@@ -1,4 +1,4 @@
-# ezEdits Docs
+# ezEdits Wiki
 
 <div align="left">
 

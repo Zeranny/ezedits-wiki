@@ -95,10 +95,21 @@ Generates a spline shaped by the given WorldEdit expression along the selected c
 * **-q** (Default: 1.85): Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
 * **-n** (Default: "CONSISTENT"): Determines the mode for spline normal calculation.
 * **-g**: When used, calculates the center radii using the geometric center for three radii.
+* **-z**: Normalize the Z-Axis, that runs along the path of the spline, to the [-1,1] domain.
 * **-h**: Shows the help page.
 
+A local coordinate system is merged onto the path of the spline. The z-axis runs along the path. The x- and y-axis run perpendicular to the path.
+
+If the -z flag _is not_ set, then the domain of the z-axis is [0,L) whereby L is the length of the path divided by the radius.
+
+If the -z flag _is_ set, then the domain of the z-axis is [-1,1], such that z=-1 is at the beginning and z=1 at the end of the spline.
+
+The domain of the x-axis is [-1,1], such that x=-1 / x=1 is the left / right plane at the radius boundary.
+
+The domain of the y-axis is [-1,1], such that y=-1 / y=1 is the bottom / top plane at the radius boundary.
+
 Example of an expression spline:\
-`//ezsp expression red 20,5 0 -q 4 z^2+y^2<2-x%2`\
+`//ezsp expression red 20,5 0 -q 4 x^2+y^2<1-z%1`\
 _Note that the expression must come last_
 
 </details>

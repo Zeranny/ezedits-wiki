@@ -209,6 +209,30 @@ Creates a regular polygon-shaped spline along the selected convex region.
 
 </details>
 
+### `rings`
+
+<details>
+
+<summary>Rings Spline</summary>
+
+**`//ezsp rings <pattern> <radii> [count] [thickness] [innerRadius] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
+
+Creates a spline of rings along the selected convex region.
+
+* **Pattern**: Specifies the block pattern.
+* **Radii**: The thickness of the spline, defined by up to three comma-separated values.\
+  _A radius of 10 will be 10 from the start to the end of the spline, 10,5,15 will start at 10, decreasing to 5 around the middle, and increasing to 15 at the end._
+* **Count** (Default: 8): Determines the number of rings.
+* **Thickness** (Default: 3.0): Determines the size of the rings in the direction of the spline.
+* **Inner Radius** (Default: 0.7): A value between 0 and 1 which determines the size of the central hole in the ring.
+* **-p** (Default: "0:0:0"): Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
+* **-q** (Default: 1.85): Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
+* **-n** (Default: "CONSISTENT"): Determines the mode for spline normal calculation.
+* **-g**: When used, calculates the center radii using the geometric center for three radii.
+* **-h**: Shows the help page.
+
+</details>
+
 ### `rope`
 
 <details>

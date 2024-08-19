@@ -147,3 +147,17 @@ Masks to blocks which match any block in the palette, regardless of block data.\
 Equivalent to **`#palette[palette][False]`**
 
 </details>
+
+### `#current`
+
+<details>
+
+<summary>#current mask</summary>
+
+Shorthand: **`#c`**
+
+A mask which represents your current global mask (gmask).
+
+e.g running `//gmask !#current` will invert your current gmask
+
+</details>

@@ -34,6 +34,7 @@
 * [Noisegen](commands/noisegen.md)
 * [Region](commands/region.md)
 * [Scatter](commands/scatter.md)
+* [Structures](commands/structures.md)
 * [Selections](commands/selections.md)
 * [Shapes](commands/shapes.md)
 * [Smoothing](commands/smoothing.md)

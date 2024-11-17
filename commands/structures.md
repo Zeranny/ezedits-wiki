@@ -22,7 +22,7 @@ Currently available structures are:
 
 <details>
 
-<summary><mark style="color:red;"><strong>&#x3C;Clipboard (C)></strong></mark></summary>
+<summary><mark style="color:red;"><strong>Clipboard (C)</strong></mark></summary>
 
 A structure based on your current WorldEdit Clipboard.
 
@@ -39,7 +39,7 @@ Options:
 
 <details>
 
-<summary><mark style="color:red;"><strong>&#x3C;Schematic (Sc)></strong></mark></summary>
+<summary><mark style="color:red;"><strong>Schematic (Sc)</strong></mark></summary>
 
 A structure based on a schematic file.
 
@@ -57,7 +57,7 @@ Options:
 
 <details>
 
-<summary><mark style="color:red;"><strong>&#x3C;Shape (S)></strong></mark></summary>
+<summary><mark style="color:red;"><strong>Shape (S)</strong></mark></summary>
 
 An expression based shape. EzEdits provides plenty of predefined ones. Material defined by a pattern.
 
@@ -69,7 +69,7 @@ Options:
 
 <details>
 
-<summary><mark style="color:red;"><strong>&#x3C;TexturedShape (TS)></strong></mark></summary>
+<summary><mark style="color:red;"><strong>TexturedShape (TS)</strong></mark></summary>
 
 An expression based shape with an expression based texturing. Material defined the Texturing-Shape and a Palette.
 

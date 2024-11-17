@@ -1,30 +1,20 @@
 # Structures
 
-ezEdits provides multiple ways to quickly place clipboards, schematics, expression-based shapes, all categorized as 'structures'.
+## Overview
+
+ezEdits provides multiple ways to quickly place clipboards, schematics, and expression-based shapes, all categorized as 'structures'.
 
 The relevant commands and brushes (introduced in version 0.11.0) are:
 
-`//ezplace` (`//ezpl`) - Places a single structure at the player position.
+<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th>Command / Brush</th><th>Description</th></tr></thead><tbody><tr><td><code>//ezplace</code> (<code>//ezpl</code>) </td><td>Places a <strong>single</strong> structure at the <strong>player's position.</strong></td></tr><tr><td><code>//ezscatter</code> (<code>//ezsc</code>) </td><td>Places <strong>multiple</strong> structures within a <strong>selected region</strong>.</td></tr><tr><td><code>//ezsequence</code> (<code>//ezseq</code>)</td><td>Places <strong>multiple</strong> structures sequentially <strong>along a path</strong>.</td></tr><tr><td><code>//ezbrush place</code> (<code>//ezbr pl</code>)</td><td>Brush that places a <strong>single</strong> structure at each <strong>brush click's target</strong>.</td></tr><tr><td><code>//ezbrush scatter</code> (<code>//ezbr sc</code>)</td><td>Brush that places <strong>multiple</strong> structures in the area of each <strong>brush click's target</strong>.</td></tr><tr><td><code>//ezbrush array</code> (<code>//ezbr ar</code>)</td><td>Brush that places <strong>multiple</strong> structures along a <strong>brush stroke</strong>.</td></tr></tbody></table>
 
-`//ezscatter` (`//ezsc`) - Places multiple structures within a selected region.
-
-`//ezsequence` (`//ezseq`)- Places multiple structures sequentially along a path.
-
-`//ezbrush place` (`//ezbr pl`) - Brush that places a single structure for every brush click.
-
-&#x20;`//ezbrush scatter` (`//ezbr sc`) - Brush that places multiple structures around a brush click.
-
-&#x20;`//ezbrush sequence` (`//ezbr seq`) - Brush that places multiple structures along a brush stroke.
-
-For completeness, one can also embed a structure, or an array of structures into a shaped spline with the ezspline subcommand:
+For completeness, one can also embed a structure or an array of structures into a shaped spline with the ezspline subcommand:
 
 `//ezspline structure` (`//ezsp structure`)
 
-However, the structures are not "placed", such that e.g. the placement parameters do not apply to this command.
+However, the structures are not "placed" as much as they are embedded into the spline path, meaning that, for example, the placement parameters do not apply to this command.
 
-## Structures
-
-### Available Structures
+## Available Structures
 
 In the context of ezEdits, we call an arrangement of blocks in 3D space a "structure". Each of the above-mentioned commands require the user to provide a `<structure>` argument.
 
@@ -94,30 +84,30 @@ Options:
 
 </details>
 
-### Placement Parameters
+## Placement Parameters
 
 Whenever a structure is placed, it goes through the following pipeline (in that order):
 
-* [Custom Dimensions](structures.md#controlling-dimensions) (`-s`)
+* [Applying Dimensions](structures.md#controlling-dimensions) (`-s`)
 * [Random Scaling](structures.md#random-scaling) (`-t`)
 * [Orientation](structures.md#orientation-advanced) (`-c` and `-k`)
 * [Random Flips](structures.md#random-flips) (`-f`)
 * [Random 90° Rotations](structures.md#random-90-rotations) (`-r`)
 * [**Alignment**](structures.md#alignment-most-important) (`<primary>` and `<secondary>`)
 
-customizeezEdits lets you fully customize this pipeline. In brackets are the flags and arguments that apply changes to each step respectively.
+ezEdits lets you fully customize this pipeline. In brackets are the flags and arguments that apply changes to each step respectively.
 
-#### Controlling Dimensions
+### Controlling Dimensions: `-s <dimensions>`
 
 The dimensions define the size of a structure placement, by setting its bounding box size.
 
-> The flag `-s <size>` sets the desired absolute base dimensions of the placement (overriding the default values).
+> The flag `-s <dimensions>` sets the desired absolute base dimensions of the placement (overriding the default values).
 
 By default, expression-based structures have dimensions `20,20,20`, while Schematic/Clipboard structures are placed with their inherent original dimensions.
 
 The structure might appear stretched or compressed depending on your choice of values. For example, if your clipboard is inherently of size 7x7x7, then setting the dimensions as `-s 7,14,7` will stretch out the structure placement along its y-axis.
 
-#### Random Scaling
+### Random Scaling: `-o <sizeMultiplierRange>`
 
 Most of the structure commands place multiple structure placements at once. To give a bit of variety you can apply some random scaling for each placement.
 
@@ -125,19 +115,38 @@ Most of the structure commands place multiple structure placements at once. To g
 
 By default, the range is `1,1`, meaning the scaling factor is always 1, and thus, does nothing.
 
-#### Random Flips
+### Random Flips: `-f <randomFlipsAxes>`
 
-> The `-f <axes>` flag enables random flipping of the structure across any of the axes for each placement.
+> The `-f <randomFlipsAxes>` flag enables random flipping of the structure across any of the axes for each placement.
+
+Available values are:
+
+* None (default)
+* X
+* Y
+* Z
+* XY
+* XZ
+* YZ
+* XYZ
 
 Flips are applied after orientation but before alignment.
 
-#### Random 90°-Rotations
+### Random 90°-Rotations: `-r <randomRotationAxis>`
 
-> The `-r <axis>` flag enables random 90° rotation of the structure across either of the axes for each placement.
+> The `-r <randomRotationAxis>` flag enables random 90° rotation of the structure across either of the axes for each placement.
+
+Available values are:
+
+* X
+* Y
+* Z
+
+By default, the flag is not set, and thus random rotations are disabled.
 
 90°-rotations are applied after orientation but before alignment.
 
-#### Alignment (most important)
+### Alignment (most important): `<primary>` and `<secondary>`
 
 Alignment defines at which orientation the structure is placed at.
 
@@ -151,77 +160,105 @@ We let the user define the alignment using two directions:
 
 > The `<secondary>` direction, together with the primary direction, imply the structures +x direction.
 
-(The secondary must not necessarily align since the structure's internal coordinate system always has right angles, but the primary and secondary can be any direction.)
-
 The primary and secondary can be set to:
 
-**`Constant(Direction:<direction>)` Abr.: `C(V:<direction>)`** Explicitly set a constant direction for all placements.
+<table data-view="cards"><thead><tr><th>Name</th><th>Abbreviation</th><th>Description</th></tr></thead><tbody><tr><td><strong><code>Constant(Direction:&#x3C;direction>)</code></strong></td><td><strong><code>C(V:&#x3C;direction>)</code></strong></td><td>Explicitly set a constant direction for all placements.</td></tr><tr><td><strong><code>Random</code></strong></td><td><strong><code>R</code></strong></td><td>Random direction for each placement.</td></tr><tr><td><strong><code>Aim</code></strong></td><td><strong><code>A</code></strong></td><td>Your player aim direction.</td></tr><tr><td><strong><code>PlayerRelative</code></strong></td><td><strong><code>P</code></strong></td><td>The direction from the placement's position towards the current player position.</td></tr><tr><td><strong><code>SurfaceNormal</code></strong></td><td><strong><code>S</code></strong></td><td>The approximate surface-normal in the region of the placement's position.</td></tr><tr><td><strong><code>ViewDiff</code></strong></td><td><strong><code>V</code></strong></td><td>Define a direction using two clicks. Exclusively for brushes.</td></tr><tr><td><strong><code>Tangential</code></strong></td><td><strong><code>T</code></strong></td><td>The direction tangential to the path. Exclusively for sequences.</td></tr><tr><td><strong><code>Orthogonal</code></strong></td><td><strong><code>O</code></strong></td><td>The direction orthogonal to the path. Exclusively for sequences.</td></tr></tbody></table>
 
-* Default direction is +y if you're setting the primary.
-* Default direction is +x if you're setting the secondary.
+Note: If you use Constant without specifying a \<direction>, then:
 
-**`Random` Abr.: `R`** Random direction for each placement.
+* the default direction is **+y** if you're setting the `<primary>`.
+* the default direction is **+x** if you're setting the `<secondary>`.
 
-**`Aim` Abr.: `A`** Your player aim direction.
-
-**`PlayerRelative` Abr.: `P`** The direction from the placement's position towards the current player position.
-
-**`SurfaceNormal` Abr.: `S`** The approximate surface-normal in the region of the placement's position.
-
-**`ViewDiff` Abr.: `V`** Define a direction using two clicks. Exclusively for brushes.
-
-**`Tangential` Abr.: `T`** The direction tangential to the path. Exclusively for sequences.
-
-**`Orthogonal` Abr.: `O`** The direction orthogonal to the path. Exclusively for sequences.
-
-#### Orientation (advanced)
+### Orientation (advanced): `-k <orientationAxis>` and `-c <orientationAngle>`
 
 Defining an orientation means defining which internal coordinate system the structure has. That coordinate system is then used in the random flips/rotations and during alignment. Defining an orientation is "defining which way is up and which way is forward".
 
-> On orientation is set by a rotation axis (`-k <direction>`) and a rotation angle (`-c <angle>`). That works similar to `//ezd rotate`.
+> On orientation is set by a rotation axis (`-k <direction>`) and a rotation angle (`-c <angle>`).
+
+It works identically to `//ezd rotate`.
 
 By default, the rotation axis `-k` is `y` or `up` and the rotation angle `-c` is `0`, and thus, does nothing.
 
 For example, if you set the rotation axis to `-k x` and the rotation angle to `-c 90` then your structure is rotated to the side. Its eastern side will now be its top side and so on.
 
-#### //ezplace
+## Scatter Parameters
 
-{% code overflow="wrap" %}
-```
-//ezplace <structure> <primary> <secondary>
-[-s <dimensions>]
-[-o <sizeMultiplierRange>]
-[-c <orientationAngle>]
-[-k <orientationAxis>]
-[-f <randomFlipsAxes>]
-[-r <randomRotationAxis>]
-```
-{% endcode %}
+`//ezscatter` and `//ezbrush scatter` place multiple shapes within a region. The positions that these commands choose can be customized with the following parameters:
 
-#### //ezscatter
+### Density: `-n <density>`
 
-{% code overflow="wrap" %}
-```
-//ezscatter <structure> <primary> <secondary>
-[-s <dimensions>]
-[-o <sizeMultiplierRange>]
-[-c <orientationAngle>]
-[-k <orientationAxis>]
-[-f <randomFlipsAxes>]
-[-r <randomRotationAxis>]
-[-n <density>]
-[-d <filterDirections>]
-[-e <filterThreshold>]
-[-m <maskFilter>]
-[-u]
-[-b]
-```
-{% endcode %}
 
-#### //ezarray
 
-{% code overflow="wrap" %}
-```
-//ezsequence <structure> <primary> <secondary> [-s <dimensions>] [-o <sizeMultiplierRange>] [-c <orientationAngle>] [-k <orientationAxis>] [-f <randomFlipsAxes>] [-r <randomRotationAxis>] [-g <gap>] [-q <radii>] [-p <kb_parameters>] [-n <normalMode>]
-```
-{% endcode %}
+### Uniformity: `-u <iterations>`
+
+
+
+### Directional Filter: `-d <directions>` and `-e <threshold>`
+
+
+
+### Mask Filter: `-m <mask>`
+
+
+
+### Trimming Flag: `-t`
+
+
+
+## Array Parameters
+
+`//ezarray` and `//ezbrush array` place multiple shapes along a path. The positions that these commands choose can be customized with the following parameters:
+
+### Distance: -g \<distance>
+
+
+
+### Progressive Scaling: -q \<radii>
+
+
+
+### Path Parameters: -p \<kbParameters>
+
+
+
+### Spline orientation: -n \<normalMode>
+
+
+
+## Commands
+
+### `//ezplace`
+
+Alias: `//ezpl`
+
+`//ezplace` [`<structure>`](structures.md#available-structures) [`<primary>  <secondary>`](structures.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](structures.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](structures.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](structures.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](structures.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](structures.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
+
+### `//ezbrush place`
+
+Alias: `//ezbr pl`
+
+`//ezbrush place` [`<structure>`](structures.md#available-structures) [`<primary>  <secondary>`](structures.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](structures.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](structures.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](structures.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](structures.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](structures.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
+
+### `//ezscatter`
+
+Alias: `//ezsc`
+
+`//ezscatter` [`<structure>`](structures.md#available-structures) [`<primary>  <secondary>`](structures.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](structures.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](structures.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](structures.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](structures.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](structures.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](structures.md#density-n-less-than-density-greater-than) [`[-u <iterations>]`](structures.md#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>]  [-e <filterThreshold>]`](structures.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](structures.md#mask-filter-m-less-than-mask-greater-than) [`[-t]`](structures.md#trimming-flag-t)
+
+### `//ezbrush scatter`
+
+Alias: `//ezbr sc`
+
+`//ezscatter` [`<structure>`](structures.md#available-structures) [`<primary>  <secondary>`](structures.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](structures.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](structures.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](structures.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](structures.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](structures.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](structures.md#density-n-less-than-density-greater-than) [`[-u <iterations>]`](structures.md#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>]  [-e <filterThreshold>]`](structures.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](structures.md#mask-filter-m-less-than-mask-greater-than) [`[-t]`](structures.md#trimming-flag-t)
+
+### `//ezarray`
+
+Alias: `//ezar`
+
+`//ezarray` [`<structure>`](structures.md#available-structures) [`<primary>  <secondary>`](structures.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](structures.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](structures.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](structures.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](structures.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](structures.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-g <gap>]`](structures.md#distance-g-less-than-distance-greater-than) [`[-q <radiiMultiplier>]`](structures.md#progressive-scaling-q-less-than-radii-greater-than) [`[-p <kbParameters>]`](structures.md#path-parameters-p-less-than-kbparameters-greater-than) [`[-n <normalMode>]`](structures.md#spline-orientation-n-less-than-normalmode-greater-than)
+
+### `//ezbrush array`
+
+Alias: `//ezbr ar`
+
+`//ezbrush array` [`<structure>`](structures.md#available-structures) [`<primary>  <secondary>`](structures.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](structures.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](structures.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](structures.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](structures.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](structures.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-g <gap>]`](structures.md#distance-g-less-than-distance-greater-than) [`[-q <radiiMultiplier>]`](structures.md#progressive-scaling-q-less-than-radii-greater-than) [`[-p <kbParameters>]`](structures.md#path-parameters-p-less-than-kbparameters-greater-than) [`[-n <normalMode>]`](structures.md#spline-orientation-n-less-than-normalmode-greater-than)

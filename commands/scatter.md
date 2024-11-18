@@ -18,36 +18,7 @@ It comes with a number of pre-defined shapes as well as the ability to use World
 
 <summary><mark style="color:red;"><strong>&#x3C;shape></strong></mark></summary>
 
-**Current shapes**
-
-_Additional parameters are given within the parenthesis after a shape._
-
-* bean
-* cube
-* curl
-* cylinder
-* ellipsoid
-* fur
-* leaf
-* lemon
-* onion
-* polygon(*Sides*)
-* pyramid(*Sides*)
-* spike
-* supersphere(*Exponent*)
-* tetrahedron
-* torus(*Thickness*)
-
-In addition to these, you can also define your own shape with a WorldEdit expression
-
-**`Expression;<expression>`**
-or
-**`Expr;<expression>`**
-
-For example, this expression will create spirals:\
-`//ezsc expr;x+=sin(2*pi*y)/2;z+=cos(2*pi*y)/2;x*x+z*z<0.3^2`
-
-
+`2`
 
 </details>
 

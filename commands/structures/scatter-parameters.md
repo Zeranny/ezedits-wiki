@@ -2,7 +2,7 @@
 
 `//ezscatter` and `//ezbrush scatter` place multiple shapes within a region. The positions that these commands choose can be customized with the parameters described on this page.
 
-`scatter` first determines a list of potential placement positions. The amount or density and uniformity of the distribution can be set with the `-n <density>` and the `-u <iterations>` parameters. From these potential placement positions you can then filter out ones that do not match certain conditions using `-d <directions>` & `-e <threshold>`, `-m <mask>`, and `-t`.
+`scatter` first determines a list of potential placement positions. The density and uniformity of the distribution can be set with the `-n <density>` and the `-u <iterations>` parameters. From these potential placement positions, you can then filter out ones that do not match certain conditions using `-d <directions>` & `-e <threshold>`, `-m <mask>`, and `-t`.
 
 ***
 
@@ -12,15 +12,31 @@ Determines how many placements are placed, by specifying a density percentage.
 
 The density value is a percentage. It determines what percentage of surface blocks a structure should be placed.
 
-To be overly specific: Let amountSurfaceBlocks be the result of `//count [!air]&[~air]`, then the final amount of structures placed is equal to _amountSurfaceBlocks \* density / 100_. (The total amount can be lower due to the mask filter, the directional filter, and the trimming flag)
+To be overly specific: Let N be the result of `//count [!air]&[~air]`, then the final amount of structures placed is equal to _N \* density / 100_. (The total amount can be lower due to the mask filter, the directional filter, and the trimming flag)
 
-Examples:
+Note: Percent sign is optional. `0.5` is equal to `0.5%`.
 
-* `-n 2%` (default)
-* `-n 0.05%`
-* `-n 0.05` ('%'-sign is optional)
-
-Note: `0.5` is equal to `0.5%` not `50%`.
+> #### Examples:
+>
+> Ex. command: **`//ezsc Clipboard C C -n <density>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+>
+>
+>
+> **`-n 2%`** (default) or **`-n 2`** ('%'-sign is optional):
+>
+> ![](../../.gitbook/assets/2024-11-19\_21.46.11.png)
+>
+>
+>
+> **`-n 0.5%`**
+>
+> &#x20;![](../../.gitbook/assets/2024-11-19\_21.46.51.png)
+>
+>
+>
+> **`-n 5%`**
+>
+> ![](../../.gitbook/assets/2024-11-19\_21.47.01.png)
 
 ***
 
@@ -28,21 +44,21 @@ Note: `0.5` is equal to `0.5%` not `50%`.
 
 Determines how uniformly spread out all placement positions are. Expecting an integer between 0 and 20.
 
+Defaults to 15.
+
 Examples:
 
 * `-u 0` (fully random distribution)
 * `-u 2` (slightly uniform distribution)
-* `-u 15` (very uniform distribution)
-
-
+* `-u 20` (maximal uniform distribution)
 
 ***
 
 ### Directional Filter: `-d <directions>` and `-e <threshold>`
 
-Enables filtering out placement positions on surfaces that are facing certain directions. 
+Enables filtering out placement positions on surfaces that are facing certain directions.
 
-The `-d <directions>` parameter defines the list of directions in which the surface, on which the placement positions points are placed at, must face. If a placement position does not satisy this condition, no structure will be placed there.
+The `-d <directions>` parameter defines the list of directions in which the surface, on which the placement positions points are placed at, must face. If a placement position does not satisfy this condition, no structure will be placed there.
 
 The `-e <threshold>` parameter defines how much the surface normal at the placement position must align with any of the directions given by `-d`. The higher the value the stronger the filter
 
@@ -69,6 +85,8 @@ Examples:
 ### Trimming Filter: `-t`
 
 The trimming flag removes all placement positions that are close enough to the edge or your selected region that they're bounding box is not fully inside the selection.
+
+***
 
 ### Cut off outside the selection: `-c`
 

@@ -108,11 +108,11 @@ By default, this parameter is not set to anything, i.e. random rotations are dis
 
 ### Alignment (most important): `<primary>` and `<secondary>`
 
-Alignment defines at which orientation the structure is placed at.
+Alignment defines the orientation at which the structure is placed.
 
-Every structure has an inherent "up" direction and an inherent "forward" direction. By default (rather, if you set primary and secondary to `Constant`), structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x).
+Every structure has an intrinsic "up" direction and an intrinsic "forward" direction. By default, structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x) ("default" meaning setting both to just `Constant`).
 
-Most important thing is now: You can define how a structure is placed by defining where its up direction should face and where its forward direction should face (aka. aligning it's internal coordinate system).
+The most important thing is now: You can define how a structure is placed by defining where its up direction should face and where its forward direction should face (aka. aligning its internal coordinate system).
 
 We let the user define the alignment using two directions:
 

@@ -33,7 +33,6 @@
 * [Flowfields](commands/flowfields.md)
 * [Noisegen](commands/noisegen.md)
 * [Region](commands/region.md)
-* [Scatter](commands/scatter.md)
 * [Structures](commands/structures/README.md)
   * [Available Structures](commands/structures/available-structures.md)
   * [Placement Parameters](commands/structures/placement-parameters.md)

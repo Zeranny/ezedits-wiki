@@ -16,6 +16,8 @@ For completeness, one can also embed a structure or an array of structures into 
 
 ## Commands
 
+This section lists the syntax of all structure commands with links to the corresponding sections.&#x20;
+
 ***
 
 ### `//ezplace`
@@ -24,7 +26,7 @@ Alias: `//ezpl`
 
 Places a **single** structure at the **player's position.**
 
-`//ezplace` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](placement-parameters.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](./#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
+`//ezplace` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](primary+secondary-alignment.md) [`[-s <dimensions>]`](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](placement-parameters.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
 
 ### `//ezbrush place`
 
@@ -32,7 +34,7 @@ Alias: `//ezbr pl`
 
 Brush that places a **single** structure at each **brush click's target**.
 
-`//ezbrush place` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](placement-parameters.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](./#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
+`//ezbrush place` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](primary+secondary-alignment.md) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
 
 ***
 
@@ -42,7 +44,7 @@ Alias: `//ezsc`
 
 Places **multiple** structures within a **selected region**.
 
-`//ezscatter` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](placement-parameters.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](./#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](./#density-n-less-than-density-greater-than) [`[-u <iterations>]`](./#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>]  [-e <filterThreshold>]`](./#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](./#mask-filter-m-less-than-mask-greater-than) [`[-t]`](./#trimming-flag-t)
+`//ezscatter` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](primary+secondary-alignment.md) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than) [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>]  [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than) [`[-t]`](scatter-parameters.md#trimming-filter-t) [`[-c]`](scatter-parameters.md#cut-off-outside-the-selection-c)
 
 ### `//ezbrush scatter`
 
@@ -50,7 +52,7 @@ Alias: `//ezbr sc`
 
 Brush that places **multiple** structures in the area of each **brush click's target**.
 
-`//ezscatter` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](placement-parameters.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](./#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](./#density-n-less-than-density-greater-than) [`[-u <iterations>]`](./#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>]  [-e <filterThreshold>]`](./#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](./#mask-filter-m-less-than-mask-greater-than) [`[-t]`](./#trimming-flag-t)
+`//ezbrush scatter` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](primary+secondary-alignment.md) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than) [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>]  [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than) [`[-t]`](scatter-parameters.md#trimming-filter-t) [`[-c]`](scatter-parameters.md#cut-off-outside-the-selection-c)
 
 ***
 
@@ -60,7 +62,7 @@ Alias: `//ezar`
 
 Places **multiple** structures sequentially **along a path**.
 
-`//ezarray` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](placement-parameters.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](./#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-g <gap>]`](./#distance-g-less-than-distance-greater-than) [`[-q <radiiMultiplier>]`](./#progressive-scaling-q-less-than-radii-greater-than) [`[-p <kbParameters>]`](./#path-parameters-p-less-than-kbparameters-greater-than) [`[-n <normalMode>]`](./#spline-orientation-n-less-than-normalmode-greater-than)
+`//ezarray` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](primary+secondary-alignment.md) [`[-s <dimensions>]`](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](placement-parameters.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-g <gap>]`](array-parameters.md#distance-g-less-than-gap-greater-than) [`[-q <radiiMultiplier>]`](array-parameters.md#progressive-scaling-q-less-than-radii-greater-than) [`[-p <kbParameters>]`](array-parameters.md#path-parameters-p-less-than-kbparameters-greater-than) [`[-n <normalMode>]`](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than)
 
 ### `//ezbrush array`
 
@@ -68,4 +70,36 @@ Alias: `//ezbr ar`
 
 Brush that places **multiple** structures along a **brush stroke**.
 
-`//ezbrush array` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](placement-parameters.md#alignment-most-important-less-than-primary-greater-than-and-less-than-secondary-greater-than) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](./#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-g <gap>]`](./#distance-g-less-than-distance-greater-than) [`[-q <radiiMultiplier>]`](./#progressive-scaling-q-less-than-radii-greater-than) [`[-p <kbParameters>]`](./#path-parameters-p-less-than-kbparameters-greater-than) [`[-n <normalMode>]`](./#spline-orientation-n-less-than-normalmode-greater-than)
+`//ezbrush array` [`<structure>`](available-structures.md) [`<primary>  <secondary>`](primary+secondary-alignment.md) [`[-s <dimensions>]`](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>]  [-k <orientationAxis>]`](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](placement-parameters.md#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-g <gap>]`](array-parameters.md#distance-g-less-than-gap-greater-than) [`[-q <radiiMultiplier>]`](array-parameters.md#progressive-scaling-q-less-than-radii-greater-than) [`[-p <kbParameters>]`](array-parameters.md#path-parameters-p-less-than-kbparameters-greater-than) [`[-n <normalMode>]`](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than)&#x20;
+
+***
+
+## Subpage structure
+
+This Structure Wiki has multiple subpages. Here's an overview of the subpages.
+
+* [**Available Structures**](available-structures.md)&#x20;
+  * Covers the [`<structure>`](available-structures.md) parameter (necessary for place/scatter/array (and ezspline structure)).
+* [**Primary+Secondary Alignment**](primary+secondary-alignment.md)&#x20;
+  * Covers the [`<primary> <secondary>`](primary+secondary-alignment.md) parameters (available for place/scatter/array).
+* [**Placement Parameters**](placement-parameters.md)&#x20;
+  * Covers the following flags (available for place/scatter/array):
+    * [`[-s <dimensions>]`](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than)
+    * [`[-o <sizeMultiplierRange>]`](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than)
+    * [`[-c <orientationAngle>]  [-k <orientationAxis>]`](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great)
+    * [`[-f <randomFlipsAxes>]`](placement-parameters.md#random-flips-f-less-than-randomflipsaxes-greater-than)
+    * [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
+* [**Scatter Parameters**](scatter-parameters.md)&#x20;
+  * Covers the following flags (only available for scatter):
+    * [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than)
+    * [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than)
+    * [`[-d <filterDirections>]  [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than)
+    * [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than)
+    * [`[-t]`](scatter-parameters.md#trimming-filter-t)
+    * [`[-c]`](scatter-parameters.md#cut-off-outside-the-selection-c)
+* [**Array Parameters**](array-parameters.md)
+  * Covers the following flags (only available for array):
+    * [`[-g <gap>]`](array-parameters.md#distance-g-less-than-gap-greater-than)
+    * [`[-q <radiiMultiplier>]`](array-parameters.md#progressive-scaling-q-less-than-radii-greater-than)
+    * [`[-p <kbParameters>]`](array-parameters.md#path-parameters-p-less-than-kbparameters-greater-than)
+    * [`[-n <normalMode>]`](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than)&#x20;

@@ -31,7 +31,7 @@ Note: The structure might appear stretched or compressed depending on your choic
 >
 > Second image: `//ezsc Clipboard C C -s 5,14,5`
 >
-> ![](../../.gitbook/assets/2024-11-18\_00.51.13.png) ![](../../.gitbook/assets/2024-11-18\_00.51.19.png)
+> <img src="../../.gitbook/assets/PlacementDimensions_example1.png" alt="" data-size="original"><img src="../../.gitbook/assets/PlacementDimensions_example2.png" alt="" data-size="original">
 
 ***
 
@@ -43,13 +43,13 @@ The `-o <sizeMultiplierRange>` flag lets you specify a range of values. A random
 
 By default, the range is `1,1`, meaning the scaling factor is always 1, and thus, does nothing.
 
-> #### Example
+> **Example**
 >
 > By setting the range as `-o 0.5,2.0` we get placements of e.g. our clipboard at random sizes between half the desired size and double the desired size,
 >
 > `//ezsc Clipboard C C -o 0.5,2.0`
 >
-> ![](../../.gitbook/assets/2024-11-18\_00.57.48.png)
+> <img src="../../.gitbook/assets/PlacementRandomScaling_example.png" alt="" data-size="original">
 >
 > (Same tree clipboard at various different sizes)
 
@@ -72,13 +72,13 @@ Available values are:
 
 Flips are applied after orientation but before alignment.
 
-> #### Example
+> **Example**
 >
 > First Image: `//ezsc Clipboard C C` (no random flips)
 >
 > Second Image: `//ezsc Clipboard C C -f XZ` (random mirrors along x- and z-axis, but not y)
 >
-> ![](../../.gitbook/assets/2024-11-18\_01.25.41.png) ![](../../.gitbook/assets/2024-11-18\_01.25.50.png)
+> <img src="../../.gitbook/assets/PlacementRandomFlips_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementRandomFlips_example2.png" alt="" data-size="original">
 
 ***
 
@@ -96,13 +96,13 @@ By default, this parameter is not set to anything, i.e. random rotations are dis
 
 90°-rotations are applied after orientation but before alignment.
 
-> #### Example
+> **Example**
 >
 > First Image: `//ezsc Clipboard C C` (no random rotations)
 >
 > Second Image: `//ezsc Clipboard C C -r Y` (random 90°-rotations around the y-axis)
 >
-> ![](../../.gitbook/assets/2024-11-18\_01.26.44.png) ![](../../.gitbook/assets/2024-11-18\_01.26.29.png)
+> <img src="../../.gitbook/assets/PlacementRandomRotations_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementRandomRotations_example2.png" alt="" data-size="original">
 
 ***
 

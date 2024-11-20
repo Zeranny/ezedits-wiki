@@ -22,19 +22,19 @@ Negative values cause the placements to overlap.
 >
 > **`-g 0`** : (default value, placements are right next to each other)
 >
-> ![](../../.gitbook/assets/2024-11-19\_21.15.54.png)
+> <img src="../../.gitbook/assets/ArrayGap_example1.png" alt="" data-size="original">
 >
 >
 >
 > **`-g 10`** : (placements are now further apart)
 >
-> ![](<../../.gitbook/assets/2024-11-19\_21.16.08 (2).png>)
+> ![](../../.gitbook/assets/ArrayGap\_example2.png)
 >
 >
 >
 > **`-g -3`** (negative values cause placements to overlap)
 >
-> ![](../../.gitbook/assets/2024-11-19\_21.16.33.png)
+> ![](../../.gitbook/assets/ArrayGap\_example3.png)
 
 ***
 
@@ -52,19 +52,19 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 >
 > **`-q 1`** (default value, no scaling applied)
 >
-> ![](../../.gitbook/assets/2024-11-19\_21.27.19.png)
+> ![](../../.gitbook/assets/ArrayGap\_example1.png)
 >
 >
 >
 > **`-q 0.3,3`** (placements are down-scaled by a factor of 0.3 at the beginning of the path and slowly get bigger up to triple their original size towards the end of the spline path)
 >
-> ![](../../.gitbook/assets/2024-11-19\_21.31.31.png)
+> ![](../../.gitbook/assets/ArrayScaling\_example2.png)
 >
 >
 >
 > **`-q 1.5,0.5,5.0,2.0,0.2`** (Tree is being scaled progressively through all given values throughout the spline path)
 >
-> ![](<../../.gitbook/assets/2024-11-19\_21.28.59 (1).png>)
+> ![](../../.gitbook/assets/ArrayScaling\_example3.png)
 
 ***
 

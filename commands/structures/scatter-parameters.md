@@ -24,19 +24,19 @@ Note: Percent sign is optional. `0.5` is equal to `0.5%`.
 >
 > **`-n 2%`** (default) or **`-n 2`** ('%'-sign is optional):
 >
-> ![](../../.gitbook/assets/2024-11-19\_21.46.11.png)
+> ![](../../.gitbook/assets/ScatterDensity\_example1.png)
 >
 >
 >
 > **`-n 0.5%`**
 >
-> &#x20;![](../../.gitbook/assets/2024-11-19\_21.46.51.png)
+> &#x20;![](../../.gitbook/assets/ScatterDensity\_example2.png)
 >
 >
 >
 > **`-n 5%`**
 >
-> ![](../../.gitbook/assets/2024-11-19\_21.47.01.png)
+> ![](../../.gitbook/assets/ScatterDensity\_example3.png)
 
 ***
 
@@ -60,7 +60,7 @@ Defaults to 15.
 >
 > GIF starting with **`-u 0`** and ending with **`-u 20`**:
 >
-> ![](<../../.gitbook/assets/ezgif.com-optimize (3).gif>)
+> ![](../../.gitbook/assets/ScatterUniformity\_demo.gif)
 
 ***
 
@@ -82,7 +82,7 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 >
 >
 >
-> **`-d west,up`** (scatter points must be on a surface facing either west or up)![](../../.gitbook/assets/2024-11-20\_16.04.28.png)
+> **`-d west,up`** (scatter points must be on a surface facing either west or up)![](../../.gitbook/assets/ScatterDirectionalFilter\_example.png)
 >
 >
 >
@@ -94,7 +94,7 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 > * pauses at **`-e 0.0`** (half of all directions are filtered out)
 > * and ends at **`-e 1.0`** (strongest filter threshold, no shapes are placed anymore).
 >
-> ![](<../../.gitbook/assets/ezgif.com-optimize (4) (1).gif>)
+> ![](../../.gitbook/assets/ScatterDirectionalFilter\_demo.gif)
 
 ***
 
@@ -114,7 +114,7 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 > * **`-m !red`** (only placements positions on anything but red wool blocks are chosen)
 > * **`-m =y>95`** (only placement positions which are above y>95 are chosen)
 >
-> ![](<../../.gitbook/assets/ezgif.com-optimize (6).gif>)
+> ![](../../.gitbook/assets/ScatterMaskFilter\_demo.gif)
 
 ***
 

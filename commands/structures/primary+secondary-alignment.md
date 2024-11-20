@@ -22,7 +22,7 @@ The `<secondary>` direction together with the primary direction imply the placem
 
 Let's say this is our build that we want to place, by for example having it as our current WorldEdit clipboard.
 
-<img src="../../.gitbook/assets/2024-11-18_03.12.06.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/AlignmentGuide_example1.png" alt="" data-size="original">
 
 For reference, the red beam is facing towards positive x (east), the blue beam is facing towards positive z (south), and the green beam is facing towards positive y (up).
 
@@ -30,7 +30,7 @@ We now want to place it at various orientations using any of the ezEdits structu
 
 Let's set the `<primary>` to `up` and the `<secondary>` to `east` (These are their default values):
 
-<img src="../../.gitbook/assets/2024-11-18_03.12.06.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/AlignmentGuide_example1.png" alt="" data-size="original">
 
 Our shape is pasted exactly in the same orientation as we copied it. Up is still up, right is still right, and so on.
 
@@ -38,13 +38,13 @@ Now, consider the following two examples:
 
 1. The **`<primary>`** is set to **`south`** and the `<secondary>` remains at `east`:
 
-<img src="../../.gitbook/assets/2024-11-18_03.12.34.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/AlignmentGuide_example2.png" alt="" data-size="original">
 
 Notice how, what was originally "up" when we copied it, i.e. the green beam in our case, is pointing into the direction that we set the primary to: south. Meanwhile what was originally east, is still east. The blue beam is going down as a consequence of this 90° rotation.&#x20;
 
 2. The **`<primary>`** is set to the vector **`(0,1,1)`**, i.e. the direction going "diagonally" up and south, and the `<secondary>` to `east`:
 
-<img src="../../.gitbook/assets/2024-11-18_03.19.20.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/AlignmentGuide_example3.png" alt="" data-size="original">
 
 Notice, again, how, what was originally "up" when we copied it, i.e. the green beam in our case, is pointing into the direction that we set the primary to: diagonally up and south.
 
@@ -52,7 +52,7 @@ Here's another interesting example:
 
 The **`<primary>`** is set to the vector **`(1,1,0)`**, i.e. the direction going diagonally up and **east**, while the `<secondary>` is set to `east`:
 
-<img src="../../.gitbook/assets/2024-11-18_03.21.06.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/AlignmentGuide_example4.png" alt="" data-size="original">
 
 The green beam is correctly pointing along the primary direction, diagonally up and east. Whatever was pointing up when we //copy'd our clipboard is always aligned with whatever direction we pass as the primary!
 
@@ -70,7 +70,7 @@ So, if the primary and secondary are not perfectly perpendicular, as in the exam
 
 Just for reference, here's a small GIF that shows the remaining perpendicular secondary directions for a set primary direction:
 
-![](../../.gitbook/assets/2024-11-2017-46-38-ezgif.com-optimize.gif)
+![](../../.gitbook/assets/AlignmentGuide\_example5.gif)
 
 
 
@@ -78,7 +78,7 @@ To give a final example:
 
 The **`<primary>`** is set to the vector **`(-1,2,-1)`**, i.e. a direction going up and northwest, while the **`<secondary>`** is set to **`west`**:
 
-![](../../.gitbook/assets/2024-11-20\_18.19.23.png)
+![](../../.gitbook/assets/AlignmentGuide\_example6.png)
 
 As you can see, the green beam, or what was originally up in our build when we copied it, is now pointing into our specified `northwest+2*up` direction, while the red beam, or what was originally east when we copied, is now pointing `west` as it can while still being perpendicular to the primary.
 
@@ -86,9 +86,9 @@ As you can see, the green beam, or what was originally up in our build when we c
 
 All of this applies independently of your current clipboard. Here's another structure at its original orientation followed by its placement aligned just like the previous example.
 
-![](../../.gitbook/assets/2024-11-20\_21.15.32.png)&#x20;
+![](../../.gitbook/assets/AlignmentGuide\_example7.png)&#x20;
 
-![](../../.gitbook/assets/2024-11-20\_21.15.47.png)
+![](../../.gitbook/assets/AlignmentGuide\_example8.png)
 
 By the way, the command used was
 
@@ -133,15 +133,15 @@ There are various ways to define a direction. From using the axes, cardinal dire
 
 `//ezsc Clipboard C(v:(0,2,0)) C(v:east)`
 
-<img src="../../.gitbook/assets/2024-11-18_04.33.26.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/ConstantAlignment_example1.png" alt="" data-size="original">
 
 `//ezsc Clipboard C(v:(-1,2,-1)) C(v:east)`
 
-<img src="../../.gitbook/assets/2024-11-18_04.33.57 (1).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/ConstantAlignment_example2.png" alt="" data-size="original">
 
 `//ezsc Clipboard C(v:(-1,2,-1)) C(v:-aim)`
 
-<img src="../../.gitbook/assets/2024-11-18_04.36.35 (1).png" alt="" data-size="original">
+<img src="../../.gitbook/assets/ConstantAlignment_example3.png" alt="" data-size="original">
 
 </details>
 
@@ -162,7 +162,7 @@ Abbreviation: `R`
 * Only setting the `<secondary>` to Random, primary remains pointing up
 * Notice how our structure's up direction (green beam) remains up (primary is set to up), but each placement is randomly rotated around the primary (y-axis in this case) since the secondary is random.
 
-![](../../.gitbook/assets/2024-11-18\_04.46.40.png)
+![](../../.gitbook/assets/RandomAlignment\_demo1.png)
 
 
 
@@ -172,7 +172,7 @@ Abbreviation: `R`
 * Terrain replaced with glass so you can see better.
 * Notice how the green beam is now facing all kinds of directions, but the red beam is roughly pointing east for all placements.
 
-![](../../.gitbook/assets/2024-11-18\_04.47.48.png)
+![](../../.gitbook/assets/RandomAlignment\_demo2.png)
 
 
 
@@ -180,7 +180,7 @@ Abbreviation: `R`
 
 * Setting both to Random
 
-![](../../.gitbook/assets/2024-11-18\_04.47.55.png)
+![](../../.gitbook/assets/RandomAlignment\_demo3.png)
 
 
 
@@ -218,7 +218,7 @@ Note: For brushes, `Constant(Direction:aim)` will use your player's aim directio
 
 `//ezsc Clipboard Aim Constant`&#x20;
 
-![](../../.gitbook/assets/2024-11-20\_22.21.02.png) ![](../../.gitbook/assets/2024-11-20\_22.21.18.png)
+![](../../.gitbook/assets/AimAlignment\_demo1.png) ![](../../.gitbook/assets/AimAlignment\_demo2.png)
 
 </details>
 
@@ -236,13 +236,13 @@ Abbreviation: `P`
 
 `//ezsc Clipboard PlayerRelative Constant`&#x20;
 
-![](../../.gitbook/assets/2024-11-20\_22.28.21.png) ![](<../../.gitbook/assets/2024-11-20\_22.29.52 (1).png>)
+![](../../.gitbook/assets/PlayerRelative\_demo1.png) ![](../../.gitbook/assets/PlayerRelative\_demo2.png)
 
 
 
 `//ezbr place Shape(S:Cone,Pattern:diamond_block) PlayerRelative Constant -s 12,36,12`&#x20;
 
-![](../../.gitbook/assets/output-ezgif.com-optimize.gif)
+![](../../.gitbook/assets/PlayerRelative\_demo3.gif)
 
 
 
@@ -264,7 +264,7 @@ By [normal](https://en.wikipedia.org/wiki/Normal\_\(geometry\)) we mean the dire
 
 `//ezbr shape Shape(P:57,S:Cone) SurfaceNormal Constant -s 12,36,12`&#x20;
 
-![](<../../.gitbook/assets/output-ezgif.com-optimize (1).gif>)
+![](../../.gitbook/assets/SurfaceNormal\_demo1.gif)
 
 </details>
 

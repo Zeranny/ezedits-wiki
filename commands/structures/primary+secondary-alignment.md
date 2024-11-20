@@ -4,7 +4,7 @@ Alignment defines the orientation at which the structure is placed.
 
 ## Explanation
 
-Every structure has an intrinsic "up" direction and an intrinsic "forward" direction. By default, structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x) ("default" meaning setting both to just `Constant`).
+Every structure has an intrinsic "up" direction and an intrinsic "forward" direction. In the most simplest case, structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x) ("simplest case" meaning setting both to just `Constant`).
 
 The most important thing is now: You can define how a structure is placed by defining where its up direction should face and where its forward direction should face (aka. aligning its internal coordinate system).
 
@@ -26,7 +26,7 @@ Let's say this is our build that we want to place, by for example having it as o
 
 For reference, the red beam is facing towards positive x (east), the blue beam is facing towards positive z (south), and the green beam is facing towards positive y (up).
 
-We now want to place it at various orientations using any of the ezEdits structure commands. For this we need to define a \<primary> and \<secondary> direction. Let us go through a few examples for a few such assignments of these parameters and try to understand what is happening:
+We now want to place it at various orientations using any of the ezEdits structure commands. For this we need to define a `<primary>` and `<secondary>` direction. Let us go through a few examples for a few such assignments of these parameters and try to understand what is happening:
 
 Let's set the `<primary>` to `up` and the `<secondary>` to `east` (These are their default values):
 
@@ -108,7 +108,7 @@ Note: The primary and secondary may not be pointing in the exact same direction.
 
 The primary and secondary can be set to either:
 
-<table data-view="cards" data-full-width="false"><thead><tr><th>Name</th><th>Abbreviation</th><th>Description</th></tr></thead><tbody><tr><td> <a href="primary+secondary-alignment.md#constant"><strong><code>Constant</code></strong></a></td><td><strong><code>C</code></strong></td><td>Explicitly set a constant direction for all placements.</td></tr><tr><td><a href="primary+secondary-alignment.md#random"><strong><code>Random</code></strong></a></td><td><strong><code>R</code></strong></td><td>Random direction for each placement.</td></tr><tr><td> <a href="primary+secondary-alignment.md#noise"><strong><code>Noise</code></strong></a></td><td>N</td><td>Direction based on the evaluation of a noise function at the placement's position.</td></tr><tr><td> <a href="primary+secondary-alignment.md#aim"><strong><code>Aim</code></strong></a></td><td><strong><code>A</code></strong></td><td>Your player aim direction.</td></tr><tr><td> <a href="primary+secondary-alignment.md#playerrelative"><strong><code>PlayerRelative</code></strong></a></td><td><strong><code>P</code></strong></td><td>The direction from the placement's position towards the current player position.</td></tr><tr><td> <a href="primary+secondary-alignment.md#surfacenormal"><strong><code>SurfaceNormal</code></strong></a></td><td><strong><code>S</code></strong></td><td>The approximate surface-normal in the region of the placement's position.</td></tr><tr><td> <a href="primary+secondary-alignment.md#viewdiff"><strong><code>ViewDiff</code></strong></a></td><td><strong><code>V</code></strong></td><td>Define a direction using two clicks. Exclusively for brushes.</td></tr><tr><td> <a href="primary+secondary-alignment.md#tangential"><strong><code>Tangential</code></strong></a></td><td><strong><code>T</code></strong></td><td>The direction tangential to the path. Exclusively for arrays.</td></tr><tr><td> <a href="primary+secondary-alignment.md#orthogonal"><strong><code>Orthogonal</code></strong></a></td><td><strong><code>O</code></strong></td><td>The direction orthogonal to the path. Exclusively for arrays.</td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th>Name</th><th>Abbreviation</th><th>Description</th></tr></thead><tbody><tr><td> <a href="primary+secondary-alignment.md#constant"><strong><code>Constant</code></strong></a></td><td><strong><code>C</code></strong></td><td>Explicitly set a constant direction for all placements.</td></tr><tr><td><a href="primary+secondary-alignment.md#random"><strong><code>Random</code></strong></a></td><td><strong><code>R</code></strong></td><td>Random direction for each placement.</td></tr><tr><td> <a href="primary+secondary-alignment.md#noise"><strong><code>Noise</code></strong></a></td><td><strong><code>N</code></strong></td><td>Direction based on the evaluation of a noise function at the placement's position.</td></tr><tr><td> <a href="primary+secondary-alignment.md#aim"><strong><code>Aim</code></strong></a></td><td><strong><code>A</code></strong></td><td>Your player aim direction.</td></tr><tr><td> <a href="primary+secondary-alignment.md#playerrelative"><strong><code>PlayerRelative</code></strong></a></td><td><strong><code>P</code></strong></td><td>The direction from the placement's position towards the current player position.</td></tr><tr><td> <a href="primary+secondary-alignment.md#surfacenormal"><strong><code>SurfaceNormal</code></strong></a></td><td><strong><code>S</code></strong></td><td>The approximate surface-normal in the region of the placement's position.</td></tr><tr><td> <a href="primary+secondary-alignment.md#viewdiff"><strong><code>ViewDiff</code></strong></a></td><td><strong><code>V</code></strong></td><td>Define a direction using two clicks. Exclusively for brushes.</td></tr><tr><td> <a href="primary+secondary-alignment.md#tangential"><strong><code>Tangential</code></strong></a></td><td><strong><code>T</code></strong></td><td>The direction tangential to the path. Exclusively for arrays.</td></tr><tr><td> <a href="primary+secondary-alignment.md#orthogonal"><strong><code>Orthogonal</code></strong></a></td><td><strong><code>O</code></strong></td><td>The direction orthogonal to the path. Exclusively for arrays.</td></tr></tbody></table>
 
 ## Settings
 
@@ -125,7 +125,7 @@ If you do not specify a `<direction>`, then:
 * the default direction is **+y** if you're setting the `<primary>`.
 * the default direction is **+x** if you're setting the `<secondary>`.
 
-There are various ways to define a direction. From using the axes, using cardinal directions or using vector notation, or player relative directions like forward, left, right, etc. You can also add directions together using the '+' sign, like `east+south`
+There are various ways to define a direction. From using the axes, cardinal directions, vector notation, or player relative directions like forward, left, right, etc. Pro tip: You can also add directions together using simple arithmetic operators, like `east-z+(0,0.5,0)`. Pro tip²: Put `=` at the end to evaluate your direction expression as you are typing it.
 
 <details>
 
@@ -188,7 +188,7 @@ Abbreviation: `R`
 
 ### Noise
 
-Uses the noise's values at the placement's position to get a direction.
+Direction based on the evaluation of a noise function at the placement's position.
 
 Syntax: `Noise(Noise:<noise>)`
 
@@ -216,7 +216,9 @@ Note: For brushes, `Constant(Direction:aim)` will use your player's aim directio
 
 <summary>Examples</summary>
 
+`//ezsc Clipboard Aim Constant`&#x20;
 
+![](../../.gitbook/assets/2024-11-20\_22.21.02.png) ![](../../.gitbook/assets/2024-11-20\_22.21.18.png)
 
 </details>
 
@@ -232,17 +234,37 @@ Abbreviation: `P`
 
 <summary>Examples</summary>
 
+`//ezsc Clipboard PlayerRelative Constant`&#x20;
+
+![](../../.gitbook/assets/2024-11-20\_22.28.21.png) ![](<../../.gitbook/assets/2024-11-20\_22.29.52 (1).png>)
+
+
+
+`//ezbr place Shape(S:Cone,Pattern:diamond_block) PlayerRelative Constant -s 12,36,12`&#x20;
+
+![](../../.gitbook/assets/output-ezgif.com-optimize.gif)
+
 
 
 </details>
 
 ### SurfaceNormal
 
+The approximate surface-normal in the region of the placement's position.
+
+Syntax: `SurfaceNormal`
+
+Abbreviation: `S`
+
+By [normal](https://en.wikipedia.org/wiki/Normal\_\(geometry\)) we mean the direction perpendicular to the terrain in question.
+
 <details>
 
 <summary>Examples</summary>
 
+`//ezbr shape Shape(P:57,S:Cone) SurfaceNormal Constant -s 12,36,12`&#x20;
 
+![](<../../.gitbook/assets/output-ezgif.com-optimize (1).gif>)
 
 </details>
 

@@ -1,8 +1,8 @@
 # Scatter Parameters
 
-`//ezscatter` and `//ezbrush scatter` place multiple shapes within a region. The positions that these commands choose can be customized with the parameters described on this page.
+[`//ezscatter`](./#ezscatter) and [`//ezbrush scatter`](./#ezbrush-scatter) place multiple structures within a region. The positions that these commands choose can be customized with the parameters described on this page.
 
-`scatter` first determines a list of potential placement positions. The density and uniformity of the distribution can be set with the `-n <density>` and the `-u <iterations>` parameters. From these potential placement positions, you can then filter out ones that do not match certain conditions using `-d <directions>` & `-e <threshold>`, `-m <mask>`, and `-t`.
+`scatter` first extracts surfaces from your region (all non-air blocks touching air). You can filter out surfaces that do not match certain conditions using `-d <directions>` & `-e <threshold>`, `-m <mask>`, and `-t`. On the remaining surfaces, a placement position distribution according to the given density `-n <density>` and uniformity  `-u <iterations>` is calculated and structures are placed.&#x20;
 
 ***
 
@@ -46,11 +46,21 @@ Determines how uniformly spread out all placement positions are. Expecting an in
 
 Defaults to 15.
 
-Examples:
-
-* `-u 0` (fully random distribution)
-* `-u 2` (slightly uniform distribution)
-* `-u 20` (maximal uniform distribution)
+> #### Example:
+>
+> Ex. command: `//ezsc Clipboard C C`` `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+>
+>
+>
+> * `-u 0` (fully random distribution)
+> * `-u 2` (slightly uniform distribution)
+> * `-u 20` (maximal uniform distribution)
+>
+>
+>
+> GIF starting with **`-u 0`** and ending with **`-u 20`**:
+>
+> ![](<../../.gitbook/assets/ezgif.com-optimize (3).gif>)
 
 ***
 
@@ -60,13 +70,31 @@ Enables filtering out placement positions on surfaces that are facing certain di
 
 The `-d <directions>` parameter defines the list of directions in which the surface, on which the placement positions points are placed at, must face. If a placement position does not satisfy this condition, no structure will be placed there.
 
-The `-e <threshold>` parameter defines how much the surface normal at the placement position must align with any of the directions given by `-d`. The higher the value the stronger the filter
+The `-e <threshold>` parameter defines how much the surface normal at the placement position must align with any of the directions given by `-d`. The higher the value the stronger the filter.
 
-Examples:
+`-d` has no default value.
 
-* `-d up -e 0.4` (scatter points must be on a surface facing roughly upwards)
-* `-d up -e 0.8` (scatter points must be on a surface facing mostly upwards)
-* `-d n,s,w,e -e 0.5` (scatter points must be on a surface facing any of the cardinal directions, leaving out up and down.)
+`-e` defaults to 0.5. Expected value range is -1 to 1.
+
+> #### Example
+>
+> Ex. command: `//ezsc Clipboard S C`` `**`-d <directions> -e <threshold>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+>
+>
+>
+> **`-d west,up`** (scatter points must be on a surface facing either west or up)![](../../.gitbook/assets/2024-11-20\_16.04.28.png)
+>
+>
+>
+> **`-d up -e <threshold>`** (scatter points must be on a surface facing roughly upwards)
+>
+> GIF
+>
+> * starts at **`-e -1.0`** (weakest filter threshold, all shapes are placed)
+> * pauses at **`-e 0.0`** (half of all directions are filtered out)
+> * and ends at **`-e 1.0`** (strongest filter threshold, no shapes are placed anymore).
+>
+> ![](<../../.gitbook/assets/ezgif.com-optimize (4) (1).gif>)
 
 ***
 
@@ -74,11 +102,19 @@ Examples:
 
 Enables filtering out placement positions that do not match a mask given by `-m <mask>`. Placement positions must satisfy the mask for a structure to be placed.
 
-Examples:
-
-* `-m stone`
-* `-m !stone`
-* `-m =y>95`
+> #### Examples:
+>
+> Ex. command: `//ezsc Clipboard S C`` `**`-m <mask>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+>
+>
+>
+> GIF going through
+>
+> * **`-m red`** (only placement positions on red wool blocks are chosen)
+> * **`-m !red`** (only placements positions on anything but red wool blocks are chosen)
+> * **`-m =y>95`** (only placement positions which are above y>95 are chosen)
+>
+> ![](<../../.gitbook/assets/ezgif.com-optimize (6).gif>)
 
 ***
 

@@ -35,6 +35,7 @@
 * [Region](commands/region.md)
 * [Structures](commands/structures/README.md)
   * [Available Structures](commands/structures/available-structures.md)
+  * [Primary+Secondary Alignment](commands/structures/primary+secondary-alignment.md)
   * [Placement Parameters](commands/structures/placement-parameters.md)
   * [Scatter Parameters](commands/structures/scatter-parameters.md)
   * [Array Parameters](commands/structures/array-parameters.md)

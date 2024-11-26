@@ -270,6 +270,14 @@ By [normal](https://en.wikipedia.org/wiki/Normal\_\(geometry\)) we mean the dire
 
 ### ViewDiff
 
+Define a direction using two clicks. Exclusively for brushes.
+
+Syntax: `ViewDiff`
+
+Abbreviation: `V`
+
+Each placement requires a right click and a left click. The first right click sets the placement position at the targeted block. Left clicking somewhere else then defines a direction: From your first (right) click target position to your second (left) click. 
+
 <details>
 
 <summary>Examples</summary>
@@ -280,6 +288,12 @@ By [normal](https://en.wikipedia.org/wiki/Normal\_\(geometry\)) we mean the dire
 
 ### Tangential
 
+The direction tangential to the path. Exclusively for arrays.
+
+Syntax: `Tangential`
+
+Abbreviation: `T`
+
 <details>
 
 <summary>Examples</summary>
@@ -289,6 +303,14 @@ By [normal](https://en.wikipedia.org/wiki/Normal\_\(geometry\)) we mean the dire
 </details>
 
 ### Orthogonal
+
+The direction orthogonal to the path. Exclusively for arrays.
+
+Syntax: `Orthogonal(Angle:<angle>)`
+
+Abbreviation: `O(A:<angle>)`
+
+The angle, given in degrees, defines the initial direction of the orthogonal direction, whereby 0° and 360°, will face up (at the first part of the spline), 90° and 270° face left and right, and 180° faces down.
 
 <details>
 

@@ -2,12 +2,12 @@
 
 Whenever a structure is placed, it goes through the following pipeline (in that order):
 
-* [Applying Dimensions](placement-parameters.md#controlling-dimensions) (`-s`)
-* [Random Scaling](placement-parameters.md#random-scaling) (`-t`)
-* [Orientation](placement-parameters.md#orientation-advanced) (`-c` and `-k`)
-* [Random Flips](placement-parameters.md#random-flips) (`-f`)
-* [Random 90° Rotations](placement-parameters.md#random-90-rotations) (`-r`)
-* [**Alignment**](placement-parameters.md#alignment-most-important) (`<primary>` and `<secondary>`)
+* [Applying Dimensions](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than) (`-s`)
+* [Random Scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) (`-t`)
+* [Orientation](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) (`-c` and `-k`)
+* [Random Flips](placement-parameters.md#random-flips-f-less-than-randomflipsaxes-greater-than) (`-f`)
+* [Random 90° Rotations](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) (`-r`)
+* [**Alignment**](primary+secondary-alignment.md) (`<primary>` and `<secondary>`)
 
 ezEdits lets you fully customize this pipeline. In brackets are the flags and arguments that apply changes to each step respectively.
 
@@ -39,7 +39,9 @@ Note: The structure might appear stretched or compressed depending on your choic
 
 Most of the structure commands place multiple structure placements at once. To give a bit of variety you can apply some random scaling for each placement.
 
-The `-o <sizeMultiplierRange>` flag lets you specify a range of values. A random number from this range is chosen for each placement. This scaling factor then scales the placement.
+{% hint style="info" %}
+The `-o <sizeMultiplierRange>` applies random scaling for each placement. You specify a range of values. A random number from this range is chosen as the scaling factor for each placement.
+{% endhint %}
 
 By default, the range is `1,1`, meaning the scaling factor is always 1, and thus, does nothing.
 
@@ -57,7 +59,9 @@ By default, the range is `1,1`, meaning the scaling factor is always 1, and thus
 
 ### Random Flips: `-f <randomFlipsAxes>`
 
-> The `-f <randomFlipsAxes>` flag enables random flipping of the structure across any of the axes for each placement.
+{% hint style="info" %}
+The `-f <randomFlipsAxes>` flag enables random flipping of the structure across any of the axes for each placement.
+{% endhint %}
 
 Available values are:
 
@@ -84,7 +88,9 @@ Flips are applied after orientation but before alignment.
 
 ### Random 90°-Rotations: `-r <randomRotationAxis>`
 
-> The `-r <randomRotationAxis>` flag enables random 90° rotation of the structure across either of the axes for each placement.
+{% hint style="info" %}
+The `-r <randomRotationAxis>` flag enables random 90° rotation of the structure across either of the axes for each placement.
+{% endhint %}
 
 Available values are:
 

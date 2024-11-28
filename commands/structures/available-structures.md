@@ -28,10 +28,12 @@ Options:
 
 A structure based on a schematic file.
 
+Syntax: `Schematic(Filename:<name>,...)`
+
 Options:
 
 * Filename (N) (mandatory parameter)
-* Format (F)
+* Format (F). Defaults to sponge.3 (or FAWE's fast if you're using FAWE)
 * Origin (O). Defaults to INHERENT.
   * INHERENT (I) will use the position it was copied at
   * CENTER (C) will use the geometric center of the clipboard
@@ -43,40 +45,35 @@ Options:
 
 <details>
 
-<summary><strong>Shape(Pattern:&#x3C;pattern>,Shape:&#x3C;shape>) (S(P:&#x3C;pattern>,S:&#x3C;shape>))</strong></summary>
+<summary><strong>Shape (S)</strong></summary>
 
 An expression-based shape. EzEdits provides plenty of predefined ones. Material defined by a pattern.
 
 Options:
 
-### Shape (S)
-
-**Current shapes**
-
-_Additional parameters are given within the parenthesis after a shape._
-
-* bean
-* cube
-* curl
-* cylinder
-* ellipsoid
-* fur
-* leaf
-* lemon
-* onion
-* polygon(_Sides_)
-* pyramid(_Sides_)
-* spike
-* supersphere(_Exponent_)
-* tetrahedron
-* torus(_Thickness_)
+* Shape (S). Additional parameters are given within the parenthesis after a shape. Available Shapes are:
+  * bean
+  * cube
+  * curl
+  * cylinder
+  * ellipsoid
+  * fur
+  * leaf
+  * lemon
+  * onion
+  * polygon(_Sides_)
+  * pyramid(_Sides_)
+  * spike
+  * supersphere(_Exponent_)
+  * tetrahedron
+  * torus(_Thickness_)
 
 In addition to these, you can also define your own shape with a WorldEdit expression
 
-**`Expression;<expression>`** or **`Expr;<expression>`**
+**`=<expression>`**
 
 For example, this expression will create spirals:\
-`//ezsc expr;x+=sin(2*pi*y)/2;z+=cos(2*pi*y)/2;x*x+z*z<0.3^`
+`//ezsc =x+=sin(2*pi*y)/2;z+=cos(2*pi*y)/2;x*x+z*z<0.3^2`
 
 ### Pattern (P)
 

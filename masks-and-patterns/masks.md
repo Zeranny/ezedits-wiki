@@ -7,14 +7,13 @@
 <summary>#near Mask</summary>
 
 **`#near[mask][distance]`**\
-**`#near[mask][minDistance][maxDistance]`**\
+&#xNAN;**`#near[mask][minDistance][maxDistance]`**\
 \
 Masks to all blocks within a given spherical (euclidean) distance of a mask.\
 Doesn't modify blocks which match the inner `mask`.\
-Can also be set to exclude blocks closer than the minimum distance.\
+Can also be set to exclude blocks closer than the minimum distance.\\
 
-
-![](../.gitbook/assets/mask\_near\_mask.gif) **`[mask]`**
+![](../.gitbook/assets/mask_near_mask.gif) **`[mask]`**
 
 <img src="../.gitbook/assets/mask_near_max.gif" alt="" data-size="original"> **`[distance]`**
 
@@ -42,8 +41,7 @@ Takes the block the player is aiming at as the mask.
 
 **`#blocklight[lightLevel]` or `#blocklight[minLevel][maxLevel]`**
 
-Masks to blocks of a given block light (Illimunation provided by light sources other than skylight).
-Optionally takes a minimum and maximum light level, matching any level within that range.
+Masks to blocks of a given block light (Illimunation provided by light sources other than skylight). Optionally takes a minimum and maximum light level, matching any level within that range.
 
 </details>
 
@@ -55,8 +53,7 @@ Optionally takes a minimum and maximum light level, matching any level within th
 
 **`#truelight[lightLevel]` or `#truelight[minLevel][maxLevel]`**
 
-Masks to blocks of a given total light level (Illimunation provided by any light sources including skylight).
-Optionally takes a minimum and maximum light level, matching any level within that range.
+Masks to blocks of a given total light level (Illimunation provided by any light sources including skylight). Optionally takes a minimum and maximum light level, matching any level within that range.
 
 </details>
 
@@ -83,7 +80,7 @@ Uses a noise preset values `0.0-1.0` to match blocks above a given noise thresho
 
 Shorthand: `#vgradientm`
 
-Masks blocks along a vector with a given distance length. With closer blocks more likely to pass the mask check. \
+Masks blocks along a vector with a given distance length. With closer blocks more likely to pass the mask check.\
 Compatible with noise presets.
 
 </details>

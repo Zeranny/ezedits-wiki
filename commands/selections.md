@@ -9,7 +9,7 @@
 <summary>Selection Load</summary>
 
 **`//selload [selection]`**\
-_Alternate for \`//ezsel load\`_
+&#xNAN;_&#x41;lternate for \`//ezsel load\`_
 
 The `//selload` command retrieves a previously saved selection from the player's saved selection list.
 
@@ -80,11 +80,9 @@ The `//delpos2` command removes the last secondary selection point for convex an
 
 </details>
 
-
-
 ## Selection Management Commands
 
-All sub-commands are under `//ezselection`  (`//ezsel`) \
+All sub-commands are under `//ezselection` (`//ezsel`)\
 e.g `//ezsel list`
 
 ### `list [-g]`

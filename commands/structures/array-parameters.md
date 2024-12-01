@@ -28,13 +28,13 @@ Negative values cause the placements to overlap.
 >
 > **`-g 10`** : (placements are now further apart)
 >
-> ![](../../.gitbook/assets/ArrayGap\_example2.png)
+> ![](../../.gitbook/assets/ArrayGap_example2.png)
 >
 >
 >
 > **`-g -3`** (negative values cause placements to overlap)
 >
-> ![](../../.gitbook/assets/ArrayGap\_example3.png)
+> ![](../../.gitbook/assets/ArrayGap_example3.png)
 
 ***
 
@@ -52,19 +52,19 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 >
 > **`-q 1`** (default value, no scaling applied)
 >
-> ![](../../.gitbook/assets/ArrayGap\_example1.png)
+> ![](../../.gitbook/assets/ArrayGap_example1.png)
 >
 >
 >
 > **`-q 0.3,3`** (placements are down-scaled by a factor of 0.3 at the beginning of the path and slowly get bigger up to triple their original size towards the end of the spline path)
 >
-> ![](../../.gitbook/assets/ArrayScaling\_example2.png)
+> ![](../../.gitbook/assets/ArrayScaling_example2.png)
 >
 >
 >
 > **`-q 1.5,0.5,5.0,2.0,0.2`** (Tree is being scaled progressively through all given values throughout the spline path)
 >
-> ![](../../.gitbook/assets/ArrayScaling\_example3.png)
+> ![](../../.gitbook/assets/ArrayScaling_example3.png)
 
 ***
 
@@ -76,22 +76,26 @@ Modifies how the path is created from the input (convex selection) points. See _
 
 ### Spline orientation: `-n <normalMode>`
 
-Modifies how the TANGENTIAL and ORTHOGONAL options for the `<primary>` and `<secondary>` arguments behave. See _LINK\_TO\_SPLINES\_PAGE_.
+Modifies how the  ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See _LINK\_TO\_SPLINES\_PAGE_.
 
-#### Examples
-
-First image: `//ezarray Clipboard O T`**`-n CONSISTENT`** (default value)
-
-Second image: `//ezarray Clipboard O T`` `**`-n UPRIGHT`** (placements are not as tilted anymore)
+> #### Examples
+>
+> First image: `//ezarray Clipboard Orthogonal C`` `**`-n CONSISTENT`** (default value)
+>
+> ![](<../../.gitbook/assets/2024-12-01_16.16.08 (1).png>)
+>
+> Second example: `//ezarray Clipboard Orthogonal C`` `**`-n UPRIGHT`** (placements are not as tilted anymore)
+>
+> ![](<../../.gitbook/assets/2024-12-01_16.16.19 (2).png>)
 
 ***
 
 ### Snap placements to surfaces: `-b`
 
-By default structures are placed along the spline path that's induced by the input (convex selection) points. This flag moves the placement positions to the nearest surface block instead, in case the position on the path is in midair or submerged in blocks.
+By default, structures are placed along the spline path that's induced by the input (convex selection) points. This flag moves the placement positions to the nearest surface block instead, in case the position on the path is in midair or submerged in blocks.
 
-#### Example
-
-First image: `//ezarray Clipboard C C` (placements are placed along path)
-
-Second image: `//ezarray Clipboard C C`` `**`-b`** (placements positions moved to nearest surface block)
+> #### Example
+>
+> First image: `//ezarray Clipboard C C` (placements are placed along path)
+>
+> Second image: `//ezarray Clipboard C C`` `**`-b`** (placements positions moved to nearest surface block)

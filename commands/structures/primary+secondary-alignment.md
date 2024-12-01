@@ -188,7 +188,17 @@ Abbreviation: `N(N:<noise>)`
 
 <summary>Examples</summary>
 
+`//ezsc Clipboard Constant Noise`
 
+![](../../.gitbook/assets/2024-12-01_13.55.50.png)
+
+`//ezsc Clipboard Constant Noise(N:Vor(Freq:0.02,DistReturn:cell))`
+
+![](../../.gitbook/assets/2024-12-01_13.54.01.png)
+
+a
+
+a
 
 </details>
 
@@ -226,7 +236,7 @@ Abbreviation: `P`
 
 `//ezsc Clipboard PlayerRelative Constant`
 
-<img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original"><img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original">  <img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
 
 `//ezbr place Shape(S:Cone,Pattern:diamond_block) PlayerRelative Constant -s 12,36,12`
 
@@ -268,7 +278,19 @@ Each placement requires a right click and a left click. The first right click se
 
 <summary>Examples</summary>
 
+`//ezbr place Clipboard SurfaceNormal ViewDiff`
 
+Here I set the primary to SurfaceNormal and control the secondary direction with a second click through the ViewDiff mode. Pay attention to my hand. You can see me alternating between right- and left-clicks. A right click sets the placement position, and a left click sets the ViewDiff direction.
+
+![](../../.gitbook/assets/output.gif)
+
+
+
+`//ezbr place Shape(S:Torus(Thickness:0.4),P:57) PlayerRelative ViewDiff -s 20,20,30 -k x -c 90`
+
+This torus shape required a few more parameters, so this example turned out a bit longer than usual. What's important to see here is that the primary is set to PlayerRelative, meaning the top of the torus always faces the player. The final orientation is determined with a second click though. Here I alternate between left-clicking above and left/right from the placement position to create a linked chain.
+
+![](<../../.gitbook/assets/output (1).gif>)
 
 </details>
 
@@ -283,6 +305,12 @@ Abbreviation: `T`
 <details>
 
 <summary>Examples</summary>
+
+`//ezarray Clipboard Tangential Constant -g 11 -o 2`
+
+The _Tangential_ direction points tangential to the spline path at the position of the placement. If you set the primary to _Tangential_, the top of the shape is pointing along the spline like this.
+
+![](../../.gitbook/assets/2024-12-01_16.11.04.png)
 
 
 
@@ -302,6 +330,18 @@ The angle, given in degrees, defines the initial direction of the orthogonal dir
 
 <summary>Examples</summary>
 
+`//ezarray Clipboard Orthogonal Constant -g 11 -o 2`
 
+The _Orthogonal_ direction points perpendicular to the spline path at the position of the placement. If you set the primary to _Orthogonal_, the top of the shape will point perpendicular to the spline path like this.
+
+![](../../.gitbook/assets/2024-12-01_16.16.08.png)
+
+
+
+`//ezarray Clipboard Orthogonal Constant -g 11 -o 2 -n HORIZONTAL`
+
+The [-n flag](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than) has a direct influence on the orthogonal direction.
+
+![](../../.gitbook/assets/2024-12-01_16.16.19.png)
 
 </details>

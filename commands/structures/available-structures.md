@@ -89,7 +89,7 @@ Mandatory Parameters:
 
 <details>
 
-<summary>Expression (Ex)</summary>
+<summary><strong>Expression (Ex)</strong></summary>
 
 An expression-based shape. One expression defines both the shape and the texturing.
 

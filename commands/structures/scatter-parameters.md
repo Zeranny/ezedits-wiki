@@ -24,19 +24,19 @@ Note: Percent sign is optional. `0.5` is equal to `0.5%`.
 >
 > **`-n 2%`** (default) or **`-n 2`** ('%'-sign is optional):
 >
-> ![](../../.gitbook/assets/ScatterDensity\_example1.png)
+> ![](../../.gitbook/assets/ScatterDensity_example1.png)
 >
 >
 >
 > **`-n 0.5%`**
 >
-> &#x20;![](../../.gitbook/assets/ScatterDensity\_example2.png)
+> &#x20;![](../../.gitbook/assets/ScatterDensity_example2.png)
 >
 >
 >
 > **`-n 5%`**
 >
-> ![](../../.gitbook/assets/ScatterDensity\_example3.png)
+> ![](../../.gitbook/assets/ScatterDensity_example3.png)
 
 ***
 
@@ -60,7 +60,7 @@ Defaults to 15.
 >
 > GIF starting with **`-u 0`** and ending with **`-u 20`**:
 >
-> ![](../../.gitbook/assets/ScatterUniformity\_demo.gif)
+> ![](../../.gitbook/assets/ScatterUniformity_demo.gif)
 
 ***
 
@@ -82,7 +82,7 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 >
 >
 >
-> **`-d west,up`** (scatter points must be on a surface facing either west or up)![](../../.gitbook/assets/ScatterDirectionalFilter\_example.png)
+> **`-d west,up`** (scatter points must be on a surface facing either west or up)![](../../.gitbook/assets/ScatterDirectionalFilter_example.png)
 >
 >
 >
@@ -94,7 +94,7 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 > * pauses at **`-e 0.0`** (half of all directions are filtered out)
 > * and ends at **`-e 1.0`** (strongest filter threshold, no shapes are placed anymore).
 >
-> ![](../../.gitbook/assets/ScatterDirectionalFilter\_demo.gif)
+> ![](../../.gitbook/assets/ScatterDirectionalFilter_demo.gif)
 
 ***
 
@@ -113,8 +113,9 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 > * **`-m red`** (only placement positions on red wool blocks are chosen)
 > * **`-m !red`** (only placements positions on anything but red wool blocks are chosen)
 > * **`-m =y>95`** (only placement positions which are above y>95 are chosen)
+> * and the region before the execution of the command.
 >
-> ![](../../.gitbook/assets/ScatterMaskFilter\_demo.gif)
+> ![](../../.gitbook/assets/ScatterMaskFilter_demo.gif)
 
 ***
 
@@ -127,3 +128,5 @@ The trimming flag removes all placement positions that are close enough to the e
 ### Cut off outside the selection: `-c`
 
 By default `scatter` will determine placement positions within the currently selected region, but will place blocks outside the region if e.g. a placement position is at the border of the currently selected region. You may cut off any such blocks with the `-c` flag. Effectively runs the command with `//gmask #region`
+
+***

@@ -6,7 +6,7 @@ Alignment defines the orientation at which the structure is placed.
 
 Every structure has an intrinsic "up" direction and an intrinsic "forward" direction. By default, structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x).
 
-The most important thing is now: You can define how a structure is placed by defining where its up direction should face and where its forward direction should face (aka. aligning its internal coordinate system).
+The most important thing is now: You can define how a structure is placed by defining where its up direction should face and where its forward direction should face.
 
 We let the user define the alignment using two directions:
 
@@ -28,37 +28,35 @@ Let's say this is our build that we want to place, by for example having it as o
 
 For reference, the red beam is facing towards positive x (east), the blue beam is facing towards positive z (south), and the green beam is facing towards positive y (up).
 
-We now want to place it at various orientations using any of the ezEdits structure commands. For this we may to define a `<primary>` and `<secondary>` direction. Let us go through a few examples for a few such assignments of these parameters and try to understand what is happening:
+We now want to place it at various orientations using any of the ezEdits structure commands. For this, we may define a `<primary>` and `<secondary>` direction. Let us go through a few examples for a few such assignments of these parameters and try to understand what is happening:
 
-Let's set the `<primary>` to `up` and the `<secondary>` to `east` (These are their default directions):
+Let's set the `<primary>` to `up` and the `<secondary>` to `east` (You'd use the [Constant](primary+secondary-alignment.md#constant) mode for that.) (These directions are the default directions):
 
 <img src="../../.gitbook/assets/AlignmentGuide_example1.png" alt="" data-size="original">
 
 Our shape is pasted exactly in the same orientation as we copied it. Up is still up, right is still right, and so on.
 
-Now, consider the following two examples:
+Now, consider the following three examples:
 
 1. The **`<primary>`** is set to **`south`** and the `<secondary>` remains at `east`:
 
 <img src="../../.gitbook/assets/AlignmentGuide_example2.png" alt="" data-size="original">
 
-Notice how, what was originally "up" when we copied it, i.e. the green beam in our case, is pointing into the direction that we set the primary to: south. Meanwhile what was originally east, is still east. The blue beam is going down as a consequence of this 90° rotation.
+Notice how, what was originally _"up"_ when we copied it, i.e. the green beam in our case, is pointing into the direction that we set the primary to: _south_. Meanwhile what was originally _east_, is still _east_. The blue beam is going down as a consequence of this 90° rotation.
 
 2. The **`<primary>`** is set to the vector **`(0,1,1)`**, i.e. the direction going "diagonally" up and south, and the `<secondary>` to `east`:
 
 <img src="../../.gitbook/assets/AlignmentGuide_example3.png" alt="" data-size="original">
 
-Notice, again, how, what was originally "up" when we copied it, i.e. the green beam in our case, is pointing into the direction that we set the primary to: diagonally up and south.
+Notice, again, how, what was originally _"up"_ when we copied it, i.e. the green beam in our case, is pointing into the direction that we set the primary to: _diagonally up and south_.
 
-Here's another interesting example:
-
-The **`<primary>`** is set to the vector **`(1,1,0)`**, i.e. the direction going diagonally up and **east**, while the `<secondary>` is set to `east`:
+3. The **`<primary>`** is set to the vector **`(1,1,0)`**, i.e. the direction going diagonally up and **east**, while the `<secondary>` is set to `east`:
 
 <img src="../../.gitbook/assets/AlignmentGuide_example4.png" alt="" data-size="original">
 
-The green beam is correctly pointing along the primary direction, diagonally up and east. Whatever was pointing up when we //copy'd our clipboard is always aligned with whatever direction the primary is set to!
+The green beam is correctly pointing along the primary direction, diagonally up and east. Whatever was pointing _up_ when we //copy'd our clipboard is always aligned with whatever direction the primary is set to!
 
-But now, notice how, even though the secondary is set to east, the red beam is not pointing directly east anymore (but diagonally down and east). This is intended behavior.
+But now, notice how, even though the secondary is set to _east_, the red beam is not pointing directly east anymore (but diagonally down and east). This is intended behavior.
 
 Imagine if it were pointing east: Then the green and red beam would be at a 45° angle instead of the original 90° angle. Our structure would be deformed/bent/sheared.
 
@@ -108,6 +106,8 @@ The primary and secondary can be set to either:
 
 ## Settings
 
+***
+
 ### Constant
 
 Explicitly set a constant direction for all placements.
@@ -127,19 +127,21 @@ There are various ways to define a direction. From using the axes, cardinal dire
 
 <summary>Examples</summary>
 
-`//ezsc Clipboard C(v:(0,2,0)) C(v:east)`
+`//ezsc Clipboard C(D:(0,2,0)) C(D:east)`
 
 <img src="../../.gitbook/assets/ConstantAlignment_example1.png" alt="" data-size="original">
 
-`//ezsc Clipboard C(v:(-1,2,-1)) C(v:east)`
+`//ezsc Clipboard C(D:(-1,2,-1)) C(D:east)`
 
 <img src="../../.gitbook/assets/ConstantAlignment_example2.png" alt="" data-size="original">
 
-`//ezsc Clipboard C(v:(-1,2,-1)) C(v:-aim)`
+`//ezsc Clipboard C(D:(-1,2,-1)) C(D:-aim)`
 
 <img src="../../.gitbook/assets/ConstantAlignment_example3.png" alt="" data-size="original">
 
 </details>
+
+***
 
 ### Random
 
@@ -160,6 +162,8 @@ Abbreviation: `R`
 
 <img src="../../.gitbook/assets/RandomAlignment_demo1.png" alt="" data-size="original">
 
+
+
 `//ezsc Clipboard Random Constant`
 
 * Only setting the `<primary>` to Random, secondary remains pointing east.
@@ -176,6 +180,8 @@ Abbreviation: `R`
 
 </details>
 
+***
+
 ### Noise
 
 Direction based on the evaluation of a noise function at the placement's position.
@@ -184,23 +190,30 @@ Syntax: `Noise(Noise:<noise>)`
 
 Abbreviation: `N(N:<noise>)`
 
+The default `<noise>` is `Perlin(Freq:0.01)`.
+
 <details>
 
 <summary>Examples</summary>
 
 `//ezsc Clipboard Constant Noise`
 
+* Top-down screenshot
+* `<primary>` is still up and only the `<secondary>` is set to Noise.
+* The default Noise is Perlin Noise.
+
 ![](../../.gitbook/assets/2024-12-01_13.55.50.png)
 
 `//ezsc Clipboard Constant Noise(N:Vor(Freq:0.02,DistReturn:cell))`
 
+* Same scenario as above but using [Cellular Noise](https://en.wikipedia.org/wiki/Voronoi_diagram#/media/File:Coloured_Voronoi_3D_slice.svg).&#x20;
+* You can recognize how each cell has its own random direction.
+
 ![](../../.gitbook/assets/2024-12-01_13.54.01.png)
 
-a
-
-a
-
 </details>
+
+***
 
 ### Aim
 
@@ -210,7 +223,7 @@ Syntax: `Aim`
 
 Abbreviation: `A`
 
-Note: For brushes, `Constant(Direction:aim)` will use your player's aim direction at the time of brush binding, while `Aim` will use the player's aim direction at the time of each brush act.
+Note: For brushes, `Constant(Direction:aim)` will use your player's aim direction at the time of brush binding, while `Aim` will use the player's aim direction during each brush act.
 
 <details>
 
@@ -218,9 +231,14 @@ Note: For brushes, `Constant(Direction:aim)` will use your player's aim directio
 
 `//ezsc Clipboard Aim Constant`
 
-<img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"><img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
+* If we set the `<primary>` to `Aim` then the up direction of our structure, the green beam in our example, will align with our current player's aim direction.
+* My player model is included in the picture for reference. That's where I was looking when I executed the command. The aim direction is visualized in F3+B with the thin blue line.
+
+<img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
 
 </details>
+
+***
 
 ### PlayerRelative
 
@@ -236,13 +254,20 @@ Abbreviation: `P`
 
 `//ezsc Clipboard PlayerRelative Constant`
 
+* If you set the `<primary>` to `PlayerRelative`, then each structure is placed such that its up direction is pointing towards your player position.
+* If you look closely, you can see my player model in the pictures. That's where I executed the command.
+
 <img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original">  <img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
 
-`//ezbr place Shape(S:Cone,Pattern:diamond_block) PlayerRelative Constant -s 12,36,12`
+
+
+`//ezbr place Shape(S:Cone,P:diamond_block) PlayerRelative Constant -s 12,36,12`
 
 <img src="../../.gitbook/assets/PlayerRelative_demo3.gif" alt="" data-size="original">
 
 </details>
+
+***
 
 ### SurfaceNormal
 
@@ -258,11 +283,15 @@ By [normal](https://en.wikipedia.org/wiki/Normal_\(geometry\)) we mean the direc
 
 <summary>Examples</summary>
 
-`//ezbr shape Shape(P:57,S:Cone) SurfaceNormal Constant -s 12,36,12`
+`//ezbr place Shape(P:57,S:Cone) SurfaceNormal Constant -s 12,36,12`
+
+You can see our ingame alignment visualizer dynamically orient itself depending on which part of the terrain you are looking at when you are holding the brush.
 
 <img src="../../.gitbook/assets/SurfaceNormal_demo1.gif" alt="" data-size="original">
 
 </details>
+
+***
 
 ### ViewDiff
 
@@ -280,7 +309,7 @@ Each placement requires a right click and a left click. The first right click se
 
 `//ezbr place Clipboard SurfaceNormal ViewDiff`
 
-Here I set the primary to SurfaceNormal and control the secondary direction with a second click through the ViewDiff mode. Pay attention to my hand. You can see me alternating between right- and left-clicks. A right click sets the placement position, and a left click sets the ViewDiff direction.
+Here I set the primary to SurfaceNormal and control the secondary direction with a second click through the ViewDiff mode. Pay attention to my hand. You can see me alternating between right- and left-clicks. A right click sets the placement position, and a left click sets the ViewDiff direction. Our ingame alignment visualizer dynamically updates depending on your movement and your actions.
 
 ![](../../.gitbook/assets/output.gif)
 
@@ -288,11 +317,13 @@ Here I set the primary to SurfaceNormal and control the secondary direction with
 
 `//ezbr place Shape(S:Torus(Thickness:0.4),P:57) PlayerRelative ViewDiff -s 20,20,30 -k x -c 90`
 
-This torus shape required a few more parameters, so this example turned out a bit longer than usual. What's important to see here is that the primary is set to PlayerRelative, meaning the top of the torus always faces the player. The final orientation is determined with a second click though. Here I alternate between left-clicking above and left/right from the placement position to create a linked chain.
+This torus shape required a few more parameters, so this example turned out a bit longer than usual. What's important to notice though is that the primary is set to PlayerRelative, meaning the top of the torus always faces the player, and the secondary is set to ViewDiff, meaning the final orientation is determined with a second click. Here, after each right-click, I alternate between left-clicking above and left/right from the placement position to create a linked chain.
 
 ![](<../../.gitbook/assets/output (1).gif>)
 
 </details>
+
+***
 
 ### Tangential
 
@@ -316,6 +347,8 @@ The _Tangential_ direction points tangential to the spline path at the position 
 
 </details>
 
+***
+
 ### Orthogonal
 
 The direction orthogonal to the path. Exclusively for arrays.
@@ -324,13 +357,13 @@ Syntax: `Orthogonal(Angle:<angle>)`
 
 Abbreviation: `O(A:<angle>)`
 
-The angle, given in degrees, defines the initial direction of the orthogonal direction, whereby 0° and 360°, will face up (at the first part of the spline), 90° and 270° face left and right, and 180° faces down.
+The angle, given in degrees, defines the initial direction of the orthogonal direction, whereby 0° and 360°, will face up, 90° and 270° face left and right, and 180° faces down (at the first part of the spline at least. It may twist further along if the normal mode is set to CONSISTENT, which is the default setting).
 
 <details>
 
 <summary>Examples</summary>
 
-`//ezarray Clipboard Orthogonal Constant -g 11 -o 2`
+`//ezarray Clipboard Orthogonal Constant`
 
 The _Orthogonal_ direction points perpendicular to the spline path at the position of the placement. If you set the primary to _Orthogonal_, the top of the shape will point perpendicular to the spline path like this.
 
@@ -338,10 +371,12 @@ The _Orthogonal_ direction points perpendicular to the spline path at the positi
 
 
 
-`//ezarray Clipboard Orthogonal Constant -g 11 -o 2 -n HORIZONTAL`
+`//ezarray Clipboard Orthogonal Constant -n HORIZONTAL`
 
 The [-n flag](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than) has a direct influence on the orthogonal direction.
 
 ![](../../.gitbook/assets/2024-12-01_16.16.19.png)
 
 </details>
+
+***

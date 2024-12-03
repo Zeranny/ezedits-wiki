@@ -16,7 +16,7 @@ Negative values cause the placements to overlap.
 
 > #### Examples
 >
-> Ex. command: `//ezarray Clipboard C C`` `**`-g <gap>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+> Ex. command: `//ezarray Clipboard`` `**`-g <gap>`** (with the clipboard being a default vanilla oak tree for no particular reason)
 >
 >
 >
@@ -48,7 +48,7 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 
 > #### Examples
 >
-> Ex. command: `//ezarray Clipboard C C`` `**`-q <radii>`**
+> Ex. command: `//ezarray Clipboard`` `**`-q <radii>`**
 >
 > **`-q 1`** (default value, no scaling applied)
 >
@@ -76,15 +76,15 @@ Modifies how the path is created from the input (convex selection) points. See _
 
 ### Spline orientation: `-n <normalMode>`
 
-Modifies how the  ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See _LINK\_TO\_SPLINES\_PAGE_.
+Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See _LINK\_TO\_SPLINES\_PAGE_.
 
 > #### Examples
 >
-> First image: `//ezarray Clipboard Orthogonal C`` `**`-n CONSISTENT`** (default value)
+> First image: `//ezarray Clipboard Orthogonal Constant`` `**`-n CONSISTENT`** (default value)
 >
 > ![](<../../.gitbook/assets/2024-12-01_16.16.08 (1).png>)
 >
-> Second example: `//ezarray Clipboard Orthogonal C`` `**`-n UPRIGHT`** (placements are not as tilted anymore)
+> Second example: `//ezarray Clipboard Orthogonal Constant`` `**`-n UPRIGHT`** (placements are not as tilted anymore)
 >
 > ![](<../../.gitbook/assets/2024-12-01_16.16.19 (2).png>)
 
@@ -96,6 +96,8 @@ By default, structures are placed along the spline path that's induced by the in
 
 > #### Example
 >
-> First image: `//ezarray Clipboard C C` (placements are placed along path)
+> First image: `//ezarray Clipboard` (placements are placed along path)
 >
-> Second image: `//ezarray Clipboard C C`` `**`-b`** (placements positions moved to nearest surface block)
+> Second image: `//ezarray Clipboard`` `**`-b`** (placements positions moved to nearest surface block)
+>
+> ![](../../.gitbook/assets/ezgif.com-animated-gif-maker.gif)

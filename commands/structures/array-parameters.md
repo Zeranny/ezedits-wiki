@@ -20,19 +20,19 @@ Negative values cause the placements to overlap.
 >
 >
 >
-> **`-g 0`** : (default value, placements are right next to each other)
+> `//ezar Cl`` `**`-g 0`** : (default value, placements are right next to each other)
 >
 > <img src="../../.gitbook/assets/ArrayGap_example1.png" alt="" data-size="original">
 >
 >
 >
-> **`-g 10`** : (placements are now further apart)
+> `//ezar Cl`` `**`-g 10`** : (placements are now further apart)
 >
 > ![](../../.gitbook/assets/ArrayGap_example2.png)
 >
 >
 >
-> **`-g -3`** (negative values cause placements to overlap)
+> `//ezar Cl`` `**`-g -3`** (negative values cause placements to overlap)
 >
 > ![](../../.gitbook/assets/ArrayGap_example3.png)
 
@@ -50,21 +50,37 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 >
 > Ex. command: `//ezarray Clipboard`` `**`-q <radii>`**
 >
-> **`-q 1`** (default value, no scaling applied)
+> `//ezar Cl`` `**`-q 1`**&#x20;
+>
+> (default value, no scaling applied)
 >
 > ![](../../.gitbook/assets/ArrayGap_example1.png)
 >
 >
 >
-> **`-q 0.3,3`** (placements are down-scaled by a factor of 0.3 at the beginning of the path and slowly get bigger up to triple their original size towards the end of the spline path)
+> `//ezar Cl`` `**`-q 0.3,3`**&#x20;
+>
+> (placements are down-scaled by a factor of 0.3 at the beginning of the path and slowly get bigger up to triple their original size towards the end of the spline path)
 >
 > ![](../../.gitbook/assets/ArrayScaling_example2.png)
 >
 >
 >
-> **`-q 1.5,0.5,5.0,2.0,0.2`** (Tree is being scaled progressively through all given values throughout the spline path)
+> `//ezar Cl`` `**`-q 1.5,0.5,5.0,2.0,0.2`**&#x20;
+>
+> (Tree is being scaled progressively through all given values throughout the spline path)
 >
 > ![](../../.gitbook/assets/ArrayScaling_example3.png)
+>
+>
+>
+> `//ezar Cl`` `**`-q 1.5,0.5,5.0,2.0,0.2 -o 0.7,1.3`**&#x20;
+>
+> (Combining progressive scaling -q with [random scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) -o)
+>
+> ![](../../.gitbook/assets/2024-12-04_22.53.26.png)
+>
+>
 
 ***
 
@@ -80,11 +96,19 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 
 > #### Examples
 >
-> First image: `//ezarray Clipboard Orthogonal Constant`` `**`-n CONSISTENT`** (default value)
+> Ex. command: `//ezarray Clipboard Orthogonal Constant`**`-n <normalMode>`**
+>
+> `//ezar Cl O C`` `**`-n CONSISTENT`**&#x20;
+>
+> (default value)
 >
 > ![](<../../.gitbook/assets/2024-12-01_16.16.08 (1).png>)
 >
-> Second example: `//ezarray Clipboard Orthogonal Constant`` `**`-n UPRIGHT`** (placements are not as tilted anymore)
+>
+>
+> `//ezar Cl O C`` `**`-n UPRIGHT`**&#x20;
+>
+> (placements are not as tilted anymore)
 >
 > ![](<../../.gitbook/assets/2024-12-01_16.16.19 (2).png>)
 
@@ -96,8 +120,10 @@ By default, structures are placed along the spline path that's induced by the in
 
 > #### Example
 >
-> First image: `//ezarray Clipboard` (placements are placed along path)
+> GIF comparing
 >
-> Second image: `//ezarray Clipboard`` `**`-b`** (placements positions moved to nearest surface block)
+> `//ezarray Clipboard` (placements are placed along path)
+>
+> `//ezarray Clipboard`` `**`-b`** (placements positions moved to nearest surface block)
 >
 > ![](../../.gitbook/assets/ezgif.com-animated-gif-maker.gif)

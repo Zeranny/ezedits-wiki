@@ -27,9 +27,9 @@ Note: The structure might appear stretched or compressed depending on your choic
 
 > For example, if your clipboard is inherently of size 5x7x5, then setting the dimensions as `-s 5,14,5` will stretch out the structure placement along its y-axis:
 >
-> First image: `//ezsc Clipboard C C -s 5,7,5` (original clipboard size)
+> First image: `//ezsc Clipboard -s 5,7,5` (original clipboard size)
 >
-> Second image: `//ezsc Clipboard C C -s 5,14,5`
+> Second image: `//ezsc Clipboard -s 5,14,5`
 >
 > <img src="../../.gitbook/assets/PlacementDimensions_example1.png" alt="" data-size="original"><img src="../../.gitbook/assets/PlacementDimensions_example2.png" alt="" data-size="original">
 
@@ -49,7 +49,7 @@ By default, the range is `1,1`, meaning the scaling factor is always 1, and thus
 >
 > By setting the range as `-o 0.5,2.0` we get placements of e.g. our clipboard at random sizes between half the desired size and double the desired size,
 >
-> `//ezsc Clipboard C C -o 0.5,2.0`
+> `//ezsc Clipboard -o 0.5,2.0`
 >
 > <img src="../../.gitbook/assets/PlacementRandomScaling_example.png" alt="" data-size="original">
 >
@@ -78,9 +78,9 @@ Flips are applied after orientation but before alignment.
 
 > **Example**
 >
-> First Image: `//ezsc Clipboard C C` (no random flips)
+> First Image: `//ezsc Clipboard` (no random flips)
 >
-> Second Image: `//ezsc Clipboard C C -f XZ` (random mirrors along x- and z-axis, but not y)
+> Second Image: `//ezsc Clipboard -f XZ` (random mirrors along x- and z-axis, but not y)
 >
 > <img src="../../.gitbook/assets/PlacementRandomFlips_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementRandomFlips_example2.png" alt="" data-size="original">
 
@@ -104,9 +104,9 @@ By default, this parameter is not set to anything, i.e. random rotations are dis
 
 > **Example**
 >
-> First Image: `//ezsc Clipboard C C` (no random rotations)
+> First Image: `//ezsc Clipboard` (no random rotations)
 >
-> Second Image: `//ezsc Clipboard C C -r Y` (random 90°-rotations around the y-axis)
+> Second Image: `//ezsc Clipboard -r Y` (random 90°-rotations around the y-axis)
 >
 > <img src="../../.gitbook/assets/PlacementRandomRotations_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementRandomRotations_example2.png" alt="" data-size="original">
 

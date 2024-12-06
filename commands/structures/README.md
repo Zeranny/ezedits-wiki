@@ -73,7 +73,7 @@ Brush that places **multiple** structures along a **brush stroke**.
 ***
 
 {% hint style="info" %}
-Note for server admins: The three structure brushes spawn BlockDisplay entities (only visible to the player using their brush) to help visualize the [Alignment](primary+secondary-alignment.md) of the brushes. Even though it should never be needed, the command `//ezdebug removeVisualizerEntities` will remove any entities spawned by ezEdits from your world in case they got bugged somehow and were not despawned correctly.
+Note for server admins: The three structure brushes spawn BlockDisplay entities (only visible to the player using their brush) to help visualize the [Alignment](primary+secondary-alignment.md) of the brushes. Even though it should never be needed, the command `//ezdebug removeVisualizerEntities` will remove any entities spawned by ezEdits from your world in case they got bugged somehow and were not despawned correctly. Additionally, you can also disable the visualisation entities entirely in the `config.yml` under `brushes.enable-visualisations`.
 {% endhint %}
 
 ***

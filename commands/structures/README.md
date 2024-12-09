@@ -73,19 +73,21 @@ Brush that places **multiple** structures along a **brush stroke**.
 ***
 
 {% hint style="info" %}
-Note for server admins: The three structure brushes spawn BlockDisplay entities (only visible to the player using their brush) to help visualise the [Alignment](primary+secondary-alignment.md) of the brushes. Even though it should never be needed, the command `//ezdebug removeVisualiserEntities` will remove any entities spawned by ezEdits from your world in case they got bugged somehow and were not despawned correctly. Additionally, you can also disable the visualisation entities entirely or change how often they are updated in the `config.yml` under `visualisations`.
+Note for server admins: The three structure brushes spawn BlockDisplay entities (only visible to the player using their brush) to help visualise the [Alignment](primary+secondary-alignment.md) of the brushes. You may disable the visualisation entities entirely or change how often they are updated in the `config.yml` under `visualisations`.
+
+Additionally, the command `//ezdebug removeVisualiserEntities` will remove any entities spawned by ezEdits from your world in case they got bugged somehow and were not despawned correctly, which should never happen, but there you go.
 {% endhint %}
 
 ***
 
 ## Subpage structure
 
-This Structure Wiki has multiple subpages. Here's an overview of the subpages.
+This Structure Wiki has multiple subpages. Below you find an overview of the subpages. We advocate reading the [**Primary+Secondary Alignment**](primary+secondary-alignment.md) page more carefully, as it covers one of the fundamental concepts of the tools. The remaining chapters can be treated as reference materials, useful for specific tasks or to delve deeper into the tool's capabilities.
 
 * [**Available Structures**](available-structures.md)
   * Covers the [`<structure>`](available-structures.md) parameter (necessary for place/scatter/array (and ezspline structure)).
 * [**Primary+Secondary Alignment**](primary+secondary-alignment.md)
-  * Covers the [`[<primary>] [<secondary>]`](primary+secondary-alignment.md) parameters (available for place/scatter/array).
+  * Covers the [`[<primary>] [<secondary>]`](primary+secondary-alignment.md) parameters (available for place/scatter/array).&#x20;
 * [**Placement Parameters**](placement-parameters.md)
   * Covers the following flags (available for place/scatter/array):
     * [`[-s <dimensions>]`](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than)
@@ -100,6 +102,7 @@ This Structure Wiki has multiple subpages. Here's an overview of the subpages.
     * [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than)
     * [`[-d <filterDirections>] [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than)
     * [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than)
+    * [`[-l <coverPattern>]`](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)
     * [`[-t]`](scatter-parameters.md#trim-outside-selection-t)
 * [**Array Parameters**](array-parameters.md)
   * Covers the following flags (only available for array):

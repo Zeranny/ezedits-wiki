@@ -129,6 +129,34 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 
 ***
 
+### Mask Cover Block: `-b <pattern>`
+
+After placing all structures, replace all unaffected blocks within the region that match the mask filter (-m) with the given block. (-m must be set for this flag to take effect.)
+
+This is a niche utility option for cases in which you apply a scatter multiple times in a neighbouring region but do not want to place structures in areas where you already did scatter structures. So using this flag, you can (temporarily within your workflow) overwrite all surface blocks within your region with the given block, such that any following scatter operations that overlap with already covered regions, do not place structures there because the surface blocks have been "covered".
+
+> Examples:
+>
+> `//ezbrush scatter Clipboard -m clay`
+>
+> Running ezbrush scatter **without** the `-b` flag results in densely placed area whereever the clicked areas overlap, which may not be the desired result.
+>
+> ![](../../.gitbook/assets/ScatterMaskCoverBlock_example1.gif)
+>
+>
+>
+> `//ezbrush scatter Clipboard -m clay -b pink`
+>
+> Running ezbrush scatter **with** `-b pink`, whereby pink wool is just some random block in this case, covers the affected areas such that, combined with the `-m clay` mask filter subsequent brush clicks do not place any new shapes there, even when the regions overlap.
+>
+> ![](../../.gitbook/assets/ScatterMaskCoverBlock_example2.gif)
+>
+>
+
+
+
+***
+
 ### Trim outside selection: `-t`
 
 By default `scatter` will determine placement positions within the currently selected region, but will place blocks outside the region if a placement position is at the border of the currently selected region. You may cut off any such blocks (prevent them from being placed) with this `-t` flag.

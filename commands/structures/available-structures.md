@@ -16,7 +16,6 @@ Abbr.: `Cl`
 
 Options:
 
-* **Format (F)**. Defaults to sponge.3 (or FAWE's fast if you're using FAWE)
 * **Origin (O)**. Defaults to INHERENT.
   * INHERENT (I) will use the position it was copied at
   * CENTER (C) will use the geometric center of the clipboard
@@ -40,14 +39,14 @@ Abbr.: `Sc(N:<name>,...)`
 
 Mandatory parameters:
 
-* **Filename (N)**
+* **Filename (N)**. The filename of the schematic you want to place.
 
 Options:
 
-* **Format (F)**. Defaults to sponge.3 (or FAWE's fast if you're using FAWE)
+* **Format (F)**. Format of the schematic file. Defaults to sponge.3 (or FAWE's fast if you're using FAWE). The default value should work for the majority of cases.
 * **Origin (O)**. Defaults to INHERENT.
-  * INHERENT (I) will use the position it was copied at
-  * CENTER (C) will use the geometric center of the clipboard
+  * INHERENT (I) will use the position it was copied at.
+  * CENTER (C) will use the center of the clipboard's region as the origin instead.
 * **PasteMethod (PM**). Defaults to FAST.
   * FAST (fast): Default unaltered pasting of clipboards
   * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched into the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.

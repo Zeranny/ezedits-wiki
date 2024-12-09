@@ -42,7 +42,7 @@ Alias: `//ezsc`
 
 Places **multiple** structures within a **selected region**.
 
-`//ezscatter` [`<structure>`](available-structures.md) [`[<primary>] [<secondary>]`](primary+secondary-alignment.md) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>] [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than) [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>] [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than) [`[-t]`](scatter-parameters.md#cut-off-outside-the-selection-c)
+`//ezscatter` [`<structure>`](available-structures.md) [`[<primary>] [<secondary>]`](primary+secondary-alignment.md) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>] [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than) [`[-i <seed>]`](scatter-parameters.md#distribution-seed-i-less-than-seed-greater-than) [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>] [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than) [`[-t]`](scatter-parameters.md#cut-off-outside-the-selection-c)
 
 ### `//ezbrush scatter`
 
@@ -50,7 +50,7 @@ Alias: `//ezbr sc`
 
 Brush that places **multiple** structures in the area of each **brush click's target**.
 
-`//ezbrush scatter` [`<structure>`](available-structures.md) [`[<primary>] [<secondary>]`](primary+secondary-alignment.md) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>] [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than) [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>] [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than)
+`//ezbrush scatter` [`<structure>`](available-structures.md) [`[<primary>] [<secondary>]`](primary+secondary-alignment.md) [`[-s <dimensions>]`](./#controlling-dimensions-s-less-than-dimensions-greater-than) [`[-o <sizeMultiplierRange>]`](./#random-scaling-o-less-than-sizemultiplierrange-greater-than) [`[-c <orientationAngle>] [-k <orientationAxis>]`](./#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) [`[-f <randomFlipsAxes>]`](./#random-flips-f-less-than-randomflipsaxes-greater-than) [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than) [`[-i <seed>]`](scatter-parameters.md#distribution-seed-i-less-than-seed-greater-than) [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than) [`[-d <filterDirections>] [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than) [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than)
 
 ***
 
@@ -73,7 +73,7 @@ Brush that places **multiple** structures along a **brush stroke**.
 ***
 
 {% hint style="info" %}
-Note for server admins: The three structure brushes spawn BlockDisplay entities (only visible to the player using their brush) to help visualize the [Alignment](primary+secondary-alignment.md) of the brushes. Even though it should never be needed, the command `//ezdebug removeVisualizerEntities` will remove any entities spawned by ezEdits from your world in case they got bugged somehow and were not despawned correctly. Additionally, you can also disable the visualisation entities entirely in the `config.yml` under `brushes.enable-visualisations`.
+Note for server admins: The three structure brushes spawn BlockDisplay entities (only visible to the player using their brush) to help visualise the [Alignment](primary+secondary-alignment.md) of the brushes. Even though it should never be needed, the command `//ezdebug removeVisualiserEntities` will remove any entities spawned by ezEdits from your world in case they got bugged somehow and were not despawned correctly. Additionally, you can also disable the visualisation entities entirely or change how often they are updated in the `config.yml` under `visualisations`.
 {% endhint %}
 
 ***
@@ -96,6 +96,7 @@ This Structure Wiki has multiple subpages. Here's an overview of the subpages.
 * [**Scatter Parameters**](scatter-parameters.md)
   * Covers the following flags (only available for scatter):
     * [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than)
+    * [`[-i <seed>]`](scatter-parameters.md#distribution-seed-i-less-than-seed-greater-than)
     * [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than)
     * [`[-d <filterDirections>] [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than)
     * [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than)

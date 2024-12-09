@@ -40,11 +40,21 @@ Note: Percent sign is optional. `0.5` is equal to `0.5%`.
 
 ***
 
+### Distribution Seed: `-i <seed>`
+
+Sets the seed for the random number generator which chooses the initial random placement positions.&#x20;
+
+Defaults to -1 (random seed), meaning that the placement positions differ in each execution of the scatter command.
+
+***
+
 ### Uniformity: `-u <iterations>`
 
-Determines how uniformly spread out all placement positions are. Expecting an integer between 0 and 20.
+Determines how uniformly spread out all placement positions are. Expecting a positive integer including 0.
 
 Defaults to 15.
+
+The uniformity algorithm works by starting with fully random placement positions, and iteratively repelling all positions apart from one another. This parameter sets the number of iterations to perform. Thus, 0 means the placement positions within your region are purely random.
 
 > #### Example:
 >

@@ -8,17 +8,23 @@ Currently available structures are:
 
 <summary><strong>Clipboard (Cl)</strong></summary>
 
-A structure based on your current WorldEdit Clipboard.
+A structure based on your current WorldEdit Clipboard (//copy).
+
+Syntax: `Clipboard`
+
+Abbr.: `Cl`
 
 Options:
 
-* Origin (O). Defaults to INHERENT.
+* **Format (F)**. Defaults to sponge.3 (or FAWE's fast if you're using FAWE)
+* **Origin (O)**. Defaults to INHERENT.
   * INHERENT (I) will use the position it was copied at
   * CENTER (C) will use the geometric center of the clipboard
-* PasteMethod (PM). Defaults to FAST.
+* **PasteMethod (PM**). Defaults to FAST.
   * FAST (fast): Default unaltered pasting of clipboards
-  * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched onto the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.
-* Example: `Clipboard(Origin:INHERENT,PasteMethod:SMOOTHED)` or `Cl(O:I,PM:smooth)`
+  * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched into the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.
+
+- Example: `Clipboard(Origin:INHERENT,PasteMethod:SMOOTHED)` or `Cl(O:I,PM:smooth)`
 
 </details>
 

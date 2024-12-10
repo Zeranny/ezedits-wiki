@@ -2,7 +2,7 @@
 
 [`//ezscatter`](./#ezscatter) and [`//ezbrush scatter`](./#ezbrush-scatter) place multiple structures within a region. The positions that these commands choose can be customized with the parameters described on this page.
 
-`scatter` first extracts surfaces from your region (all non-air blocks touching air). You can filter out surfaces that do not match certain conditions using `-d <directions>` & `-e <threshold>`, `-m <mask>`, and `-t`. On the remaining surfaces, a placement position distribution according to the given density `-n <density>` and uniformity  `-u <iterations>` is calculated and structures are placed.&#x20;
+`scatter` first extracts all surface blocks (all non-air blocks touching air) from a region of your choice. You can filter out surfaces that do not match certain conditions using `-d <directions>` & `-e <threshold>`, and `-m <mask>`. On the remaining surfaces, a placement position distribution according to the given density `-n <density>` and uniformity  `-u <iterations>` is calculated and structures are placed.&#x20;
 
 ***
 
@@ -16,7 +16,7 @@ Determines the region in which the placement positions are scattered.
 
 Available options:
 
-* _Box_ (_B_): A cuboid region
+* _Box_ (_B_): A cuboid region. (Named Box to have single-letter abbreviations)
 * _Ellipsoid_ (_E_): An ellipsoidal region
 * _Cylinder_ (_C_): A cylindrical region
 * _Saved_ (_S_): A selection saved using //ezsel save.
@@ -41,75 +41,9 @@ By default, all regions are centered around the player position (for `//ezsc`) o
 >
 > ![](../../.gitbook/assets/ScatterRegion_example1.gif)
 >
-> Selection is visualized using pink wool for clearity (done by using the [-p flag](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)).
-
-***
-
-### Density: `-n <density>`
-
-Determines how many placements are placed, by specifying a density percentage.
-
-The density value is a percentage. It determines what percentage of surface blocks a structure should be placed.
-
-To be overly specific: Let N be the result of `//count [!air]&[~air]`, then the final amount of structures placed is equal to _N \* density / 100_. (The total amount can be lower due to the mask filter, and the directional filter)
-
-Note: Percent sign is optional. `0.5` is equal to `0.5%`.
-
-> #### Examples:
+> Whereby `$triangle` is just some 3-point polyhedral selection I saved with //ezsel.
 >
-> Ex. command: **`//ezsc Clipboard C C -n <density>`** (with the clipboard being a default vanilla oak tree for no particular reason)
->
->
->
-> **`-n 2%`** (default) or **`-n 2`** ('%'-sign is optional):
->
-> ![](../../.gitbook/assets/ScatterDensity_example1.png)
->
->
->
-> **`-n 0.5%`**
->
-> &#x20;![](../../.gitbook/assets/ScatterDensity_example2.png)
->
->
->
-> **`-n 5%`**
->
-> ![](../../.gitbook/assets/ScatterDensity_example3.png)
-
-***
-
-### Distribution Seed: `-i <seed>`
-
-Sets the seed for the random number generator which chooses the initial random placement positions.&#x20;
-
-Defaults to -1 (random seed), meaning that the placement positions differ in each execution of the scatter command.
-
-***
-
-### Uniformity: `-u <iterations>`
-
-Determines how uniformly spread out all placement positions are. Expecting a positive integer including 0.
-
-Defaults to 15.
-
-The uniformity algorithm works by starting with fully random placement positions, and iteratively repelling all positions apart from one another. This parameter sets the number of iterations to perform. Thus, 0 means the placement positions within your region are purely random.
-
-> #### Example:
->
-> Ex. command: `//ezsc Clipboard C C`` `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree for no particular reason)
->
->
->
-> * `-u 0` (fully random distribution)
-> * `-u 2` (slightly uniform distribution)
-> * `-u 20` (maximal uniform distribution)
->
->
->
-> GIF starting with **`-u 0`** and ending with **`-u 20`**:
->
-> ![](../../.gitbook/assets/ScatterUniformity_demo.gif)
+> Selection is visualised using pink wool for clarity (using the [-l flag](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)).
 
 ***
 
@@ -168,11 +102,95 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 
 ***
 
+### Density: `-n <density>`
+
+Determines how many placements are placed, by specifying a density percentage.
+
+The density value is a percentage. It determines what percentage of surface blocks a structure is placed on. Specifically, it determines the percentage of positions _after_ the directional filter and the mask filter have been applied.
+
+To be overly specific: Let _N_ be the remaining surface blocks (e.g. the result of `//count [!air]&[~air]` if neither filter is used), then the final amount of structures placed is equal to _N \* density / 100_.
+
+Note: Percent sign is optional. `0.5` is equal to `0.5%`.
+
+> #### Examples:
+>
+> Ex. command: **`//ezsc Clipboard C C -n <density>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+>
+>
+>
+> **`-n 2%`** (default) or **`-n 2`** ('%'-sign is optional):
+>
+> ![](../../.gitbook/assets/ScatterDensity_example1.png)
+>
+>
+>
+> **`-n 0.5%`**
+>
+> &#x20;![](../../.gitbook/assets/ScatterDensity_example2.png)
+>
+>
+>
+> **`-n 5%`**
+>
+> ![](../../.gitbook/assets/ScatterDensity_example3.png)
+
+{% hint style="info" %}
+The density specifies the percentage of _**remaining**_ surface blocks on which a placement is placed.&#x20;
+
+If for example, you use the mask filter to restrict the placement to a specific block which only rarely occurs within your selection, e.g. with the following region and `-m sea_lantern`,
+
+![](../../.gitbook/assets/2024-12-10_13.54.52.png)
+
+Then `-n 2%`, the default density, implies that from all sea\_lantern blocks (that touch air) only 2% are chosen as a placement position. The result of doing `//ezsc Clipboard -m sea_lantern` is therefore:
+
+![](../../.gitbook/assets/2024-12-10_13.54.43.png)
+
+For cases like these, where you want to place a structure at every instance of a specific block you'd therefore use `-n 100%`. Doing `//ezsc Clipboard -m sea_lantern -n 100%` in our example results in:
+
+![](../../.gitbook/assets/2024-12-10_13.54.33.png)
+{% endhint %}
+
+***
+
+### Distribution Seed: `-i <seed>`
+
+Sets the seed for the random number generator which chooses the initial random placement positions.&#x20;
+
+Defaults to -1 (random seed), meaning that the placement positions differ in each execution of the scatter command.
+
+***
+
+### Uniformity: `-u <iterations>`
+
+Determines how uniformly spread out all placement positions are. Expecting a positive integer including 0.
+
+Defaults to 15.
+
+The uniformity algorithm works by starting with fully random placement positions, and iteratively repelling all positions apart from one another. This parameter sets the number of repelling iterations to perform. Thus, 0 means the placement positions within your region are purely random.
+
+> #### Example:
+>
+> Ex. command: `//ezsc Clipboard C C`` `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+>
+>
+>
+> * `-u 0` (fully random distribution)
+> * `-u 2` (slightly uniform distribution)
+> * `-u 20` (very uniform distribution)
+>
+>
+>
+> GIF starting with **`-u 0`** and ending with **`-u 20`**:
+>
+> ![](../../.gitbook/assets/ScatterUniformity_demo.gif)
+
+***
+
 ### Mask Cover Block: `-l <pattern>`
 
-After placing all structures, replace all unaffected blocks within the region that match the mask filter (-m) with the given block. (-m must be set for this flag to take effect.)
+After placing all structures, replace all unaffected surface blocks within the region that match the mask filter (-m) with the given block. (-m must be set for this flag to take effect.)
 
-This is a niche utility option for cases in which you apply a scatter multiple times in a neighbouring region but do not want to place structures in areas where you already did scatter structures. So using this flag, you can (temporarily within your workflow) overwrite all surface blocks within your region with the given block, such that any following scatter operations that overlap with already covered regions, do not place structures there because the surface blocks have been "covered".
+This is a niche utility option for cases in which you apply a scatter multiple times in a neighbouring region but do not want to place structures in areas where you already did scatter before. So using this flag, you can (temporarily within your workflow) overwrite all surface blocks within your region with the given block, such that any following scatter operations that overlap with already covered regions, do not place structures there because the surface blocks have been "covered".
 
 > Examples:
 >
@@ -189,10 +207,6 @@ This is a niche utility option for cases in which you apply a scatter multiple t
 > Running ezbrush scatter **with** `-b pink`, whereby pink wool is just some random block in this case, covers the affected areas such that, combined with the `-m clay` mask filter subsequent brush clicks do not place any new shapes there, even when the regions overlap.
 >
 > ![](../../.gitbook/assets/ScatterMaskCoverBlock_example2.gif)
->
->
-
-
 
 ***
 
@@ -208,7 +222,9 @@ Turning on this flag is comparable to running the command with `//gmask #region`
 >
 > ![](../../.gitbook/assets/2024-12-02_21.46.25.png)
 >
-> Then executing the ezsc command without the flag will result in blocks potentially being placed outside the region. Only the placement/origin positions are restricted to the region. Without flag:
+> Then executing the ezsc command without the flag will result in blocks potentially being placed outside the region. Only the placement/origin positions are restricted to the region.
+>
+> Without `-t` flag:
 >
 > `//ezsc Cl C C -s 15,21,15 -n 0.5%`
 >
@@ -216,7 +232,7 @@ Turning on this flag is comparable to running the command with `//gmask #region`
 >
 > With `-t` flag:
 >
-> `//ezsc Cl C C -s 15,21,15 -n 0.5% -t`
+> `//ezsc Cl C C -s 15,21,15 -n 0.5%`` `**`-t`**
 >
 > ![](../../.gitbook/assets/2024-12-02_21.46.46.png)
 

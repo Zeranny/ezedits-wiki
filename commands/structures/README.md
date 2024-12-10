@@ -102,11 +102,11 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
 * [**Scatter Parameters**](scatter-parameters.md)
   * Covers the following flags (only available for scatter):
     * [`[-h <region>]`](scatter-parameters.md#scatter-region-h-less-than-region-greater-than)
+    * [`[-d <filterDirections>] [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than)
+    * [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than)
     * [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than)
     * [`[-i <seed>]`](scatter-parameters.md#distribution-seed-i-less-than-seed-greater-than)
     * [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than)
-    * [`[-d <filterDirections>] [-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than)
-    * [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than)
     * [`[-l <coverPattern>]`](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)
     * [`[-t]`](scatter-parameters.md#trim-outside-selection-t)
 * [**Array Parameters**](array-parameters.md)

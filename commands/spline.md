@@ -5,6 +5,8 @@ e.g `//ezspline beads`
 
 _Note that every spline can only be run with a Convex Selection type (\`//sel convex\`)._
 
+***
+
 ## Common parameters
 
 The following parameters and flags are common between all //ezspline subcommands.
@@ -38,6 +40,18 @@ Defines how much to twist the shape along the spline. The input is an angle.
 
 Specifics: The angle determines by how much the shape is rotated throughout the length of the current diameter of the spline. Meaning if the diameter is 30 blocks, then after 30 blocks of path length, the shape will be rotated by the given angle.
 
+<details>
+
+<summary>Example:</summary>
+
+Example command: `//ezsp polygon clay 10 4`` `**`-t <angle>`**
+
+Gif starts at `-t 0` and increases up to `-t 90`.
+
+![](../.gitbook/assets/SplinesTwist_example.gif)
+
+</details>
+
 ***
 
 ### Kochanek-Bartel-Parameters: `-p <kbParameters>`
@@ -48,18 +62,40 @@ Provide `<tension>:<bias>:<continuity>`, colon-separated in that order (default 
 
 [This diagram](https://en.wikipedia.org/wiki/Kochanek%E2%80%93Bartels_spline#/media/File:Kochanek_bartels_spline.svg) shows what each parameter does (Note: the order in the diagram (c,t,b) is different than what ezspline expects (t,b,c)).
 
+<details>
+
+<summary>Examples:</summary>
+
+Example command: `//ezsp polygon clay 10 4`` `**`-p <kbParameters>`**
+
+**`-p 0:0:0`**
+
+![](../.gitbook/assets/SplinesKBParameters_example1.png)
+
+**`-p 0:-1:0`**
+
+![](../.gitbook/assets/SplinesKBParameters_example2.png)
+
+**`-p -1:0:0`**
+
+![](../.gitbook/assets/SplinesKBParameters_example4.png)
+
+**`-p 0:1:0`**
+
+![](../.gitbook/assets/SplinesKBParameters_example3.png)
+
+</details>
+
 ***
 
 ### Quality: `-q <quality>`
 
-Quality. Sets the number of samples of the shape-function per block. Must be greater than 0.
+Sets the number of samples of the shape per dimension per block. Must be greater than 0.
 
 If you get air gaps, set the quality to a higher value.
 
 {% hint style="warning" %}
-The larger the value, the longer it will take. Large values in particular may take a very long while.
-
-While `-q 2` might take a few _seconds_, `-q 10` will likely take _minutes_. Also, returns are diminishing.
+Higher values for the `-q` parameter can significantly increase processing time. While small values (e.g., `-q 2`) are relatively quick, larger values (e.g., `-q 10`) may take several minutes. Additionally, the benefit of increasing the `-q` value diminishes beyond a certain point. We suggest using 2 while testing parameters and rendering with 4-6 for the final placement.
 {% endhint %}
 
 <details>

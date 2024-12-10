@@ -99,6 +99,7 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
     * [`[-c <orientationAngle>] [-k <orientationAxis>]`](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great)
     * [`[-f <randomFlipsAxes>]`](placement-parameters.md#random-flips-f-less-than-randomflipsaxes-greater-than)
     * [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
+    * [`[-a]`](placement-parameters.md#place-air-a)
 * [**Scatter Parameters**](scatter-parameters.md)
   * Covers the following flags (only available for scatter):
     * [`[-h <region>]`](scatter-parameters.md#scatter-region-h-less-than-region-greater-than)

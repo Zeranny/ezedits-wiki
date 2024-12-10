@@ -123,3 +123,11 @@ The rotation works identically to `//ezd rotate`.
 By default, the rotation axis `-k` is `y` or `up` and the rotation angle `-c` is `0`, and thus, does nothing.
 
 For example, if you set the rotation axis to `-k x` and the rotation angle to `-c 90` then your structure is rotated to the side. Its eastern side will now be its top side and so on.
+
+***
+
+### Place Air: `-a`
+
+By default, if this flag _is not_ set, air blocks are skipped when placing a structure. When this flag _is_ set, air blocks within the structure are able to override existing blocks.&#x20;
+
+(Note: This behaviour is opposite to `//paste`'s  `-a` flag. It may be confusing, but we think it's more convenient for our commands.)

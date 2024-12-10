@@ -82,7 +82,11 @@ Additionally, the command `//ezdebug removeVisualiserEntities` will remove any e
 
 ## Subpage structure
 
-This Structure Wiki has multiple subpages. Below you find an overview of the subpages. We advocate reading the [**Primary+Secondary Alignment**](primary+secondary-alignment.md) page more carefully, as it covers one of the fundamental concepts of the tools. The remaining chapters can be treated as reference materials, useful for specific tasks or to delve deeper into the tool's capabilities.
+This Structure Wiki has multiple subpages. Below you find an overview of the subpages.
+
+{% hint style="info" %}
+We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-alignment.md) page more carefully, as it covers one of the fundamental concepts of the tools. The remaining chapters can be treated as reference materials, useful for specific tasks or to delve deeper into the tool's capabilities.
+{% endhint %}
 
 * [**Available Structures**](available-structures.md)
   * Covers the [`<structure>`](available-structures.md) parameter (necessary for place/scatter/array (and ezspline structure)).
@@ -97,6 +101,7 @@ This Structure Wiki has multiple subpages. Below you find an overview of the sub
     * [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
 * [**Scatter Parameters**](scatter-parameters.md)
   * Covers the following flags (only available for scatter):
+    * [`[-h <region>]`](scatter-parameters.md#scatter-region-h-less-than-region-greater-than)
     * [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than)
     * [`[-i <seed>]`](scatter-parameters.md#distribution-seed-i-less-than-seed-greater-than)
     * [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than)

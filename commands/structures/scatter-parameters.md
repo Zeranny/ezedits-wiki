@@ -6,6 +6,45 @@
 
 ***
 
+### Scatter Region: `-h <region>`
+
+Determines the region in which the placement positions are scattered.
+
+* Defaults to:
+  * Your currently selected region for `//ezscatter`, or
+  * a 40x40x40 cuboid region around the clicked position for `//ezbrush scatter`.
+
+Available options:
+
+* _Box_ (_B_): A cuboid region
+* _Ellipsoid_ (_E_): An ellipsoidal region
+* _Cylinder_ (_C_): A cylindrical region
+* _Saved_ (_S_): A selection saved using //ezsel save.
+* _Active_ (_A_): Your currently selected region.
+
+The dimensions of the first three can be set using the _Dimensions_ (_D_) parameter, e.g. `Box(Dimensions:"60,30,60")`  or `B(D:"60,30,60")`. It defaults to `"40,40,40"`.
+
+By default, all regions are centered around the player position (for `//ezsc`) or the clicked position (for `//ezbr sc`). You may define an offset using the _Offset_ (_O_) parameter to move the center of the region relative to its target position.
+
+> #### Examples:
+>
+> Ex. command: `//ezbrush scatter Clipboard`` `**`-h <region>`**
+>
+> Gif going through
+>
+> * `-h Box`
+> * `-h Cylinder`
+> * `-h Saved(Name:$triangle)`
+> * `-h Saved(Name:$triangle,Offset:(0,0,10))`&#x20;
+>
+> after using the brush once at the same position:
+>
+> ![](../../.gitbook/assets/ScatterRegion_example1.gif)
+>
+> Selection is visualized using pink wool for clearity (done by using the [-p flag](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)).
+
+***
+
 ### Density: `-n <density>`
 
 Determines how many placements are placed, by specifying a density percentage.
@@ -129,7 +168,7 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 
 ***
 
-### Mask Cover Block: `-b <pattern>`
+### Mask Cover Block: `-l <pattern>`
 
 After placing all structures, replace all unaffected blocks within the region that match the mask filter (-m) with the given block. (-m must be set for this flag to take effect.)
 
@@ -139,7 +178,7 @@ This is a niche utility option for cases in which you apply a scatter multiple t
 >
 > `//ezbrush scatter Clipboard -m clay`
 >
-> Running ezbrush scatter **without** the `-b` flag results in densely placed area whereever the clicked areas overlap, which may not be the desired result.
+> Running ezbrush scatter **without** the `-l` flag results in densely placed area whereever the clicked areas overlap, which may not be the desired result.
 >
 > ![](../../.gitbook/assets/ScatterMaskCoverBlock_example1.gif)
 >
@@ -161,9 +200,7 @@ This is a niche utility option for cases in which you apply a scatter multiple t
 
 By default `scatter` will determine placement positions within the currently selected region, but will place blocks outside the region if a placement position is at the border of the currently selected region. You may cut off any such blocks (prevent them from being placed) with this `-t` flag.
 
-Turning on this flag is comparable to running the command with `//gmask #region`.
-
-Note: This flag is only available for the scatter command, not the brush.
+Turning on this flag is comparable to running the command with `//gmask #region` (for //ezscatter at least).
 
 > Examples:
 >

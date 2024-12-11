@@ -13,36 +13,60 @@ The following parameters and flags are common between all //ezspline subcommands
 
 ***
 
-### Radius progression: `<radii>`
+### Radius progression: <mark style="color:yellow;">`<radii>`</mark>
 
 Defines the thickness (course) of the spline.
 
 **Acceptable values are:** one or more comma-separated entries, where each entry is either:
 
 1. A **radius value** (e.g., `10`, `6.9`). Radius values must be greater than 0.
-2. A **position and radius** separated by a colon, where the position is a decimal between 0 and 1 (e.g., `0:10`, `0.5:15.5`).
+2. A **position and radius**, separated by a colon, where the position is a decimal between 0 and 1 (e.g., `0:10`, `0.5:15.5`).
 
 Whereby if specified, each _position_ must be strictly ascending, and the first and last entries must be positions of `0` and `1`. If positions are omitted, they will be set and interpolated automatically.
 
-Example:
+<details>
 
-* `0:10, 0.3:20, 1:30`&#x20;
-  * `0:10` - At the beginning of the spline (at 0% of its path), start with radius 10,
-  * `0.3:20` - At 30% of the path, reach radius 20,
-  * `1:30` - At the end of the path (100%) end with radius 30.
-  * Equivalent to `10,0.3:20,30` since the first and last entries are automatically positions 0 and 1.
+<summary><mark style="color:blue;">Examples:</mark></summary>
+
+Example command: `//ezsp rope clay`` `**`<radii>`**
+
+Single radius entry: GIF going from `//ezsp rope clay`` `**`5`** through up to `//ezsp rope clay`` `**`10`**.
+
+![](../.gitbook/assets/SplinesRadii_example1.gif)&#x20;
+
+Two radii entries: `//ezsp rope clay`` `**`1,12`** . The spline starts with radius 1 and progressively gets thicker up to radius 12 at the end.
+
+![](../.gitbook/assets/SplinesRadii_example2.png)
+
+Triple radii entries: `//ezsp rope clay`` `**`1,12,1`**. The spline starts with radius 1, and progressively gets larger up until the middle of the spline (50% of the path) where it reaches 12 and goes back to radius 1 towards the end:
+
+![](../.gitbook/assets/SplinesRadii_example3.png)
+
+As the first and last values always define the start- and end-radius of the spline and as all unspecified positions in between are interpolated, that means `1,12,1` (no positions specified) is expanded to **`0`**`:1,`**`0.5`**`:12,`**`1`**`:1` when you execute the command. You may also specify the positions yourself though.
+
+Here's a GIF going from `1,`**`0.1`**`:12,1` up through `1,`**`0.9`**`:12,1`. This shifts the "keyframe position" of our radius-12-entry throughout the spline (start and end are fixed at radius 1):
+
+![](../.gitbook/assets/SplinesRadii_example4.gif)&#x20;
+
+You may define any number of entries and their respective positions.
+
+`//ezsp rope clay 2,10,2,12,2,10,2`
+
+![](../.gitbook/assets/SplinesRadii_example5.png)
+
+</details>
 
 ***
 
-### Twist: `-t <angle>`
+### Twist: <mark style="color:yellow;">`-t <angle>`</mark>
 
 Defines how much to twist the shape along the spline. The input is an angle.
 
-Specifics: The angle determines by how much the shape is rotated throughout the length of the current diameter of the spline. Meaning if the diameter is 30 blocks, then after 30 blocks of path length, the shape will be rotated by the given angle.
+Specifics: The angle determines how much the shape is rotated throughout the length of the current diameter of the spline. Meaning, that if the diameter is 30 blocks, then after 30 blocks of path length, the shape will have rotated by the given angle.
 
 <details>
 
-<summary>Example:</summary>
+<summary><mark style="color:blue;">Example:</mark></summary>
 
 Example command: `//ezsp polygon clay 10 4`` `**`-t <angle>`**
 
@@ -54,7 +78,7 @@ Gif starts at `-t 0` and increases up to `-t 90`.
 
 ***
 
-### Kochanek-Bartel-Parameters: `-p <kbParameters>`
+### Kochanek-Bartel-Parameters: <mark style="color:yellow;">`-p <kbParameters>`</mark>
 
 Parameters for the flow of the spline. Determines what path the spline takes through the given node positions.
 
@@ -64,7 +88,7 @@ Provide `<tension>:<bias>:<continuity>`, colon-separated in that order (default 
 
 <details>
 
-<summary>Examples:</summary>
+<summary><mark style="color:blue;">Examples:</mark></summary>
 
 Example command: `//ezsp polygon clay 10 4`` `**`-p <kbParameters>`**
 
@@ -88,7 +112,7 @@ Example command: `//ezsp polygon clay 10 4`` `**`-p <kbParameters>`**
 
 ***
 
-### Quality: `-q <quality>`
+### Quality: <mark style="color:yellow;">`-q <quality>`</mark>
 
 Sets the number of samples of the shape per dimension per block. Must be greater than 0.
 
@@ -100,7 +124,7 @@ Higher values for the `-q` parameter can significantly increase processing time.
 
 <details>
 
-<summary>Example</summary>
+<summary><mark style="color:blue;">Example</mark></summary>
 
 Example command: `//ezspline beads clay 10`` `**`-q <quality>`**
 
@@ -114,7 +138,7 @@ For this example, `-q 2` took less than a second, and `-q 7` already took 20 sec
 
 ***
 
-### Spline Normal Mode: `-n <normalMode>`
+### Spline Normal Mode: <mark style="color:yellow;">`-n <normalMode>`</mark>
 
 There are three modes:
 
@@ -124,7 +148,7 @@ There are three modes:
 
 <details>
 
-<summary>Examples:</summary>
+<summary><mark style="color:blue;">Examples:</mark></summary>
 
 Example command: `//ezspline expression black,red,blue,white,yellow -o 5`` `**`-n <normalMode>`**` ``((z%2)>1.5?5:2*(x>0)+(y>0))+0.001`
 
@@ -160,13 +184,15 @@ Example command: `//ezspline expression black,red,blue,white,yellow -o 5`` `**`-
 
 ***
 
-## `//ezspline ...`
+## Predefined Spline Shapes
 
-### `beads`
+The following //ezsp subcommands feature predefined shapes with a smaller set of parameters.
+
+### `//ezspline`` `<mark style="color:yellow;">`beads`</mark>
 
 <details>
 
-<summary>Bead spline</summary>
+<summary><mark style="color:blue;">Bead spline</mark></summary>
 
 **`//ezsp beads <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
@@ -189,11 +215,11 @@ Generates a beads-shaped spline along the selected positions.
 
 </details>
 
-### `chainlink`
+### `//ezspline`` `<mark style="color:yellow;">`chainlink`</mark>
 
 <details>
 
-<summary>Chain Link Spline</summary>
+<summary><mark style="color:blue;">Chain Link Spline</mark></summary>
 
 **`//ezsp chainlink <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[inner] [offset] [stretch]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
@@ -222,11 +248,11 @@ Generates a chainlink-shaped spline along the selected positions.
 
 </details>
 
-### `cubes`
+### `//ezspline`` `<mark style="color:yellow;">`cubes`</mark>
 
 <details>
 
-<summary>Cube Spline</summary>
+<summary><mark style="color:blue;">Cube Spline</mark></summary>
 
 **`//ezsp cubes <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[gap]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
@@ -251,11 +277,11 @@ Generates a chainlink-shaped spline along the selected positions.
 
 </details>
 
-### `fishnet`
+### `//ezspline`` `<mark style="color:yellow;">`fishnet`</mark>
 
 <details>
 
-<summary>Fishnet Spline</summary>
+<summary><mark style="color:blue;">Fishnet Spline</mark></summary>
 
 **`//ezsp fishnet <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[inner] [offset] [stretch]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
@@ -284,11 +310,11 @@ Generates a fishnet-shaped spline along the selected positions.
 
 </details>
 
-### `oscillate`
+### `//ezspline`` `<mark style="color:yellow;">`oscillate`</mark>
 
 <details>
 
-<summary>Oscillation Spline</summary>
+<summary><mark style="color:blue;">Oscillation Spline</mark></summary>
 
 **`//ezsp oscillate <pattern> <radii> [depth] [interval] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
 
@@ -307,11 +333,11 @@ Generates a spline with an oscillating thickness along the selected convex regio
 
 </details>
 
-### `polygon`
+### `//ezspline`` `<mark style="color:yellow;">`polygon`</mark>
 
 <details>
 
-<summary>Polygonal Spline</summary>
+<summary><mark style="color:blue;">Polygonal Spline</mark></summary>
 
 **`//ezsp polygon <pattern> <radii> [sides] [spin] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
 
@@ -330,11 +356,11 @@ Creates a regular polygon-shaped spline along the selected convex region.
 
 </details>
 
-### `rings`
+### `//ezspline`` `<mark style="color:yellow;">`rings`</mark>
 
 <details>
 
-<summary>Rings Spline</summary>
+<summary><mark style="color:blue;">Rings Spline</mark></summary>
 
 **`//ezsp rings <pattern> <radii> [count] [thickness] [innerRadius] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
 
@@ -355,11 +381,11 @@ Creates a spline of rings along the selected convex region.
 
 </details>
 
-### `rope`
+### `//ezspline`` `<mark style="color:yellow;">`rope`</mark>
 
 <details>
 
-<summary>Rope Spline</summary>
+<summary><mark style="color:blue;">Rope Spline</mark></summary>
 
 **`//ezsp rope <pattern> <radii> [ropeCount] [spin] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
 
@@ -378,11 +404,11 @@ Creates a rope-shaped spline along the selected convex region.
 
 </details>
 
-### `simple`
+### `//ezspline`` `<mark style="color:yellow;">`simple`</mark>
 
 <details>
 
-<summary>Simple Spline</summary>
+<summary><mark style="color:blue;">Simple Spline</mark></summary>
 
 **`//ezsp simple <pattern> <radii> [-p <kb_parameters>] [-q <quality>]`**\
 &#xNAN;**`[-n <normalMode>] [-g] [-h]`**
@@ -402,13 +428,15 @@ Creates a simple cylindrical spline along the selected convex region.
 
 ***
 
-## Advanced splines
+## Advanced Spline Shapes
 
-### `noise`
+The following //ezspline subcommands feature three very powerful but more advanced spline shapes with effectively limitless customizability.
+
+### `//ezspline`` `<mark style="color:yellow;">`noise`</mark>
 
 <details>
 
-<summary>Noise Spline</summary>
+<summary><mark style="color:blue;">Noise Spline</mark></summary>
 
 **`//ezsp noise <pattern> <radii> [strength] [stretch] [spin] <noise> [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
 
@@ -429,11 +457,11 @@ Creates a noise-based spline along the selected convex region.
 
 </details>
 
-### `expression`
+### `//ezspline`` `<mark style="color:yellow;">`expression`</mark>
 
 <details>
 
-<summary>Expression Spline</summary>
+<summary><mark style="color:blue;">Expression Spline</mark></summary>
 
 **`//ezsp expression <palette>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-z] [-o] [-h]`**
 
@@ -460,11 +488,11 @@ Generates a spline shaped by the given WorldEdit expression along the selected p
 
 </details>
 
-### `structure`
+### `//ezspline`` `<mark style="color:yellow;">`structure`</mark>
 
 <details>
 
-<summary>Structure Spline</summary>
+<summary><mark style="color:blue;">Structure Spline</mark></summary>
 
 **`//ezsp structure <structure> <radii> [-p <kb_parameters>] [-q <quality>]`**\
 &#xNAN;**`[-n <normalMode>] [-g] [-h]`**

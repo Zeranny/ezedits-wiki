@@ -13,7 +13,7 @@ The following parameters and flags are common between all //ezspline subcommands
 
 ***
 
-### Radius progression: <mark style="color:yellow;">`<radii>`</mark>
+### Radius progression: <mark style="color:orange;">`<radii>`</mark>
 
 Defines the thickness (course) of the spline.
 
@@ -58,7 +58,7 @@ You may define any number of entries and their respective positions.
 
 ***
 
-### Twist: <mark style="color:yellow;">`-t <angle>`</mark>
+### Twist: <mark style="color:orange;">`-t <angle>`</mark>
 
 Defines how much to twist the shape along the spline. The input is an angle.
 
@@ -78,7 +78,7 @@ Gif starts at `-t 0` and increases up to `-t 90`.
 
 ***
 
-### Kochanek-Bartel-Parameters: <mark style="color:yellow;">`-p <kbParameters>`</mark>
+### Kochanek-Bartel-Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark>
 
 Parameters for the flow of the spline. Determines what path the spline takes through the given node positions.
 
@@ -112,7 +112,7 @@ Example command: `//ezsp polygon clay 10 4`` `**`-p <kbParameters>`**
 
 ***
 
-### Quality: <mark style="color:yellow;">`-q <quality>`</mark>
+### Quality: <mark style="color:orange;">`-q <quality>`</mark>
 
 Sets the number of samples of the shape per dimension per block. Must be greater than 0.
 
@@ -138,7 +138,7 @@ For this example, `-q 2` took less than a second, and `-q 7` already took 20 sec
 
 ***
 
-### Spline Normal Mode: <mark style="color:yellow;">`-n <normalMode>`</mark>
+### Spline Normal Mode: <mark style="color:orange;">`-n <normalMode>`</mark>
 
 There are three modes:
 
@@ -188,22 +188,22 @@ Example command: `//ezspline expression black,red,blue,white,yellow -o 5`` `**`-
 
 The following //ezsp subcommands feature predefined shapes with a smaller set of parameters.
 
-### `//ezspline`` `<mark style="color:yellow;">`beads`</mark>
+### `//ezspline`` `<mark style="color:orange;">`beads`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Bead spline</mark></summary>
 
-**`//ezsp beads <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
+**`//ezsp beads <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
 Generates a beads-shaped spline along the selected positions.
 
 * **`<Pattern>`**:
-  * Specifies the block pattern.
+  * Specifies the block(s) the spline is made out of.
 * [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
   * The thickness of the spline, defined by comma-separated entries.
 * [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) (Default: 0):
-  * Defines how much to twist the shape along the spline. Note: Since beads are symmetric there is no visible effect.
+  * Defines how much to twist the shape along the spline. Note: Since the beads shape is symmetric there is no visible effect.
 * [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) (Default: "0:0:0"):
   * Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
 * [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) (Default: 2.0):
@@ -215,18 +215,18 @@ Generates a beads-shaped spline along the selected positions.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`chainlink`</mark>
+### `//ezspline`` `<mark style="color:orange;">`chainlink`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Chain Link Spline</mark></summary>
 
-**`//ezsp chainlink <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[inner] [offset] [stretch]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
+**`//ezsp chainlink <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[inner] [offset] [stretch]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
 Generates a chainlink-shaped spline along the selected positions.
 
 * **`<Pattern>`**:
-  * Specifies the block pattern.
+  * Specifies the block(s) the spline is made out of.
 * [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
   * The thickness of the spline, defined by comma-separated entries.
 * **`[inner]`** (Default: 1.0):
@@ -248,18 +248,18 @@ Generates a chainlink-shaped spline along the selected positions.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`cubes`</mark>
+### `//ezspline`` `<mark style="color:orange;">`cubes`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Cube Spline</mark></summary>
 
-**`//ezsp cubes <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[gap]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
+**`//ezsp cubes <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[gap]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
 Generates a chainlink-shaped spline along the selected positions.
 
 * **`<Pattern>`**:
-  * Specifies the block pattern.
+  * Specifies the block(s) the spline is made out of.
 * [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
   * The thickness of the spline, defined by comma-separated entries.
 * **`[gap]`** (Default: 1.0):
@@ -277,18 +277,18 @@ Generates a chainlink-shaped spline along the selected positions.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`fishnet`</mark>
+### `//ezspline`` `<mark style="color:orange;">`fishnet`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Fishnet Spline</mark></summary>
 
-**`//ezsp fishnet <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[inner] [offset] [stretch]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
+**`//ezsp fishnet <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[spacing] [depth] [width]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
 Generates a fishnet-shaped spline along the selected positions.
 
 * **`<Pattern>`**:
-  * Specifies the block pattern.
+  * Specifies the block(s) the spline is made out of.
 * [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
   * The thickness of the spline, defined by comma-separated entries.
 * **`[spacing]`** (Default: 10):
@@ -310,119 +310,152 @@ Generates a fishnet-shaped spline along the selected positions.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`oscillate`</mark>
+### `//ezspline`` `<mark style="color:orange;">`oscillate`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Oscillation Spline</mark></summary>
 
-**`//ezsp oscillate <pattern> <radii> [depth] [interval] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
+**`//ezsp oscillate <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[depth] [interval]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
-Generates a spline with an oscillating thickness along the selected convex region.
+Generates a spline with an oscillating thickness along the selected positions.
 
-* **Pattern**: Specifies the block pattern.
-* **Radii**: The thickness of the spline, defined by up to three comma-separated values.\
-  &#xNAN;_&#x41; radius of 10 will be 10 from the start to the end of the spline, 10,5,15 will start at 10, decreasing to 5 around the middle, and increasing to 15 at the end._
-* **Depth** (Default: 2): Determines the ridge depth of the oscillation, affecting the amplitude of the waves.
-* **Interval** (Default: 5): Sets the ridge interval, controlling the frequency of the oscillation along the spline.
-* **-p** (Default: "0:0:0"): Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
-* **-q** (Default: 1.85): Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
-* **-n** (Default: "CONSISTENT"): Determines the mode for spline normal calculation.
-* **-g**: When used, calculates the center radii using the geometric center for three radii.
-* **-h**: Shows the help page.
+* **`<Pattern>`**:
+  * Specifies the block(s) the spline is made out of.
+* [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
+  * The thickness of the spline, defined by comma-separated entries.
+* **`[depth]`** (Default: 2):
+  * Specifies how many blocks deep the ridges cut into the surface of the spline, measured in blocks.
+* **`[interval]`** (Default: 5):
+  * Specifies the distance between each ridge, measured in blocks.
+* [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) (Default: 0):
+  * Defines how much to twist the shape along the spline. Note: Since the oscillate shape is symmetric there is no visible effect.
+* [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) (Default: "0:0:0"):
+  * Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
+* [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) (Default: 2.0):
+  * Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
+* [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) (Default: "CONSISTENT"):
+  * Determines how the spline will orient itself.
+* **`[-h]`**:
+  * Shows the help page.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`polygon`</mark>
+### `//ezspline`` `<mark style="color:orange;">`polygon`</mark>
 
 <details>
 
-<summary><mark style="color:blue;">Polygonal Spline</mark></summary>
+<summary><mark style="color:blue;">Polygon Spline</mark></summary>
 
-**`//ezsp polygon <pattern> <radii> [sides] [spin] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
+**`//ezsp polygon <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[sides]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
-Creates a regular polygon-shaped spline along the selected convex region.
+Generates a regular-polygon-shaped spline along the selected positions.
 
-* **Pattern**: Specifies the block pattern.
-* **Radii**: The thickness of the spline, defined by up to three comma-separated values.\
-  &#xNAN;_&#x41; radius of 10 will be 10 from the start to the end of the spline, 10,5,15 will start at 10, decreasing to 5 around the middle, and increasing to 15 at the end._
-* **Sides** (Default: 6): Determines the number of sides to the polygon.
-* **Spin** (Default: 0.0): Adds twist to the spline.
-* **-p** (Default: "0:0:0"): Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
-* **-q** (Default: 1.85): Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
-* **-n** (Default: "CONSISTENT"): Determines the mode for spline normal calculation.
-* **-g**: When used, calculates the center radii using the geometric center for three radii.
-* **-h**: Shows the help page.
+* **`<Pattern>`**:
+  * Specifies the block(s) the spline is made out of.
+* [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
+  * The thickness of the spline, defined by comma-separated entries.
+* **`[sides]`** (Default: 6):
+  * The number of sides of the polygon. 3 means triangle, 4 means square, 6 means hexagon etc.
+* [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) (Default: 0):
+  * Defines how much to twist the shape along the spline.
+* [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) (Default: "0:0:0"):
+  * Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
+* [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) (Default: 2.0):
+  * Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
+* [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) (Default: "CONSISTENT"):
+  * Determines how the spline will orient itself.
+* **`[-h]`**:
+  * Shows the help page.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`rings`</mark>
+### `//ezspline`` `<mark style="color:orange;">`rings`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Rings Spline</mark></summary>
 
-**`//ezsp rings <pattern> <radii> [count] [thickness] [innerRadius] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
+**`//ezsp rings <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[count] [thickness] [innerRadius]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
-Creates a spline of rings along the selected convex region.
+Generates a spline of rings along the selected positions.
 
-* **Pattern**: Specifies the block pattern.
-* **Radii**: The thickness of the spline, defined by up to three comma-separated values.\
-  &#xNAN;_&#x41; radius of 10 will be 10 from the start to the end of the spline, 10,5,15 will start at 10, decreasing to 5 around the middle, and increasing to 15 at the end._
-* **Count** (Default: 8): Determines the number of rings.
-* **Thickness** (Default: 3.0): Determines the size of the rings in the direction of the spline.
-* **Inner Radius** (Default: 0.7): A value between 0 and 1 which determines the size of the central hole in the ring.
-* **-p** (Default: "0:0:0"): Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
-* ### `noise`
-* **-q** (Default: 1.85): Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
-* **-n** (Default: "CONSISTENT"): Determines the mode for spline normal calculation.
-* **-g**: When used, calculates the center radii using the geometric center for three radii.
-* **-h**: Shows the help page.
+* **`<Pattern>`**:
+  * Specifies the block(s) the spline is made out of.
+* [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
+  * The thickness of the spline, defined by comma-separated entries.
+* **`[count]`** (Default: 8):
+  * Determines the number of rings.
+* **`[thickness]`** (Default: 3.0):
+  * Determines the width of each ring in the direction of the spline path, measured in blocks.
+* **`[innerRadius]`** (Default: 0.7):
+  * A value between 0 and 1, determining the size of the central hole in the ring.
+* [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) (Default: 0):
+  * Defines how much to twist the shape along the spline. Note: Since rings are symmetric there is no visible effect.
+* [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) (Default: "0:0:0"):
+  * Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
+* [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) (Default: 2.0):
+  * Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
+* [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) (Default: "CONSISTENT"):
+  * Determines how the spline will orient itself.
+* **`[-h]`**:
+  * Shows the help page.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`rope`</mark>
+### `//ezspline`` `<mark style="color:orange;">`rope`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Rope Spline</mark></summary>
 
-**`//ezsp rope <pattern> <radii> [ropeCount] [spin] [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
+**`//ezsp rope <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[count]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
-Creates a rope-shaped spline along the selected convex region.
+Generates a rope-shaped spline along the selected positions.
 
-* **Pattern**: Specifies the block pattern.
-* **Radii**: The thickness of the spline, defined by up to three comma-separated values.\
-  &#xNAN;_&#x41; radius of 10 will be 10 from the start to the end of the spline, 10,5,15 will start at 10, decreasing to 5 around the middle, and increasing to 15 at the end._
-* **RopeCount** (Default: 3): Determines the number of intertwining ropes.
-* **Spin** (Default: 2.0): Adds twist to the spline.
-* **-p** (Default: "0:0:0"): Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
-* **-q** (Default: 1.85): Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
-* **-n** (Default: "CONSISTENT"): Determines the mode for spline normal calculation.
-* **-g**: When used, calculates the center radii using the geometric center for three radii.
-* **-h**: Shows the help page.
+* **`<Pattern>`**:
+  * Specifies the block(s) the spline is made out of.
+* [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
+  * The thickness of the spline, defined by comma-separated entries.
+* **`[count]`** (Default: 3):
+  * The amount of intertwining ropes.
+* [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) (Default: 90):
+  * Defines how much to twist the shape along the spline.
+* [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) (Default: "0:0:0"):
+  * Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
+* [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) (Default: 2.0):
+  * Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
+* [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) (Default: "CONSISTENT"):
+  * Determines how the spline will orient itself.
+* **`[-h]`**:
+  * Shows the help page.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`simple`</mark>
+### `//ezspline`` `<mark style="color:orange;">`simple`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Simple Spline</mark></summary>
 
-**`//ezsp simple <pattern> <radii> [-p <kb_parameters>] [-q <quality>]`**\
-&#xNAN;**`[-n <normalMode>] [-g] [-h]`**
+**`//ezsp fishnet <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
-Creates a simple cylindrical spline along the selected convex region.
+Generates a simple cylindrical spline along the selected positions.
 
-* **Pattern**: Specifies the block pattern.
-* **Radii**: The thickness of the spline, defined by up to three comma-separated values.\
-  &#xNAN;_&#x41; radius of 10 will be 10 from the start to the end of the spline, 10,5,15 will start at 10, decreasing to 5 around the middle, and increasing to 15 at the end._
-* **-p** (Default: "0:0:0"): Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
-* **-q** (Default: 1.85): Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
-* **-n** (Default: "CONSISTENT"): Determines the mode for spline normal calculation.
-* **-g**: When used, calculates the center radii using the geometric center for three radii.
-* **-h**: Shows the help page.
+* **`<Pattern>`**:
+  * Specifies the block(s) the spline is made out of.
+* [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
+  * The thickness of the spline, defined by comma-separated entries.
+* [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) (Default: 0):
+  * Defines how much to twist the shape along the spline. Note: Since the cylinder is symmetric there is no visible effect.
+* [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) (Default: "0:0:0"):
+  * Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
+* [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) (Default: 2.0):
+  * Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
+* [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) (Default: "CONSISTENT"):
+  * Determines how the spline will orient itself.
+* **`[-h]`**:
+  * Shows the help page.
 
 </details>
 
@@ -432,38 +465,47 @@ Creates a simple cylindrical spline along the selected convex region.
 
 The following //ezspline subcommands feature three very powerful but more advanced spline shapes with effectively limitless customizability.
 
-### `//ezspline`` `<mark style="color:yellow;">`noise`</mark>
+### `//ezspline`` `<mark style="color:orange;">`noise`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Noise Spline</mark></summary>
 
-**`//ezsp noise <pattern> <radii> [strength] [stretch] [spin] <noise> [-p <kb_parameters>] [-q <quality>] [-n <normalMode>] [-g] [-h]`**
+**`//ezsp noise <pattern>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) **`[noise] [strength] [stretch]`** [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-h]`**
 
-Creates a noise-based spline along the selected convex region.
+Generates a noise-based spline along the selected positions.
 
-* **Pattern**: Specifies the block pattern.
-* **Radii**: The thickness of the spline, defined by up to three comma-separated values.\
-  &#xNAN;_&#x41; radius of 10 will be 10 from the start to the end of the spline, 10,5,15 will start at 10, decreasing to 5 around the middle, and increasing to 15 at the end._
-* **Strength** (Default: 0.5): Determines the noise strength, affecting the intensity of the noise.
-* **Stretch** (Default: 4.0): Controls the stretch factor of noise along the spline.
-* **Spin** (Default: 0): Adds twist to the spline.
-* **Noise** (Default: `Perlin(Freq:3)`): Specifies the type of noise to use for generation.
-* **-p** (Default: "0:0:0"): Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
-* **-q** (Default: 1.85): Adjusts the quality of the spline generation. Increase this value to reduce air gaps, noting that higher values increase processing time.
-* **-n** (Default: "CONSISTENT"): Determines the mode for spline normal calculation.
-* **-g**: When used, calculates the center radii using the geometric center for three radii.
-* **-h**: Shows the help page.
+* **`<Pattern>`**:
+  * Specifies the block(s) the spline is made out of.
+* [**`<Radii>`**](spline.md#radius-progression-less-than-radii-greater-than):
+  * The thickness of the spline, defined by comma-separated entries.
+* **`[noise]`** (Default: "Perlin(Freq:2,z:0.5)"):
+  * The noise that should be embedded along the spline path.
+* **`[depth]`** (Default: 0.7):
+  * How deep the noise should cut into the cylinder. Values approaching 0 approach a simple cylinder shape, 0.5 means the noise may reach half the radius deep, and 1.0 means the full radius, reaching the center. Larger than 1.0 will result in a choppy look.
+* **`[width]`** (Default: 2):
+  * The width of each string. Measured in blocks.
+* [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) (Default: 0):
+  * Defines how much to twist the shape along the spline.
+* [**`[-p <kbParameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) (Default: "0:0:0"):
+  * Sets the parameters for the flow of the spline, including tension, bias, and continuity, provided in a colon-separated format.
+* [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) (Default: 2.0):
+  * Sets the number of spline shape samples per dimension per block.
+* [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) (Default: "CONSISTENT"):
+  * Determines how the spline will orient itself.
+* \[-e \<expression>] (Default: "`aa`)
+* **`[-h]`**:
+  * Shows the help page.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`expression`</mark>
+### `//ezspline`` `<mark style="color:orange;">`expression`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Expression Spline</mark></summary>
 
-**`//ezsp expression <palette>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-z] [-o] [-h]`**
+**`//ezsp expression <palette>`** [**`<radii>`**](spline.md#radius-progression-less-than-radii-greater-than) [**`[-t <angle>]`**](spline.md#twist-t-less-than-angle-greater-than) [**`[-p <kb_parameters>]`**](spline.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](spline.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-z] [-o] [-h] <expression...>`**
 
 Generates a spline shaped by the given WorldEdit expression along the selected positions.
 
@@ -480,15 +522,22 @@ Generates a spline shaped by the given WorldEdit expression along the selected p
 * [**`[-n <normalMode>]`**](spline.md#spline-normal-mode-n-less-than-normalmode-greater-than) (Default: "CONSISTENT"):
   * Determines how the spline will orient itself.
 * **`[-z]:`**
-  * Without setting this flag, the domain of the z-axis is 0 to the length of the spline divided by the radius. You may set this flag to normalize the Z-Axis, that runs along the path of the spline, to the \[-1,1] domain.
+  * Without setting this flag, the domain of the z-axis is 0 to the length of the spline divided by the radius. You may set this flag to normalize the z-Axis, that runs along the path of the spline, to the \[-1,1] domain.
 * **`[-o]`**:
   * By default, expression output maps >0..1 to the palette. Use this flag to instead map the output to whole numbers.
 * **`[-h]`**:
   * Shows the help page.
+* **`<expression...>`**:
+  * [A WorldEdit expression](https://worldedit.enginehub.org/en/latest/usage/other/expressions/). Input variables are
+    * -1 ≤ _`x`_ ≤ 1&#x20;
+    * -1 ≤ _`y`_ ≤ 1
+    * 0 ≤ _`z`_ ≤ L, whereby L is the length of the spline divided by its radius.
+    * or -1 ≤ _`z`_ ≤ 1, if you're using the -z flag.
+  * Output is either a normalized palette index (0,1] or if using the -o flag (0,P] whereby P is the number of blocks in the palette. Note that <=0 means not placing any block.
 
 </details>
 
-### `//ezspline`` `<mark style="color:yellow;">`structure`</mark>
+### `//ezspline`` `<mark style="color:orange;">`structure`</mark>
 
 <details>
 

@@ -1,0 +1,92 @@
+# Advanced Spline Shapes
+
+The following //ezspline subcommands feature three very powerful but more complex spline shapes with effectively limitless customizability.
+
+***
+
+####
+
+### `//ezspline`` `<mark style="color:orange;">`noise`</mark>
+
+<details>
+
+<summary><mark style="color:blue;">Noise Spline</mark></summary>
+
+**`//ezsp noise <pattern>`** [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) **`[noise] [depth]`** [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
+
+Generates a noise-based spline along the selected positions.
+
+* **`<Pattern>`**:
+  * Specifies the block(s) the spline is made out of.
+* **`[noise]`** (Default: "Perlin(Freq:2,z:0.5)"):
+  * The noise that should be embedded along the spline path.
+* **`[depth]`** (Default: 0.7):
+  * How deep the noise should cut into the cylinder-shaped spline. Depths approaching 0 approach the original cylinder-shaped spline, 0.5 means the noise may reach half the radius deep, and 1.0 means the full radius, reaching the center. Larger than 1.0 will result in a choppy look.
+* **`[-e <expression>]`** (Default: "`r=sqrt(x*x+y*y);t=r/d+1-1/d;f=r>1?1:(4*r*(r-1))^2;g=f*t+(1-f)*n;p=min(d,1);(g>t)*max((r-1)/p+1,0.01)`"):
+  * Advanced parameter for nerds. Ignore if this above looks scary.
+  * This expression implements the functionality of the noise cutting into a cylinder at a certain relative `<depth>`. [Derivation](https://www.desmos.com/calculator/qw8fro1npf). If you _**really**_ want to, you can come up with a different expression here to get a different result. If you don't need custom noises just use `//ezspline expression` instead though.
+  * Input parameters are _`x,y,z,n,d`_ whereby _`x,y,z`_ are assigned like in [//ezspline expression](advanced-spline-shapes.md#expression-spline), _`n`_ is the evaluation of the given `<noise>` at the coordinates _`x,y,z`_ and _`d`_ is the given `<depth>` parameter.
+  * An alternative expression could be:&#x20;
+    * `r=sqrt(x*x+y*y);(r<1&&n>0.5)*max(n,0.01)`: If you only want the noise to be restricted to a cylinder shape
+
+The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
+
+</details>
+
+***
+
+####
+
+### `//ezspline`` `<mark style="color:orange;">`expression`</mark>
+
+<details>
+
+<summary><mark style="color:blue;">Expression Spline</mark></summary>
+
+**`//ezsp expression <palette>`** [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-z] [-o]`** [**`[-h]`**](common-parameters.md#ingame-help-page-h) **`<expression...>`**
+
+Generates a spline shaped by the given WorldEdit expression along the selected positions.
+
+* **`<Palette>`**:
+  * Specifies the block palette.
+* **`[-z]:`**
+  * Without setting this flag, the domain of the z-axis is 0 to the length of the spline divided by the radius. You may set this flag to normalize the z-Axis, that runs along the path of the spline, to the \[-1,1] domain.
+* **`[-o]`**:
+  * By default, expression output maps >0..1 to the palette. Use this flag to instead map the output to whole numbers.
+* **`<expression...>`**:
+  * [A WorldEdit expression](https://worldedit.enginehub.org/en/latest/usage/other/expressions/). Input variables are
+    * -1 ≤ _`x`_ ≤ 1&#x20;
+    * -1 ≤ _`y`_ ≤ 1
+    * 0 ≤ _`z`_ ≤ L, whereby L is the length of the spline divided by its radius.
+    * or -1 ≤ _`z`_ ≤ 1, if you're using the -z flag.
+  * Output is either a normalized palette index (0,1] or if using the -o flag (0,P] whereby P is the number of blocks in the palette. Note that <=0 means not placing any block.
+
+The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
+
+</details>
+
+***
+
+####
+
+### `//ezspline`` `<mark style="color:orange;">`structure`</mark>
+
+<details>
+
+<summary><mark style="color:blue;">Structure Spline</mark></summary>
+
+**`//ezsp structure <structure>`** [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) **`[-z] [-g]`** [**`[-h]`**](common-parameters.md#ingame-help-page-h)
+
+Embeds a structure along the path defined by the selected convex region.
+
+* **`<structure>`**: Specifies the structure to embed along the path.
+* **`[-z]:`**
+  * Without setting this flag, the structure will be repeated throughout the path as often as its bounding box fits. If you do set this flag you normalize the z-Axis, which will result in exactly one structure being stretched out throughout the entire length of the  path.
+
+The structure will be placed in its Z-direction facing along the path. If you use -g, then one instance of the structure will be stretched across the whole length of the path. Otherwise, multiple instances will be repeated one after another.
+
+The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
+
+</details>
+
+***

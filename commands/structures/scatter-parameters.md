@@ -6,7 +6,7 @@
 
 ***
 
-### Scatter Region: `-h <region>`
+### Scatter Region: <mark style="color:orange;">`-h <region>`</mark>
 
 Determines the region in which the placement positions are scattered.
 
@@ -47,7 +47,7 @@ By default, all regions are centered around the player position (for `//ezsc`) o
 
 ***
 
-### Directional Filter: `-d <directions>` and `-e <threshold>`
+### Directional Filter: <mark style="color:orange;">`-d <directions>`</mark> and <mark style="color:orange;">`-e <threshold>`</mark>
 
 Enables filtering out placement positions on surfaces that are facing certain directions.
 
@@ -81,7 +81,7 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 
 ***
 
-### Mask Filter: `-m <mask>`
+### Mask Filter: <mark style="color:orange;">`-m <mask>`</mark>
 
 Enables filtering out placement positions that do not match a mask given by `-m <mask>`. Placement positions must satisfy the mask for a structure to be placed.
 
@@ -102,7 +102,7 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 
 ***
 
-### Density: `-n <density>`
+### Density: <mark style="color:orange;">`-n <density>`</mark>
 
 Determines how many placements are placed, by specifying a density percentage.
 
@@ -152,7 +152,7 @@ For cases like these, where you want to place a structure at every instance of a
 
 ***
 
-### Distribution Seed: `-i <seed>`
+### Distribution Seed: <mark style="color:orange;">`-i <seed>`</mark>
 
 Sets the seed for the random number generator which chooses the initial random placement positions.&#x20;
 
@@ -160,7 +160,7 @@ Defaults to -1 (random seed), meaning that the placement positions differ in eac
 
 ***
 
-### Uniformity: `-u <iterations>`
+### Uniformity: <mark style="color:orange;">`-u <iterations>`</mark>
 
 Determines how uniformly spread out all placement positions are. Expecting a positive integer including 0.
 
@@ -186,7 +186,7 @@ The uniformity algorithm works by starting with fully random placement positions
 
 ***
 
-### Mask Cover Block: `-l <pattern>`
+### Mask Cover Block: <mark style="color:orange;">`-l <pattern>`</mark>
 
 After placing all structures, replace all unaffected surface blocks within the region that match the mask filter (-m) with the given block. (-m must be set for this flag to take effect.)
 
@@ -210,7 +210,7 @@ This is a niche utility option for cases in which you apply a scatter multiple t
 
 ***
 
-### Trim outside selection: `-t`
+### Trim outside selection: <mark style="color:orange;">`-t`</mark>
 
 By default `scatter` will determine placement positions within the currently selected region, but will place blocks outside the region if a placement position is at the border of the currently selected region. You may cut off any such blocks (prevent them from being placed) with this `-t` flag.
 

@@ -52,7 +52,7 @@ Generates a chainlink-shaped spline along the selected positions.
 * **`[stretch]`** (Default: 1.0):
   * The stretch factor for the entire spline along the path.
 
-We provide an interactive 3D plot to play around with all chain-link parameters: [<mark style="background-color:purple;">https://www.desmos.com/3d/zy2vtwkeg3</mark>](https://www.desmos.com/3d/zy2vtwkeg3)
+We provide an interactive 3D plot to play around with all chain-link parameters: [<mark style="background-color:purple;">https://www.desmos.com/3d/jn07vcnfec</mark>](https://www.desmos.com/3d/jn07vcnfec)
 
 The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
 

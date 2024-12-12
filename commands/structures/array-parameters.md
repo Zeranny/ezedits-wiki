@@ -4,7 +4,7 @@
 
 ***
 
-### Distance: `-g <gap>`
+### Distance: <mark style="color:orange;">`-g <gap>`</mark>
 
 Control how close all placements are by defining the gap distance between each placement.
 
@@ -38,7 +38,7 @@ Negative values cause the placements to overlap.
 
 ***
 
-### Progressive Scaling: `-q <radii>`
+### Progressive Scaling: <mark style="color:orange;">`-q <radii>`</mark>
 
 Similar to Random Scaling, this modifier allows scaling of the placements using relative values, e.g. 1 keeps the scale as is, 2 means doubling the size, and 0.5 halfs the size.
 
@@ -84,15 +84,15 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 
 ***
 
-### Path Parameters: `-p <kbParameters>`
+### Path Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark>
 
-Modifies how the path is created from the input (convex selection) points. See _LINK\_TO\_SPLINES\_PAGE_.
+Modifies how the path is created from the input (convex selection) points. See [#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than](../spline/common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than "mention")
 
 ***
 
-### Spline orientation: `-n <normalMode>`
+### Spline orientation: <mark style="color:orange;">`-n <normalMode>`</mark>
 
-Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See _LINK\_TO\_SPLINES\_PAGE_.
+Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See [#spline-normal-mode-n-less-than-normalmode-greater-than](../spline/common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than "mention")
 
 > #### Examples
 >
@@ -114,7 +114,7 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 
 ***
 
-### Snap placements to surfaces: `-b`
+### Snap placements to surfaces: <mark style="color:orange;">`-b`</mark>
 
 By default, structures are placed along the spline path that's induced by the input (convex selection) points. This flag moves the placement positions to the nearest surface block instead, in case the position on the path is in midair or submerged in blocks.
 
@@ -127,3 +127,5 @@ By default, structures are placed along the spline path that's induced by the in
 > `//ezarray Clipboard`` `**`-b`** (placements positions moved to nearest surface block)
 >
 > ![](../../.gitbook/assets/ezgif.com-animated-gif-maker.gif)
+
+***

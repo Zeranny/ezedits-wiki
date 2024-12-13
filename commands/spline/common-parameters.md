@@ -1,6 +1,6 @@
 # Common Parameters
 
-The following parameters and flags are common between **all** //ezspline subcommands.
+The following parameters and flags are available for **all** //ezspline subcommands.
 
 ***
 
@@ -61,7 +61,7 @@ Specifics: The angle determines how much the shape is rotated throughout the len
 
 <summary><mark style="color:blue;">Example:</mark></summary>
 
-Example command: `//ezsp polygon clay 10 4`` `**`-t <angle>`**
+Example command: `//ezsp 2d Polygon(S:4) clay 10`` `**`-t <angle>`**
 
 Gif starts at `-t 0` and increases up to `-t 90`.
 

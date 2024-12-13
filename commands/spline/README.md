@@ -1,11 +1,11 @@
 # Spline
 
+ezEdits provides an extensive interface to place and embed various shapes and structures along a 1-dimensional interpolated path in 3-D space.
 
+The paths are defined by WorldEdits convex selections (//sel convex). Every subcommand requires the user to have a convex region selection active.
 
-All sub-commands are under `//ezspline`\
-The abbreviation of it is `//ezsp`
-
-_Note that every spline can only be run with a Convex Selection type (\`//sel convex\`)._
+All sub-commands are under <mark style="color:orange;">**`//ezspline`**</mark>\
+The abbreviation/alias of it is <mark style="color:orange;">**`//ezsp`**</mark>
 
 ***
 
@@ -19,7 +19,7 @@ _Note that every spline can only be run with a Convex Selection type (\`//sel co
     * [`[-q <quality>]`](common-parameters.md#quality-q-less-than-quality-greater-than)
     * [`[-n <normalMode>]`](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than)
 * [**2D Spline Shapes**](2d-spline-shapes.md)
-  * covers the following subcommands:
+  * covers the //ezsp 2d subcommand:
     * [`//ezsp simple`](2d-spline-shapes.md#ezspline-simple)
     * [`//ezsp polygon`](2d-spline-shapes.md#ezspline-polygon)
     * [`//ezsp rope`](2d-spline-shapes.md#ezspline-rope)

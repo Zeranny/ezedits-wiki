@@ -49,28 +49,6 @@ You may define any number of entries and their respective positions.
 
 ***
 
-### Twist: <mark style="color:orange;">`-t <angle>`</mark>
-
-Defines how much to twist the shape along the spline. The input is an angle given in degrees.
-
-Defaults to 0. (Except for //ezsp rope, there it's 90)
-
-Specifics: The angle determines how much the shape is rotated throughout the length of the current diameter of the spline. Meaning, that if the diameter is 30 blocks, then after 30 blocks of path length, the shape will have rotated by the given angle.
-
-<details>
-
-<summary><mark style="color:blue;">Example:</mark></summary>
-
-Example command: `//ezsp 2d Polygon(S:4) clay 10`` `**`-t <angle>`**
-
-Gif starts at `-t 0` and increases up to `-t 90`.
-
-![](../../.gitbook/assets/SplinesTwist_example.gif)
-
-</details>
-
-***
-
 ### Kochanek-Bartel-Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark>
 
 Parameters for the flow of the spline. Determines what path the spline takes through the given node positions.
@@ -132,6 +110,74 @@ For this example, `-q 2` took less than a second, and `-q 7` already took 20 sec
 </details>
 
 ***
+
+### Initial roll: <mark style="color:orange;">`-r <startingRoll>`</mark>
+
+Allows to rotate the spline shape around the spline's axis, aka. rolling it. Expecting an angle given in degrees. Defaults to 0.
+
+<details>
+
+<summary><mark style="color:blue;">Example</mark></summary>
+
+Example command: `//ezspline 2d Re(Y1:-0.2,Y2:0.2) clay 10`` `**`-r <angle>`**
+
+Gif start at `-q 0` and moves up to `-q 180`.
+
+![](../../.gitbook/assets/SplinesRollParameter.gif)
+
+</details>
+
+***
+
+### Stretch: <mark style="color:orange;">`-s <stretchFactor>`</mark>
+
+Allows stretching or compressing the spline shape in the direction of the spline path.
+
+Defaults to 0.
+
+{% hint style="info" %}
+Note: `//ezspline structure`'s and `//ezspline expressions`'s `-z` flag overrides this flag. If `-z` is on, then `-s` does nothing.
+{% endhint %}
+
+<details>
+
+<summary><mark style="color:blue;">Example:</mark></summary>
+
+Example command: `//ezsp 3d Chainlink clay 10`` `**`-s <stretchFactor>`**
+
+Gif starts at `-s 0.2`, briefly pauses at `-s 1`, and increases up to `-s 4`.
+
+![](../../.gitbook/assets/SplinesStretchParameter.gif)
+
+</details>
+
+***
+
+### Twist: <mark style="color:orange;">`-t <angle>`</mark>
+
+Defines how much to twist the shape along the spline. The input is an angle given in degrees.
+
+Defaults to 0. (Except for //ezsp rope, there it's 90)
+
+Specifics: The angle determines how much the shape is rotated throughout the length of the current diameter of the spline. Meaning, that if the diameter is 30 blocks, then after 30 blocks of path length, the shape will have rotated by the given angle.
+
+<details>
+
+<summary><mark style="color:blue;">Example:</mark></summary>
+
+Example command: `//ezsp 2d Polygon(S:4) clay 10`` `**`-t <angle>`**
+
+Gif starts at `-t 0` and increases up to `-t 90`.
+
+![](../../.gitbook/assets/SplinesTwist_example.gif)
+
+</details>
+
+***
+
+
+
+
 
 ### Spline Normal Mode: <mark style="color:orange;">`-n <normalMode>`</mark>
 

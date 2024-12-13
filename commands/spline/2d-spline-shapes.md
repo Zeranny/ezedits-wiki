@@ -107,11 +107,11 @@ Generates a simple rounded square-shaped spline along the spline path.
 
 <details>
 
-<summary><mark style="color:blue;">RoundedSquare Spline</mark></summary>
+<summary><mark style="color:blue;">SuperCircle Spline</mark></summary>
 
 **`//ezsp 2d SuperCircle([`**<mark style="color:orange;">**`Exponent:<value>`**</mark>**`])`** [**`<pattern>`**](2d-spline-shapes.md#syntax) [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
 
-Generates a spline with the given SuperCircle shape as the cross-section along the spline path.
+Generates a spline with the given super-circle shape as the cross-section along the spline path.
 
 * **`[`**<mark style="color:orange;">**`Exponent:<value>`**</mark>**`]`** (<mark style="color:orange;">**`E`**</mark>) (Default: 2.0)
   * Determines the shape.
@@ -120,7 +120,8 @@ Generates a spline with the given SuperCircle shape as the cross-section along t
 
 Example:
 
-* The GIF above goes through the following set of values:
+* This GIF goes through the following set of values:
+  * ![](../../.gitbook/assets/SplinesSuperCircle.gif)
   * `0.5, 1.0, 2.0, 3.0, 99.0`&#x20;
 * using the following command:
   * `//ezsp 2d SuperCircle(`<mark style="color:orange;">`Exponent:`</mark><mark style="color:orange;">**`0.5`**</mark>`) clay 15`

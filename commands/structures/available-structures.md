@@ -6,49 +6,49 @@ Currently available structures are:
 
 <details>
 
-<summary><strong>Clipboard (Cl)</strong></summary>
+<summary><mark style="color:blue;"><strong>Clipboard (Cl)</strong></mark></summary>
 
 A structure based on your current WorldEdit Clipboard (//copy).
 
-Syntax: `Clipboard`
+Syntax: <mark style="color:orange;">`Clipboard`</mark>
 
-Abbr.: `Cl`
+Abbr.: <mark style="color:orange;">`Cl`</mark>
 
 Options:
 
-* **Origin (O)**. Defaults to INHERENT.
+* <mark style="color:blue;">**Origin (O)**</mark>. Defaults to INHERENT.
   * INHERENT (I) will use the position it was copied at
   * CENTER (C) will use the geometric center of the clipboard
-* **PasteMethod (PM**). Defaults to FAST. See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
+* <mark style="color:blue;">**PasteMethod (PM**</mark><mark style="color:blue;">)</mark>. Defaults to FAST. See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
   * FAST (fast): Default unaltered pasting of clipboards, like //paste
   * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched into the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.
   * See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
 
-- Example: `Clipboard(Origin:INHERENT,PasteMethod:SMOOTHED)` or `Cl(O:I,PM:smooth)`
+- Example: <mark style="color:orange;">`Clipboard(Origin:INHERENT,PasteMethod:SMOOTHED)`</mark> <mark style="color:orange;"></mark><mark style="color:orange;">or</mark> <mark style="color:orange;"></mark><mark style="color:orange;">`Cl(O:I,PM:smooth)`</mark>
 
 </details>
 
 <details>
 
-<summary><strong>Schematic (Sc)</strong></summary>
+<summary><mark style="color:blue;"><strong>Schematic (Sc)</strong></mark></summary>
 
 A structure based on a schematic file.
 
-Syntax: `Schematic(Filename:<name>,...)`
+Syntax: <mark style="color:orange;">`Schematic(Filename:<name>,...)`</mark>
 
-Abbr.: `Sc(N:<name>,...)`
+Abbr.: <mark style="color:orange;">`Sc(N:<name>,...)`</mark>
 
 Mandatory parameters:
 
-* **Filename (N)**. The filename of the schematic you want to place.
+* <mark style="color:orange;">**Filename (N)**</mark>. The filename of the schematic you want to place.
 
 Options:
 
-* **Format (F)**. Format of the schematic file. Defaults to sponge.3 (or FAWE's fast if you're using FAWE). The default value should work for the majority of cases.
-* **Origin (O)**. Defaults to INHERENT.
+* <mark style="color:blue;">**Format (F)**</mark>. Format of the schematic file. Defaults to sponge.3 (or FAWE's fast if you're using FAWE). The default value should work for the majority of cases.
+* <mark style="color:blue;">**Origin (O)**</mark>. Defaults to INHERENT.
   * INHERENT (I) will use the position it was copied at.
   * CENTER (C) will use the center of the clipboard's region as the origin instead.
-* **PasteMethod (PM**). Defaults to FAST.&#x20;
+* <mark style="color:blue;">**PasteMethod (PM**</mark><mark style="color:blue;">)</mark>. Defaults to FAST.&#x20;
   * FAST (fast): Default unaltered pasting of clipboards, like //paste
   * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched into the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.
   * See  [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")&#x20;
@@ -57,37 +57,52 @@ Options:
 
 <details>
 
-<summary><strong>Shape (Sh)</strong></summary>
+<summary><mark style="color:blue;"><strong>Shape (Sh)</strong></mark></summary>
 
 An expression-based shape. EzEdits provides plenty of predefined ones. Material defined by a pattern.
 
-Syntax: `Shape(Shape:<shape>,Pattern:<pattern>)`
+Syntax: <mark style="color:orange;">`Shape(Shape:<shape>,Pattern:<pattern>)`</mark>
 
-Abbr.: `Sh(S:<shape>,P:<pattern>)`
+Abbr.: <mark style="color:orange;">`Sh(S:<shape>,P:<pattern>)`</mark>
 
 Mandatory Parameters:
 
-* **Shape (S)**. Well, defines the shape of the Shape structure. Additional parameters are given within the parenthesis after. Available shapes are:
+* <mark style="color:orange;">**Shape (S)**</mark>. Well, defines the shape of the Shape structure. Additional parameters are given within the parenthesis after. Available shapes are:
   * Cone
+    * ![](../../.gitbook/assets/StructuresShapesCone.png)
   * Cuboid
+    * ![](../../.gitbook/assets/StructuresShapesCuboid.png)
   * Curl
+    * ![](../../.gitbook/assets/StructuresShapesCurl.png)
   * Cylinder
+    * ![](../../.gitbook/assets/StructuresShapesCylinder.png)
   * Ellipsoid
+    * ![](../../.gitbook/assets/StructuresShapesEllipsoid.png)
   * Fur
+    * ![](../../.gitbook/assets/StructuresShapesFur.png)
   * Jellybean
+    * ![](../../.gitbook/assets/StructuresShapesJellybean.png)
   * Leaf
+    * ![](../../.gitbook/assets/StructuresShapesLeaf.png)
   * Lemon
+    * ![](../../.gitbook/assets/StructuresShapesLemon.png)
   * Onion
+    * ![](../../.gitbook/assets/StructuresShapesOnion.png)
   * Polygon(_Sides_)
+    * ![](../../.gitbook/assets/StructuresShapesPolygon.gif)
   * Pyramid(_Sides_)
+    * ![](../../.gitbook/assets/StructuresShapesPyramid.gif)
   * Supersphere(_Exponent_)
+    * ![](../../.gitbook/assets/StructuresShapesSupersphere.gif)
   * Tetrahedron
+    * ![](../../.gitbook/assets/StructuresShapesTetrahedron.png)
   * Torus(_Thickness_)
+    * ![](../../.gitbook/assets/StructuresShapesTorus.gif)
   * \=_\<expression>_
     * In addition to predefined shapes, you can also define your own shape with a WorldEdit expression.
     * For example, this expression will create spirals:\
       `Shape(S:=x+=sin(2*pi*y)/2;z+=cos(2*pi*y)/2;x*x+z*z<0.3^2`
-* **Pattern (P)**. The pattern which the shape should be made of.
+* <mark style="color:orange;">**Pattern (P)**</mark>. The pattern which the shape should be made of.
   * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a pattern that uses commas then you need to put your Pattern argument in quotes: E.g. `Sh(S:Cone,Pattern:`**`"dirt,diamond_block"`**`)`
 
 
@@ -96,21 +111,21 @@ Mandatory Parameters:
 
 <details>
 
-<summary><strong>Expression (Ex)</strong></summary>
+<summary><mark style="color:blue;"><strong>Expression (Ex)</strong></mark></summary>
 
 An expression-based shape. One expression defines both the shape and the texturing.
 
-Syntax: `Expression(Expression:=<expression>,Palette:<palette>)`
+Syntax: <mark style="color:orange;">`Expression(Expression:=<expression>,Palette:<palette>)`</mark>
 
-Abbr.: `Ex(E:=<expression>,P:<palette>)`
+Abbr.: <mark style="color:orange;">`Ex(E:=<expression>,P:<palette>)`</mark>
 
 Mandatory Parameters:
 
-* **Expression (E)**. Input variables are `x`, `y`, and `z`, all between \[-1,1]. `x=0`,`y=0`,`z=0` is the origin of the structure.
+* <mark style="color:orange;">**Expression (E)**</mark>. Input variables are `x`, `y`, and `z`, all between \[-1,1]. `x=0`,`y=0`,`z=0` is the origin of the structure.
   * If the expression f(x,y,z) evaluates as _f_≤_0_, 0 or negative, then the position will be air.
   * If it evaluates as _1>f>0_, between 0 and 1, then the according palette block is placed.&#x20;
   * Otherwise, any value 1 or larger will place the last palette block.
-*   **Palette (P)**. The set of blocks of which the structure should be made of.
+*   <mark style="color:orange;">**Palette (P)**</mark>. The set of blocks of which the structure should be made of.
 
     * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a palette that uses commas then you need to put your Palette argument in quotes: E.g. `Ex(E:=y*.5+.5,Palette:`**`"##GlowOrange,-##GlowPurple"`**`)`
 
@@ -120,19 +135,19 @@ Mandatory Parameters:
 
 <details>
 
-<summary><strong>TexturedShape (TS)</strong></summary>
+<summary><mark style="color:blue;"><strong>TexturedShape (TS)</strong></mark></summary>
 
 An expression-based shape with an expression-based texturing. The Shape parameter defines its shape. The Palette and Texturing-Shape parameters define its material.
 
-Syntax: `TexturedShape(Shape:<shape>,TexturingShape:<shape>,Palette:<palette>)`
+Syntax: <mark style="color:orange;">`TexturedShape(Shape:<shape>,TexturingShape:<shape>,Palette:<palette>)`</mark>
 
-Abbr.: `TS(S:<shape>,T:<shape>,P:<palette>)`
+Abbr.: <mark style="color:orange;">`TS(S:<shape>,T:<shape>,P:<palette>)`</mark>
 
 Mandatory Parameters:
 
-* **Shape (S)**. See [Shape Structure](available-structures.md#shape-sh).
-* **TexturingShape (T)**. Defines which parts of the shape are painted with which blocks of the palette. Accepts a shape, just like the Shape Parameter.
-*   **Palette (P)**.  The set of blocks of which the shape should be made of.
+* <mark style="color:orange;">**Shape (S)**</mark>. See [Shape Structure](available-structures.md#shape-sh).
+* <mark style="color:orange;">**TexturingShape (T)**</mark>. Defines which parts of the shape are painted with which blocks of the palette. Accepts a shape, just like the Shape Parameter.
+*   <mark style="color:orange;">**Palette (P)**</mark><mark style="color:orange;">.</mark>  The set of blocks of which the shape should be made of.
 
     * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a palette that uses commas then you need to put your Palette argument in quotes: E.g. `TS(S:Cone,T:=y*.5+.5;Palette:`**`"dirt,diamond_block"`**`)`
 

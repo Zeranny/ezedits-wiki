@@ -19,9 +19,10 @@ Options:
 * **Origin (O)**. Defaults to INHERENT.
   * INHERENT (I) will use the position it was copied at
   * CENTER (C) will use the geometric center of the clipboard
-* **PasteMethod (PM**). Defaults to FAST.
-  * FAST (fast): Default unaltered pasting of clipboards
+* **PasteMethod (PM**). Defaults to FAST. See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
+  * FAST (fast): Default unaltered pasting of clipboards, like //paste
   * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched into the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.
+  * See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
 
 - Example: `Clipboard(Origin:INHERENT,PasteMethod:SMOOTHED)` or `Cl(O:I,PM:smooth)`
 
@@ -47,9 +48,10 @@ Options:
 * **Origin (O)**. Defaults to INHERENT.
   * INHERENT (I) will use the position it was copied at.
   * CENTER (C) will use the center of the clipboard's region as the origin instead.
-* **PasteMethod (PM**). Defaults to FAST.
-  * FAST (fast): Default unaltered pasting of clipboards
+* **PasteMethod (PM**). Defaults to FAST.&#x20;
+  * FAST (fast): Default unaltered pasting of clipboards, like //paste
   * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched into the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.
+  * See  [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")&#x20;
 
 </details>
 
@@ -135,6 +137,52 @@ Mandatory Parameters:
     * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a palette that uses commas then you need to put your Palette argument in quotes: E.g. `TS(S:Cone,T:=y*.5+.5;Palette:`**`"dirt,diamond_block"`**`)`
 
 
+
+</details>
+
+***
+
+### Comparison between FAST and SMOOTH PasteMethod:
+
+<details>
+
+<summary><mark style="color:blue;">&#x3C;-   Click me</mark></summary>
+
+Let's say this is our clipboard or our schematic:
+
+* ![](../../.gitbook/assets/StructuresPasteMethod_example1.png)
+
+Here's how it would look pasted at an odd angle when using
+
+* `PasteMethod:FAST`
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example2.png)
+* vs `PasteMethod:SMOOTHED`
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example3.png)
+
+Or when pasted a significantly larger size:
+
+* `PasteMethod:FAST`
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example4.png)
+* vs `PasteMethod:SMOOTHED`
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example5.png)
+
+There's also an additional parameter to the SMOOTHED PasteMethod: The `FillBias`. It allows you to specify whether the tool should try to place _more_ blocks or try to place _less_ blocks. This could be particularly helpful for e.g., particularly thin structures.
+
+Let's say this is our clipboard/schematic now.
+
+* A curved one-block thick sheet:
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example6.png)
+
+Here's how _it_ would look pasted at an odd angle when using `//paste` or
+
+* `PasteMethod:FAST`
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example7.png)
+* compared to `PasteMethod:SMOOTHED`&#x20;
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example9.png)
+* compared to `PasteMethod:SMOOTHED,FillBias:3` (default FillBias is 1.0)
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example8.png)
+* compared to a GIF going from `Fillbias:`**`0.25`** up to `Fillbias:`**`3.0`**
+  * ![](../../.gitbook/assets/StructuresPasteMethod_example10.gif)
 
 </details>
 

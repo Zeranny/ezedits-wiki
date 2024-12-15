@@ -2,7 +2,7 @@
 
 [`//ezscatter`](./#ezscatter) and [`//ezbrush scatter`](./#ezbrush-scatter) place multiple structures within a region. The positions that these commands choose can be customized with the parameters described on this page.
 
-`scatter` first extracts all surface blocks (all non-air blocks touching air) from a region of your choice. You can filter out surfaces that do not match certain conditions using `-d <directions>` & `-e <threshold>`, and `-m <mask>`. On the remaining surfaces, a placement position distribution according to the given density `-n <density>` and uniformity  `-u <iterations>` is calculated and structures are placed.&#x20;
+`scatter` first extracts all surface blocks (all non-air blocks touching air) from a region defined by `-h <region>`. You can filter out surfaces that do not match certain conditions using `-d <directions>` & `-e <threshold>`, and `-m <mask>`. On the remaining surfaces, a placement position distribution according to the given density `-n <density>` and uniformity  `-u <iterations>` is calculated and structures are placed.&#x20;
 
 ***
 
@@ -22,9 +22,9 @@ Available options:
 * _Saved_ (_S_): A selection saved using //ezsel save.
 * _Active_ (_A_): Your currently selected region.
 
-The dimensions of the first three can be set using the _Dimensions_ (_D_) parameter, e.g. `Box(Dimensions:"60,30,60")`  or `B(D:"60,30,60")`. It defaults to `"40,40,40"`.
+The dimensions of the first three can be set using the <mark style="color:orange;">**`Dimensions`**</mark> (<mark style="color:orange;">**`D`**</mark>) parameter, e.g. `Box(Dimensions:"60,30,60")`  or `B(D:"60,30,60")`. It defaults to `"40,40,40"`.
 
-By default, all regions are centered around the player position (for `//ezsc`) or the clicked position (for `//ezbr sc`). You may define an offset using the _Offset_ (_O_) parameter to move the center of the region relative to its target position.
+By default, all regions are centered around the player position (for `//ezsc`) or the clicked position (for `//ezbr sc`). You may define an offset using the <mark style="color:orange;">**`Offset`**</mark> (<mark style="color:orange;">**`O`**</mark>) parameter to move the center of the region relative to its target position.
 
 > #### Examples:
 >

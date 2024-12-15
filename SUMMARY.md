@@ -24,7 +24,10 @@
 
 ## Brushes & Tools
 
-* [Brushes](brushes-and-tools/brushes.md)
+* [Brushes](brushes-and-tools/brushes/README.md)
+  * [Palette Shift Brush](brushes-and-tools/brushes/palette-shift-brush.md)
+  * [Palette Gradient Brushes](brushes-and-tools/brushes/palette-gradient-brushes.md)
+  * [Structure Brushes](brushes-and-tools/brushes/structure-brushes.md)
 * [Superwand](brushes-and-tools/superwand.md)
 
 ## Commands

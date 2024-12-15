@@ -112,9 +112,9 @@ The primary and secondary can be set to either:
 
 Explicitly set a constant direction for all placements.
 
-Syntax: `Constant(Direction:<direction>)`
+Syntax: <mark style="color:orange;">**`Constant`**</mark> or <mark style="color:orange;">**`Constant(Direction:<direction>)`**</mark>
 
-Abbreviation: `C(D:<direction>)`
+Abbreviation: <mark style="color:orange;">**`C`**</mark> or <mark style="color:orange;">**`C(D:<direction>)`**</mark>
 
 If you do not specify a `<direction>`, then:
 
@@ -125,7 +125,7 @@ There are various ways to define a direction. From using the axes, cardinal dire
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezsc Clipboard C(D:(0,2,0)) C(D:east)`
 
@@ -147,13 +147,13 @@ There are various ways to define a direction. From using the axes, cardinal dire
 
 Random direction for each placement.
 
-Syntax: `Random`
+Syntax: <mark style="color:orange;">**`Random`**</mark>
 
-Abbreviation: `R`
+Abbreviation: <mark style="color:orange;">**`R`**</mark>
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezsc Clipboard Constant Random`
 
@@ -186,15 +186,15 @@ Abbreviation: `R`
 
 Direction based on the evaluation of a noise function at the placement's position.
 
-Syntax: `Noise(Noise:<noise>)`
+Syntax: <mark style="color:orange;">**`Noise`**</mark> or <mark style="color:orange;">**`Noise(Noise:<noise>)`**</mark>
 
-Abbreviation: `N(N:<noise>)`
+Abbreviation: <mark style="color:orange;">**`N`**</mark> or <mark style="color:orange;">**`N(N:<noise>)`**</mark>
 
 The default `<noise>` is `Perlin(Freq:0.01)`.
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezsc Clipboard Constant Noise`
 
@@ -219,15 +219,15 @@ The default `<noise>` is `Perlin(Freq:0.01)`.
 
 Your player's aim direction.
 
-Syntax: `Aim`
+Syntax: <mark style="color:orange;">**`Aim`**</mark>
 
-Abbreviation: `A`
+Abbreviation: <mark style="color:orange;">**`A`**</mark>
 
 Note: For brushes, `Constant(Direction:aim)` will use your player's aim direction at the time of brush binding, while `Aim` will use the player's aim direction during each brush act.
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezsc Clipboard Aim Constant`
 
@@ -244,13 +244,13 @@ Note: For brushes, `Constant(Direction:aim)` will use your player's aim directio
 
 The direction from the placement's position towards the current player position.
 
-Syntax: `PlayerRelative`
+Syntax: <mark style="color:orange;">**`PlayerRelative`**</mark>
 
-Abbreviation: `P`
+Abbreviation: <mark style="color:orange;">**`P`**</mark>
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezsc Clipboard PlayerRelative Constant`
 
@@ -273,15 +273,15 @@ Abbreviation: `P`
 
 The approximate surface-normal in the region of the placement's position.
 
-Syntax: `SurfaceNormal`
+Syntax: <mark style="color:orange;">**`SurfaceNormal`**</mark>
 
-Abbreviation: `S`
+Abbreviation: <mark style="color:orange;">**`S`**</mark>
 
 By [normal](https://en.wikipedia.org/wiki/Normal_\(geometry\)) we mean the direction perpendicular to the terrain in question.
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezbr place Shape(P:57,S:Cone) SurfaceNormal Constant -s 12,36,12`
 
@@ -297,15 +297,15 @@ You can see our ingame alignment visualizer dynamically orient itself depending 
 
 Define a direction using two clicks. Exclusively for brushes.
 
-Syntax: `ViewDiff`
+Syntax: <mark style="color:orange;">**`ViewDiff`**</mark>
 
-Abbreviation: `V`
+Abbreviation: <mark style="color:orange;">**`V`**</mark>
 
 Each placement requires a right click and a left click. The first right click sets the placement position at the targeted block. Left-clicking somewhere else then defines a direction: From your first (right) click target position to your second (left) click.
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezbr place Clipboard SurfaceNormal ViewDiff`
 
@@ -329,13 +329,13 @@ This torus shape required a few more parameters, so this example turned out a bi
 
 The direction tangential to the path. Exclusively for arrays.
 
-Syntax: `Tangential`
+Syntax: <mark style="color:orange;">**`Tangential`**</mark>
 
-Abbreviation: `T`
+Abbreviation: <mark style="color:orange;">**`T`**</mark>
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezarray Clipboard Tangential Constant -g 11 -o 2`
 
@@ -353,21 +353,27 @@ The _Tangential_ direction points tangential to the spline path at the position 
 
 The direction orthogonal to the path. Exclusively for arrays.
 
-Syntax: `Orthogonal(Angle:<angle>)`
+Syntax: <mark style="color:orange;">**`Orthogonal`**</mark> or <mark style="color:orange;">**`Orthogonal(Angle:<angle>)`**</mark>
 
-Abbreviation: `O(A:<angle>)`
+Abbreviation: <mark style="color:orange;">**`O`**</mark> or <mark style="color:orange;">**`O(A:<angle>)`**</mark>
 
 The angle, given in degrees, defines the initial direction of the orthogonal direction, whereby 0° and 360°, will face up, 90° and 270° face left and right, and 180° faces down (at the first part of the spline at least. It may twist further along if the normal mode is set to CONSISTENT, which is the default setting).
 
 <details>
 
-<summary>Examples</summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezarray Clipboard Orthogonal Constant`
 
 The _Orthogonal_ direction points perpendicular to the spline path at the position of the placement. If you set the primary to _Orthogonal_, the top of the shape will point perpendicular to the spline path like this.
 
 ![](../../.gitbook/assets/2024-12-01_16.16.08.png)
+
+
+
+Here's a GIF going through the `<angle>` parameter:
+
+![](../../.gitbook/assets/StructuresAlignmentsOrthogonal_example.gif)
 
 
 

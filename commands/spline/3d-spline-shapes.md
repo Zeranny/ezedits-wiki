@@ -195,7 +195,7 @@ Examples:
 
 #### ![](../../.gitbook/assets/SplinesRings.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`rings`</mark>
+### `//ezspline 3d`` `<mark style="color:orange;">`Rings (Ri)`</mark>
 
 <details>
 

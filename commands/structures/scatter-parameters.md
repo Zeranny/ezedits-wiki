@@ -12,19 +12,21 @@ Determines the region in which the placement positions are scattered.
 
 * Defaults to:
   * Your currently selected region for `//ezscatter`, or
+    * -h Active(UseOriginalPosition:true)
   * a 40x40x40 cuboid region around the clicked position for `//ezbrush scatter`.
 
 Available options:
 
-* _Box_ (_B_): A cuboid region. (Named Box to have single-letter abbreviations)
-* _Ellipsoid_ (_E_): An ellipsoidal region
-* _Cylinder_ (_C_): A cylindrical region
-* _Saved_ (_S_): A selection saved using //ezsel save.
-* _Active_ (_A_): Your currently selected region.
-
-The dimensions of the first three can be set using the <mark style="color:orange;">**`Dimensions`**</mark> (<mark style="color:orange;">**`D`**</mark>) parameter, e.g. `Box(Dimensions:"60,30,60")`  or `B(D:"60,30,60")`. It defaults to `"40,40,40"`.
-
-By default, all regions are centered around the player position (for `//ezsc`) or the clicked position (for `//ezbr sc`). You may define an offset using the <mark style="color:orange;">**`Offset`**</mark> (<mark style="color:orange;">**`O`**</mark>) parameter to move the center of the region relative to its target position.
+* <mark style="color:orange;">**`Box`**</mark> (<mark style="color:orange;">**`B`**</mark>): A cuboid region. (Named Box to have single-letter abbreviations)
+* <mark style="color:orange;">**`Ellipsoid`**</mark> (<mark style="color:orange;">**`E`**</mark>): An ellipsoidal region
+* <mark style="color:orange;">**`Cylinder`**</mark> (<mark style="color:orange;">**`C`**</mark>): A cylindrical region
+  * The dimensions of the first three can be set using the <mark style="color:blue;">**`Dimensions`**</mark> (<mark style="color:blue;">**`D`**</mark>) parameter, e.g. `Box(Dimensions:"60,30,60")`  or `B(D:"60,30,60")`. It defaults to `"40,40,40"`.
+* <mark style="color:orange;">**`Saved`**</mark> (<mark style="color:orange;">**`S`**</mark>): A selection saved using //ezsel save.
+  * Requires you to define the <mark style="color:blue;">**`Name`**</mark> (<mark style="color:blue;">**`N`**</mark>) parameter, choosing one of your saved selections.
+* <mark style="color:orange;">**`Active`**</mark> (<mark style="color:orange;">**`A`**</mark>): Your currently selected region.
+  * Contrary to the first three region options, these last two options have an inherent position in the world. You may choose to override their position by moving them to the player (//ezsc) or the clicked position (//ezbr sc), or use their inherent position using the <mark style="color:blue;">**`UseOriginalPosition`**</mark> (<mark style="color:blue;">**`P`**</mark>) parameter.\
+    The default value for the region argument for //ezsc is in fact `-h Active(UseOriginalPosition:true)`. If you set it to false, then the command is executed with the region shifted to your player location.&#x20;
+* By default, the center of the region is positioned at the target position. You may define an offset using the <mark style="color:blue;">**`Offset`**</mark> (<mark style="color:blue;">**`O`**</mark>) parameter to move it relative to its target position. The default is `(0,0,0)`.
 
 > #### Examples:
 >
@@ -139,15 +141,15 @@ The density specifies the percentage of _**remaining**_ surface blocks on which 
 
 If for example, you use the mask filter to restrict the placement to a specific block which only rarely occurs within your selection, e.g. with the following region and `-m sea_lantern`,
 
-![](../../.gitbook/assets/2024-12-10_13.54.52.png)
+![](../../.gitbook/assets/ScatterDensityHint_example1.png)
 
 Then `-n 2%`, the default density, implies that from all sea\_lantern blocks (that touch air) only 2% are chosen as a placement position. The result of doing `//ezsc Clipboard -m sea_lantern` is therefore:
 
-![](../../.gitbook/assets/2024-12-10_13.54.43.png)
+![](../../.gitbook/assets/ScatterDensityHint_example2.png)
 
 For cases like these, where you want to place a structure at every instance of a specific block you'd therefore use `-n 100%`. Doing `//ezsc Clipboard -m sea_lantern -n 100%` in our example results in:
 
-![](../../.gitbook/assets/2024-12-10_13.54.33.png)
+![](../../.gitbook/assets/ScatterDensityHint_example3.png)
 {% endhint %}
 
 ***
@@ -220,7 +222,7 @@ Turning on this flag is comparable to running the command with `//gmask #region`
 >
 > If this is our selected region:
 >
-> ![](../../.gitbook/assets/2024-12-02_21.46.25.png)
+> ![](../../.gitbook/assets/ScatterTrimFlag_example1.png)
 >
 > Then executing the ezsc command without the flag will result in blocks potentially being placed outside the region. Only the placement/origin positions are restricted to the region.
 >
@@ -228,13 +230,13 @@ Turning on this flag is comparable to running the command with `//gmask #region`
 >
 > `//ezsc Cl C C -s 15,21,15 -n 0.5%`
 >
-> ![](../../.gitbook/assets/2024-12-02_21.46.36.png)
+> ![](../../.gitbook/assets/ScatterTrimFlag_example2.png)
 >
 > With `-t` flag:
 >
 > `//ezsc Cl C C -s 15,21,15 -n 0.5%`` `**`-t`**
 >
-> ![](../../.gitbook/assets/2024-12-02_21.46.46.png)
+> ![](../../.gitbook/assets/ScatterTrimFlag_example3.png)
 
 
 

@@ -15,6 +15,11 @@ Defines the thickness (course) of the spline.
 
 Whereby if specified, each _position_ must be strictly ascending, and the first and last entries must be positions of `0` and `1`. If positions are omitted, they will be set and interpolated automatically.
 
+For example
+
+* `0.5:10`_`,`_`2` is illegal because the _first_ entry, which is always position `0.0`, has been specified as position "`0.5`"
+* `5`_`,`_`0.6:10`_`,`_`15`_`,`_`0.4:20`_`,`_`5` is illegal because the positions are not in strictly ascending order since 0.4 came after 0.6.
+
 <details>
 
 <summary><mark style="color:blue;">Examples:</mark></summary>
@@ -39,7 +44,7 @@ Here's a GIF going from `1,`**`0.1`**`:12,1` up through `1,`**`0.9`**`:12,1`. Th
 
 ![](../../.gitbook/assets/SplinesRadii_example4.gif)&#x20;
 
-You may define any number of entries and their respective positions.
+You may define any number of entries and their respective positions. Example with 7 entries (only radii values, no positions specified)
 
 `//ezsp rope clay 2,10,2,12,2,10,2`
 
@@ -49,13 +54,17 @@ You may define any number of entries and their respective positions.
 
 ***
 
-### Kochanek-Bartel-Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark>
+### Kochanek-Bartels-Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark>
 
 Parameters for the flow of the spline. Determines what path the spline takes through the given node positions.
 
 Provide `<tension>:<bias>:<continuity>`, colon-separated in that order (default is `0:0:0`). The expected value range for each parameter is `[-1..1]`.
 
-[This diagram](https://en.wikipedia.org/wiki/Kochanek%E2%80%93Bartels_spline#/media/File:Kochanek_bartels_spline.svg) shows what each parameter does (Note: the order in the diagram (c,t,b) is different than what ezspline expects (t,b,c)).
+{% hint style="info" %}
+[This diagram](https://en.wikipedia.org/wiki/Kochanek%E2%80%93Bartels_spline#/media/File:Kochanek_bartels_spline.svg) shows what each parameter does.
+
+(Note: the order in the diagram (c,t,b) is different than what ezspline expects (t,b,c).)
+{% endhint %}
 
 <details>
 
@@ -174,10 +183,6 @@ Gif starts at `-t 0` and increases up to `-t 90`.
 </details>
 
 ***
-
-
-
-
 
 ### Spline Normal Mode: <mark style="color:orange;">`-n <normalMode>`</mark>
 

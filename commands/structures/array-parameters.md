@@ -78,7 +78,7 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 >
 > (Combining progressive scaling -q with [random scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) -o)
 >
-> ![](../../.gitbook/assets/2024-12-04_22.53.26.png)
+> ![](../../.gitbook/assets/ArrayScaling_example4.png)
 >
 >
 
@@ -102,7 +102,7 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 >
 > (default value)
 >
-> ![](<../../.gitbook/assets/2024-12-01_16.16.08 (1).png>)
+> ![](../../.gitbook/assets/OrthogonalAlignment_example1.png)
 >
 >
 >
@@ -110,7 +110,7 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 >
 > (placements are not as tilted anymore)
 >
-> ![](<../../.gitbook/assets/2024-12-01_16.16.19 (2).png>)
+> ![](../../.gitbook/assets/OrthogonalAlignment_example2.png)
 
 ***
 

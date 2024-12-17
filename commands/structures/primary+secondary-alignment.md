@@ -202,14 +202,14 @@ The default `<noise>` is `Perlin(Freq:0.01)`.
 * `<primary>` is still up and only the `<secondary>` is set to Noise.
 * The default Noise is Perlin Noise.
 
-![](../../.gitbook/assets/2024-12-01_13.55.50.png)
+![](../../.gitbook/assets/NoiseAlignment_example2.png)
 
 `//ezsc Clipboard Constant Noise(N:Vor(Freq:0.02,DistReturn:cell))`
 
 * Same scenario as above but using [Cellular Noise](https://en.wikipedia.org/wiki/Voronoi_diagram#/media/File:Coloured_Voronoi_3D_slice.svg).&#x20;
 * You can recognize how each cell has its own random direction.
 
-![](../../.gitbook/assets/2024-12-01_13.54.01.png)
+![](../../.gitbook/assets/NoiseAlignment_example1.png)
 
 </details>
 
@@ -341,7 +341,7 @@ Abbreviation: <mark style="color:orange;">**`T`**</mark>
 
 The _Tangential_ direction points tangential to the spline path at the position of the placement. If you set the primary to _Tangential_, the top of the shape is pointing along the spline like this.
 
-![](../../.gitbook/assets/2024-12-01_16.11.04.png)
+![](../../.gitbook/assets/TangentialAlignment_example1.png)
 
 
 
@@ -367,7 +367,7 @@ The angle, given in degrees, defines the initial direction of the orthogonal dir
 
 The _Orthogonal_ direction points perpendicular to the spline path at the position of the placement. If you set the primary to _Orthogonal_, the top of the shape will point perpendicular to the spline path like this.
 
-![](../../.gitbook/assets/2024-12-01_16.16.08.png)
+![](../../.gitbook/assets/OrthogonalAlignment_example1.png)
 
 
 
@@ -381,7 +381,7 @@ Here's a GIF going through the `<angle>` parameter:
 
 The [-n flag](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than) has a direct influence on the orthogonal direction.
 
-![](../../.gitbook/assets/2024-12-01_16.16.19.png)
+![](../../.gitbook/assets/OrthogonalAlignment_example2.png)
 
 </details>
 

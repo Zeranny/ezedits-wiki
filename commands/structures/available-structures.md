@@ -67,43 +67,43 @@ Abbr.: <mark style="color:orange;">`Sh(S:<shape>,P:<pattern>)`</mark>
 
 Mandatory Parameters:
 
-* <mark style="color:orange;">**Shape (S)**</mark>. Well, defines the shape of the Shape structure. Additional parameters are given within the parenthesis after. Available shapes are:
-  * Cone
+* <mark style="color:orange;">**`Shape`**</mark> (<mark style="color:orange;">**`S`**</mark>). Well, defines the shape of the Shape structure. Additional parameters are given within the parenthesis after. Available shapes are:
+  * `Cone`
     * ![](../../.gitbook/assets/StructuresShapesCone.png)
-  * Cuboid
+  * `Cuboid`
     * ![](../../.gitbook/assets/StructuresShapesCuboid.png)
-  * Curl
+  * `Curl`
     * ![](../../.gitbook/assets/StructuresShapesCurl.png)
-  * Cylinder
+  * `Cylinder`
     * ![](../../.gitbook/assets/StructuresShapesCylinder.png)
-  * Ellipsoid
+  * `Ellipsoid`
     * ![](../../.gitbook/assets/StructuresShapesEllipsoid.png)
-  * Fur
+  * `Fur`
     * ![](../../.gitbook/assets/StructuresShapesFur.png)
-  * Jellybean
+  * `Jellybean`
     * ![](../../.gitbook/assets/StructuresShapesJellybean.png)
-  * Leaf
+  * `Leaf`
     * ![](../../.gitbook/assets/StructuresShapesLeaf.png)
-  * Lemon
+  * `Lemon`
     * ![](../../.gitbook/assets/StructuresShapesLemon.png)
-  * Onion
+  * `Onion`
     * ![](../../.gitbook/assets/StructuresShapesOnion.png)
-  * Polygon(_Sides_)
+  * `Polygon([Sides:<sides>])`
     * ![](../../.gitbook/assets/StructuresShapesPolygon.gif)
-  * Pyramid(_Sides_)
+  * `Pyramid([Sides:<sides>])`
     * ![](../../.gitbook/assets/StructuresShapesPyramid.gif)
-  * Supersphere(_Exponent_)
+  * `Supersphere(Exponent:<exponent>)`
     * ![](../../.gitbook/assets/StructuresShapesSupersphere.gif)
-  * Tetrahedron
+  * `Tetrahedron`
     * ![](../../.gitbook/assets/StructuresShapesTetrahedron.png)
-  * Torus(_Thickness_)
+  * `Torus(Thickness:<value>)`
     * ![](../../.gitbook/assets/StructuresShapesTorus.gif)
-  * \=_\<expression>_
+  * `=<expression>`
     * In addition to predefined shapes, you can also define your own shape with a WorldEdit expression.
     * For example, this expression will create spirals:\
-      `Shape(S:=x+=sin(2*pi*y)/2;z+=cos(2*pi*y)/2;x*x+z*z<0.3^2`
-* <mark style="color:orange;">**Pattern (P)**</mark>. The pattern which the shape should be made of.
-  * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a pattern that uses commas then you need to put your Pattern argument in quotes: E.g. `Sh(S:Cone,Pattern:`**`"dirt,diamond_block"`**`)`
+      <mark style="color:blue;">`Shape(S:`</mark><mark style="color:blue;">**`=x+=sin(2*pi*y)/2;z+=cos(2*pi*y)/2;x*x+z*z<0.3^2`**</mark><mark style="color:blue;">`,P:clay)`</mark>
+* <mark style="color:orange;">**`Pattern`**</mark> (<mark style="color:orange;">**`P`**</mark>). The pattern which the shape should be made of.
+  * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a pattern that uses commas then you need to put your Pattern argument in quotes: E.g. <mark style="color:blue;">`Sh(S:Cone,Pattern:`</mark><mark style="color:blue;">**`"dirt,diamond_block"`**</mark><mark style="color:blue;">`)`</mark>
 
 
 

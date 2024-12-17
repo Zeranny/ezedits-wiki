@@ -62,7 +62,7 @@ Blends palette blocks within a region.
 
 <summary>Blocklight Texture</summary>
 
-**`//ezt blocklight <mask> <palette> [-v] [-s]`**
+**`//ezt blocklight <mask> <palette> [-v] [-s] [-l]`**
 
 Textures a region based on in-game block light levels, excluding skylight.
 
@@ -70,6 +70,7 @@ Textures a region based on in-game block light levels, excluding skylight.
 * **Palette**: Specifies the palette to use.
 * **-v**: When activated, only considers the light level directly above the block.
 * **-s**: When activated, will consider skylight levels.
+* **-l**: When activated, prevents the palette replacing light source blocks.
 
 </details>
 

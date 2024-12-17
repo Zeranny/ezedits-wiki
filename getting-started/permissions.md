@@ -146,6 +146,11 @@ description: List of permissions within ezEdits
       <td>Basic</td>
     </tr>
     <tr>
+      <td>ezedits.mask.infested</td>
+      <td><strong>#infested</strong><br>Masks to blocks which contain a silverfish</td>
+      <td>Basic</td>
+    </tr>
+    <tr>
       <td>ezedits.mask.light</td>
       <td><strong>#truelight | #blocklight</strong><br>Masks to block matching a light level range.<br>Truelight includes skylight<br>Blocklight only considers light from blocks</td>
       <td>Basic</td>
@@ -441,6 +446,21 @@ description: List of permissions within ezEdits
       <td>Intermediate</td>
     </tr>
     <tr>
+      <td>ezedits.survival.deinfest</td>
+      <td><strong>//ezsurvival deinfest</strong><br>Replaces infested blocks with their non-infested counterpart</td>
+      <td>Basic</td>
+    </tr>
+    <tr>
+      <td>ezedits.survival.persist</td>
+      <td><strong>//ezsurvival persist</strong><br>Lets you set the persistence of all leaves within a selection, enabling or disabling decay</td>
+      <td>Basic</td>
+    </tr>
+    <tr>
+      <td>ezedits.survival.wax</td>
+      <td><strong>//ezsurvival wax</strong><br>Replaces copper block with their waxed or unwaxed counterpart</td>
+      <td>Basic</td>
+    </tr>
+    <tr>
       <td>ezedits.symmetry.reflectional</td>
       <td><strong>//ezsymmetry reflectional | reflectional3d</strong><br>Starts a reflectional symmetry mode</td>
       <td>Experimental</td>
@@ -527,3 +547,4 @@ description: List of permissions within ezEdits
     </tr>
   </tbody>
 </table>
+

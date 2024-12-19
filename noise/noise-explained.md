@@ -68,8 +68,12 @@ Sets the type of noise to be used. This is the start of any noise and will be in
     **If Overridden:**
     * <mark style="color:red;">`LowerBound (Min)`</mark>
     * <mark style="color:red;">`UpperBound (Max)`</mark>
+* <mark style="color:red;">`XScaling (X)`</mark>\
+  This can be used to stretch or squish the X axis.
 * <mark style="color:red;">`YScaling (Y)`</mark>\
   When using 3D noises this can be used to stretch or squish the Y axis.
+* <mark style="color:red;">`ZScaling (Z)`</mark>\
+  This can be used to stretch or squish the Z axis.
 
 </details>
 

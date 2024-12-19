@@ -58,7 +58,7 @@ Direction defaults to the direction the user is facing.
 
 Region operation which swaps the blocks of the source palette with those of the target palette.
 
-* **-a**: Activate to include air blocks (if the source palette contains air).
+* **-a**: Activate to ignore air blocks in source palette.
 * **-s**: Activate to stretch the target palette to match the size of the source palette.
 * **-f**: Enables fuzzy matching mode. Ignoring the block states of the source palette.
 * **-b**: Copies the block states from the source palette blocks onto the target palette.

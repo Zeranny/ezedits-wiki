@@ -30,22 +30,26 @@ Uses a noise preset values to return palette blocks.\
 
 </details>
 
-### `#vectorgradient`
+### `#palette`
 
 <details>
 
-<summary>#vectorgradient Pattern</summary>
 
-**`#vectorgradientpattern[palette][vector][distance][<noisePreset>][<noiseScale>][<noiseSeed>]`**\
-**Alias: `#vgradientp`**
+<summary>#palette Pattern</summary>
 
-Sets palette blocks along a vector with a given distance length with the block chosen based on distance plus a blending factor. Can also use noise presets.
+**`#palette[palette]`**
+
+Takes the given palette and returns a list of palette blocks.
+Can be used as a random block pattern.
+
+e.g. `//set #palette[##ice]` is the same as `//set [blue_ice,packed_ice,ice]`
 
 </details>
 
 ### `#selection`
 
 <details>
+
 
 <summary>#selection Pattern</summary>
 
@@ -60,19 +64,15 @@ Optional `<offset>` variable to offset the pattern by a given vector.
 
 </details>
 
-
-
-### `#palette`
+### `#vectorgradient`
 
 <details>
 
-<summary>#palette Pattern</summary>
+<summary>#vectorgradient Pattern</summary>
 
-**`#palette[palette]`**
+**`#vectorgradientpattern[palette][vector][distance][<noisePreset>][<noiseScale>][<noiseSeed>]`**\
+**Alias: `#vgradientp`**
 
-Takes the given palette and returns a list of palette blocks.
-Can be used as a random block pattern.
-
-e.g. `//set #palette[##ice]` is the same as `//set [blue_ice,packed_ice,ice]`
+Sets palette blocks along a vector with a given distance length with the block chosen based on distance plus a blending factor. Can also use noise presets.
 
 </details>

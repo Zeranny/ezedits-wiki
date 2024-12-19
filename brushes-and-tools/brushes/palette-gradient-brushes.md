@@ -51,6 +51,7 @@ The `gradientstroke` brush allows for gradient application along a path (stroke)
 * **-a**: When activated, allows the gradient to replace air blocks.
 * **-d**: Activates the 'distance to center' mode which applies the gradient based on distance to the middle of the stroke line instead of distance along the stroke.
 * **-v**: Deactivates WorldEditCUI integration.
+* **-w**: Clears the brush's path after every placed stroke.
 * **-n \<noise>** (Default: `White()`): Adds an underlying noise field to the gradient effect.
 * **-z \<scale>** (Default: 1): Modifies the scale of the noise.
 

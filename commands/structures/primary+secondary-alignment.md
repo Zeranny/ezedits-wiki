@@ -386,3 +386,55 @@ The [-n flag](array-parameters.md#spline-orientation-n-less-than-normalmode-grea
 </details>
 
 ***
+
+## Parameters
+
+The following flags adjust how Alignments are calculated.
+
+***
+
+### Snap to certain directions: <mark style="color:orange;">`[-j <snapDirections>]`</mark>
+
+This parameter allows you to restrict the chosen alignment direction to the specified subset. E.g. snapping to / only allowing cardinal direction, i.e. 90° rotations.  &#x20;
+
+Available options:
+
+* <mark style="color:orange;">**`MULTIPLES_90`**</mark>
+  * Only allows multiples of 90°, i.e. all axis-aligned directions.
+* <mark style="color:orange;">**`MULTIPLES_45`**</mark>
+  * Only allows multiples of 45°, i.e. axis-aligned directions AND all perfect diagonals.
+* <mark style="color:orange;">**`MULTIPLES_22_5`**</mark>
+  * Only allows multiples of 22.5°.
+* <mark style="color:orange;">**`MULTIPLES_15`**</mark>
+  * Only allows multiples of 15°.
+* <mark style="color:orange;">**`DIAGONALS_1_1`**</mark>
+  * Only allows axis-aligned directions, and perfect "1:1" diagonals.
+* <mark style="color:orange;">**`DIAGONALS_2_1`**</mark>
+  * Only allows the <mark style="color:orange;">`DIAGONALS_1_1`</mark> directions and any "2:1" diagonals.
+* <mark style="color:orange;">**`DIAGONALS_3_1`**</mark>
+  * Only allows the <mark style="color:orange;">`DIAGONALS_2_1`</mark> directions and any "3:1" diagonals.
+* <mark style="color:orange;">**`DIAGONALS_4_1`**</mark>
+  * Only allows the <mark style="color:orange;">`DIAGONALS_3_1`</mark> directions and any "4:1" diagonals.
+* <mark style="color:orange;">**`DIAGONALS_5_1`**</mark>
+  * Only allows the <mark style="color:orange;">`DIAGONALS_4_1`</mark> directions and any "5:1" diagonals.
+
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+`//ezbrush Cl Constant ViewDiff -j MULTIPLES_45`
+
+![](../../.gitbook/assets/AlignmentSnapToAngles_example.gif)
+
+
+
+</details>
+
+***
+
+### Perturb Secondary: <mark style="color:orange;">\[-x]</mark>
+
+In our primary+secondary system, placement fails if both vectors are collinear.
+
+By enabling this flag ezEdits tries to circumvent that case by perturbing the secondary direction by a small amount.
+

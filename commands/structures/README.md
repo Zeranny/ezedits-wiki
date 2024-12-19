@@ -91,7 +91,9 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
 * [**Available Structures**](available-structures.md)
   * Covers the [`<structure>`](available-structures.md) parameter (necessary for place/scatter/array (and ezspline structure)).
 * [**Primary+Secondary Alignment**](primary+secondary-alignment.md)
-  * Covers the [`[<primary>] [<secondary>]`](primary+secondary-alignment.md) parameters (available for place/scatter/array).&#x20;
+  * Covers the [`[<primary>] [<secondary>]`](primary+secondary-alignment.md) parameters (available for place/scatter/array) and the accompanying flags:
+    * [`[-j <snapDirections>]`](primary+secondary-alignment.md#snap-to-angles-j-less-than-anglesset-greater-than)
+    * [`[-x]`](primary+secondary-alignment.md#perturb-secondary-x)
 * [**Placement Parameters**](placement-parameters.md)
   * Covers the following flags (available for place/scatter/array):
     * [`[-s <dimensions>]`](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than)
@@ -117,3 +119,37 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
     * [`[-p <kbParameters>]`](array-parameters.md#path-parameters-p-less-than-kbparameters-greater-than)
     * [`[-n <normalMode>]`](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than)
     * [`[-b]`](array-parameters.md#snap-placements-to-surfaces-b)
+
+<details>
+
+<summary>Here are the <em>same</em> flags <em>again</em>, but in alphabetical order:</summary>
+
+* [`[-a]`](placement-parameters.md#place-air-a)
+* [`[-b]`](array-parameters.md#snap-placements-to-surfaces-b)
+* [`[-c <orientationAngle>]` ](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great)
+* [`[-d <filterDirections>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than)
+* [`[-e <filterThreshold>]`](scatter-parameters.md#directional-filter-d-less-than-directions-greater-than-and-e-less-than-threshold-greater-than)
+* [`[-f <randomFlipsAxes>]`](placement-parameters.md#random-flips-f-less-than-randomflipsaxes-greater-than)
+* [`[-g <gap>]`](array-parameters.md#distance-g-less-than-gap-greater-than)
+* [`[-h <region>]`](scatter-parameters.md#scatter-region-h-less-than-region-greater-than)
+* [`[-i <seed>]`](scatter-parameters.md#distribution-seed-i-less-than-seed-greater-than)
+* [`[-j <restrictedAngles>]`](primary+secondary-alignment.md#snap-to-angles-j-less-than-anglesset-greater-than)
+* [`[-k <orientationAxis>]`](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great)
+* [`[-l <coverPattern>]`](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)
+* [`[-m <maskFilter>]`](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than)
+* [`[-n <density>]`](scatter-parameters.md#density-n-less-than-density-greater-than)
+* [`[-n <normalMode>]`](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than)
+* [`[-o <sizeMultiplierRange>]`](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than)
+* [`[-p <kbParameters>]`](array-parameters.md#path-parameters-p-less-than-kbparameters-greater-than)
+* [`[-q <radiiMultiplier>]`](array-parameters.md#progressive-scaling-q-less-than-radii-greater-than)
+* [`[-r <randomRotationAxis>]`](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than)
+* [`[-s <dimensions>]`](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than)
+* [`[-t]`](scatter-parameters.md#trim-outside-selection-t)
+* [`[-u <iterations>]`](scatter-parameters.md#uniformity-u-less-than-iterations-greater-than)
+*
+
+</details>
+
+
+
+*

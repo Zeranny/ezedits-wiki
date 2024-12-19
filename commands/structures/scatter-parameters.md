@@ -11,9 +11,10 @@
 Determines the region in which the placement positions are scattered.
 
 * Defaults to:
-  * Your currently selected region for `//ezscatter`, or
-    * -h Active(UseOriginalPosition:true)
-  * a 40x40x40 cuboid region around the clicked position for `//ezbrush scatter`.
+  * Your currently selected region for `//ezscatter`&#x20;
+    * <mark style="color:blue;">`-h Active(UseOriginalPosition:true)`</mark>
+  * or a 40x40x40 cuboid region around the clicked position for `//ezbrush scatter`.
+    * <mark style="color:blue;">`-h Box(Dimensions:"40,40,40")`</mark>
 
 Available options:
 

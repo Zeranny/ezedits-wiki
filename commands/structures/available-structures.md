@@ -70,6 +70,8 @@ Mandatory Parameters:
 * <mark style="color:orange;">**`Shape`**</mark> (<mark style="color:orange;">**`S`**</mark>). Well, defines the shape of the Shape structure. Additional parameters are given within the parenthesis after. Available shapes are:
   * `Cone`
     * ![](../../.gitbook/assets/StructuresShapesCone.png)
+  * Crystal
+    * ![](../../.gitbook/assets/StructuresShapesCrystal.gif)
   * `Cuboid`
     * ![](../../.gitbook/assets/StructuresShapesCuboid.png)
   * `Curl`
@@ -80,6 +82,8 @@ Mandatory Parameters:
     * ![](../../.gitbook/assets/StructuresShapesEllipsoid.png)
   * `Fur`
     * ![](../../.gitbook/assets/StructuresShapesFur.png)
+  * Heart
+    * ![](../../.gitbook/assets/StructuresShapesHeart.png)
   * `Jellybean`
     * ![](../../.gitbook/assets/StructuresShapesJellybean.png)
   * `Leaf`

@@ -128,4 +128,8 @@ By default, structures are placed along the spline path that's induced by the in
 >
 > ![](../../.gitbook/assets/ezgif.com-animated-gif-maker.gif)
 
+{% hint style="info" %}
+By default the maximum search range is 96 blocks. The maximum search range can be set in the config. If no surface block is found within that range, the original position will be used instead.
+{% endhint %}
+
 ***

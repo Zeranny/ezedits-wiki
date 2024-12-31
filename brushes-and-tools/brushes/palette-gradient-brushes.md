@@ -4,27 +4,27 @@
 
 <details>
 
-<summary>Gradient Brush</summary>
+<summary><mark style="color:blue;">Gradient Brush</mark></summary>
 
-**`//ezbr gradient <palette> [radius] [interpolation] [strength] [-av] [-n <noise>] [-z <scale>] [-d <distanceFunction>]`**
+**`//ezbr gradient`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [strength] [-av] [-n <noise>] [-z <scale>] [-d <distanceFunction>]`**</mark>
 
 The `gradient` brush allows you to first define a plane by selecting 2 points, you can then paint with your gradient with blocks chosen based on distance along this plane.
 
-**Left Click to start a plane at your target block**\
-**Sneak + Left Click to start a plane at the player position**\
-**Right Click to set the end of the plane at your target block OR paint palette blocks if the plane is set**\
-**Sneak + Right Click to set the end of the plane at the player position OR paint palette blocks if the plane is set**\
-**Swap Hands (Default F key) to toggle between GLOBAL and PER\_ITEM active gradients**
+<mark style="color:blue;">**Left Click**</mark>**&#x20;to start a plane at your target block**\
+<mark style="color:blue;">**Sneak + Left Click**</mark>**&#x20;to start a plane at the player position**\
+<mark style="color:blue;">**Right Click**</mark>**&#x20;to set the end of the plane at your target block OR paint palette blocks if the plane is set**\
+<mark style="color:blue;">**Sneak + Right Click**</mark>**&#x20;to set the end of the plane at the player position OR paint palette blocks if the plane is set**\
+<mark style="color:blue;">**Swap Hands**</mark>**&#x20;(Default F key) to toggle between GLOBAL and per brush active gradients**
 
-* **Palette**: Specifies the palette to use for the gradient.
-* **Radius** (Default: 8): Sets the radius of the brush.
-* **Interpolation** (Default: NONE): Determines the type of interpolation used in the gradient transition.
-* **Strength** (Default: 0.5): Adjusts the strength of interpolation, with a normal range from 0 to 1.
-* **-a**: When activated, the gradient is allowed to replace air blocks.
-* **-v**: Deactivates WorldEditCUI integration.
-* **-n \<noise>** (Default: `White()`): Adds an underlying noise field to the gradient effect.
-* **-z \<scale>** (Default: 1): Modifies the scale of the noise.
-* **-d \<distanceFunction>** (Default: NONE): Sets the distance mode changing the brush to work based on distance from the initial block with the given distance function.
+* <mark style="color:orange;">**Palette**</mark>: Specifies the palette to use for the gradient.
+* <mark style="color:orange;">**Radius**</mark> (Default: 8): Sets the radius of the brush.
+* <mark style="color:orange;">**Interpolation**</mark> (Default: NONE): Determines the type of interpolation used in the gradient transition.
+* <mark style="color:orange;">**Strength**</mark> (Default: 0.5): Adjusts the strength of interpolation, with a normal range from 0 to 1.
+* <mark style="color:orange;">**`-a`**</mark>: When activated, the gradient is allowed to replace air blocks.
+* <mark style="color:orange;">**`-v`**</mark>: Deactivates WorldEditCUI integration.
+* <mark style="color:orange;">**`-n <noise>`**</mark> (Default: `White()`): Adds an underlying noise field to the gradient effect.
+* <mark style="color:orange;">**`-z <scale>`**</mark> (Default: 1): Modifies the scale of the noise.
+* <mark style="color:orange;">**`-d <distanceFunction>`**</mark> (Default: NONE): Sets the distance mode changing the brush to work based on distance from the initial block with the given distance function.
 
 </details>
 
@@ -32,28 +32,28 @@ The `gradient` brush allows you to first define a plane by selecting 2 points, y
 
 <details>
 
-<summary>Gradient Stroke Brush</summary>
+<summary><mark style="color:blue;">Gradient Stroke Brush</mark></summary>
 
-**`//ezbr gradientstroke <palette> [radius] [interpolation] [strength] [-adv] [-n <noise>] [-z <scale>]`**
+**`//ezbr gradientstroke`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [strength] [-adv] [-n <noise>] [-z <scale>]`**</mark>
 
 The `gradientstroke` brush allows for gradient application along a path (stroke) defined by selecting points.
 
-**Left Click to add points**\
-**Sneak + Left Click to remove the last point**\
-**Right Click to confirm & place the gradient stroke**\
-**Sneak + Right Click to clear all points**\
-**Swap Hands (Default F key) to toggle between GLOBAL and PER\_ITEM active gradients**
+<mark style="color:blue;">**Left Click**</mark>**&#x20;to add points**\
+<mark style="color:blue;">**Sneak + Left Click**</mark>**&#x20;to remove the last point**\
+<mark style="color:blue;">**Right Click**</mark>**&#x20;to confirm & place the gradient stroke**\
+<mark style="color:blue;">**Sneak + Right Click**</mark>**&#x20;to clear all points**\
+<mark style="color:blue;">**Swap Hands**</mark>**&#x20;(Default F key) to toggle between GLOBAL and per brush active gradients**
 
-* **Palette**: Specifies the block pattern for the gradient.
-* **Radius** (Default: 8): Sets the radius of the brush.
-* **Interpolation** (Default: LINEAR): Determines the type of interpolation used in the gradient transition.
-* **Bleed** (Default: 0.5): Adjusts the strength of interpolation, with a normal range from 0 to 1.
-* **-a**: When activated, allows the gradient to replace air blocks.
-* **-d**: Activates the 'distance to center' mode which applies the gradient based on distance to the middle of the stroke line instead of distance along the stroke.
-* **-v**: Deactivates WorldEditCUI integration.
-* **-w**: Clears the brush's path after every placed stroke.
-* **-n \<noise>** (Default: `White()`): Adds an underlying noise field to the gradient effect.
-* **-z \<scale>** (Default: 1): Modifies the scale of the noise.
+* <mark style="color:orange;">**Palette**</mark>: Specifies the block pattern for the gradient.
+* <mark style="color:orange;">**Radius**</mark> (Default: 8): Sets the radius of the brush.
+* <mark style="color:orange;">**Interpolation**</mark> (Default: LINEAR): Determines the type of interpolation used in the gradient transition.
+* <mark style="color:orange;">**Bleed**</mark> (Default: 0.5): Adjusts the strength of interpolation, with a normal range from 0 to 1.
+* <mark style="color:orange;">**`-a`**</mark>: When activated, allows the gradient to replace air blocks.
+* <mark style="color:orange;">**`-d`**</mark>: Activates the 'distance to center' mode which applies the gradient based on distance to the middle of the stroke line instead of distance along the stroke.
+* <mark style="color:orange;">**`-v`**</mark>: Deactivates WorldEditCUI integration.
+* <mark style="color:orange;">**`-w`**</mark>: Clears the brush's path after every placed stroke.
+* <mark style="color:orange;">**`-n <noise>`**</mark> (Default: `White()`): Adds an underlying noise field to the gradient effect.
+* <mark style="color:orange;">**`-z <scale>`**</mark> (Default: 1): Modifies the scale of the noise.
 
 </details>
 

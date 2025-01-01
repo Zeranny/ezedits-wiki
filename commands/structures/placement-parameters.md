@@ -114,15 +114,15 @@ By default, this parameter is not set to anything, i.e. random rotations are dis
 
 ### Orientation (advanced): `-k <orientationAxis>` and `-c <orientationAngle>`
 
-Defining an orientation means defining which internal coordinate system the structure has. That coordinate system is then used in the random flips/rotations and during alignment. Defining an orientation is "defining which way is up and which way is forward".
+Setting an orientation means defining which internal coordinate system the structure has. That coordinate system is then used in the random flips/rotations and during alignment. 
+_Defining an orientation is "defining which way is up and which way is forward"_
 
-On orientation is set by a rotation axis (`-k <direction>`) and a rotation angle (`-c <angle>`).
+Orientation is set by a rotation axis (`-k <direction>`) and a rotation angle (`-c <angle>`).
+_The rotation works identically to `//ezd rotate`_
 
-The rotation works identically to `//ezd rotate`.
+By default, the rotation axis `-k` is `y` or `up` and the rotation angle `-c` is `0`, which means no rotation.
 
-By default, the rotation axis `-k` is `y` or `up` and the rotation angle `-c` is `0`, and thus, does nothing.
-
-For example, if you set the rotation axis to `-k x` and the rotation angle to `-c 90` then your structure is rotated to the side. Its eastern side will now be its top side and so on.
+For example, if you set the rotation axis to `-k x` and the rotation angle to `-c 90` then your structure is rotated to the side. Its Eastern side will now be its top side and so on.
 
 ***
 

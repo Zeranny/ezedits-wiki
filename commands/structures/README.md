@@ -1,4 +1,4 @@
-# Structure commands
+# Structure Commands
 
 ## Overview
 

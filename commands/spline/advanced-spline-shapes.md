@@ -1,18 +1,18 @@
 # Advanced Spline Shapes
 
-The following //ezspline subcommands feature three very powerful but more complex spline shapes with effectively limitless customizability.
+The following `//ezspline` subcommands feature three very powerful but more complex spline shapes with effectively limitless customizability.
 
 ***
 
 #### \*image\*
 
-### `//ezspline`` `<mark style="color:orange;">`noise`</mark>
+### `//ezspline `<mark style="color:orange;">`noise`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Noise Spline</mark></summary>
 
-**`//ezsp noise`` `**<mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) <mark style="color:orange;">**`[noise]`**</mark> <mark style="color:orange;">**`[depth]`**</mark> [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
+**`//ezsp noise `**<mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) <mark style="color:orange;">**`[noise]`**</mark> <mark style="color:orange;">**`[depth]`**</mark> [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
 
 Generates a noise-based spline along the selected positions.
 
@@ -29,7 +29,7 @@ Generates a noise-based spline along the selected positions.
   * An alternative expression could be:&#x20;
     * `r=sqrt(x*x+y*y);(r<1&&n>0.5)*max(n,0.01)`: If you only want the noise to be restricted to a cylinder shape
 
-The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
+_The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage_
 
 </details>
 
@@ -37,13 +37,13 @@ The remaining arguments are outlined on the [Common Parameters](common-parameter
 
 #### \*image\*
 
-### `//ezspline`` `<mark style="color:orange;">`expression`</mark>
+### `//ezspline `<mark style="color:orange;">`expression`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Expression Spline</mark></summary>
 
-**`//ezsp expression`` `**<mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#ingame-help-page-h) <mark style="color:orange;">**`<expression...>`**</mark>
+**`//ezsp expression `**<mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#ingame-help-page-h) <mark style="color:orange;">**`<expression...>`**</mark>
 
 Generates a spline shaped by the given WorldEdit expression along the selected positions.
 
@@ -61,7 +61,7 @@ Generates a spline shaped by the given WorldEdit expression along the selected p
     * or -1 ≤ _`z`_ ≤ 1, if you're using the -z flag.
   * Output is either a normalized palette index (0,1] or if using the -o flag (0,P] whereby P is the number of blocks in the palette. Note that <=0 means not placing any block.
 
-The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
+_The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage_
 
 </details>
 
@@ -69,13 +69,13 @@ The remaining arguments are outlined on the [Common Parameters](common-parameter
 
 #### \*image\*
 
-### `//ezspline`` `<mark style="color:orange;">`structure`</mark>
+### `//ezspline `<mark style="color:orange;">`structure`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Structure Spline</mark></summary>
 
-**`//ezsp structure`` `**<mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#ingame-help-page-h)&#x20;
+**`//ezsp structure `**<mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#ingame-help-page-h)&#x20;
 
 Embeds a structure along the path defined by the selected convex region.
 
@@ -85,7 +85,7 @@ Embeds a structure along the path defined by the selected convex region.
 
 The structure will be placed in its Z-direction facing along the path. If you use -g, then one instance of the structure will be stretched across the whole length of the path. Otherwise, multiple instances will be repeated one after another.
 
-The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
+_The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage_
 
 </details>
 

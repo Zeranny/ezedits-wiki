@@ -4,9 +4,10 @@ Alignment defines the orientation at which the structure is placed.
 
 ## Explanation
 
-Every structure has an intrinsic "up" direction and an intrinsic "forward" direction. By default, structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x).
+Every structure has an intrinsic "up" direction and an intrinsic "forward" direction. 
+By default, structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x).
 
-The most important thing is now: You can define how a structure is placed by defining where its up direction should face and where its forward direction should face.
+The most important thing is that now you can control how a structure is placed by defining where its up direction and where its forward direction should face.
 
 We let the user define the alignment using two directions:
 
@@ -19,8 +20,7 @@ Note: The primary and secondary may not be the same direction.
 {% endhint %}
 
 <details>
-
-<summary>More in-depth explanation using examples:</summary>
+<summary>**More in-depth explanation using examples:**</summary>
 
 Let's say this is our build that we want to place, by for example having it as our current WorldEdit clipboard.
 
@@ -48,7 +48,7 @@ Notice how, what was originally _"up"_ when we copied it, i.e. the green beam in
 
 <img src="../../.gitbook/assets/AlignmentGuide_example3.png" alt="" data-size="original">
 
-Notice, again, how, what was originally _"up"_ when we copied it, i.e. the green beam in our case, is pointing into the direction that we set the primary to: _diagonally up and south_.
+Notice again, how what was originally _"up"_ when we copied it, i.e. the green beam in our case, is pointing into the direction that we set the primary to: _diagonally up and south_.
 
 3. The **`<primary>`** is set to the vector **`(1,1,0)`**, i.e. the direction going diagonally up and **east**, while the `<secondary>` is set to `east`:
 
@@ -56,7 +56,7 @@ Notice, again, how, what was originally _"up"_ when we copied it, i.e. the green
 
 The green beam is correctly pointing along the primary direction, diagonally up and east. Whatever was pointing _up_ when we //copy'd our clipboard is always aligned with whatever direction the primary is set to!
 
-But now, notice how, even though the secondary is set to _east_, the red beam is not pointing directly east anymore (but diagonally down and east). This is intended behavior.
+But now, even though the secondary is set to _east_, the red beam is not pointing directly east anymore (but diagonally down and east). This is intended behaviour.
 
 Imagine if it were pointing east: Then the green and red beam would be at a 45° angle instead of the original 90° angle. Our structure would be deformed/bent/sheared.
 
@@ -84,7 +84,11 @@ All of this applies independently of your current clipboard. Here's another stru
 
 Can you see why setting the primary to `(-1,2-1)` and the secondary to `west` leads to the leaf being oriented like that?
 
-\*\*\*
+
+
+------
+
+
 
 By the way, the command used was
 
@@ -121,10 +125,11 @@ If you do not specify a `<direction>`, then:
 * the default direction is **+y** if you're setting the `<primary>`.
 * the default direction is **+x** if you're setting the `<secondary>`.
 
-There are various ways to define a direction. From using the axes, cardinal directions, vector notation, or player relative directions like forward, left, right, etc. Pro tip: You can also add directions together using simple arithmetic operators, like `east-z+(0,0.5,0)`. Pro tip²: Put `=` at the end to evaluate your direction expression as you are typing it.
+There are various ways to define a direction. From using the axes, cardinal directions, vector notation, or player relative directions like forward, left, right, etc. 
+Pro tip: You can also add directions together using simple arithmetic operators, like `east-z+(0,0.5,0)`. 
+Pro tip²: Put `=` at the end to evaluate your direction expression as you are typing it.
 
 <details>
-
 <summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezsc Clipboard C(D:(0,2,0)) C(D:east)`
@@ -232,7 +237,8 @@ Note: For brushes, `Constant(Direction:aim)` will use your player's aim directio
 `//ezsc Clipboard Aim Constant`
 
 * If we set the `<primary>` to `Aim` then the up direction of our structure, the green beam in our example, will align with our current player's aim direction.
-* My player model is included in the picture for reference. That's where I was looking when I executed the command. The aim direction is visualized in F3+B with the thin blue line.
+* My player model is included in the picture for reference. That's where I was looking when I executed the command. 
+  _The aim direction is visualized in F3+B with the thin blue line_
 
 <img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
 
@@ -301,7 +307,9 @@ Syntax: <mark style="color:orange;">**`ViewDiff`**</mark>
 
 Abbreviation: <mark style="color:orange;">**`V`**</mark>
 
-Each placement requires a right click and a left click. The first right click sets the placement position at the targeted block. Left-clicking somewhere else then defines a direction: From your first (right) click target position to your second (left) click.
+Each placement requires a right click and a left click. 
+The first right click sets the placement position at the targeted block. 
+Left-clicking somewhere else then defines a direction: From your first (right) click target position to your second (left) click.
 
 <details>
 
@@ -395,7 +403,8 @@ The following flags adjust how Alignments are calculated.
 
 ### Snap to certain directions: <mark style="color:orange;">`[-j <snapDirections>]`</mark>
 
-This parameter allows you to restrict the chosen alignment direction to the specified subset. E.g. snapping to / only allowing cardinal direction, i.e. 90° rotations.  &#x20;
+This parameter allows you to restrict the chosen alignment direction to the specified subset. 
+E.g. snapping to / only allowing cardinal direction, i.e. 90° rotations.  &#x20;
 
 Available options:
 
@@ -434,7 +443,7 @@ Available options:
 
 ### Perturb Secondary: <mark style="color:orange;">\[-x]</mark>
 
-In our primary+secondary system, placement fails if both vectors are collinear.
+In our primary+secondary system, placement fails if both vectors are collinear, which simply means they are on the same line.
 
 By enabling this flag ezEdits tries to circumvent that case by perturbing the secondary direction by a small amount.
 

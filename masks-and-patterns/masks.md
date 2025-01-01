@@ -133,11 +133,11 @@ Optionally takes a specific light level to match, or minimum and maximum light l
 <summary>#near Mask</summary>
 
 **`#near[mask][distance]`**\
-&#xNAN;**`#near[mask][minDistance][maxDistance]`**\
+**`#near[mask][minDistance][maxDistance]`**\
 \
-Masks to all blocks within a given spherical (euclidean) distance of a mask.\
+Masks to all blocks within a given spherical (Euclidean) distance of a mask.\
 Doesn't modify blocks which match the inner `mask`.\
-Can also be set to exclude blocks closer than the minimum distance.\\
+Can also be set to exclude blocks closer than the minimum distance.\
 
 ![](../.gitbook/assets/mask_near_mask.gif) **`[mask]`**
 

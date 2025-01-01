@@ -69,40 +69,58 @@ Mandatory Parameters:
 
 * <mark style="color:orange;">**`Shape`**</mark> (<mark style="color:orange;">**`S`**</mark>). Well, defines the shape of the Shape structure. Additional parameters are given within the parenthesis after. Available shapes are:
   * `Cone`
-    * ![](../../.gitbook/assets/StructuresShapesCone.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesCone.png)
   * `Crystal([Sides:<sides>],[Extrusion:<value>])`&#x20;
-    * ![](../../.gitbook/assets/StructuresShapesCrystal.gif)
+    
+    ![](../../.gitbook/assets/StructuresShapesCrystal.gif)
   * `Cuboid`
-    * ![](../../.gitbook/assets/StructuresShapesCuboid.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesCuboid.png)
   * `Curl`
-    * ![](../../.gitbook/assets/StructuresShapesCurl.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesCurl.png)
   * `Cylinder`
-    * ![](../../.gitbook/assets/StructuresShapesCylinder.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesCylinder.png)
   * `Ellipsoid`
-    * ![](../../.gitbook/assets/StructuresShapesEllipsoid.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesEllipsoid.png)
   * `Fur`
-    * ![](../../.gitbook/assets/StructuresShapesFur.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesFur.png)
   * `Heart`
-    * ![](../../.gitbook/assets/StructuresShapesHeart.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesHeart.png)
   * `Jellybean`
-    * ![](../../.gitbook/assets/StructuresShapesJellybean.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesJellybean.png)
   * `Leaf`
-    * ![](../../.gitbook/assets/StructuresShapesLeaf.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesLeaf.png)
   * `Lemon`
-    * ![](../../.gitbook/assets/StructuresShapesLemon.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesLemon.png)
   * `Onion`
-    * ![](../../.gitbook/assets/StructuresShapesOnion.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesOnion.png)
   * `Polygon([Sides:<sides>])`
-    * ![](../../.gitbook/assets/StructuresShapesPolygon.gif)
+    
+    ![](../../.gitbook/assets/StructuresShapesPolygon.gif)
   * `Pyramid([Sides:<sides>])`
-    * ![](../../.gitbook/assets/StructuresShapesPyramid.gif)
+    
+    ![](../../.gitbook/assets/StructuresShapesPyramid.gif)
   * `Supersphere(Exponent:<exponent>)`
-    * ![](../../.gitbook/assets/StructuresShapesSupersphere.gif)
+    
+    ![](../../.gitbook/assets/StructuresShapesSupersphere.gif)
   * `Tetrahedron`
-    * ![](../../.gitbook/assets/StructuresShapesTetrahedron.png)
+    
+    ![](../../.gitbook/assets/StructuresShapesTetrahedron.png)
   * `Torus(Thickness:<value>)`
-    * ![](../../.gitbook/assets/StructuresShapesTorus.gif)
+    
+    ![](../../.gitbook/assets/StructuresShapesTorus.gif)
   * `=<expression>`
+    
     * In addition to predefined shapes, you can also define your own shape with a WorldEdit expression.
     * For example, this expression will create spirals:\
       <mark style="color:blue;">`Shape(S:`</mark><mark style="color:blue;">**`=x+=sin(2*pi*y)/2;z+=cos(2*pi*y)/2;x*x+z*z<0.3^2`**</mark><mark style="color:blue;">`,P:clay)`</mark>
@@ -169,39 +187,48 @@ Mandatory Parameters:
 
 Let's say this is our clipboard or our schematic:
 
-* ![](../../.gitbook/assets/StructuresPasteMethod_example1.png)
+![](../../.gitbook/assets/StructuresPasteMethod_example1.png)
 
 Here's how it would look pasted at an odd angle when using
 
 * `PasteMethod:FAST`
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example2.png)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example2.png)
 * vs `PasteMethod:SMOOTHED`
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example3.png)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example3.png)
 
 Or when pasted a significantly larger size:
 
 * `PasteMethod:FAST`
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example4.png)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example4.png)
 * vs `PasteMethod:SMOOTHED`
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example5.png)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example5.png)
 
 There's also an additional parameter to the SMOOTHED PasteMethod: The `FillBias`. It allows you to specify whether the tool should try to place _more_ blocks or try to place _less_ blocks. This could be particularly helpful for e.g., particularly thin structures.
 
 Let's say this is our clipboard/schematic now.
 
 * A curved one-block thick sheet:
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example6.png)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example6.png)
 
 Here's how _it_ would look pasted at an odd angle when using `//paste` or
 
 * `PasteMethod:FAST`
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example7.png)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example7.png)
 * compared to `PasteMethod:SMOOTHED`&#x20;
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example9.png)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example9.png)
 * compared to `PasteMethod:SMOOTHED,FillBias:3` (default FillBias is 1.0)
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example8.png)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example8.png)
 * compared to a GIF going from `Fillbias:`**`0.25`** up to `Fillbias:`**`3.0`**
-  * ![](../../.gitbook/assets/StructuresPasteMethod_example10.gif)
+  
+  ![](../../.gitbook/assets/StructuresPasteMethod_example10.gif)
 
 </details>
 

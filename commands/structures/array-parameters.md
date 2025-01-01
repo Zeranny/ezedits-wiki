@@ -8,7 +8,7 @@
 
 Control how close all placements are by defining the gap distance between each placement.
 
-Defaults to 0. Meaning, in a straight line each placement comes right after another with no gap.
+Defaults to `0`. Meaning, in a straight line each placement comes right after another with no gap.
 
 Positive values will increase that distance and place fewer structures in total.
 
@@ -16,23 +16,23 @@ Negative values cause the placements to overlap.
 
 > #### Examples
 >
-> Ex. command: `//ezarray Clipboard`` `**`-g <gap>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+> Ex. command: `//ezarray Clipboard `**`-g <gap>`** (with the clipboard being a default vanilla oak tree for no particular reason)
 >
 >
 >
-> `//ezar Cl`` `**`-g 0`** : (default value, placements are right next to each other)
+> `//ezar Cl `**`-g 0`** : (default value, placements are right next to each other)
 >
 > <img src="../../.gitbook/assets/ArrayGap_example1.png" alt="" data-size="original">
 >
 >
 >
-> `//ezar Cl`` `**`-g 10`** : (placements are now further apart)
+> `//ezar Cl `**`-g 10`** : (placements are now further apart)
 >
 > ![](../../.gitbook/assets/ArrayGap_example2.png)
 >
 >
 >
-> `//ezar Cl`` `**`-g -3`** (negative values cause placements to overlap)
+> `//ezar Cl `**`-g -3`** (negative values cause placements to overlap)
 >
 > ![](../../.gitbook/assets/ArrayGap_example3.png)
 
@@ -48,9 +48,9 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 
 > #### Examples
 >
-> Ex. command: `//ezarray Clipboard`` `**`-q <radii>`**
+> Ex. command: `//ezarray Clipboard `**`-q <radii>`**
 >
-> `//ezar Cl`` `**`-q 1`**&#x20;
+> `//ezar Cl `**`-q 1`**&#x20;
 >
 > (default value, no scaling applied)
 >
@@ -58,7 +58,7 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 >
 >
 >
-> `//ezar Cl`` `**`-q 0.3,3`**&#x20;
+> `//ezar Cl `**`-q 0.3,3`**&#x20;
 >
 > (placements are down-scaled by a factor of 0.3 at the beginning of the path and slowly get bigger up to triple their original size towards the end of the spline path)
 >
@@ -66,7 +66,7 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 >
 >
 >
-> `//ezar Cl`` `**`-q 1.5,0.5,5.0,2.0,0.2`**&#x20;
+> `//ezar Cl `**`-q 1.5,0.5,5.0,2.0,0.2`**&#x20;
 >
 > (Tree is being scaled progressively through all given values throughout the spline path)
 >
@@ -74,7 +74,7 @@ Advanced Tip: You may prepend each entry with a position between 0 and 1 to spec
 >
 >
 >
-> `//ezar Cl`` `**`-q 1.5,0.5,5.0,2.0,0.2 -o 0.7,1.3`**&#x20;
+> `//ezar Cl `**`-q 1.5,0.5,5.0,2.0,0.2 -o 0.7,1.3`**&#x20;
 >
 > (Combining progressive scaling -q with [random scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) -o)
 >
@@ -98,7 +98,7 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 >
 > Ex. command: `//ezarray Clipboard Orthogonal Constant`**`-n <normalMode>`**
 >
-> `//ezar Cl O C`` `**`-n CONSISTENT`**&#x20;
+> `//ezar Cl O C `**`-n CONSISTENT`**&#x20;
 >
 > (default value)
 >
@@ -106,7 +106,7 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 >
 >
 >
-> `//ezar Cl O C`` `**`-n UPRIGHT`**&#x20;
+> `//ezar Cl O C `**`-n UPRIGHT`**&#x20;
 >
 > (placements are not as tilted anymore)
 >
@@ -124,7 +124,7 @@ By default, structures are placed along the spline path that's induced by the in
 >
 > `//ezarray Clipboard` (placements are placed along path)
 >
-> `//ezarray Clipboard`` `**`-b`** (placements positions moved to nearest surface block)
+> `//ezarray Clipboard `**`-b`** (placements positions moved to nearest surface block)
 >
 > ![](../../.gitbook/assets/ezgif.com-animated-gif-maker.gif)
 

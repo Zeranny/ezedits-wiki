@@ -22,16 +22,16 @@ Available options:
 * <mark style="color:orange;">**`Ellipsoid`**</mark> (<mark style="color:orange;">**`E`**</mark>): An ellipsoidal region
 * <mark style="color:orange;">**`Cylinder`**</mark> (<mark style="color:orange;">**`C`**</mark>): A cylindrical region
   * The dimensions of the first three can be set using the <mark style="color:blue;">**`Dimensions`**</mark> (<mark style="color:blue;">**`D`**</mark>) parameter, e.g. `Box(Dimensions:"60,30,60")`  or `B(D:"60,30,60")`. It defaults to `"40,40,40"`.
-* <mark style="color:orange;">**`Saved`**</mark> (<mark style="color:orange;">**`S`**</mark>): A selection saved using //ezsel save.
+* <mark style="color:orange;">**`Saved`**</mark> (<mark style="color:orange;">**`S`**</mark>): A selection saved using `//ezsel save`.
   * Requires you to define the <mark style="color:blue;">**`Name`**</mark> (<mark style="color:blue;">**`N`**</mark>) parameter, choosing one of your saved selections.
 * <mark style="color:orange;">**`Active`**</mark> (<mark style="color:orange;">**`A`**</mark>): Your currently selected region.
-  * Contrary to the first three region options, these last two options have an inherent position in the world. You may choose to override their position by moving them to the player (//ezsc) or the clicked position (//ezbr sc), or use their inherent position using the <mark style="color:blue;">**`UseOriginalPosition`**</mark> (<mark style="color:blue;">**`P`**</mark>) parameter.\
-    The default value for the region argument for //ezsc is in fact `-h Active(UseOriginalPosition:true)`. If you set it to false, then the command is executed with the region shifted to your player location.&#x20;
+  * Contrary to the first three region options, these last two options have an inherent position in the world. You may choose to override their position by moving them to the player (`//ezsc`) or the clicked position (`//ezbr sc`), or use their inherent position using the <mark style="color:blue;">**`UseOriginalPosition`**</mark> (<mark style="color:blue;">**`P`**</mark>) parameter.\
+    The default value for the region argument for `//ezsc` is in fact `-h Active(UseOriginalPosition:true)`. If you set it to false, then the command is executed with the region shifted to your player location.&#x20;
 * By default, the center of the region is positioned at the target position. You may define an offset using the <mark style="color:blue;">**`Offset`**</mark> (<mark style="color:blue;">**`O`**</mark>) parameter to move it relative to its target position. The default is `(0,0,0)`.
 
 > #### Examples:
 >
-> Ex. command: `//ezbrush scatter Clipboard`` `**`-h <region>`**
+> Ex. command: `//ezbrush scatter Clipboard `**`-h <region>`**
 >
 > Gif going through
 >
@@ -58,13 +58,13 @@ The `-d <directions>` parameter defines the list of cardinal directions (up, dow
 
 The `-e <threshold>` parameter defines how much the surface normal at the placement position must align with any of the directions given by `-d`. The higher the value the stronger the filter.
 
-`-d` has defaults to an empty list (nothing).
+`-d` defaults to an empty list (nothing).
 
 `-e` defaults to 0.5. Expected value range is -1 to 1.
 
 > #### Example
 >
-> Ex. command: `//ezsc Clipboard S C`` `**`-d <directions> -e <threshold>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+> Ex. command: `//ezsc Clipboard S C `**`-d <directions> -e <threshold>`** (with the clipboard being a default vanilla oak tree)
 >
 >
 >
@@ -74,12 +74,10 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 >
 > **`-d up -e <threshold>`** (scatter points must be on a surface facing roughly upwards)
 >
-> GIF
->
 > * starts at **`-e -1.0`** (weakest filter threshold, all shapes are placed)
-> * pauses at **`-e 0.0`** (half of all directions are filtered out)
+>* pauses at **`-e 0.0`** (half of all directions are filtered out)
 > * and ends at **`-e 1.0`** (strongest filter threshold, no shapes are placed anymore).
->
+> 
 > ![](../../.gitbook/assets/ScatterDirectionalFilter_demo.gif)
 
 ***
@@ -90,17 +88,14 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 
 > #### Examples:
 >
-> Ex. command: `//ezsc Clipboard S C`` `**`-m <mask>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+> Ex. command: `//ezsc Clipboard S C `**`-m <mask>`** (with the clipboard being a default vanilla oak tree)
 >
->
->
-> GIF going through
+>Using the following masks:
 >
 > * **`-m red`** (only placement positions on red wool blocks are chosen)
-> * **`-m !red`** (only placements positions on anything but red wool blocks are chosen)
+>* **`-m !red`** (only placements positions on anything but red wool blocks are chosen)
 > * **`-m =y>95`** (only placement positions which are above y>95 are chosen)
-> * and the region before the execution of the command.
->
+> 
 > ![](../../.gitbook/assets/ScatterMaskFilter_demo.gif)
 
 ***
@@ -117,11 +112,11 @@ Note: Percent sign is optional. `0.5` is equal to `0.5%`.
 
 > #### Examples:
 >
-> Ex. command: **`//ezsc Clipboard C C -n <density>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+> Ex. command: **`//ezsc Clipboard C C -n <density>`** (with the clipboard being a default vanilla oak tree)
 >
 >
 >
-> **`-n 2%`** (default) or **`-n 2`** ('%'-sign is optional):
+> **`-n 2%`** (default) or **`-n 2`** (`%` is optional):
 >
 > ![](../../.gitbook/assets/ScatterDensity_example1.png)
 >
@@ -159,7 +154,7 @@ For cases like these, where you want to place a structure at every instance of a
 
 Sets the seed for the random number generator which chooses the initial random placement positions.&#x20;
 
-Defaults to -1 (random seed), meaning that the placement positions differ in each execution of the scatter command.
+Defaults to `-1` (random seed), meaning that the placement positions differ in each execution of the scatter command.
 
 ***
 
@@ -167,13 +162,13 @@ Defaults to -1 (random seed), meaning that the placement positions differ in eac
 
 Determines how uniformly spread out all placement positions are. Expecting a positive integer including 0.
 
-Defaults to 15.
+Defaults to `15`.
 
 The uniformity algorithm works by starting with fully random placement positions, and iteratively repelling all positions apart from one another. This parameter sets the number of repelling iterations to perform. Thus, 0 means the placement positions within your region are purely random.
 
 > #### Example:
 >
-> Ex. command: `//ezsc Clipboard C C`` `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+> Ex. command: `//ezsc Clipboard C C `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree)
 >
 >
 >
@@ -191,7 +186,7 @@ The uniformity algorithm works by starting with fully random placement positions
 
 ### Mask Cover Block: <mark style="color:orange;">`-l <pattern>`</mark>
 
-After placing all structures, replace all unaffected surface blocks within the region that match the mask filter (-m) with the given block. (-m must be set for this flag to take effect.)
+After placing all structures, replace all unaffected surface blocks within the region that match the mask filter (`-m`) with the given block. (`-m` must be set for this flag to take effect.)
 
 This is a niche utility option for cases in which you apply a scatter multiple times in a neighbouring region but do not want to place structures in areas where you already did scatter before. So using this flag, you can (temporarily within your workflow) overwrite all surface blocks within your region with the given block, such that any following scatter operations that overlap with already covered regions, do not place structures there because the surface blocks have been "covered".
 
@@ -199,7 +194,7 @@ This is a niche utility option for cases in which you apply a scatter multiple t
 >
 > `//ezbrush scatter Clipboard -m clay`
 >
-> Running ezbrush scatter **without** the `-l` flag results in densely placed area whereever the clicked areas overlap, which may not be the desired result.
+> Running ezbrush scatter **without** the `-l` flag results in densely placed area wherever the clicked areas overlap, which may not be the desired result.
 >
 > ![](../../.gitbook/assets/ScatterMaskCoverBlock_example1.gif)
 >
@@ -217,7 +212,7 @@ This is a niche utility option for cases in which you apply a scatter multiple t
 
 By default `scatter` will determine placement positions within the currently selected region, but will place blocks outside the region if a placement position is at the border of the currently selected region. You may cut off any such blocks (prevent them from being placed) with this `-t` flag.
 
-Turning on this flag is comparable to running the command with `//gmask #region` (for //ezscatter at least).
+Turning on this flag is comparable to running the command with `//gmask #region` (for `//ezscatter` at least).
 
 > Examples:
 >
@@ -235,7 +230,7 @@ Turning on this flag is comparable to running the command with `//gmask #region`
 >
 > With `-t` flag:
 >
-> `//ezsc Cl C C -s 15,21,15 -n 0.5%`` `**`-t`**
+> `//ezsc Cl C C -s 15,21,15 -n 0.5% `**`-t`**
 >
 > ![](../../.gitbook/assets/ScatterTrimFlag_example3.png)
 

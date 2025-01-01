@@ -72,7 +72,7 @@ Prints the blocks of a given palette in chat. Block list can be clicked to copy.
 ### `encode <palette>`
 
 Prints an encoded string representing a given palette. Click the string to copy.\
-&#xNAN;_&#x4F;nly supports vanilla Minecraft blocks._
+_Only supports vanilla Minecraft blocks._
 
 ### `decode <string>`
 

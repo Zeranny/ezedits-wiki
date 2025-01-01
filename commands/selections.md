@@ -9,7 +9,7 @@
 <summary>Selection Load</summary>
 
 **`//selload [selection]`**\
-&#xNAN;_&#x41;lternate for \`//ezsel load\`_
+_Alternate for \`//ezsel load\`_
 
 The `//selload` command retrieves a previously saved selection from the player's saved selection list.
 
@@ -20,7 +20,6 @@ The `//selload` command retrieves a previously saved selection from the player's
 ### `//next`
 
 <details>
-
 <summary>Selection Shift</summary>
 
 **`//next <direction> <gap>`**
@@ -44,7 +43,7 @@ The `//next` command shifts your current selection area by its own size in a spe
 
 The `//selhere` command moves your current selection to your location.
 
-* **SelectionPosition** (Default: POS1): Specifies which point in the selection to move to the player's position. All other points will be moved to the relative positon.
+* **SelectionPosition** (Default: POS1): Specifies which point in the selection to move to the player's position. All other points will be moved to the relative position.
   * POS1 - The "Pos1" of the selection, or first point for convex/poly selections.
   * POS2 - The "Pos2" of the selection, or the last points for convex/poly selections.
   * CENTER - The center point of the selection

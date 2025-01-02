@@ -31,7 +31,9 @@ Note: The structure might appear stretched or compressed depending on your choic
 >
 > Second image: `//ezsc Clipboard -s 5,14,5`
 >
-> <img src="../../.gitbook/assets/PlacementDimensions_example1.png" alt="" data-size="original"><img src="../../.gitbook/assets/PlacementDimensions_example2.png" alt="" data-size="original">
+> <img src="../../.gitbook/assets/PlacementDimensions_example1.png" alt="" data-size="original">
+>
+> <img src="../../.gitbook/assets/PlacementDimensions_example2.png" alt="" data-size="original">
 
 ***
 
@@ -82,7 +84,9 @@ Flips are applied after orientation but before alignment.
 >
 > Second Image: `//ezsc Clipboard -f XZ` (random mirrors along x- and z-axis, but not y)
 >
-> <img src="../../.gitbook/assets/PlacementRandomFlips_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementRandomFlips_example2.png" alt="" data-size="original">
+> <img src="../../.gitbook/assets/PlacementRandomFlips_example1.png" alt="" data-size="original">
+>
+> <img src="../../.gitbook/assets/PlacementRandomFlips_example2.png" alt="" data-size="original">
 
 ***
 
@@ -108,17 +112,17 @@ By default, this parameter is not set to anything, i.e. random rotations are dis
 >
 > Second Image: `//ezsc Clipboard -r Y` (random 90°-rotations around the y-axis)
 >
-> <img src="../../.gitbook/assets/PlacementRandomRotations_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementRandomRotations_example2.png" alt="" data-size="original">
+> <img src="../../.gitbook/assets/PlacementRandomRotations_example1.png" alt="" data-size="original">
+>
+> <img src="../../.gitbook/assets/PlacementRandomRotations_example2.png" alt="" data-size="original">
 
 ***
 
 ### Orientation (advanced): `-k <orientationAxis>` and `-c <orientationAngle>`
 
-Setting an orientation means defining which internal coordinate system the structure has. That coordinate system is then used in the random flips/rotations and during alignment. 
-_Defining an orientation is "defining which way is up and which way is forward"_
+Setting an orientation means defining which internal coordinate system the structure has. That coordinate system is then used in the random flips/rotations and during alignment. _Defining an orientation is "defining which way is up and which way is forward"_
 
-Orientation is set by a rotation axis (`-k <direction>`) and a rotation angle (`-c <angle>`).
-_The rotation works identically to `//ezd rotate`_
+Orientation is set by a rotation axis (`-k <direction>`) and a rotation angle (`-c <angle>`). _The rotation works identically to `//ezd rotate`_
 
 By default, the rotation axis `-k` is `y` or `up` and the rotation angle `-c` is `0`, which means no rotation.
 
@@ -128,6 +132,6 @@ For example, if you set the rotation axis to `-k x` and the rotation angle to `-
 
 ### Place Air: `-a`
 
-By default, if this flag _is not_ set, air blocks are skipped when placing a structure. When this flag _is_ set, air blocks within the structure are able to override existing blocks.&#x20;
+By default, if this flag _is not_ set, air blocks are skipped when placing a structure. When this flag _is_ set, air blocks within the structure are able to override existing blocks.
 
-(Note: This behaviour is opposite to `//paste`'s  `-a` flag. It may be confusing, but we think it's more convenient for our commands.)
+(Note: This behaviour is opposite to `//paste`'s `-a` flag. It may be confusing, but we think it's more convenient for our commands.)

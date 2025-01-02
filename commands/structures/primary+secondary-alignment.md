@@ -20,7 +20,7 @@ Note: The primary and secondary may not be the same direction.
 
 <details>
 
-<summary>**More in-depth explanation using examples:**</summary>
+<summary>More in-depth explanation using examples:</summary>
 
 Let's say this is our build that we want to place, by for example having it as our current WorldEdit clipboard.
 
@@ -418,6 +418,6 @@ Available options:
 
 ### Perturb Secondary: <mark style="color:orange;">\[-x]</mark>
 
-In our primary+secondary system, placement fails if both vectors are collinear, which simply means they are on the same line.
+In our primary+secondary system, placement fails if both vectors are collinear (which simply means they are on the same line).
 
 By enabling this flag ezEdits tries to circumvent that case by perturbing the secondary direction by a small amount.

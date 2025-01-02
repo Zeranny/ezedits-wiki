@@ -1,12 +1,12 @@
 # Palette Shift Brush
 
-### `//ezbr `<mark style="color:orange;">`paletteshift`</mark>
+### `//ezbr`` `<mark style="color:orange;">`paletteshift`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Palette Shift Brush</mark></summary>
 
-**`//ezbr paletteshift `**<mark style="color:orange;">**`<palette>`**</mark> <mark style="color:orange;">**`[radius]`**</mark> <mark style="color:orange;">**`[shift]`**</mark>
+**`//ezbr paletteshift`` `**<mark style="color:orange;">**`<palette>`**</mark> <mark style="color:orange;">**`[radius]`**</mark> <mark style="color:orange;">**`[shift]`**</mark>
 
 Replaces blocks matching the palette with palette blocks shifted along by the given amount.\
 For example, a shift value of 2 will replace any instances of the first palette block with the third.

@@ -16,7 +16,6 @@ Takes the block the player is aiming at as the mask.
 
 <details>
 
-
 <summary>#attached mask</summary>
 
 **`#attached[<vector,vector,vector ...>]`**
@@ -39,15 +38,13 @@ In either case, attached means that the block is "touching" the adjacent block. 
 
 **`#blocklight[lightLevel]` or `#blocklight[minLevel][maxLevel]`**
 
-Masks to blocks of a given block light (Illumination provided by light sources other than skylight).
-Optionally takes a minimum and maximum light level, matching any level within that range.
+Masks to blocks of a given block light (Illumination provided by light sources other than skylight). Optionally takes a minimum and maximum light level, matching any level within that range.
 
 </details>
 
 ### `#current`
 
 <details>
-
 
 <summary>#current mask</summary>
 
@@ -63,7 +60,6 @@ e.g running `//gmask !#current` will invert your current gmask
 
 <details>
 
-
 <summary>#eznoise Mask</summary>
 
 **`#eznoisemask[noisePreset][<scale>][<threshold>][<seed>]`**\
@@ -77,7 +73,6 @@ Uses a noise preset values `0.0-1.0` to match blocks above a given noise thresho
 
 <details>
 
-
 <summary>#fullblock mask</summary>
 
 Masks to blocks which fill an entire cube space.
@@ -89,7 +84,6 @@ e.g 1-7 layers of snow will not pass, but 8 layers of snow, a block like stone, 
 ### `#fuzzypalette`
 
 <details>
-
 
 <summary>#fuzzypalette mask</summary>
 
@@ -120,8 +114,7 @@ Masks to blocks which are infested with silverfish.
 
 **`#lightsource[lightLevel]` or `#lightsource[lightLevel]` or `#lightsource[minLevel][maxLevel]`**
 
-Masks to blocks which emit light.
-Optionally takes a specific light level to match, or minimum and maximum light level, matching any level within that range.
+Masks to blocks which emit light. Optionally takes a specific light level to match, or minimum and maximum light level, matching any level within that range.
 
 </details>
 
@@ -129,15 +122,14 @@ Optionally takes a specific light level to match, or minimum and maximum light l
 
 <details>
 
-
 <summary>#near Mask</summary>
 
 **`#near[mask][distance]`**\
-**`#near[mask][minDistance][maxDistance]`**\
+&#xNAN;**`#near[mask][minDistance][maxDistance]`**\
 \
 Masks to all blocks within a given spherical (Euclidean) distance of a mask.\
 Doesn't modify blocks which match the inner `mask`.\
-Can also be set to exclude blocks closer than the minimum distance.\
+Can also be set to exclude blocks closer than the minimum distance.\\
 
 ![](../.gitbook/assets/mask_near_mask.gif) **`[mask]`**
 
@@ -150,7 +142,6 @@ Can also be set to exclude blocks closer than the minimum distance.\
 ### `#palette`
 
 <details>
-
 
 <summary>#palette mask</summary>
 
@@ -166,7 +157,6 @@ e.g `oak_stairs[facing=east]` will only match with `oak_stairs[facing=west]` if 
 ### `#truelight`
 
 <details>
-
 
 <summary>#truelight Mask</summary>
 

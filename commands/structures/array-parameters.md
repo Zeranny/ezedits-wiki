@@ -14,27 +14,21 @@ Positive values will increase that distance and place fewer structures in total.
 
 Negative values cause the placements to overlap.
 
-> #### Examples
+> **Examples**
 >
-> Ex. command: `//ezarray Clipboard `**`-g <gap>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+> Ex. command: `//ezarray Clipboard`` `**`-g <gap>`** (with the clipboard being a default vanilla oak tree for no particular reason)
 >
->
->
-> `//ezar Cl `**`-g 0`** : (default value, placements are right next to each other)
+> `//ezar Cl`` `**`-g 0`** : (default value, placements are right next to each other)
 >
 > <img src="../../.gitbook/assets/ArrayGap_example1.png" alt="" data-size="original">
 >
+> `//ezar Cl`` `**`-g 10`** : (placements are now further apart)
 >
+> <img src="../../.gitbook/assets/ArrayGap_example2.png" alt="" data-size="original">
 >
-> `//ezar Cl `**`-g 10`** : (placements are now further apart)
+> `//ezar Cl`` `**`-g -3`** (negative values cause placements to overlap)
 >
-> ![](../../.gitbook/assets/ArrayGap_example2.png)
->
->
->
-> `//ezar Cl `**`-g -3`** (negative values cause placements to overlap)
->
-> ![](../../.gitbook/assets/ArrayGap_example3.png)
+> <img src="../../.gitbook/assets/ArrayGap_example3.png" alt="" data-size="original">
 
 ***
 
@@ -46,41 +40,33 @@ The scaling factors are defined as a progression along the spline. Meaning you m
 
 Advanced Tip: You may prepend each entry with a position between 0 and 1 to specify at what part of the spline a radius should be reached. `-q 0:1,0.8:3,1:1` means start and end with radius 1 (`0:1` & `1:1`), but "keyframe" a radius of 3 at 80% of the spline path (`0.8:3`). (If no positions are given then equally distant positions are chosen.)
 
-> #### Examples
+> **Examples**
 >
-> Ex. command: `//ezarray Clipboard `**`-q <radii>`**
+> Ex. command: `//ezarray Clipboard`` `**`-q <radii>`**
 >
-> `//ezar Cl `**`-q 1`**&#x20;
+> `//ezar Cl`` `**`-q 1`**
 >
 > (default value, no scaling applied)
 >
-> ![](../../.gitbook/assets/ArrayGap_example1.png)
+> <img src="../../.gitbook/assets/ArrayGap_example1.png" alt="" data-size="original">
 >
->
->
-> `//ezar Cl `**`-q 0.3,3`**&#x20;
+> `//ezar Cl`` `**`-q 0.3,3`**
 >
 > (placements are down-scaled by a factor of 0.3 at the beginning of the path and slowly get bigger up to triple their original size towards the end of the spline path)
 >
-> ![](../../.gitbook/assets/ArrayScaling_example2.png)
+> <img src="../../.gitbook/assets/ArrayScaling_example2.png" alt="" data-size="original">
 >
->
->
-> `//ezar Cl `**`-q 1.5,0.5,5.0,2.0,0.2`**&#x20;
+> `//ezar Cl`` `**`-q 1.5,0.5,5.0,2.0,0.2`**
 >
 > (Tree is being scaled progressively through all given values throughout the spline path)
 >
-> ![](../../.gitbook/assets/ArrayScaling_example3.png)
+> <img src="../../.gitbook/assets/ArrayScaling_example3.png" alt="" data-size="original">
 >
->
->
-> `//ezar Cl `**`-q 1.5,0.5,5.0,2.0,0.2 -o 0.7,1.3`**&#x20;
+> `//ezar Cl`` `**`-q 1.5,0.5,5.0,2.0,0.2 -o 0.7,1.3`**
 >
 > (Combining progressive scaling -q with [random scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) -o)
 >
-> ![](../../.gitbook/assets/ArrayScaling_example4.png)
->
->
+> <img src="../../.gitbook/assets/ArrayScaling_example4.png" alt="" data-size="original">
 
 ***
 
@@ -94,23 +80,21 @@ Modifies how the path is created from the input (convex selection) points. See [
 
 Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See [#spline-normal-mode-n-less-than-normalmode-greater-than](../spline/common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than "mention")
 
-> #### Examples
+> **Examples**
 >
 > Ex. command: `//ezarray Clipboard Orthogonal Constant`**`-n <normalMode>`**
 >
-> `//ezar Cl O C `**`-n CONSISTENT`**&#x20;
+> `//ezar Cl O C`` `**`-n CONSISTENT`**
 >
 > (default value)
 >
-> ![](../../.gitbook/assets/OrthogonalAlignment_example1.png)
+> <img src="../../.gitbook/assets/OrthogonalAlignment_example1.png" alt="" data-size="original">
 >
->
->
-> `//ezar Cl O C `**`-n UPRIGHT`**&#x20;
+> `//ezar Cl O C`` `**`-n UPRIGHT`**
 >
 > (placements are not as tilted anymore)
 >
-> ![](../../.gitbook/assets/OrthogonalAlignment_example2.png)
+> <img src="../../.gitbook/assets/OrthogonalAlignment_example2.png" alt="" data-size="original">
 
 ***
 
@@ -118,15 +102,15 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 
 By default, structures are placed along the spline path that's induced by the input (convex selection) points. This flag moves the placement positions to the nearest surface block instead, in case the position on the path is in midair or submerged in blocks.
 
-> #### Example
+> **Example**
 >
 > GIF comparing
 >
 > `//ezarray Clipboard` (placements are placed along path)
 >
-> `//ezarray Clipboard `**`-b`** (placements positions moved to nearest surface block)
+> `//ezarray Clipboard`` `**`-b`** (placements positions moved to nearest surface block)
 >
-> ![](../../.gitbook/assets/ezgif.com-animated-gif-maker.gif)
+> <img src="../../.gitbook/assets/ezgif.com-animated-gif-maker.gif" alt="" data-size="original">
 
 {% hint style="info" %}
 By default the maximum search range is 96 blocks. The maximum search range can be set in the config. If no surface block is found within that range, the original position will be used instead.

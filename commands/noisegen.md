@@ -65,7 +65,7 @@ e.g `//ng heightmap`
 * **-o** (Default: (0,0,0)): Offsets the noise generation coordinates by a given vector (X,Y,Z).
 * **-c**: When used, centres the noise generation on the world coordinates of the selection.
 * **-h**: Activates heightmap mode using 2D noise.\
-  _Heightmap mode is only compatible with Cuboid, Cylinder, or Polygon region types._
+  &#xNAN;_&#x48;eightmap mode is only compatible with Cuboid, Cylinder, or Polygon region types._
 * **-n**: Uses normalized (-1 to 1) selection-centred coordinates for noise generation.
 * **-t**: Enables smooth mode, specifically for snow, water, and lava blocks in the palette \[Applicable only in heightmap mode].
 

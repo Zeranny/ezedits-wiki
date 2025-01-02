@@ -4,8 +4,7 @@ Alignment defines the orientation at which the structure is placed.
 
 ## Explanation
 
-Every structure has an intrinsic "up" direction and an intrinsic "forward" direction. 
-By default, structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x).
+Every structure has an intrinsic "up" direction and an intrinsic "forward" direction. By default, structures are placed with their up direction facing, well, up (+y), and with their forward direction facing forward (+x).
 
 The most important thing is that now you can control how a structure is placed by defining where its up direction and where its forward direction should face.
 
@@ -20,6 +19,7 @@ Note: The primary and secondary may not be the same direction.
 {% endhint %}
 
 <details>
+
 <summary>**More in-depth explanation using examples:**</summary>
 
 Let's say this is our build that we want to place, by for example having it as our current WorldEdit clipboard.
@@ -78,17 +78,11 @@ As you can see, the green beam, or what was originally up in our build when we c
 
 All of this applies independently of your current clipboard. Here's another structure at its original orientation followed by its placement aligned just like the previous example.
 
-<img src="../../.gitbook/assets/AlignmentGuide_example7.png" alt="" data-size="original">
-
-<img src="../../.gitbook/assets/AlignmentGuide_example8.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/AlignmentGuide_example7.png" alt="" data-size="original"> <img src="../../.gitbook/assets/AlignmentGuide_example8.png" alt="" data-size="original">
 
 Can you see why setting the primary to `(-1,2-1)` and the secondary to `west` leads to the leaf being oriented like that?
 
-
-
-------
-
-
+***
 
 By the way, the command used was
 
@@ -125,11 +119,10 @@ If you do not specify a `<direction>`, then:
 * the default direction is **+y** if you're setting the `<primary>`.
 * the default direction is **+x** if you're setting the `<secondary>`.
 
-There are various ways to define a direction. From using the axes, cardinal directions, vector notation, or player relative directions like forward, left, right, etc. 
-Pro tip: You can also add directions together using simple arithmetic operators, like `east-z+(0,0.5,0)`. 
-Pro tip²: Put `=` at the end to evaluate your direction expression as you are typing it.
+There are various ways to define a direction. From using the axes, cardinal directions, vector notation, or player relative directions like forward, left, right, etc. Pro tip: You can also add directions together using simple arithmetic operators, like `east-z+(0,0.5,0)`. Pro tip²: Put `=` at the end to evaluate your direction expression as you are typing it.
 
 <details>
+
 <summary><mark style="color:blue;">Examples</mark></summary>
 
 `//ezsc Clipboard C(D:(0,2,0)) C(D:east)`
@@ -166,8 +159,6 @@ Abbreviation: <mark style="color:orange;">**`R`**</mark>
 * Notice how our structure's up direction (green beam) remains up (primary is set to up), but each placement is randomly rotated around the primary (y-axis in this case) since the secondary is random.
 
 <img src="../../.gitbook/assets/RandomAlignment_demo1.png" alt="" data-size="original">
-
-
 
 `//ezsc Clipboard Random Constant`
 
@@ -207,14 +198,14 @@ The default `<noise>` is `Perlin(Freq:0.01)`.
 * `<primary>` is still up and only the `<secondary>` is set to Noise.
 * The default Noise is Perlin Noise.
 
-![](../../.gitbook/assets/NoiseAlignment_example2.png)
+<img src="../../.gitbook/assets/NoiseAlignment_example2.png" alt="" data-size="original">
 
 `//ezsc Clipboard Constant Noise(N:Vor(Freq:0.02,DistReturn:cell))`
 
-* Same scenario as above but using [Cellular Noise](https://en.wikipedia.org/wiki/Voronoi_diagram#/media/File:Coloured_Voronoi_3D_slice.svg).&#x20;
+* Same scenario as above but using [Cellular Noise](https://en.wikipedia.org/wiki/Voronoi_diagram#/media/File:Coloured_Voronoi_3D_slice.svg).
 * You can recognize how each cell has its own random direction.
 
-![](../../.gitbook/assets/NoiseAlignment_example1.png)
+<img src="../../.gitbook/assets/NoiseAlignment_example1.png" alt="" data-size="original">
 
 </details>
 
@@ -237,10 +228,9 @@ Note: For brushes, `Constant(Direction:aim)` will use your player's aim directio
 `//ezsc Clipboard Aim Constant`
 
 * If we set the `<primary>` to `Aim` then the up direction of our structure, the green beam in our example, will align with our current player's aim direction.
-* My player model is included in the picture for reference. That's where I was looking when I executed the command. 
-  _The aim direction is visualized in F3+B with the thin blue line_
+* My player model is included in the picture for reference. That's where I was looking when I executed the command. _The aim direction is visualized in F3+B with the thin blue line_
 
-<img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"><img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
 
 </details>
 
@@ -263,9 +253,7 @@ Abbreviation: <mark style="color:orange;">**`P`**</mark>
 * If you set the `<primary>` to `PlayerRelative`, then each structure is placed such that its up direction is pointing towards your player position.
 * If you look closely, you can see my player model in the pictures. That's where I executed the command.
 
-<img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original">  <img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
-
-
+<img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original"><img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
 
 `//ezbr place Shape(S:Cone,P:diamond_block) PlayerRelative Constant -s 12,36,12`
 
@@ -307,9 +295,7 @@ Syntax: <mark style="color:orange;">**`ViewDiff`**</mark>
 
 Abbreviation: <mark style="color:orange;">**`V`**</mark>
 
-Each placement requires a right click and a left click. 
-The first right click sets the placement position at the targeted block. 
-Left-clicking somewhere else then defines a direction: From your first (right) click target position to your second (left) click.
+Each placement requires a right click and a left click. The first right click sets the placement position at the targeted block. Left-clicking somewhere else then defines a direction: From your first (right) click target position to your second (left) click.
 
 <details>
 
@@ -319,15 +305,13 @@ Left-clicking somewhere else then defines a direction: From your first (right) c
 
 Here I set the primary to SurfaceNormal and control the secondary direction with a second click through the ViewDiff mode. Pay attention to my hand. You can see me alternating between right- and left-clicks. A right click sets the placement position, and a left click sets the ViewDiff direction. Our ingame alignment visualizer dynamically updates depending on your movement and your actions.
 
-![](../../.gitbook/assets/output.gif)
-
-
+<img src="../../.gitbook/assets/output.gif" alt="" data-size="original">
 
 `//ezbr place Shape(S:Torus(Thickness:0.4),P:57) PlayerRelative ViewDiff -s 20,20,30 -k x -c 90`
 
 This torus shape required a few more parameters, so this example turned out a bit longer than usual. What's important to notice though is that the primary is set to PlayerRelative, meaning the top of the torus always faces the player, and the secondary is set to ViewDiff, meaning the final orientation is determined with a second click. Here, after each right-click, I alternate between left-clicking above and left/right from the placement position to create a linked chain.
 
-![](<../../.gitbook/assets/output (1).gif>)
+<img src="../../.gitbook/assets/output (1).gif" alt="" data-size="original">
 
 </details>
 
@@ -349,9 +333,7 @@ Abbreviation: <mark style="color:orange;">**`T`**</mark>
 
 The _Tangential_ direction points tangential to the spline path at the position of the placement. If you set the primary to _Tangential_, the top of the shape is pointing along the spline like this.
 
-![](../../.gitbook/assets/TangentialAlignment_example1.png)
-
-
+<img src="../../.gitbook/assets/TangentialAlignment_example1.png" alt="" data-size="original">
 
 </details>
 
@@ -375,21 +357,17 @@ The angle, given in degrees, defines the initial direction of the orthogonal dir
 
 The _Orthogonal_ direction points perpendicular to the spline path at the position of the placement. If you set the primary to _Orthogonal_, the top of the shape will point perpendicular to the spline path like this.
 
-![](../../.gitbook/assets/OrthogonalAlignment_example1.png)
-
-
+<img src="../../.gitbook/assets/OrthogonalAlignment_example1.png" alt="" data-size="original">
 
 Here's a GIF going through the `<angle>` parameter:
 
-![](../../.gitbook/assets/StructuresAlignmentsOrthogonal_example.gif)
-
-
+<img src="../../.gitbook/assets/StructuresAlignmentsOrthogonal_example.gif" alt="" data-size="original">
 
 `//ezarray Clipboard Orthogonal Constant -n HORIZONTAL`
 
 The [-n flag](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than) has a direct influence on the orthogonal direction.
 
-![](../../.gitbook/assets/OrthogonalAlignment_example2.png)
+<img src="../../.gitbook/assets/OrthogonalAlignment_example2.png" alt="" data-size="original">
 
 </details>
 
@@ -403,8 +381,7 @@ The following flags adjust how Alignments are calculated.
 
 ### Snap to certain directions: <mark style="color:orange;">`[-j <snapDirections>]`</mark>
 
-This parameter allows you to restrict the chosen alignment direction to the specified subset. 
-E.g. snapping to / only allowing cardinal direction, i.e. 90° rotations.  &#x20;
+This parameter allows you to restrict the chosen alignment direction to the specified subset. E.g. snapping to / only allowing cardinal direction, i.e. 90° rotations.
 
 Available options:
 
@@ -433,9 +410,7 @@ Available options:
 
 `//ezbrush Cl Constant ViewDiff -j MULTIPLES_45`
 
-![](../../.gitbook/assets/AlignmentSnapToAngles_example.gif)
-
-
+<img src="../../.gitbook/assets/AlignmentSnapToAngles_example.gif" alt="" data-size="original">
 
 </details>
 
@@ -446,4 +421,3 @@ Available options:
 In our primary+secondary system, placement fails if both vectors are collinear, which simply means they are on the same line.
 
 By enabling this flag ezEdits tries to circumvent that case by perturbing the secondary direction by a small amount.
-

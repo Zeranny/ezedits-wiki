@@ -6,13 +6,12 @@ This page covers the `//ezspline 3d` subcommand which feature 3D spline shapes e
 
 ## Syntax
 
-> **`//ezspline 3d `**<mark style="color:orange;">**`<shape>`**</mark> <mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
+> **`//ezspline 3d`` `**<mark style="color:orange;">**`<shape>`**</mark> <mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
 >
 > * <mark style="color:orange;">**`<shape>`**</mark> : Choose one from the list below.
->
 > * <mark style="color:orange;">**`<pattern>`**</mark>: Specifies the block(s) the spline is made out of, e.g. `clay`.
 >
->   The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
+> The remaining arguments are outlined on the [Common Parameters](common-parameters.md) subpage.
 
 ***
 
@@ -22,7 +21,7 @@ This page covers the `//ezspline 3d` subcommand which feature 3D spline shapes e
 
 #### ![](../../.gitbook/assets/SplinesBeads.png)
 
-### `//ezspline 3d `<mark style="color:orange;">`Beads (Be)`</mark>
+### `//ezspline 3d`` `<mark style="color:orange;">`Beads (Be)`</mark>
 
 <details>
 
@@ -36,9 +35,10 @@ Generates a beads-shaped spline along the selected positions.
 
 Example:
 
-* `//ezsp 3d `<mark style="color:orange;">`Beads`</mark>` clay 10![](../../.gitbook/assets/SplinesBeads.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Beads`</mark>` ``clay 10`
+  * &#x20;![](../../.gitbook/assets/SplinesBeads.png)
 
-_This shape can also be achieved with the [Rings](3d-spline-shapes.md#ezspline-3d-rings) shape using the following set of parameters: `Rings(E:0,T:1,G:0,M:2,N:2)`_
+_This shape can also be achieved with the_ [_Rings_](3d-spline-shapes.md#ezspline-3d-rings) _shape using the following set of parameters: `Rings(E:0,T:1,G:0,M:2,N:2)`_
 
 </details>
 
@@ -46,13 +46,11 @@ _This shape can also be achieved with the [Rings](3d-spline-shapes.md#ezspline-3
 
 #### ![](../../.gitbook/assets/SplinesCubes.gif)
 
-### `//ezspline 3d `<mark style="color:orange;">`Cubes (Cu)`</mark>
+### `//ezspline 3d`` `<mark style="color:orange;">`Cubes (Cu)`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Cubes Spline</mark></summary>
-
-
 
 **`//ezsp 3d Cubes([`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`])`** [**`<pattern>`**](3d-spline-shapes.md#syntax) [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
 
@@ -63,17 +61,16 @@ Generates a chainlink-shaped spline along the selected positions.
 
 Examples:
 
-* `//ezsp 3d `<mark style="color:orange;">`Cubes`</mark>` clay 7`
+* `//ezsp 3d`` `<mark style="color:orange;">`Cubes`</mark>` ``clay 7`
   * Default gap is 0.5
+  * <img src="../../.gitbook/assets/SplinesCubes_example1.png" alt="" data-size="original">
 
-![](../../.gitbook/assets/SplinesCubes_example1.png)
-
-* `//ezsp 3d `<mark style="color:orange;">`Cubes(Gap:0.0)`</mark>` clay 7`
-    ![](../../.gitbook/assets/SplinesCubes_example2.png)
-* `//ezsp 3d `<mark style="color:orange;">`Cubes(Gap:1.0)`</mark>` clay 7`
-    ![](../../.gitbook/assets/SplinesCubes_example3.png)
-* `//ezsp 3d `<mark style="color:orange;">`Cu(G:2.0)`</mark>` clay 7`
-    ![](../../.gitbook/assets/SplinesCubes_example4.png)
+- `//ezsp 3d`` `<mark style="color:orange;">`Cubes(Gap:0.0)`</mark>` ``clay 7`&#x20;
+  * ![](../../.gitbook/assets/SplinesCubes_example2.png)
+- `//ezsp 3d`` `<mark style="color:orange;">`Cubes(Gap:1.0)`</mark>` ``clay 7`&#x20;
+  * ![](../../.gitbook/assets/SplinesCubes_example3.png)
+- `//ezsp 3d`` `<mark style="color:orange;">`Cu(G:2.0)`</mark>` ``clay 7`&#x20;
+  * ![](../../.gitbook/assets/SplinesCubes_example4.png)
 
 </details>
 
@@ -81,7 +78,7 @@ Examples:
 
 #### ![](../../.gitbook/assets/SplinesChainlink.gif)
 
-### `//ezspline 3d `<mark style="color:orange;">`Chainlink (Ch)`</mark>
+### `//ezspline 3d`` `<mark style="color:orange;">`Chainlink (Ch)`</mark>
 
 <details>
 
@@ -108,21 +105,19 @@ Generates a highly customisable chainlink-shaped spline along the selected posit
 
 Examples:
 
-* `//ezsp 3d `<mark style="color:orange;">`Chainlink`</mark>` clay 10`
-    ![](../../.gitbook/assets/SplinesChainlink_example1.png)
-* `//ezsp 3d `<mark style="color:orange;">`Chainlink(M:99,N:99,Extrusion:0.6)`</mark>` clay 10`
+* `//ezsp 3d`` `<mark style="color:orange;">`Chainlink`</mark>` ``clay 10`&#x20;
+  * ![](../../.gitbook/assets/SplinesChainlink_example1.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Chainlink(M:99,N:99,Extrusion:0.6)`</mark>` ``clay 10`
   * `M:99` is responsible for making the chains appear rectangular (instead of elliptical).
   * `N:99` is responsible for making the square chain link's cross-section square-shaped.
-    ![](../../.gitbook/assets/SplinesChainlink_example2.png)
-* `//ezsp 3d `<mark style="color:orange;">`Chainlink(M:1,N:1,E:0.7,G:-0.2,T:1.2)`</mark>` clay 11`
-    ![](../../.gitbook/assets/SplinesChainlink_example3.png)
-* `//ezsp 3d `<mark style="color:orange;">`Chainlink(M:2,N:2,E:0,G:1)`</mark>` clay 11`
-    ![](../../.gitbook/assets/SplinesChainlink_example4.png)
-* `//ezspline 3d `<mark style="color:orange;">`Chainlink(P:FIRST)`</mark> <mark style="color:red;">`red_terracotta`</mark>` 10`
-* `//ezspline 3d `<mark style="color:orange;">`Chainlink(P:SECOND)`</mark> <mark style="color:blue;">`blue_wool`</mark>` 10`
-    ![](../../.gitbook/assets/SplinesChainlink_example5.png)
-
-
+  * &#x20;![](../../.gitbook/assets/SplinesChainlink_example2.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Chainlink(M:1,N:1,E:0.7,G:-0.2,T:1.2)`</mark>` ``clay 11`&#x20;
+  * ![](../../.gitbook/assets/SplinesChainlink_example3.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Chainlink(M:2,N:2,E:0,G:1)`</mark>` ``clay 11`&#x20;
+  * ![](../../.gitbook/assets/SplinesChainlink_example4.png)
+* `//ezspline 3d`` `<mark style="color:orange;">`Chainlink(P:FIRST)`</mark> <mark style="color:red;">`red_terracotta`</mark>` ``10`
+* `//ezspline 3d`` `<mark style="color:orange;">`Chainlink(P:SECOND)`</mark> <mark style="color:blue;">`blue_wool`</mark>` ``10`&#x20;
+  * ![](../../.gitbook/assets/SplinesChainlink_example5.png)
 
 </details>
 
@@ -130,7 +125,7 @@ Examples:
 
 #### ![](../../.gitbook/assets/SplinesFishnet.gif)
 
-### `//ezspline 3d `<mark style="color:orange;">`Fishnet (Fi)`</mark>
+### `//ezspline 3d`` `<mark style="color:orange;">`Fishnet (Fi)`</mark>
 
 <details>
 
@@ -149,14 +144,17 @@ Generates a fishnet-shaped spline along the selected positions.
 
 Examples:
 
-* `//ezspline 3d `<mark style="color:orange;">`Fishnet`</mark>` clay 10`
-    ![](../../.gitbook/assets/SplinesFishnet_example1.png)
-* `//ezsp 3d `<mark style="color:orange;">`Fishnet(Spacing:2.0)`</mark>` clay 10`
-    ![](../../.gitbook/assets/SplinesFishnet_example2.png)
-* `//ezsp 3d `<mark style="color:orange;">`Fishnet(S:2.0,Depth:1.0,Width:0.3)`</mark>` clay 10`
-    ![](../../.gitbook/assets/SplinesFishnet_example3.png)
-* `//ezsp 3d `<mark style="color:orange;">`Fi(S:2.0,D:0.5,W:0.5)`</mark>` clay 10`
-    ![](../../.gitbook/assets/SplinesFishnet_example4.png)
+* `//ezspline 3d`` `<mark style="color:orange;">`Fishnet`</mark>` ``clay 10`&#x20;
+  * ![](../../.gitbook/assets/SplinesFishnet_example1.png)
+
+
+
+* `//ezsp 3d`` `<mark style="color:orange;">`Fishnet(Spacing:2.0)`</mark>` ``clay 10`&#x20;
+  * ![](../../.gitbook/assets/SplinesFishnet_example2.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Fishnet(S:2.0,Depth:1.0,Width:0.3)`</mark>` ``clay 10`&#x20;
+  * ![](../../.gitbook/assets/SplinesFishnet_example3.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Fi(S:2.0,D:0.5,W:0.5)`</mark>` ``clay 10`&#x20;
+  * ![](../../.gitbook/assets/SplinesFishnet_example4.png)
 
 </details>
 
@@ -164,7 +162,7 @@ Examples:
 
 #### ![](../../.gitbook/assets/SplineOscillate.gif)
 
-### `//ezspline 3d `<mark style="color:orange;">`Oscillate (Os)`</mark>
+### `//ezspline 3d`` `<mark style="color:orange;">`Oscillate (Os)`</mark>
 
 <details>
 
@@ -181,16 +179,16 @@ Generates a spline with an oscillating thickness along the selected positions.
 
 Examples:
 
-* `//ezspline 3d `<mark style="color:orange;">`Oscillate`</mark>` clay 10`
-  * Uses default values <mark style="color:orange;">`Depth:0.2`</mark> and <mark style="color:orange;">`Interval:0.5`</mark>
-    ![](../../.gitbook/assets/SplinesOscillate_example1.png)
-* `//ezsp 3d `<mark style="color:orange;">`Oscillate(Depth:0.6)`</mark>` clay 10`
-    ![](../../.gitbook/assets/SplinesOscillate_example2.png)
-* `//ezsp 3d `<mark style="color:orange;">`Oscillate(Depth:0.6,Interval:1.5)`</mark>` clay 10`
-    ![](../../.gitbook/assets/SplinesOscillate_example3.png)
-* `//ezsp 3d `<mark style="color:orange;">`Oscillate(Depth:0.2,Interval:1.5)`</mark>` clay 10`
-  * Can be abbreviated to <mark style="color:orange;">`Os(D:0.2,I:1.5)`</mark>
-    ![](../../.gitbook/assets/SplinesOscillate_example4.png)
+* `//ezspline 3d`` `<mark style="color:orange;">`Oscillate`</mark>` ``clay 10`
+  * Uses default values <mark style="color:orange;">`Depth:0.2`</mark> and <mark style="color:orange;">`Interval:0.5`</mark>&#x20;
+  * ![](../../.gitbook/assets/SplinesOscillate_example1.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Oscillate(Depth:0.6)`</mark>` ``clay 10`&#x20;
+  * ![](../../.gitbook/assets/SplinesOscillate_example2.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Oscillate(Depth:0.6,Interval:1.5)`</mark>` ``clay 10`&#x20;
+  * ![](../../.gitbook/assets/SplinesOscillate_example3.png)
+* `//ezsp 3d`` `<mark style="color:orange;">`Oscillate(Depth:0.2,Interval:1.5)`</mark>` ``clay 10`
+  * Can be abbreviated to <mark style="color:orange;">`Os(D:0.2,I:1.5)`</mark>&#x20;
+  * ![](../../.gitbook/assets/SplinesOscillate_example4.png)
 
 </details>
 
@@ -198,7 +196,7 @@ Examples:
 
 #### ![](../../.gitbook/assets/SplinesRings.gif)
 
-### `//ezspline 3d `<mark style="color:orange;">`Rings (Ri)`</mark>
+### `//ezspline 3d`` `<mark style="color:orange;">`Rings (Ri)`</mark>
 
 <details>
 
@@ -227,7 +225,7 @@ Generates a highly customisable spline of repeating rings/cubes/spheres along th
 
 #### ![](../../.gitbook/assets/SplinesSpaghetti.gif)
 
-### `//ezspline 3d `<mark style="color:orange;">`Sphaghetti (Sp)`</mark>
+### `//ezspline 3d`` `<mark style="color:orange;">`Sphaghetti (Sp)`</mark>
 
 <details>
 
@@ -241,23 +239,21 @@ Experimental spline which generates a set of twisted, intertwining, non-intersec
   * The number of intertwining lines.
 * **`[`**<mark style="color:orange;">**`Tangle:<value>`**</mark>**`]`** (Default: 3.0):
   * Determines how much the lines intertwine and move around. Low values result in fully straight lines. High values result in more chaotic paths.
-      ![](../../.gitbook/assets/SplinesSpaghettiTangle.gif)
+  * &#x20;![](../../.gitbook/assets/SplinesSpaghettiTangle.gif)
 * **`[`**<mark style="color:orange;">**`Density:<value>`**</mark>**`]`** (Default: 70%):
   * Indirectly determines the width of the noodles by specifying how much the cross-section should be filled with material vs just air. 100% makes the noodles as thick as they can be so that the given amount of noodles can still fit into the spline radius. Thus, large values do not leave the lines much space to move which give rise to glitchy paths. Small values leave large air gaps between the lines.
-  * Example: Cross section of the spline at 100%
-      ![](../../.gitbook/assets/SplinesNoodleSplineDensity_example2.png)
+  * Example: Cross section of the spline at 100%&#x20;
+  * ![](../../.gitbook/assets/SplinesNoodleSplineDensity_example2.png)
   * Example Cross section of the spline at 50% (same number of lines)
-      ![](../../.gitbook/assets/SplinesNoodleSplineDensity_example1.png)a
+  * &#x20;![](../../.gitbook/assets/SplinesNoodleSplineDensity_example1.png)
   * The smaller the density the smaller the individual radius of the lines. Difference to the width parameter: The determined radius is the one used for collision detection. The width parameter has no influence on the collision between lines.
-      ![](../../.gitbook/assets/SplinesSpaghettiDensity.gif)
+  * ![](../../.gitbook/assets/SplinesSpaghettiDensity.gif)
 * **`[`**<mark style="color:orange;">**`Width:<value>`**</mark>**`]`** (Default: 0.8):
-  * Relative width multiplier for all noodles independent of the line collision detection. Line collisions are calculated at width 1.0. This parameter defines the width at which the lines are rendered/placed. This means values larger than one result in overlapping lines, clipping into each other, meanwhile, values smaller than one ensure an air gap between all lines.
-      ![](../../.gitbook/assets/SplinesSpaghettiWidth.gif)
+  * Relative width multiplier for all noodles independent of the line collision detection. Line collisions are calculated at width 1.0. This parameter defines the width at which the lines are rendered/placed. This means values larger than one result in overlapping lines, clipping into each other, meanwhile, values smaller than one ensure an air gap between all lines.&#x20;
+  * ![](../../.gitbook/assets/SplinesSpaghettiWidth.gif)
 * **`[`**<mark style="color:orange;">**`Frequency:<value>`**</mark>**`]`** (Default: 0.5):
   * Sets the frequency value of the underlying noise responsible for the random perturbations. Higher values result in jittering. Tip: Use a higher/lower frequency if your spline is significantly longer/shorter than it is wide.
 * **`[`**<mark style="color:orange;">**`Seed:<value>`**</mark>**`]`** (Default: -1 (random)):
   * Sets the seed of the underlying noise responsible for the random perturbations.
-
-
 
 </details>

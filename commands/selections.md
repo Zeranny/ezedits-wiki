@@ -9,7 +9,7 @@
 <summary>Selection Load</summary>
 
 **`//selload [selection]`**\
-_Alternate for \`//ezsel load\`_
+&#xNAN;_&#x41;lternate for \`//ezsel load\`_
 
 The `//selload` command retrieves a previously saved selection from the player's saved selection list.
 
@@ -20,6 +20,7 @@ The `//selload` command retrieves a previously saved selection from the player's
 ### `//next`
 
 <details>
+
 <summary>Selection Shift</summary>
 
 **`//next <direction> <gap>`**

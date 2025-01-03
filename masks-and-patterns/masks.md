@@ -127,7 +127,7 @@ Masks to blocks which emit light. Optionally takes a specific light level to mat
 **`#near[mask][distance]`**\
 &#xNAN;**`#near[mask][minDistance][maxDistance]`**\
 \
-Masks to all blocks within a given spherical (euclidean) distance of a mask.\
+Masks to all blocks within a given spherical (Euclidean) distance of a mask.\
 Doesn't modify blocks which match the inner `mask`.\
 Can also be set to exclude blocks closer than the minimum distance.\\
 

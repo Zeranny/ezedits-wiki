@@ -30,7 +30,7 @@ e.g `//ng heightmap`
 
 <summary>Terrain (3D)</summary>
 
-**`//eznoisegen terrain <palette> <noise> [height] [strength] [-z <scale>] [-s <seed>] [-l <smear>] [-o <offset>] [-chnt]`**
+**`//eznoisegen terrain <palette> <noise> [height] [strength] [-z <scale>] [-s <seed>] [-l <smear>] [-o <offset>] [-c]`**
 
 * **Palette**: Specifies the palette of blocks to use.
 * **Noise**: Defines the noise preset to use.

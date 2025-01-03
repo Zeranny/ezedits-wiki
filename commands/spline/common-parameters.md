@@ -4,7 +4,7 @@ The following parameters and flags are available for **all** `//ezspline` subcom
 
 ***
 
-### Radius progression: <mark style="color:orange;">`<radii>`</mark>
+### Radius progression: <mark style="color:#EE2B6C;">`<radii>`</mark>
 
 Defines the thickness (course) of the spline.
 
@@ -21,7 +21,7 @@ For example
 * `5`_`,`_`0.6:10`_`,`_`15`_`,`_`0.4:20`_`,`_`5` is illegal because the positions are not in strictly ascending order since 0.4 came after 0.6.
 
 <details>
-<summary><mark style="color:blue;">Examples:</mark></summary>
+<summary><mark style="color:#EE2BFF;">Examples:</mark></summary>
 
 Example command: `//ezsp rope clay `**`<radii>`**
 

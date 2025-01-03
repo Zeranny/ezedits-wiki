@@ -49,6 +49,7 @@
   * [Common Parameters](commands/spline/common-parameters.md)
   * [2D Spline Shapes](commands/spline/2d-spline-shapes.md)
   * [3D Spline Shapes](commands/spline/3d-spline-shapes.md)
+  * [Hopefully Invisible Spaghetti Spline](commands/spline/hopefully-invisible-spaghetti-spline.md)
   * [Advanced Spline Shapes](commands/spline/advanced-spline-shapes.md)
 * [Stained Glass](commands/stained-glass.md)
 * [Surface](commands/surface.md)

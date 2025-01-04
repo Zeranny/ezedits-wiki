@@ -159,22 +159,19 @@ Abbreviation: <mark style="color:orange;">**`R`**</mark>
 
 `//ezsc Clipboard Constant Random`
 
-* Only setting the `<secondary>` to Random, primary remains pointing up
-* Notice how our structure's up direction (green beam) remains up (primary is set to up), but each placement is randomly rotated around the primary (y-axis in this case) since the secondary is random.
+Only setting the `<secondary>` to Random here, primary remains pointing up. Notice how our structure's up direction (green beam) remains up (primary is set to up), but each placement is randomly rotated around the primary (y-axis in this case) since the secondary is random.
 
 <img src="../../.gitbook/assets/RandomAlignment_demo1.png" alt="" data-size="original">
 
 `//ezsc Clipboard Random Constant`
 
-* Only setting the `<primary>` to Random, secondary remains pointing east.
-* Terrain replaced with glass so you can see better.
-* Notice how the green beam is now facing all kinds of directions, but the red beam is roughly pointing east for all placements.
+Only setting the `<primary>` to Random, secondary remains pointing east. The terrain was replaced with glass so you can see better. Notice how the green beam is now facing all kinds of directions, but the red beam is roughly pointing east for all placements.
 
 <img src="../../.gitbook/assets/RandomAlignment_demo2.png" alt="" data-size="original">
 
 `//ezsc Clipboard Random Random`
 
-* Setting both to Random
+If we set both to Random, then we get true random chaos.
 
 <img src="../../.gitbook/assets/RandomAlignment_demo3.png" alt="" data-size="original">
 
@@ -231,10 +228,11 @@ Note: For brushes, `Constant(Direction:aim)` will use your player's aim directio
 
 `//ezsc Clipboard Aim Constant`
 
-* If we set the `<primary>` to `Aim` then the up direction of our structure, the green beam in our example, will align with our current player's aim direction.
-* My player model is included in the picture for reference. That's where I was looking when I executed the command. _The aim direction is visualized in F3+B with the thin blue line_
+If we set the `<primary>` to `Aim` then the up direction of our structure, the green beam in our example, will align with our current player's aim direction.
 
-<img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"><img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
+My player model is included in the picture for reference. That's where I was looking when I executed the command. _The aim direction is visualized in F3+B with the thin blue line_
+
+<img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
 
 </details>
 
@@ -254,10 +252,11 @@ Abbreviation: <mark style="color:orange;">**`P`**</mark>
 
 `//ezsc Clipboard PlayerRelative Constant`
 
-* If you set the `<primary>` to `PlayerRelative`, then each structure is placed such that its up direction is pointing towards your player position.
-* If you look closely, you can see my player model in the pictures. That's where I executed the command.
+If you set the `<primary>` to `PlayerRelative`, then each structure is placed such that its up direction is pointing towards your player position.
 
-<img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original"><img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
+If you look closely, you can see my player model in the pictures. That's where I executed the command.
+
+<img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
 
 `//ezbr place Shape(S:Cone,P:diamond_block) PlayerRelative Constant -s 12,36,12`
 

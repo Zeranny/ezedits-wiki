@@ -13,57 +13,61 @@ ezEdits lets you fully customize this pipeline. In brackets are the flags and ar
 
 ***
 
-### Controlling Dimensions: `-s <dimensions>`
+### Controlling Dimensions: <mark style="color:orange;">`-s <dimensions>`</mark>
 
 The dimensions define the size of a structure placement, by setting its bounding box size.
 
-{% hint style="info" %}
 The flag `-s <dimensions>` sets the desired absolute base dimensions of the placement (overriding the default values).
-{% endhint %}
 
 By default, expression-based structures have dimensions `20,20,20`, while Schematic/Clipboard structures are placed with their inherent original dimensions.
 
-Note: The structure might appear stretched or compressed depending on your choice of values.
+{% hint style="success" %}
+The structure might appear **stretched** or **compressed** depending on your choice of values.
+{% endhint %}
 
-> For example, if your clipboard is inherently of size 5x7x5, then setting the dimensions as `-s 5,14,5` will stretch out the structure placement along its y-axis:
->
-> First image: `//ezsc Clipboard -s 5,7,5` (original clipboard size)
->
-> Second image: `//ezsc Clipboard -s 5,14,5`
->
-> <img src="../../.gitbook/assets/PlacementDimensions_example1.png" alt="" data-size="original">
->
-> <img src="../../.gitbook/assets/PlacementDimensions_example2.png" alt="" data-size="original">
+<details>
+
+<summary><mark style="color:blue;">Example</mark></summary>
+
+For example, if your clipboard is inherently of size 5x7x5, then setting the dimensions as `-s 5,14,5` will stretch out the structure placement along its y-axis:
+
+First image: `//ezsc Clipboard -s 5,7,5` (original clipboard size)
+
+Second image: `//ezsc Clipboard -s 5,14,5`
+
+<img src="../../.gitbook/assets/PlacementDimensions_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementDimensions_example2.png" alt="" data-size="original">
+
+</details>
 
 ***
 
-### Random Scaling: `-o <sizeMultiplierRange>`
+### Random Scaling: <mark style="color:orange;">`-o <sizeMultiplierRange>`</mark>
 
 Most of the structure commands place multiple structure placements at once. To give a bit of variety you can apply some random scaling for each placement.
 
-{% hint style="info" %}
 The `-o <sizeMultiplierRange>` applies random scaling for each placement. You specify a range of values. A random number from this range is chosen as the scaling factor for each placement.
-{% endhint %}
 
 By default, the range is `1,1`, meaning the scaling factor is always 1, and thus, does nothing.
 
-> **Example**
->
-> By setting the range as `-o 0.5,2.0` we get placements of e.g. our clipboard at random sizes between half the desired size and double the desired size,
->
-> `//ezsc Clipboard -o 0.5,2.0`
->
-> <img src="../../.gitbook/assets/PlacementRandomScaling_example.png" alt="" data-size="original">
->
-> (Same tree clipboard at various different sizes)
+<details>
+
+<summary><mark style="color:blue;">Example</mark></summary>
+
+By setting the range as `-o 0.5,2.0` we get placements of e.g. our clipboard at random sizes between half the desired size and double the desired size,
+
+`//ezsc Clipboard -o 0.5,2.0`
+
+<img src="../../.gitbook/assets/PlacementRandomScaling_example.png" alt="" data-size="original">
+
+(Same tree clipboard at various different sizes)
+
+</details>
 
 ***
 
-### Random Flips: `-f <randomFlipsAxes>`
+### Random Flips: <mark style="color:orange;">`-f <randomFlipsAxes>`</mark>
 
-{% hint style="info" %}
 The `-f <randomFlipsAxes>` flag enables random flipping of the structure across any of the axes for each placement.
-{% endhint %}
 
 Available values are:
 
@@ -78,23 +82,23 @@ Available values are:
 
 Flips are applied after orientation but before alignment.
 
-> **Example**
->
-> First Image: `//ezsc Clipboard` (no random flips)
->
-> Second Image: `//ezsc Clipboard -f XZ` (random mirrors along x- and z-axis, but not y)
->
-> <img src="../../.gitbook/assets/PlacementRandomFlips_example1.png" alt="" data-size="original">
->
-> <img src="../../.gitbook/assets/PlacementRandomFlips_example2.png" alt="" data-size="original">
+<details>
+
+<summary><mark style="color:blue;">Example</mark></summary>
+
+First Image: `//ezsc Clipboard` (no random flips)
+
+Second Image: `//ezsc Clipboard -f XZ` (random mirrors along x- and z-axis, but not y)
+
+<img src="../../.gitbook/assets/PlacementRandomFlips_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementRandomFlips_example2.png" alt="" data-size="original">
+
+</details>
 
 ***
 
-### Random 90°-Rotations: `-r <randomRotationAxis>`
+### Random 90°-Rotations: <mark style="color:orange;">`-r <randomRotationAxis>`</mark>
 
-{% hint style="info" %}
 The `-r <randomRotationAxis>` flag enables random 90° rotation of the structure across either of the axes for each placement.
-{% endhint %}
 
 Available values are:
 
@@ -106,19 +110,21 @@ By default, this parameter is not set to anything, i.e. random rotations are dis
 
 90°-rotations are applied after orientation but before alignment.
 
-> **Example**
->
-> First Image: `//ezsc Clipboard` (no random rotations)
->
-> Second Image: `//ezsc Clipboard -r Y` (random 90°-rotations around the y-axis)
->
-> <img src="../../.gitbook/assets/PlacementRandomRotations_example1.png" alt="" data-size="original">
->
-> <img src="../../.gitbook/assets/PlacementRandomRotations_example2.png" alt="" data-size="original">
+<details>
+
+<summary><mark style="color:blue;">Example</mark></summary>
+
+First Image: `//ezsc Clipboard` (no random rotations)
+
+Second Image: `//ezsc Clipboard -r Y` (random 90°-rotations around the y-axis)
+
+<img src="../../.gitbook/assets/PlacementRandomRotations_example1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlacementRandomRotations_example2.png" alt="" data-size="original">
+
+</details>
 
 ***
 
-### Orientation (advanced): `-k <orientationAxis>` and `-c <orientationAngle>`
+### Orientation (advanced): <mark style="color:orange;">`-k <orientationAxis>`</mark> and <mark style="color:orange;">`-c <orientationAngle>`</mark>
 
 Setting an orientation means defining which internal coordinate system the structure has. That coordinate system is then used in the random flips/rotations and during alignment. _Defining an orientation is "defining which way is up and which way is forward"_
 
@@ -130,7 +136,7 @@ For example, if you set the rotation axis to `-k x` and the rotation angle to `-
 
 ***
 
-### Place Air: `-a`
+### Place Air: <mark style="color:orange;">`-a`</mark>
 
 By default, if this flag _is not_ set, air blocks are skipped when placing a structure. When this flag _is_ set, air blocks within the structure are able to override existing blocks.
 

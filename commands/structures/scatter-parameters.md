@@ -29,24 +29,26 @@ Available options:
     The default value for the region argument for `//ezsc` is in fact `-h Active(UseOriginalPosition:true)`. If you set it to false, then the command is executed with the region shifted to your player location.
 * By default, the center of the region is positioned at the target position. You may define an offset using the <mark style="color:blue;">**`Offset`**</mark> (<mark style="color:blue;">**`O`**</mark>) parameter to move it relative to its target position. The default is `(0,0,0)`.
 
-> **Examples:**
->
-> Ex. command: `//ezbrush scatter Clipboard `**`-h <region>`**
->
-> Gif going through
->
-> * `-h Box`
-> * `-h Cylinder`
-> * `-h Saved(Name:$triangle)`
-> * `-h Saved(Name:$triangle,Offset:(0,0,10))`
->
-> after using the brush once at the same position:
->
-> <img src="../../.gitbook/assets/ScatterRegion_example1.gif" alt="" data-size="original">
->
-> Whereby `$triangle` is just some 3-point polyhedral selection I saved with //ezsel.
->
-> Selection is visualised using pink wool for clarity (using the [-l flag](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)).
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+Ex. command: `//ezbrush scatter Clipboard`` `**`-h <region>`**
+
+Gif going through the following options, using the brush once at the same position:
+
+* <mark style="color:orange;">`-h Box`</mark>
+* <mark style="color:orange;">`-h Cylinder`</mark>
+* <mark style="color:orange;">`-h Saved(Name:$triangle)`</mark>
+* <mark style="color:orange;">`-h Saved(Name:$triangle,Offset:(0,0,10))`</mark>
+
+<img src="../../.gitbook/assets/ScatterRegion_example1.gif" alt="" data-size="original">
+
+Whereby `$triangle` is just some 3-point polyhedral selection I saved with //ezsel.
+
+Selection is visualised using pink wool for clarity (using the [-l flag](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)).
+
+</details>
 
 ***
 
@@ -62,19 +64,27 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 
 `-e` defaults to 0.5. Expected value range is -1 to 1.
 
-> **Example**
->
-> Ex. command: `//ezsc Clipboard S C `**`-d <directions> -e <threshold>`** (with the clipboard being a default vanilla oak tree)
->
-> **`-d west,up`** (scatter points must be on a surface facing either west or up)![](../../.gitbook/assets/ScatterDirectionalFilter_example.png)
->
-> **`-d up -e <threshold>`** (scatter points must be on a surface facing roughly upwards)
->
-> * starts at **`-e -1.0`** (weakest filter threshold, all shapes are placed)
-> * pauses at **`-e 0.0`** (half of all directions are filtered out)
-> * and ends at **`-e 1.0`** (strongest filter threshold, no shapes are placed anymore).
->
-> <img src="../../.gitbook/assets/ScatterDirectionalFilter_demo.gif" alt="" data-size="original">
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+`//ezsc Clipboard S C`` `**`-d <directions>`** **`-e <threshold>`**
+
+**`-d west,up`** **`-e 0.5`** (Satter points must be on a surface facing either west or up.)
+
+![](../../.gitbook/assets/ScatterDirectionalFilter_example.png)
+
+
+
+**`-d up`** **`-e <threshold>`** (scatter points must be on a surface facing roughly upwards)
+
+* starts at **`-e -1.0`** (weakest filter threshold, all shapes are placed)
+* pauses at **`-e 0.0`** (half of all directions are filtered out)
+* and ends at **`-e 1.0`** (strongest filter threshold, no shapes are placed anymore).
+
+<img src="../../.gitbook/assets/ScatterDirectionalFilter_demo.gif" alt="" data-size="original">
+
+</details>
 
 ***
 
@@ -82,17 +92,21 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 
 Enables filtering out placement positions that do not match a mask given by `-m <mask>`. Placement positions must satisfy the mask for a structure to be placed.
 
-> **Examples:**
->
-> Ex. command: `//ezsc Clipboard S C `**`-m <mask>`** (with the clipboard being a default vanilla oak tree)
->
-> Using the following masks:
->
-> * **`-m red`** (only placement positions on red wool blocks are chosen)
-> * **`-m !red`** (only placements positions on anything but red wool blocks are chosen)
-> * **`-m =y>95`** (only placement positions which are above y>95 are chosen)
->
-> <img src="../../.gitbook/assets/ScatterMaskFilter_demo.gif" alt="" data-size="original">
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+`//ezsc Clipboard S C`` `**`-m <mask>`** (with the clipboard being a default vanilla oak tree)
+
+Using the following masks:
+
+* **`-m red`** (only placement positions on red wool blocks are chosen)
+* **`-m !red`** (only placements positions on anything but red wool blocks are chosen)
+* **`-m =y>95`** (only placement positions which are above y>95 are chosen)
+
+<img src="../../.gitbook/assets/ScatterMaskFilter_demo.gif" alt="" data-size="original">
+
+</details>
 
 ***
 
@@ -104,25 +118,34 @@ The density value is a percentage. It determines what percentage of surface bloc
 
 To be overly specific: Let _N_ be the remaining surface blocks (e.g. the result of `//count [!air]&[~air]` if neither filter is used), then the final amount of structures placed is equal to _N \* density / 100_.
 
-Note: Percent sign is optional. `0.5` is equal to `0.5%`.
-
-> **Examples:**
->
-> Ex. command: **`//ezsc Clipboard C C -n <density>`** (with the clipboard being a default vanilla oak tree)
->
-> **`-n 2%`** (default) or **`-n 2`** (`%` is optional):
->
-> <img src="../../.gitbook/assets/ScatterDensity_example1.png" alt="" data-size="original">
->
-> **`-n 0.5%`**
->
-> <img src="../../.gitbook/assets/ScatterDensity_example2.png" alt="" data-size="original">
->
-> **`-n 5%`**
->
-> <img src="../../.gitbook/assets/ScatterDensity_example3.png" alt="" data-size="original">
-
 {% hint style="info" %}
+The percent sign "%" is optional. `0.5` is interpreted as `0.5%`.
+{% endhint %}
+
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+**`//ezsc Clipboard C C -n <density>`** (with the clipboard being a default vanilla oak tree)
+
+**`-n 2%`** (default) or **`-n 2`** (`%` is optional):
+
+<img src="../../.gitbook/assets/ScatterDensity_example1.png" alt="" data-size="original">
+
+**`-n 0.5%`**
+
+<img src="../../.gitbook/assets/ScatterDensity_example2.png" alt="" data-size="original">
+
+**`-n 5%`**
+
+<img src="../../.gitbook/assets/ScatterDensity_example3.png" alt="" data-size="original">
+
+</details>
+
+<details>
+
+<summary>Note when using <code>-d</code> or <code>-m</code>:</summary>
+
 The density specifies the percentage of _**remaining**_ surface blocks on which a placement is placed.
 
 If for example, you use the mask filter to restrict the placement to a specific block which only rarely occurs within your selection, e.g. with the following region and `-m sea_lantern`,
@@ -136,7 +159,8 @@ Then `-n 2%`, the default density, implies that from all sea\_lantern blocks (th
 For cases like these, where you want to place a structure at every instance of a specific block you'd therefore use `-n 100%`. Doing `//ezsc Clipboard -m sea_lantern -n 100%` in our example results in:
 
 <img src="../../.gitbook/assets/ScatterDensityHint_example3.png" alt="" data-size="original">
-{% endhint %}
+
+</details>
 
 ***
 
@@ -156,17 +180,21 @@ Defaults to `15`.
 
 The uniformity algorithm works by starting with fully random placement positions, and iteratively repelling all positions apart from one another. This parameter sets the number of repelling iterations to perform. Thus, 0 means the placement positions within your region are purely random.
 
-> **Example:**
->
-> Ex. command: `//ezsc Clipboard C C `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree)
->
-> * `-u 0` (fully random distribution)
-> * `-u 2` (slightly uniform distribution)
-> * `-u 20` (very uniform distribution)
->
-> GIF starting with **`-u 0`** and ending with **`-u 20`**:
->
-> <img src="../../.gitbook/assets/ScatterUniformity_demo.gif" alt="" data-size="original">
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+`//ezsc Clipboard C C`` `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree)
+
+* `-u 0` (fully random distribution)
+* `-u 2` (slightly uniform distribution)
+* `-u 20` (very uniform distribution)
+
+GIF starting with **`-u 0`** and ending with **`-u 20`**:
+
+<img src="../../.gitbook/assets/ScatterUniformity_demo.gif" alt="" data-size="original">
+
+</details>
 
 ***
 
@@ -176,19 +204,25 @@ After placing all structures, replace all unaffected surface blocks within the r
 
 This is a niche utility option for cases in which you apply a scatter multiple times in a neighbouring region but do not want to place structures in areas where you already did scatter before. So using this flag, you can (temporarily within your workflow) overwrite all surface blocks within your region with the given block, such that any following scatter operations that overlap with already covered regions, do not place structures there because the surface blocks have been "covered".
 
-> Examples:
->
-> `//ezbrush scatter Clipboard -m clay`
->
-> Running ezbrush scatter **without** the `-l` flag results in densely placed area wherever the clicked areas overlap, which may not be the desired result.
->
-> <img src="../../.gitbook/assets/ScatterMaskCoverBlock_example1.gif" alt="" data-size="original">
->
-> `//ezbrush scatter Clipboard -m clay -b pink`
->
-> Running ezbrush scatter **with** `-b pink`, whereby pink wool is just some random block in this case, covers the affected areas such that, combined with the `-m clay` mask filter subsequent brush clicks do not place any new shapes there, even when the regions overlap.
->
-> <img src="../../.gitbook/assets/ScatterMaskCoverBlock_example2.gif" alt="" data-size="original">
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+`//ezbrush scatter Clipboard -m clay`
+
+Running ezbrush scatter **without** the `-l` flag results in densely placed area wherever the clicked areas overlap, which may not be the desired result.
+
+<img src="../../.gitbook/assets/ScatterMaskCoverBlock_example1.gif" alt="" data-size="original">
+
+
+
+`//ezbrush scatter Clipboard -m clay -b pink`
+
+Running ezbrush scatter **with** `-b pink`, whereby pink wool is just some random block in this case, covers the affected areas such that, combined with the `-m clay` mask filter subsequent brush clicks do not place any new shapes there, even when the regions overlap.
+
+<img src="../../.gitbook/assets/ScatterMaskCoverBlock_example2.gif" alt="" data-size="original">
+
+</details>
 
 ***
 
@@ -198,24 +232,28 @@ By default `scatter` will determine placement positions within the currently sel
 
 Turning on this flag is comparable to running the command with `//gmask #region` (for `//ezscatter` at least).
 
-> Examples:
->
-> If this is our selected region:
->
-> <img src="../../.gitbook/assets/ScatterTrimFlag_example1.png" alt="" data-size="original">
->
-> Then executing the ezsc command without the flag will result in blocks potentially being placed outside the region. Only the placement/origin positions are restricted to the region.
->
-> Without `-t` flag:
->
-> `//ezsc Cl C C -s 15,21,15 -n 0.5%`
->
-> <img src="../../.gitbook/assets/ScatterTrimFlag_example2.png" alt="" data-size="original">
->
-> With `-t` flag:
->
-> `//ezsc Cl C C -s 15,21,15 -n 0.5% `**`-t`**
->
-> <img src="../../.gitbook/assets/ScatterTrimFlag_example3.png" alt="" data-size="original">
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+If this is our selected region:
+
+<img src="../../.gitbook/assets/ScatterTrimFlag_example1.png" alt="" data-size="original">
+
+Then executing the ezsc command without the flag will result in blocks potentially being placed outside the region. Only the placement/origin positions are restricted to the region.
+
+Without `-t` flag:
+
+`//ezsc Cl C C -s 15,21,15 -n 0.5%`
+
+<img src="../../.gitbook/assets/ScatterTrimFlag_example2.png" alt="" data-size="original">
+
+With `-t` flag:
+
+`//ezsc Cl C C -s 15,21,15 -n 0.5%`` `**`-t`**
+
+<img src="../../.gitbook/assets/ScatterTrimFlag_example3.png" alt="" data-size="original">
+
+</details>
 
 ***

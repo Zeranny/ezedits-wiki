@@ -1,12 +1,16 @@
 # Palette Gradient Brushes
 
-### `//ezbr `<mark style="color:orange;">`gradient`</mark>
+The following commands feature brushes for creating gradients.
+
+***
+
+### `//ezbr`` `<mark style="color:orange;">`gradient`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Gradient Brush</mark></summary>
 
-**`//ezbr gradient `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-av] [-n <noise>] [-z <scale>] [-d <distanceFunction>]`**</mark>
+**`//ezbr gradient`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-av] [-n <noise>] [-z <scale>] [-d <distanceFunction>]`**</mark>
 
 The `gradient` brush allows you to first define a plane by selecting 2 points, you can then paint with your gradient with blocks chosen based on distance along this plane.
 
@@ -28,13 +32,15 @@ The `gradient` brush allows you to first define a plane by selecting 2 points, y
 
 </details>
 
-### `//ezbr `<mark style="color:orange;">`gradientstroke`</mark>
+***
+
+### `//ezbr`` `<mark style="color:orange;">`gradientstroke`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Gradient Stroke Brush</mark></summary>
 
-**`//ezbr gradientstroke `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-advw] [-n <noise>] [-z <scale>]`**</mark>
+**`//ezbr gradientstroke`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-advw] [-n <noise>] [-z <scale>]`**</mark>
 
 The `gradientstroke` brush allows for gradient application along a path (stroke) defined by selecting points.
 
@@ -57,15 +63,17 @@ The `gradientstroke` brush allows for gradient application along a path (stroke)
 
 </details>
 
+***
+
 ## Gradient Parameters
 
-There are a few parameters to creating a gradient.
+There are a few parameters to creating a gradient worth explaining.
 
 ### Bleed
 
 First off, the <mark style="color:orange;">**`bleed`**</mark> parameter.
 
-![](../../.gitbook/assets/GradientInterpolationTapered2.gif)
+&#x20;![](../../.gitbook/assets/GradientInterpolationTapered2.gif)
 
 The bleed parameter determines how much the colors bleed into each other.
 
@@ -73,22 +81,25 @@ The bleed parameter determines how much the colors bleed into each other.
 
 The pattern of how this bleeding takes place can be determined by <mark style="color:orange;">**`noise`**</mark>. The GIF above was using White noise (`-n White`), while the following GIFs use Perlin noise (`-n Perlin(Freq:0.25)`)
 
-![](../../.gitbook/assets/GradientInterpolationTapered.gif)
+&#x20;![](../../.gitbook/assets/GradientInterpolationTapered.gif)
 
 #### You can also put in any noise. Here are a few more examples:
 
-*   **`-n Perlin(Freq:0.25)`**
+**`-n Perlin(Freq:0.25)`**
 
-    ![](../../.gitbook/assets/GradientInterpolationNoise_example1.png)
-*   **`-n Cellular(Freq:0.15)`**
+&#x20;![](../../.gitbook/assets/GradientInterpolationNoise_example1.png)
 
-    ![](../../.gitbook/assets/GradientInterpolationNoise_example3.png)
-*   **`-n @@ridged(Freq:0.15)`**
+**`-n Cellular(Freq:0.15)`**
 
-    ![](../../.gitbook/assets/GradientInterpolationNoise_example2.png)
-*   **`-n Shard(Freq:0.15)`**
+&#x20;![](../../.gitbook/assets/GradientInterpolationNoise_example3.png)
 
-    ![](../../.gitbook/assets/GradientInterpolationNoise_example4.png)
+**`-n @@ridged(Freq:0.15)`**
+
+&#x20;![](../../.gitbook/assets/GradientInterpolationNoise_example2.png)
+
+**`-n Shard(Freq:0.15)`**
+
+![](../../.gitbook/assets/GradientInterpolationNoise_example4.png)
 
 ### Interpolation Mode
 
@@ -100,26 +111,26 @@ _The blue square's top and bottom show where the gradient starts and ends_
 
 No interpolation is applied.
 
-![](../../.gitbook/assets/GradientInterpolationNone.png)
+&#x20;![](../../.gitbook/assets/GradientInterpolationNone.png)
 
 #### LINEAR
 
 The noise is applied with a constant factor throughout the entire gradient. Because of that, the gradient is "clipping" outside our two selected positions.
 
-![](../../.gitbook/assets/GradientInterpolationLinear.gif)
+&#x20;![](../../.gitbook/assets/GradientInterpolationLinear.gif)
 
 #### TAPERED
 
 Applies the noise strongest in the middle of the gradient and tapers off towards the start and end to avoid "clipping" outside of the given positions.
 
-![](../../.gitbook/assets/GradientInterpolationTapered.gif)
+&#x20;![](../../.gitbook/assets/GradientInterpolationTapered.gif)
 
 #### BEZIER
 
 Uses Bezier interpolation to apply the noise more softly and smoothly. Breaks for a bleed value of >1.
 
-![](../../.gitbook/assets/GradientInterpolationBezier.gif)
+&#x20;![](../../.gitbook/assets/GradientInterpolationBezier.gif)
 
 #### SIN
 
-![](../../.gitbook/assets/GradientInterpolationSin.gif)
+&#x20;![](../../.gitbook/assets/GradientInterpolationSin.gif)

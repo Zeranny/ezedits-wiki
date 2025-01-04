@@ -8,7 +8,7 @@ hidden: true
 
 #### ![](../../.gitbook/assets/SplinesSpaghetti.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Sphaghetti (Sp)`</mark>
+### `//ezspline 3d `<mark style="color:orange;">`Sphaghetti (Sp)`</mark>
 
 <details>
 

@@ -31,7 +31,7 @@ Available options:
 
 > **Examples:**
 >
-> Ex. command: `//ezbrush scatter Clipboard`` `**`-h <region>`**
+> Ex. command: `//ezbrush scatter Clipboard `**`-h <region>`**
 >
 > Gif going through
 >
@@ -64,7 +64,7 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 
 > **Example**
 >
-> Ex. command: `//ezsc Clipboard S C`` `**`-d <directions> -e <threshold>`** (with the clipboard being a default vanilla oak tree)
+> Ex. command: `//ezsc Clipboard S C `**`-d <directions> -e <threshold>`** (with the clipboard being a default vanilla oak tree)
 >
 > **`-d west,up`** (scatter points must be on a surface facing either west or up)![](../../.gitbook/assets/ScatterDirectionalFilter_example.png)
 >
@@ -84,7 +84,7 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 
 > **Examples:**
 >
-> Ex. command: `//ezsc Clipboard S C`` `**`-m <mask>`** (with the clipboard being a default vanilla oak tree)
+> Ex. command: `//ezsc Clipboard S C `**`-m <mask>`** (with the clipboard being a default vanilla oak tree)
 >
 > Using the following masks:
 >
@@ -158,7 +158,7 @@ The uniformity algorithm works by starting with fully random placement positions
 
 > **Example:**
 >
-> Ex. command: `//ezsc Clipboard C C`` `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree)
+> Ex. command: `//ezsc Clipboard C C `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree)
 >
 > * `-u 0` (fully random distribution)
 > * `-u 2` (slightly uniform distribution)
@@ -214,7 +214,7 @@ Turning on this flag is comparable to running the command with `//gmask #region`
 >
 > With `-t` flag:
 >
-> `//ezsc Cl C C -s 15,21,15 -n 0.5%`` `**`-t`**
+> `//ezsc Cl C C -s 15,21,15 -n 0.5% `**`-t`**
 >
 > <img src="../../.gitbook/assets/ScatterTrimFlag_example3.png" alt="" data-size="original">
 

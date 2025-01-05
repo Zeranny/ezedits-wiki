@@ -22,11 +22,11 @@ The abbreviation/alias of it is <mark style="color:orange;">**`//ezsp`**</mark>
     * [`[-n <normalMode>]`](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than)
 * [**2D Spline Shapes**](2d-spline-shapes.md)
   * covers the `//ezsp` 2d subcommand:
-    * [`//ezsp 2d Circle (Ci) (//ezsp basic)`](2d-spline-shapes.md#ezspline-2d-circle-ci-ezspline-basic)&#x20;
+    * [`//ezsp 2d Circle (Ci) (//ezsp basic)`](2d-spline-shapes.md#ezspline-2d-circle-ci-ezspline-basic)
     * [`//ezsp 2d Square (Sq)`](2d-spline-shapes.md#ezspline-2d-square-sq)
-    * [`//ezsp 2d Diamond (Di)`](2d-spline-shapes.md#ezspline-2d-diamond-di)&#x20;
-    * [`//ezsp 2d RoundedSquare (RS)`](2d-spline-shapes.md#ezspline-2d-roundedsquare-rs)&#x20;
-    * [`//ezsp 2d SuperCircle (SC)`](2d-spline-shapes.md#ezspline-2d-supercircle-sc)&#x20;
+    * [`//ezsp 2d Diamond (Di)`](2d-spline-shapes.md#ezspline-2d-diamond-di)
+    * [`//ezsp 2d RoundedSquare (RS)`](2d-spline-shapes.md#ezspline-2d-roundedsquare-rs)
+    * [`//ezsp 2d SuperCircle (SC)`](2d-spline-shapes.md#ezspline-2d-supercircle-sc)
     * [`//ezsp 2d CirclesCircle (CC) (//ezsp rope)`](2d-spline-shapes.md#ezspline-2d-circlescircle-cc-ezspline-rope)
     * [`//ezsp 2d Polygon (Po)`](2d-spline-shapes.md#ezspline-2d-polygon-po)
     * [`//ezsp 2d Rectangle (Re)`](2d-spline-shapes.md#ezspline-2d-rectangle-re)
@@ -34,12 +34,12 @@ The abbreviation/alias of it is <mark style="color:orange;">**`//ezsp`**</mark>
     * [`//ezsp 2d Flower (Fl)`](2d-spline-shapes.md#ezspline-2d-flower-fl)
 * [**3D Spline Shapes**](3d-spline-shapes.md)
   * covers the following subcommands:
-    * [`//ezsp 3d Beads`](3d-spline-shapes.md#ezspline-beads)
-    * [`//ezsp 3d Chainlink`](3d-spline-shapes.md#ezspline-chainlink)
-    * [`//ezsp 3d Cubes`](3d-spline-shapes.md#ezspline-cubes)
-    * [`//ezsp 3d Fishnet`](3d-spline-shapes.md#ezspline-fishnet)
-    * [`//ezsp 3d Oscillate`](3d-spline-shapes.md#ezspline-oscillate)
-    * [`//ezsp 3d Rings`](3d-spline-shapes.md#ezspline-rings)
+    * [`//ezsp 3d Beads`](3d-spline-shapes.md#ezspline-3d-beads-be)
+    * [`//ezsp 3d Chainlink`](3d-spline-shapes.md#ezspline-3d-chainlink-ch)
+    * [`//ezsp 3d Cubes`](3d-spline-shapes.md#ezspline-3d-cubes-cu)
+    * [`//ezsp 3d Fishnet`](3d-spline-shapes.md#ezspline-3d-fishnet-fi)
+    * [`//ezsp 3d Oscillate`](3d-spline-shapes.md#ezspline-3d-oscillate-os)
+    * [`//ezsp 3d Rings`](3d-spline-shapes.md#ezspline-3d-rings-ri)
 * [**Advanced Spline Shapes**](advanced-spline-shapes.md)
   * covers the following subcommands:
     * [`//ezsp noise`](advanced-spline-shapes.md#ezspline-noise)

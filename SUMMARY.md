@@ -36,7 +36,7 @@
 * [Flowfields](commands/flowfields.md)
 * [Noisegen](commands/noisegen.md)
 * [Region](commands/region.md)
-* [Placement Commands](commands/placement/README.md)
+* [Placement](commands/placement/README.md)
   * [Available Structures](commands/placement/available-structures.md)
   * [Primary+Secondary Alignment](commands/placement/primary+secondary-alignment.md)
   * [Placement Parameters](commands/placement/placement-parameters.md)

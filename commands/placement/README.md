@@ -1,4 +1,4 @@
-# Placement Commands
+# Placement
 
 ## Overview
 
@@ -89,7 +89,7 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
 ***
 
 {% hint style="warning" %}
-Note for server admins: The three structure brushes spawn BlockDisplay entities (only visible to the player using their brush) to help visualise the [Alignment](primary+secondary-alignment.md) of the brushes. You may disable the visualisation entities entirely or change how often they are updated in the `config.yml` under `visualisations`.
+Note for server admins: The three placement brushes spawn BlockDisplay entities (only visible to the player using their brush) to help visualise the [Alignment](primary+secondary-alignment.md) of the brushes. You may disable the visualisation entities entirely or change how often they are updated in the `config.yml` under `visualisations`.
 
 Additionally, the command `//ezdebug removeVisualiserEntities` will remove any entities spawned by ezEdits from your world in case they got bugged somehow and were not despawned correctly, which should never happen, but there you go.
 {% endhint %}

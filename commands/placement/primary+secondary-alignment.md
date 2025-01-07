@@ -1,6 +1,6 @@
 # Primary+Secondary Alignment
 
-Alignment defines the orientation at which the structure is placed.
+The two alignment directions define the _orientation_ at which the structure is placed.
 
 ## Explanation
 
@@ -11,16 +11,16 @@ The most important thing is that now you can control how a structure is placed b
 We let the user define the alignment using two directions:
 
 {% hint style="info" %}
-The `<primary>` direction defines the placement's +y direction.
+The `<primary>` direction _defines_ the placement's +y direction.
 
-The `<secondary>` direction together with the primary direction imply the placement's +x direction.
+The `<secondary>` direction _implies_ the placement's +x direction. From all directions perpendicular to the primary direction, the chosen +x direction is the one that most closely aligns with the given secondary direction.
 
 Note: The primary and secondary may not be the same direction.
 {% endhint %}
 
 <details>
 
-<summary>More in-depth explanation using examples:</summary>
+<summary><mark style="color:blue;">More in-depth explanation using examples:</mark></summary>
 
 Let's say this is our build that we want to place, by for example having it as our current WorldEdit clipboard.
 
@@ -424,3 +424,5 @@ Available options:
 In our primary+secondary system, placement fails if both vectors are collinear (which simply means they are on the same line).
 
 By enabling this flag ezEdits tries to circumvent that case by perturbing the secondary direction by a small amount.
+
+***

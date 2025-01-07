@@ -1,6 +1,6 @@
 # Scatter Parameters
 
-[`//ezscatter`](./#ezscatter) and [`//ezbrush scatter`](./#ezbrush-scatter) place multiple structures within a region. The positions that these commands choose can be customized with the parameters described on this page.
+[`//ezscatter`](./#overview) and [`//ezbrush scatter`](./#overview) place multiple structures within a region. The positions that these commands choose can be customized with the parameters described on this page.
 
 `scatter` first extracts all surface blocks (all non-air blocks touching air) from a region defined by `-h <region>`. You can filter out surfaces that do not match certain conditions using `-d <directions>` & `-e <threshold>`, and `-m <mask>`. On the remaining surfaces, a placement position distribution according to the given density `-n <density>` and uniformity `-u <iterations>` is calculated and structures are placed.
 
@@ -200,7 +200,7 @@ GIF starting with **`-u 0`** and ending with **`-u 20`**:
 
 ### Mask Cover Block: <mark style="color:orange;">`-l <pattern>`</mark>
 
-After placing all structures, replace all unaffected surface blocks within the region that match the mask filter (`-m`) with the given block. (`-m` must be set for this flag to take effect.)
+After placing all structures, replace all unaffected surface blocks within the region that match the [mask filter (`-m`)](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than) with the given block. (`-m` must be set for this flag to take effect.)
 
 This is a niche utility option for cases in which you apply a scatter multiple times in a neighbouring region but do not want to place structures in areas where you already did scatter before. So using this flag, you can (temporarily within your workflow) overwrite all surface blocks within your region with the given block, such that any following scatter operations that overlap with already covered regions, do not place structures there because the surface blocks have been "covered".
 

@@ -21,7 +21,7 @@ The flag `-s <dimensions>` sets the desired absolute base dimensions of the plac
 
 By default, expression-based structures have dimensions `20,20,20`, while Schematic/Clipboard structures are placed with their inherent original dimensions.
 
-{% hint style="success" %}
+{% hint style="info" %}
 The structure might appear **stretched** or **compressed** depending on your choice of values.
 {% endhint %}
 
@@ -132,7 +132,7 @@ Orientation is set by a rotation axis (`-k <direction>`) and a rotation angle (`
 
 By default, the rotation axis `-k` is `y` or `up` and the rotation angle `-c` is `0`, which means no rotation.
 
-For example, if you set the rotation axis to `-k x` and the rotation angle to `-c 90` then your structure is rotated to the side. Its Eastern side will now be its top side and so on.
+For example, if you set the rotation axis to `-k x` and the rotation angle to `-c 90` then your structure is rotated to the side. Its eastern side will now be the "up-direction" and so on.
 
 ***
 
@@ -140,4 +140,6 @@ For example, if you set the rotation axis to `-k x` and the rotation angle to `-
 
 By default, if this flag _is not_ set, air blocks are skipped when placing a structure. When this flag _is_ set, air blocks within the structure are able to override existing blocks.
 
-(Note: This behaviour is opposite to `//paste`'s `-a` flag. It may be confusing, but we think it's more convenient for our commands.)
+{% hint style="info" %}
+This behaviour is opposite to `//paste`'s `-a` flag. It may be confusing, but we think it's more convenient for our commands.
+{% endhint %}

@@ -94,7 +94,7 @@ Expression by [imhols](https://twitter.com/imhols1)
 Embeds a structure along the path defined by the selected convex region.
 
 * <mark style="color:orange;">**`<structure>`**</mark>:
-  * The shape/clipboard/schematic to embed along the path. See [available-structures.md](../structures/available-structures.md "mention").
+  * The shape/clipboard/schematic to embed along the path. See [available-structures.md](../placement/available-structures.md "mention").
 * <mark style="color:orange;">**`[-z]`**</mark>:
   * Normalizes the Z-Axis, which results in exactly one structure being stretched out throughout the entire length of the path.
 

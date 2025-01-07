@@ -1,3 +1,3 @@
 # Structure Brushes
 
-See [structures](../../commands/structures/ "mention")
+See [placement](../../commands/placement/ "mention")

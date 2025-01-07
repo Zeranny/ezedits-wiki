@@ -1,6 +1,6 @@
 # Array Parameters
 
-`//ezarray` and `//ezbrush array` place multiple shapes along a path. The following parameters apply to these commands:
+[`//ezarray`](./#overview) and [`//ezbrush array`](./#overview) place multiple shapes along a path. The following parameters apply to these commands:
 
 ***
 
@@ -10,8 +10,7 @@ Control how close all placements are by defining the gap distance between each p
 
 Defaults to `0`. Meaning, in a straight line each placement comes right after another with no gap.
 
-Positive values will increase that distance and place fewer structures in total.
-
+Positive values will increase that distance and place fewer structures in total.\
 Negative values cause the placements to overlap.
 
 <details>
@@ -38,11 +37,11 @@ Negative values cause the placements to overlap.
 
 ### Progressive Scaling: <mark style="color:orange;">`-q <radii>`</mark>
 
-Similar to Random Scaling, this modifier allows scaling of the placements using relative values, e.g. 1 keeps the scale as is, 2 means doubling the size, and 0.5 halfs the size.
+Similar to [Random Scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than), this modifier allows scaling of the placements using relative values, e.g. 1 keeps the scale as is, 2 doubles the size, and 0.5 halfs the size.
 
-The scaling factors are defined as a progression along the spline. Meaning you may specify as many comma-separated scaling factors as you like, and the spline path will smoothly interpolate through all entries.
+The scaling factors are defined as a progression along the spline. This means you may specify as many comma-separated scaling factors as you like, and the spline path will smoothly interpolate through all entries.
 
-Advanced Tip: You may prepend each entry with a position between 0 and 1 to specify at what part of the spline a radius should be reached. `-q 0:1,0.8:3,1:1` means start and end with radius 1 (`0:1` & `1:1`), but "keyframe" a radius of 3 at 80% of the spline path (`0.8:3`). (If no positions are given then equally distant positions are chosen.)
+The syntax is the same as [#radius-progression-less-than-radii-greater-than](../spline/common-parameters.md#radius-progression-less-than-radii-greater-than "mention").
 
 <details>
 

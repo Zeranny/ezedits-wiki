@@ -1,6 +1,6 @@
 # Available Structures
 
-In the context of ezEdits, we call an arrangement of blocks in 3D space a "structure". Each of the above-mentioned commands requires the user to provide a `<structure>` argument.
+In the context of ezEdits, we call an arrangement of blocks in 3D space a "structure". Each placement command requires the user to provide a `<structure>` argument.
 
 Currently available structures are:
 
@@ -171,6 +171,8 @@ Mandatory Parameters:
 ***
 
 ### Comparison between FAST and SMOOTH PasteMethod:
+
+[Clipboard](available-structures.md#clipboard-cl) and [Schematic](available-structures.md#schematic-sc) both have the PasteMethod parameter. Here's a comparison of both modes:
 
 <details>
 

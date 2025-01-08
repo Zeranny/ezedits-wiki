@@ -4,13 +4,13 @@ The following commands feature brushes for creating gradients.
 
 ***
 
-### `//ezbr`` `<mark style="color:orange;">`gradient`</mark>
+### `//ezbr `<mark style="color:orange;">`gradient`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Gradient Brush</mark></summary>
 
-**`//ezbr gradient`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-av] [-n <noise>] [-z <scale>] [-d <distanceFunction>]`**</mark>
+**`//ezbr gradient `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-av] [-n <noise>] [-z <scale>] [-d <distanceFunction>]`**</mark>
 
 The `gradient` brush allows you to first define a plane by selecting 2 points, you can then paint with your gradient with blocks chosen based on distance along this plane.
 
@@ -34,13 +34,13 @@ The `gradient` brush allows you to first define a plane by selecting 2 points, y
 
 ***
 
-### `//ezbr`` `<mark style="color:orange;">`gradientstroke`</mark>
+### `//ezbr `<mark style="color:orange;">`gradientstroke`</mark>
 
 <details>
 
 <summary><mark style="color:blue;">Gradient Stroke Brush</mark></summary>
 
-**`//ezbr gradientstroke`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-advw] [-n <noise>] [-z <scale>]`**</mark>
+**`//ezbr gradientstroke `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-advw] [-n <noise>] [-z <scale>]`**</mark>
 
 The `gradientstroke` brush allows for gradient application along a path (stroke) defined by selecting points.
 

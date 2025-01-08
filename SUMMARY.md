@@ -24,7 +24,10 @@
 
 ## Brushes & Tools
 
-* [Brushes](brushes-and-tools/brushes.md)
+* [Brushes](brushes-and-tools/brushes/README.md)
+  * [Palette Shift Brush](brushes-and-tools/brushes/palette-shift-brush.md)
+  * [Palette Gradient Brushes](brushes-and-tools/brushes/palette-gradient-brushes.md)
+  * [Placement Brushes](brushes-and-tools/brushes/placement-brushes.md)
 * [Superwand](brushes-and-tools/superwand.md)
 
 ## Commands
@@ -33,11 +36,21 @@
 * [Flowfields](commands/flowfields.md)
 * [Noisegen](commands/noisegen.md)
 * [Region](commands/region.md)
-* [Scatter](commands/scatter.md)
+* [Placement](commands/placement/README.md)
+  * [Available Structures](commands/placement/available-structures.md)
+  * [Primary+Secondary Alignment](commands/placement/primary+secondary-alignment.md)
+  * [Placement Parameters](commands/placement/placement-parameters.md)
+  * [Scatter Parameters](commands/placement/scatter-parameters.md)
+  * [Array Parameters](commands/placement/array-parameters.md)
 * [Selections](commands/selections.md)
 * [Shapes](commands/shapes.md)
 * [Smoothing](commands/smoothing.md)
-* [Spline](commands/spline.md)
+* [Spline](commands/spline/README.md)
+  * [Common Parameters](commands/spline/common-parameters.md)
+  * [2D Spline Shapes](commands/spline/2d-spline-shapes.md)
+  * [3D Spline Shapes](commands/spline/3d-spline-shapes.md)
+  * [Hopefully Invisible Spaghetti Spline](commands/spline/hopefully-invisible-spaghetti-spline.md)
+  * [Advanced Spline Shapes](commands/spline/advanced-spline-shapes.md)
 * [Stained Glass](commands/stained-glass.md)
 * [Surface](commands/surface.md)
 * [Survival](commands/survival.md)

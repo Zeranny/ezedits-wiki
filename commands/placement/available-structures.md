@@ -140,12 +140,20 @@ Abbr.: <mark style="color:orange;">`Ex(E:=<expression>,P:<palette>)`</mark>
 
 Mandatory Parameters:
 
-* <mark style="color:orange;">**`Expression`**</mark> **(**<mark style="color:orange;">**`E`**</mark>**)**. Input variables are `x`, `y`, and `z`, all between \[-1,1]. `x=0`,`y=0`,`z=0` is the origin of the structure.
+* <mark style="color:orange;">**`Expression`**</mark> **(**<mark style="color:orange;">**`E`**</mark>**)**. Input variables are `x`, `y`, `z`, all between \[-1,1], and `seed`.&#x20;
+  * `x=0`,`y=0`,`z=0` is the origin of the structure.
   * If the expression f(x,y,z) evaluates as _f_≤_0_, 0 or negative, then the position will be air.
   * If it evaluates as _1>f>0_, between 0 and 1, then the according palette block is placed.
   * Otherwise, any value 1 or larger will place the last palette block.
+  * `seed` is a random integer between 0 and 2147483647, different for each placement (but most importantly constant within a single placement)
 * <mark style="color:orange;">**`Palette`**</mark> **(**<mark style="color:orange;">**`P`**</mark>**)**. The set of blocks of which the structure should be made of.
   * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a palette that uses commas then you need to put your Palette argument in quotes: E.g. <mark style="color:blue;">`Ex(E:=y*.5+.5,Palette:`</mark><mark style="color:blue;">**`"##GlowOrange,-##GlowPurple"`**</mark><mark style="color:blue;">`)`</mark>
+
+Examples:
+
+<mark style="color:blue;">`//ezbr pl`</mark><mark style="color:blue;">` `</mark><mark style="color:blue;">**`Ex(E:"=x*x+y*y+z*z<perlin(seed,x,y,z,1,1,.5)",P:1)`**</mark><mark style="color:blue;">` `</mark><mark style="color:blue;">`-s 30`</mark>
+
+![](../../.gitbook/assets/StructuresExpression.gif)
 
 </details>
 
@@ -197,7 +205,7 @@ Optional Parameters:
     * 1 resulting in a maximally deformed boulder shape.
     * ![](../../.gitbook/assets/StructuresIcosphere_example3.gif)
     * All above examples at Subdivisions=0.
-* <mark style="color:blue;">**`Subdivisions`**</mark> **(**<mark style="color:blue;">**`S`**</mark>**)**<mark style="color:orange;">.</mark> Determines the amount of polygons used.
+* <mark style="color:blue;">**`Subdivisions`**</mark> **(**<mark style="color:blue;">**`S`**</mark>**)**. Determines the amount of polygons used.
   * Defaults to <mark style="color:blue;">`0`</mark>.
   * Choose between 0, 1, 2, 3, 4:
     * 0 results in the most low-poly look

@@ -28,6 +28,8 @@ Options:
 
 </details>
 
+
+
 <details>
 
 <summary><mark style="color:blue;"><strong>Schematic (Sc)</strong></mark></summary>
@@ -54,6 +56,8 @@ Options:
   * See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
 
 </details>
+
+
 
 <details>
 
@@ -128,6 +132,8 @@ Mandatory Parameters:
 
 </details>
 
+
+
 <details>
 
 <summary><mark style="color:blue;"><strong>Expression (Ex)</strong></mark></summary>
@@ -149,13 +155,15 @@ Mandatory Parameters:
 * <mark style="color:orange;">**`Palette`**</mark> **(**<mark style="color:orange;">**`P`**</mark>**)**. The set of blocks of which the structure should be made of.
   * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a palette that uses commas then you need to put your Palette argument in quotes: E.g. <mark style="color:blue;">`Ex(E:=y*.5+.5,Palette:`</mark><mark style="color:blue;">**`"##GlowOrange,-##GlowPurple"`**</mark><mark style="color:blue;">`)`</mark>
 
-Examples:
+Example:
 
-<mark style="color:blue;">`//ezbr pl`</mark><mark style="color:blue;">` `</mark><mark style="color:blue;">**`Ex(E:"=x*x+y*y+z*z<perlin(seed,x,y,z,1,1,.5)",P:1)`**</mark><mark style="color:blue;">` `</mark><mark style="color:blue;">`-s 30`</mark>
+<mark style="color:blue;">`Ex(E:"=x*x+y*y+z*z<perlin(seed,x,y,z,1,1,.5)",P:clay)`</mark>
 
-![](../../.gitbook/assets/StructuresExpression.gif)
+![](../../.gitbook/assets/StructuresExpression_example1.gif)
 
 </details>
+
+
 
 <details>
 
@@ -175,6 +183,8 @@ Mandatory Parameters:
   * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a palette that uses commas then you need to put your Palette argument in quotes: E.g. <mark style="color:blue;">`TS(S:Cone,T:=y*.5+.5;Palette:`</mark><mark style="color:blue;">**`"dirt,diamond_block"`**</mark><mark style="color:blue;">`)`</mark>
 
 </details>
+
+
 
 <details>
 

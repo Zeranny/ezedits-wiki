@@ -33,7 +33,7 @@ Available options:
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-Ex. command: `//ezbrush scatter Clipboard `**`-h <region>`**
+Ex. command: `//ezbrush scatter Clipboard`` `**`-h <region>`**
 
 Gif going through the following options, using the brush once at the same position:
 
@@ -68,13 +68,11 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-`//ezsc Clipboard S C `**`-d <directions>`** **`-e <threshold>`**
+`//ezsc Clipboard S C`` `**`-d <directions>`** **`-e <threshold>`**
 
 **`-d west,up`** **`-e 0.5`** (Satter points must be on a surface facing either west or up.)
 
-![](../../.gitbook/assets/ScatterDirectionalFilter_example.png)
-
-
+<img src="../../.gitbook/assets/ScatterDirectionalFilter_example.png" alt="" data-size="original">
 
 **`-d up`** **`-e <threshold>`** (scatter points must be on a surface facing roughly upwards)
 
@@ -96,7 +94,7 @@ Enables filtering out placement positions that do not match a mask given by `-m 
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-`//ezsc Clipboard S C `**`-m <mask>`** (with the clipboard being a default vanilla oak tree)
+`//ezsc Clipboard S C`` `**`-m <mask>`** (with the clipboard being a default vanilla oak tree)
 
 Using the following masks:
 
@@ -184,7 +182,7 @@ The uniformity algorithm works by starting with fully random placement positions
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-`//ezsc Clipboard C C `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree)
+`//ezsc Clipboard C C`` `**`-u <iterations>`** (with the clipboard being a default vanilla oak tree)
 
 * `-u 0` (fully random distribution)
 * `-u 2` (slightly uniform distribution)
@@ -213,8 +211,6 @@ This is a niche utility option for cases in which you apply a scatter multiple t
 Running ezbrush scatter **without** the `-l` flag results in densely placed area wherever the clicked areas overlap, which may not be the desired result.
 
 <img src="../../.gitbook/assets/ScatterMaskCoverBlock_example1.gif" alt="" data-size="original">
-
-
 
 `//ezbrush scatter Clipboard -m clay -b pink`
 
@@ -250,7 +246,7 @@ Without `-t` flag:
 
 With `-t` flag:
 
-`//ezsc Cl C C -s 15,21,15 -n 0.5% `**`-t`**
+`//ezsc Cl C C -s 15,21,15 -n 0.5%`` `**`-t`**
 
 <img src="../../.gitbook/assets/ScatterTrimFlag_example3.png" alt="" data-size="original">
 

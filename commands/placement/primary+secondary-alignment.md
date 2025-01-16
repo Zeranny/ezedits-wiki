@@ -338,6 +338,59 @@ This torus shape required a few more parameters, so this example turned out a bi
 
 ***
 
+### Expression
+
+Define a direction through an expression over each placement position.
+
+Syntax: <mark style="color:orange;">**`Expression(Expression:=<expression>,Space:<space>)`**</mark>
+
+Abbreviation: <mark style="color:orange;">**`E(E:=<expression>,S:<space>)`**</mark>
+
+Mandatory Arguments:
+
+* <mark style="color:orange;">**`Expression`**</mark> **(**<mark style="color:orange;">**`E`**</mark>**)**: An expression defining a 3D vector for each position in space.
+  * Input variables are <mark style="color:blue;">`x`</mark>, <mark style="color:blue;">`y`</mark>, <mark style="color:blue;">`z`</mark>.
+  * Output variables are <mark style="color:blue;">`rx`</mark>, <mark style="color:blue;">`ry`</mark>, <mark style="color:blue;">`rz`</mark>.
+  * For each placement, the expression will evaluated with the according placement position and the result used for the placement's alignment.
+
+Optional Arguments:
+
+* <mark style="color:blue;">**`Space`**</mark>**&#x20;(**<mark style="color:blue;">**`S`**</mark>**)**: Defines the domain of the input variables.
+  * Defaults to <mark style="color:blue;">`WORLD`</mark>.
+  * <mark style="color:blue;">`WORLD`</mark>: the placement position. x, y, z, are in world coordinates
+  * <mark style="color:blue;">`LOCAL`</mark>: When used in...
+    * ezplace: Always 0,0,0.
+    * ezscatter: Coordinates shifted such that the center of the region is 0,0,0.
+    * ezarray: x=y=0. z=0 at the start of the path, z=L at the end of the path, whereby L is the length of the path.
+  * <mark style="color:blue;">`NORMALIZED`</mark>: When used in...
+    * ezplace: Always 0,0,0.
+    * ezscatter: Coordinates normalized to the region such that x,y,z ∈ \[-1,1].
+    * ezarray: x=y=0. z=0 at the start of the path, z=1 at the end of the path.
+
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+`//ezsc TS(P:##Grayscale,S:Fur,T:=y) C Ex(E:"=rx=z;rz=-x",S:N)`
+
+* <mark style="color:blue;">`TS(P:##Grayscale,S:Fur,T:=y)`</mark> is a fur shape in a grayscale gradient.
+* <mark style="color:blue;">`C`</mark>, the primary, using the default up direction.
+* <mark style="color:blue;">`Ex(E:"=rx=z;rz=-x",S:N)`</mark> sets the secondary to (z,0,-x), whereby x,z are the normalized placement position coordinates.
+
+![](../../.gitbook/assets/AlignmentsExpression_example1.png)
+
+
+
+`//ezar Sh(S:Fur,P:clay) C E(E:"=rx=sin(2*pi*z);rz=cos(2*pi*z)",S:N) -g -12`
+
+This example shows how the z coordinate ranges from 0 to 1 along the path when using normalized mode.
+
+![](../../.gitbook/assets/AlignmentsExpression_example2.png)
+
+</details>
+
+***
+
 ### Tangential
 
 The direction tangential to the path. Exclusively for arrays.
@@ -389,59 +442,6 @@ Here's a GIF going through the `<angle>` parameter:
 The [-n flag](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than) has a direct influence on the orthogonal direction.
 
 <img src="../../.gitbook/assets/OrthogonalAlignment_example2.png" alt="" data-size="original">
-
-</details>
-
-***
-
-### Expression
-
-Define a direction through an expression over each placement position.
-
-Syntax: <mark style="color:orange;">**`Expression(Expression:=<expression>,Space:<space>)`**</mark>
-
-Abbreviation: <mark style="color:orange;">**`E(E:=<expression>,S:<space>)`**</mark>
-
-Mandatory Arguments:
-
-* <mark style="color:orange;">**`Expression`**</mark> **(**<mark style="color:orange;">**`E`**</mark>**)**: An expression defining a 3D vector for each position in space.
-  * Input variables are <mark style="color:blue;">`x`</mark>, <mark style="color:blue;">`y`</mark>, <mark style="color:blue;">`z`</mark>.
-  * Output variables are <mark style="color:blue;">`rx`</mark>, <mark style="color:blue;">`ry`</mark>, <mark style="color:blue;">`rz`</mark>.
-  * For each placement, the expression will evaluated with the according placement position and the result used for the placement's alignment.
-
-Optional Arguments:
-
-* <mark style="color:blue;">**`Space`**</mark>**&#x20;(**<mark style="color:blue;">**`S`**</mark>**)**: Defines the domain of the input variables.
-  * Defaults to <mark style="color:blue;">`WORLD`</mark>.
-  * <mark style="color:blue;">`WORLD`</mark>: the placement position. x, y, z, are in world coordinates
-  * <mark style="color:blue;">`LOCAL`</mark>: When used in...
-    * ezplace: Always 0,0,0.
-    * ezscatter: Coordinates shifted such that the center of the region is 0,0,0.
-    * ezarray: x=y=0. z=0 at the start of the path, z=L at the end of the path, whereby L is the length of the path.
-  * <mark style="color:blue;">`NORMALIZED`</mark>: When used in...
-    * ezplace: Always 0,0,0.
-    * ezscatter: Coordinates normalized to the region such that x,y,z ∈ \[-1,1].
-    * ezarray: x=y=0. z=0 at the start of the path, z=1 at the end of the path.
-
-<details>
-
-<summary><mark style="color:blue;">Examples</mark></summary>
-
-`//ezsc TS(P:##Grayscale,S:Fur,T:=y) C Ex(E:"=rx=z;rz=-x",S:N)`
-
-* <mark style="color:blue;">`TS(P:##Grayscale,S:Fur,T:=y)`</mark> is a fur shape in a grayscale gradient.
-* <mark style="color:blue;">`C`</mark>, the primary, using the default up direction.
-* <mark style="color:blue;">`Ex(E:"=rx=z;rz=-x",S:N)`</mark> sets the secondary to (z,0,-x), whereby x,z are the normalized placement position coordinates.
-
-![](../../.gitbook/assets/AlignmentsExpression_example1.png)
-
-
-
-`//ezar Sh(S:Fur,P:clay) C E(E:"=rx=sin(2*pi*z);rz=cos(2*pi*z)",S:N) -g -12`
-
-Simple example showing off how in Normalized mode the z coordinate ranges through 0 to 1 along the path
-
-![](../../.gitbook/assets/AlignmentsExpression_example2.png)
 
 </details>
 

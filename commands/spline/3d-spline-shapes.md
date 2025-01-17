@@ -255,6 +255,49 @@ Generates a highly customisable spline of repeating rings/cubes/spheres along th
 
 ***
 
+#### ![](../../.gitbook/assets/SplinesScales.gif)
+
+### `//ezspline 3d`` `<mark style="color:orange;">`Scales (Sc)`</mark>
+
+<details>
+
+<summary><mark style="color:blue;">Scales Spline</mark></summary>
+
+**`//ezsp Scales([`**<mark style="color:orange;">**`Scale:<value>`**</mark>**`],[`**<mark style="color:orange;">**`HorizontalOffset:<value>`**</mark>**`],[`**<mark style="color:orange;">**`VerticalOffset:<value>`**</mark>**`],[`**<mark style="color:orange;">**`MajorExponent:<value>`**</mark>**`],[`**<mark style="color:orange;">**`MinorExponent:<value>`**</mark>**`],[`**<mark style="color:orange;">**`Angle:<value>`**</mark>**`],[`**<mark style="color:orange;">**`DepthMultiplier:<value>`**</mark>**`])`** [**`<pattern>`**](3d-spline-shapes.md#syntax) [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
+
+Generates a highly customisable spline with a scales-like three-dimensional texture on it.
+
+* <mark style="color:orange;">**`Columns`**</mark>**&#x20;(**<mark style="color:orange;">**`C`**</mark>**).** (Default: 8):
+  * Sets how many tiles go around the spline in one ring.&#x20;
+* <mark style="color:orange;">**`HorizontalOffset`**</mark> **(**<mark style="color:orange;">**`H`**</mark>**).** Default: 1.05):
+  * Determines how far apart each tile is sideways.
+* <mark style="color:orange;">**`VerticalOffset`**</mark> **(**<mark style="color:orange;">**`V`**</mark>**).**  (Default: 1.2):
+  * Determines how far apart each tile along the spline path direction.
+* <mark style="color:orange;">**`MajorExponent`**</mark> **(**<mark style="color:orange;">**`M`**</mark>**).**  (Default: 1.4):
+  * The exponent defining the shape of the tile.
+* <mark style="color:orange;">**`MinorExponent`**</mark> **(**<mark style="color:orange;">**`N`**</mark>**).**  (Default: 14.0):
+  * The exponent defining the shape of the cross-section of each tile.
+* <mark style="color:orange;">**`Angle`**</mark> **(**<mark style="color:orange;">**`A`**</mark>**).**  (Default: 14.0):
+  * Defines the orientation of each tile.
+* <mark style="color:orange;">**`DepthMultiplier`**</mark> **(**<mark style="color:orange;">**`D`**</mark>**).**  (Default: 1.0):
+  * Adjusts how deep each the ridges between the tiles go.
+  * Values larger than 1 carve out blocks.
+  * Value less then 1 fill with more blocks.
+
+(<mark style="color:red;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters (it's very neat): [https://www.desmos.com/3d/ymmixtkdgf](https://www.desmos.com/3d/ymmixtkdgf)
+
+Example:
+
+<mark style="color:blue;">`//ezsp 3d Sc(c:8,d:1.2) clay 22,9`</mark>
+
+<mark style="color:blue;">`//ezt ambient clay ##EnchantedBright`</mark>
+
+![](../../.gitbook/assets/SplinesScales_example1.png)
+
+</details>
+
+***
+
 #### ![](../../.gitbook/assets/SplinesNoodles.gif)
 
 ### `//ezspline 3d`` `<mark style="color:orange;">`Noodles (No)`</mark>
@@ -290,3 +333,4 @@ Experimental spline which generates a set of twisted, intertwining, non-intersec
 
 </details>
 
+***

@@ -268,11 +268,11 @@ Generates a highly customisable spline of repeating rings/cubes/spheres along th
 Generates a highly customisable spline with a scales-like three-dimensional texture on it.
 
 * <mark style="color:orange;">**`Columns`**</mark>**&#x20;(**<mark style="color:orange;">**`C`**</mark>**).** (Default: 8):
-  * Sets how many tiles go around the spline in one ring.&#x20;
+  * Sets how many tiles should fit per "layer".&#x20;
 * <mark style="color:orange;">**`HorizontalOffset`**</mark> **(**<mark style="color:orange;">**`H`**</mark>**).** Default: 1.05):
   * Determines how far apart each tile is sideways.
 * <mark style="color:orange;">**`VerticalOffset`**</mark> **(**<mark style="color:orange;">**`V`**</mark>**).**  (Default: 1.2):
-  * Determines how far apart each tile along the spline path direction.
+  * Determines how far apart each tile is along the spline path direction.
 * <mark style="color:orange;">**`MajorExponent`**</mark> **(**<mark style="color:orange;">**`M`**</mark>**).**  (Default: 1.4):
   * The exponent defining the shape of the tile.
 * <mark style="color:orange;">**`MinorExponent`**</mark> **(**<mark style="color:orange;">**`N`**</mark>**).**  (Default: 14.0):
@@ -280,15 +280,15 @@ Generates a highly customisable spline with a scales-like three-dimensional text
 * <mark style="color:orange;">**`Angle`**</mark> **(**<mark style="color:orange;">**`A`**</mark>**).**  (Default: 14.0):
   * Defines the orientation of each tile.
 * <mark style="color:orange;">**`DepthMultiplier`**</mark> **(**<mark style="color:orange;">**`D`**</mark>**).**  (Default: 1.0):
-  * Adjusts how deep each the ridges between the tiles go.
+  * Adjusts how deep the ridges between the tiles go.
   * Values larger than 1 carve out blocks.
-  * Value less then 1 fill with more blocks.
+  * Value less than 1 fill with more blocks.
 
 (<mark style="color:red;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters (it's very neat): [https://www.desmos.com/3d/ymmixtkdgf](https://www.desmos.com/3d/ymmixtkdgf)
 
 Example:
 
-<mark style="color:blue;">`//ezsp 3d Sc(c:8,d:1.2) clay 22,9`</mark>
+`//ezsp 3d`` `<mark style="color:orange;">`Sc(c:8,d:1.2)`</mark>` ``clay 22,9`
 
 <mark style="color:blue;">`//ezt ambient clay ##EnchantedBright`</mark>
 

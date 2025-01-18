@@ -40,6 +40,8 @@ The abbreviation/alias of it is <mark style="color:orange;">**`//ezsp`**</mark>
     * [`//ezsp 3d Fishnet`](3d-spline-shapes.md#ezspline-3d-fishnet-fi)
     * [`//ezsp 3d Oscillate`](3d-spline-shapes.md#ezspline-3d-oscillate-os)
     * [`//ezsp 3d Rings`](3d-spline-shapes.md#ezspline-3d-rings-ri)
+    * [`//ezsp 3d Scales`](3d-spline-shapes.md#ezspline-3d-scales-sc)
+    * [`//ezsp 3d Noodles`](3d-spline-shapes.md#ezspline-3d-noodles-no)
 * [**Advanced Spline Shapes**](advanced-spline-shapes.md)
   * covers the following subcommands:
     * [`//ezsp noise`](advanced-spline-shapes.md#ezspline-noise)

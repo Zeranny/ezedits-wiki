@@ -4,7 +4,7 @@ The following parameters and flags are available for **all** `//ezspline` subcom
 
 ***
 
-### Radius progression: <mark style="color:orange;">`<radii>`</mark>
+### Radius progression: <mark style="color:orange;">`<radii>`</mark> <a href="#radii" id="radii"></a>
 
 Defines the thickness (course) of the spline.
 
@@ -52,11 +52,13 @@ Many radii entries: `//ezsp rope clay 2,10,2,12,2,10,2`. You may define any numb
 
 ***
 
-### Kochanek-Bartels-Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark>
+### Kochanek-Bartels-Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark> <a href="#kochanek-bartels-parameters" id="kochanek-bartels-parameters"></a>
 
 Parameters for the flow of the spline. Determines what path the spline takes through the given node positions.
 
-Provide `<tension>:<bias>:<continuity>`, colon-separated in that order (default is `0:0:0`). The expected value range for each parameter is `[-1..1]`.
+Defaults to `0:0:0`.
+
+Provide `<tension>:<bias>:<continuity>`, colon-separated in that order. The expected value range for each parameter is `[-1..1]`.
 
 {% hint style="info" %}
 [This diagram](https://en.wikipedia.org/wiki/Kochanek%E2%80%93Bartels_spline#/media/File:Kochanek_bartels_spline.svg) shows what each parameter does.
@@ -90,7 +92,11 @@ Provide `<tension>:<bias>:<continuity>`, colon-separated in that order (default 
 
 ***
 
-### Quality: <mark style="color:orange;">`-q <quality>`</mark>
+### Quality: <mark style="color:orange;">`-q <quality>`</mark> <a href="#quality" id="quality"></a>
+
+{% hint style="danger" %}
+**\[Deprecated]** This parameter was removed in v.013.0. Since v0.13.0 splines will always render at perfect quality at an even faster pace. The part is only relevant if you still use v0.12.0 or below.
+{% endhint %}
 
 Sets the number of samples of the shape per dimension per block. Must be greater than 0.
 
@@ -104,7 +110,7 @@ Higher values for the `-q` parameter can significantly increase processing time.
 
 <details>
 
-<summary><mark style="color:blue;">Example</mark></summary>
+<summary><mark style="color:blue;">Example (for v0.12.0 and below)</mark></summary>
 
 `//ezspline beads clay 10`` `**`-q <quality>`**
 
@@ -118,7 +124,7 @@ For this example, `-q 2` took less than a second, and `-q 7` took 20 seconds to 
 
 ***
 
-### Initial roll: <mark style="color:orange;">`-r <startingRoll>`</mark>
+### Initial roll: <mark style="color:orange;">`-r <startingRoll>`</mark> <a href="#roll" id="roll"></a>
 
 Allows to rotate the spline shape around the spline's axis, aka. rolling it. Expecting an angle given in degrees.
 
@@ -138,7 +144,7 @@ GIF start at `-q 0` and moves up to `-q 180`.
 
 ***
 
-### Stretch: <mark style="color:orange;">`-s <stretchFactor>`</mark>
+### Stretch: <mark style="color:orange;">`-s <stretchFactor>`</mark> <a href="#stretch" id="stretch"></a>
 
 Allows stretching or compressing the spline shape in the direction of the spline path.
 
@@ -162,7 +168,7 @@ GIF starts at `-s 0.2`, briefly pauses at `-s 1`, and increases up to `-s 4`.
 
 ***
 
-### Twist: <mark style="color:orange;">`-t <angle>`</mark>
+### Twist: <mark style="color:orange;">`-t <angle>`</mark> <a href="#twist" id="twist"></a>
 
 Defines how much to twist the shape along the spline. The input is an angle given in degrees.
 
@@ -184,7 +190,7 @@ GIF starts at `-t 0` and increases up to `-t 90`.
 
 ***
 
-### Spline Normal Mode: <mark style="color:orange;">`-n <normalMode>`</mark>
+### Normal Mode: <mark style="color:orange;">`-n <normalMode>`</mark> <a href="#normal-mode" id="normal-mode"></a>
 
 There are three modes:
 
@@ -230,7 +236,7 @@ The default is `CONSISTENT`.
 
 ***
 
-### Ingame help page: <mark style="color:orange;">`-h`</mark>
+### Ingame help page: <mark style="color:orange;">`-h`</mark> <a href="#help-page" id="help-page"></a>
 
 Prints the in-game help page. Shortcut for `//help ezspline ...`
 

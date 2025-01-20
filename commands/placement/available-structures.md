@@ -229,7 +229,7 @@ Optional Parameters:
     * 4 results in many polygons used, but also limits the amount of randomness, resulting in a pretty spherical look even with maximum randomness as you can already see with 3 subdivisions.
   * (<mark style="color:red;">**`!`**</mark>) Large values have a large performance impact.
 
-Remember: All of the given examples were rendered with equal dimensions across all three axes. Use the [dimensions parameter](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than) to stretch and squish along the three axes.
+Remember: All of the given examples were rendered with equal dimensions across all three axes. Use the [dimensions parameter](placement-parameters.md#dimensions-s) to stretch and squish along the three axes.
 
 </details>
 

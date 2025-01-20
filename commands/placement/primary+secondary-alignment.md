@@ -439,7 +439,7 @@ Here's a GIF going through the `<angle>` parameter:
 
 `//ezarray Clipboard Orthogonal Constant -n HORIZONTAL`
 
-The [-n flag](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than) has a direct influence on the orthogonal direction.
+The [-n flag](array-parameters.md#spline-orientation-n) has a direct influence on the orthogonal direction.
 
 <img src="../../.gitbook/assets/OrthogonalAlignment_example2.png" alt="" data-size="original">
 
@@ -489,7 +489,7 @@ The following flags adjust how Alignments are calculated.
 
 ***
 
-### Snap to certain directions: <mark style="color:orange;">`[-j <snapDirections>]`</mark>
+### Snap to certain directions: <mark style="color:orange;">`[-j <snapDirections>]`</mark> <a href="#snap-to-angles-j" id="snap-to-angles-j"></a>
 
 This parameter allows you to restrict the chosen alignment direction to the specified subset. E.g. snapping to / only allowing cardinal direction, i.e. 90° rotations.
 
@@ -526,7 +526,7 @@ Available options:
 
 ***
 
-### Perturb Secondary: <mark style="color:orange;">\[-x]</mark>
+### Perturb Secondary: <mark style="color:orange;">\[-x]</mark> <a href="#perturb-secondary-x" id="perturb-secondary-x"></a>
 
 In our primary+secondary system, placement fails if both vectors are collinear (which simply means they are on the same line).
 

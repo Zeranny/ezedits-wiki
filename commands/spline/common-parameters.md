@@ -95,7 +95,7 @@ Provide `<tension>:<bias>:<continuity>`, colon-separated in that order. The expe
 ### Quality: <mark style="color:orange;">`-q <quality>`</mark> <a href="#quality" id="quality"></a>
 
 {% hint style="danger" %}
-**\[Deprecated]** This parameter was removed in v.013.0. Since v0.13.0 splines will always render at perfect quality at an even faster pace. The part is only relevant if you still use v0.12.0 or below.
+**\[Deprecated]** This parameter was removed in v.013.0. Since v0.13.0 splines will always render at perfect quality at an even faster pace. This part is only relevant if you still use v0.12.0 or below.
 {% endhint %}
 
 Sets the number of samples of the shape per dimension per block. Must be greater than 0.
@@ -124,11 +124,16 @@ For this example, `-q 2` took less than a second, and `-q 7` took 20 seconds to 
 
 ***
 
-### Initial roll: <mark style="color:orange;">`-r <startingRoll>`</mark> <a href="#roll" id="roll"></a>
+### Initial roll: <mark style="color:orange;">`-r <startRoll>`</mark> or <mark style="color:orange;">`-r <startRoll>,<endRoll>`</mark>  <a href="#roll" id="roll"></a>
 
 Allows to rotate the spline shape around the spline's axis, aka. rolling it. Expecting an angle given in degrees.
 
 Defaults to `0`.
+
+There are two ways to twist/roll your spline:
+
+* You may define a starting roll angle with `-r` and a twisting angle with `-t`, allowing for a constant twist per length.
+* Or may define a starting roll angle and an end roll angle by passing two comma-separated angles to `-r`. If you do that, `-t` will be ignored.
 
 <details>
 
@@ -176,6 +181,8 @@ Defaults to `0`. (Except for `//ezsp rope`, there it's 90)
 
 Specifics: The angle determines how much the shape is rotated throughout the length of the current diameter of the spline. Meaning, that if the diameter is 30 blocks, then after 30 blocks of path length, the shape will have rotated by the given angle.
 
+This parameter is ignored if you pass both a starting and an end angle to `-r`.
+
 <details>
 
 <summary><mark style="color:blue;">Example:</mark></summary>
@@ -194,11 +201,11 @@ GIF starts at `-t 0` and increases up to `-t 90`.
 
 There are three modes:
 
-1. `CONSISTENT` aims to appear smooth and consistent by "rolling" the spline shape in curves.
-2. `HORIZONTAL` prevents the spline shape from "rolling sideways", keeping its initial orientation.
-3. `UPRIGHT` makes the internal spline shape's y-axis with the world's y-axis.
+1. <mark style="color:orange;">`CONSISTENT`</mark> aims to appear smooth and consistent by "rolling" the spline shape in curves.
+2. <mark style="color:orange;">`HORIZONTAL`</mark> prevents the spline shape from "rolling sideways", keeping its initial orientation.
+3. <mark style="color:orange;">`UPRIGHT`</mark> makes the internal spline shape's y-axis with the world's y-axis.
 
-The default is `CONSISTENT`.
+The default is <mark style="color:orange;">`CONSISTENT`</mark>.
 
 <details>
 
@@ -231,6 +238,71 @@ The default is `CONSISTENT`.
 `-n UPRIGHT`: As you'd expect, when the spline's y-axis is perfectly vertical, then it does not like steep/vertical path sections...
 
 <img src="../../.gitbook/assets/SplinesNormalMode_example6.png" alt="" data-size="original">
+
+</details>
+
+***
+
+### End Style: <mark style="color:orange;">`-e <endMode>`</mark> <a href="#end-style-e" id="end-style-e"></a>
+
+Set how the two ends of the spline should look like.
+
+There are five modes:
+
+1. <mark style="color:orange;">`FLAT`</mark> The spline ends abruptly at the exact endpoint of the path.
+2. <mark style="color:orange;">`SOFT`</mark> The spline ends softly shape Cuts into the spline, tapering off the end in a softened end.
+3. <mark style="color:orange;">`SPIKE`</mark> The spline ends with a cone that extends beyond the endpoint of the path.
+4. <mark style="color:orange;">`ROUND`</mark> The spline ends with a dome that extends beyond the endpoint of the path.
+5. <mark style="color:orange;">`CUBE`</mark> The spline ends in a cube shape beyond the endpoint of the path.
+
+The default is <mark style="color:orange;">`FLAT`</mark>.
+
+<details>
+
+<summary><mark style="color:blue;">Example</mark></summary>
+
+`//ezsp rope ice 15 6`` `**`-e <endMode>`**
+
+`-e FLAT`\
+![](../../.gitbook/assets/SplinesEndMode_FLAT1.png)
+
+`-e SOFT`\
+![](../../.gitbook/assets/SplinesEndMode_SOFT1.png)\
+
+
+`-e SPIKE`\
+![](../../.gitbook/assets/SplinesEndMode_SPIKE1.png)\
+
+
+`-e ROUND`\
+![](../../.gitbook/assets/SplinesEndMode_ROUND1.png)\
+
+
+`-e CUBE`\
+![](../../.gitbook/assets/SplinesEndMode_CUBE1.png)
+
+The redstone block line shows the used convex selection.
+
+`//ezsp 2d sq ice 15`` `**`-e <endMode>`**&#x20;
+
+`-e FLAT`\
+![](../../.gitbook/assets/SplinesEndMode_FLAT2.png)
+
+`-e SOFT`\
+![](../../.gitbook/assets/SplinesEndMode_SOFT2.png)
+
+`-e SPIKE`\
+![](../../.gitbook/assets/SplinesEndMode_SPIKE2.png)
+
+`-e ROUND`\
+![](../../.gitbook/assets/SplinesEndMode_ROUND2.png)
+
+`-e CUBE`\
+![](../../.gitbook/assets/SplinesEndMode_CUBE2.png)
+
+
+
+
 
 </details>
 

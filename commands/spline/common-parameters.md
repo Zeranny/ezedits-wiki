@@ -52,7 +52,7 @@ Many radii entries: `//ezsp rope clay 2,10,2,12,2,10,2`. You may define any numb
 
 ***
 
-### Kochanek-Bartels-Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark> <a href="#kochanek-bartels-parameters" id="kochanek-bartels-parameters"></a>
+### Kochanek-Bartels-Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark> <a href="#kb-parameters" id="kb-parameters"></a>
 
 Parameters for the flow of the spline. Determines what path the spline takes through the given node positions.
 

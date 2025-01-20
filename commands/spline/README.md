@@ -13,13 +13,13 @@ The abbreviation/alias of it is <mark style="color:orange;">**`//ezsp`**</mark>
 
 * [**Common Parameters**](common-parameters.md)
   * covers all arguments and flags that are available to **all** `ezspline` subcommands. These are:
-    * [`<radii>`](common-parameters.md#radius-progression-less-than-radii-greater-than)
-    * [`[-p <kbParameters>]`](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than)
-    * [`[-q <quality>]`](common-parameters.md#quality-q-less-than-quality-greater-than)
-    * [`[-r <startingRoll>]`](common-parameters.md#initial-roll-r-less-than-startingroll-greater-than)
-    * [`[-s <stretchFactor>]`](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than)
-    * [`[-t <twistAngle>]`](common-parameters.md#twist-t-less-than-angle-greater-than)
-    * [`[-n <normalMode>]`](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than)
+    * [`<radii>`](common-parameters.md#radii)
+    * [`[-p <kbParameters>]`](common-parameters.md#kochanek-bartels-parameters)
+    * [`[-q <quality>]`](common-parameters.md#quality)
+    * [`[-r <startingRoll>]`](common-parameters.md#roll)
+    * [`[-s <stretchFactor>]`](common-parameters.md#stretch)
+    * [`[-t <twistAngle>]`](common-parameters.md#twist)
+    * [`[-n <normalMode>]`](common-parameters.md#normal-mode)
 * [**2D Spline Shapes**](2d-spline-shapes.md)
   * covers the `//ezsp` 2d subcommand:
     * [`//ezsp 2d Circle (Ci) (//ezsp basic)`](2d-spline-shapes.md#ezspline-2d-circle-ci-ezspline-basic)

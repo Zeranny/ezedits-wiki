@@ -28,8 +28,6 @@ Options:
 
 </details>
 
-
-
 <details>
 
 <summary><mark style="color:blue;"><strong>Schematic (Sc)</strong></mark></summary>
@@ -42,7 +40,9 @@ Abbr.: <mark style="color:orange;">`Sc(N:<name>,...)`</mark>
 
 Mandatory parameters:
 
-* <mark style="color:orange;">**`Filename`**</mark> **(**<mark style="color:orange;">**`N`**</mark>**)**. The filename of the schematic you want to place.
+* <mark style="color:orange;">**`Filename`**</mark> **(**<mark style="color:orange;">**`N`**</mark>**)**. A regex pattern for specifying all filenames of the schematics you want to place.
+  * For example, if you type in `Sc(N:tree_.*)` we will fetch all schematic files that match the regex `tree.*,` e.g. `tree_1`, `tree_2`, `tree_3` etc.
+  * In case you use FAWE's per-player-schematics path system, in which schematics are separated into folders named after each player's UUID, you can use the shortcut `%p` to denote your own UUID and access your folder through e.g. `%p/your_schematic.schem`
 
 Options:
 
@@ -56,8 +56,6 @@ Options:
   * See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
 
 </details>
-
-
 
 <details>
 
@@ -132,8 +130,6 @@ Mandatory Parameters:
 
 </details>
 
-
-
 <details>
 
 <summary><mark style="color:blue;"><strong>Expression (Ex)</strong></mark></summary>
@@ -146,7 +142,7 @@ Abbr.: <mark style="color:orange;">`Ex(E:=<expression>,P:<palette>)`</mark>
 
 Mandatory Parameters:
 
-* <mark style="color:orange;">**`Expression`**</mark> **(**<mark style="color:orange;">**`E`**</mark>**)**. Input variables are `x`, `y`, `z`, all between \[-1,1], and `seed`.&#x20;
+* <mark style="color:orange;">**`Expression`**</mark> **(**<mark style="color:orange;">**`E`**</mark>**)**. Input variables are `x`, `y`, `z`, all between \[-1,1], and `seed`.
   * `x=0`,`y=0`,`z=0` is the origin of the structure.
   * If the expression f(x,y,z) evaluates as _f_≤_0_, 0 or negative, then the position will be air.
   * If it evaluates as _1>f>0_, between 0 and 1, then the according palette block is placed.
@@ -159,11 +155,9 @@ Example:
 
 <mark style="color:blue;">`Ex(E:"=x*x+y*y+z*z<perlin(seed,x,y,z,1,1,.5)",P:clay)`</mark>
 
-![](../../.gitbook/assets/StructuresExpression_example1.gif)
+<img src="../../.gitbook/assets/StructuresExpression_example1.gif" alt="" data-size="original">
 
 </details>
-
-
 
 <details>
 
@@ -184,13 +178,11 @@ Mandatory Parameters:
 
 </details>
 
-
-
 <details>
 
 <summary><mark style="color:blue;"><strong>Icosphere (Ic)</strong></mark></summary>
 
-(<mark style="color:red;">**`!`**</mark>) Only available if [Arceon](https://www.patreon.com/c/arcaniax/home) v0.4.8 or higher is running on your server.
+(<mark style="color:red;">**`!`**</mark>) Only available if [Arceon](https://www.patreon.com/c/arcaniax/home) v0.4.9 or higher is running on your server.
 
 A deformed icosphere. Popularised in the building community under the [Arceon Boulder](https://github.com/Brennian/Arceon-1.14/wiki/Brushes#boulder-brush).
 
@@ -201,7 +193,7 @@ Abbr.: <mark style="color:orange;">`Ic(P:<pattern>,R:<value>,S:<value>)`</mark>
 Mandatory Parameters:
 
 * <mark style="color:orange;">**`Pattern`**</mark> (<mark style="color:orange;">**`P`**</mark>). The pattern which the shape should be made of.
-  * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a pattern that uses commas then you need to put your Pattern argument in quotes: E.g. <mark style="color:blue;">`Ic(P:`</mark><mark style="color:blue;">**`"dirt,diamond_block"`**</mark><mark style="color:blue;">`)`</mark>&#x20;
+  * Note: Commas `,` being part of the argument breaks the input parser. If you want to use a pattern that uses commas then you need to put your Pattern argument in quotes: E.g. <mark style="color:blue;">`Ic(P:`</mark><mark style="color:blue;">**`"dirt,diamond_block"`**</mark><mark style="color:blue;">`)`</mark>
 
 Optional Parameters:
 
@@ -227,7 +219,7 @@ Optional Parameters:
     * 3
     * ![](../../.gitbook/assets/StructuresIcosphere_example6.gif)
     * 4 results in many polygons used, but also limits the amount of randomness, resulting in a pretty spherical look even with maximum randomness as you can already see with 3 subdivisions.
-  * (<mark style="color:red;">**`!`**</mark>) Large values have a large performance impact.
+  * (<mark style="color:red;">**`!`**</mark>) Large number of subdivisions have a large performance impact.
 
 Remember: All of the given examples were rendered with equal dimensions across all three axes. Use the [dimensions parameter](placement-parameters.md#dimensions-s) to stretch and squish along the three axes.
 

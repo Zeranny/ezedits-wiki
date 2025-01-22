@@ -20,6 +20,7 @@ The abbreviation/alias of it is <mark style="color:orange;">**`//ezsp`**</mark>
     * [`[-s <stretchFactor>]`](common-parameters.md#stretch)
     * [`[-t <twistAngle>]`](common-parameters.md#twist)
     * [`[-n <normalMode>]`](common-parameters.md#normal-mode)
+    * [`[-e <endMode>]`](common-parameters.md#end-style-e)
 * [**2D Spline Shapes**](2d-spline-shapes.md)
   * covers the `//ezsp` 2d subcommand:
     * [`//ezsp 2d Circle (Ci) (//ezsp basic)`](2d-spline-shapes.md#circle)

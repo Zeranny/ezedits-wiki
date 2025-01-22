@@ -95,7 +95,9 @@ Provide `<tension>:<bias>:<continuity>`, colon-separated in that order. The expe
 ### Quality: <mark style="color:orange;">`-q <quality>`</mark> <a href="#quality" id="quality"></a>
 
 {% hint style="danger" %}
-**\[Deprecated]** This parameter was removed in v.013.0. Since v0.13.0 splines will always render at perfect quality at an even faster pace. This part is only relevant if you still use v0.12.0 or below.
+**\[Deprecated]** The quality parameter was removed in v0.13.0. Since v0.13.0 splines will always render at perfect quality at an even faster pace.
+
+This part is only relevant if you still use ezEdits v0.12.0 or lower.
 {% endhint %}
 
 Sets the number of samples of the shape per dimension per block. Must be greater than 0.
@@ -177,7 +179,7 @@ GIF starts at `-s 0.2`, briefly pauses at `-s 1`, and increases up to `-s 4`.
 
 Defines how much to twist the shape along the spline. The input is an angle given in degrees.
 
-Defaults to `0`. (Except for `//ezsp rope`, there it's 90)
+Defaults to `0`.  (Except for `//ezsp rope`, there it's 90)
 
 Specifics: The angle determines how much the shape is rotated throughout the length of the current diameter of the spline. Meaning, that if the diameter is 30 blocks, then after 30 blocks of path length, the shape will have rotated by the given angle.
 
@@ -283,7 +285,7 @@ The default is <mark style="color:orange;">`FLAT`</mark>.
 
 The redstone block line shows the used convex selection.
 
-`//ezsp 2d sq ice 15`` `**`-e <endMode>`**&#x20;
+`//ezsp 2d square ice 15`` `**`-e <endMode>`**&#x20;
 
 `-e FLAT`\
 ![](../../.gitbook/assets/SplinesEndMode_FLAT2.png)
@@ -299,10 +301,6 @@ The redstone block line shows the used convex selection.
 
 `-e CUBE`\
 ![](../../.gitbook/assets/SplinesEndMode_CUBE2.png)
-
-
-
-
 
 </details>
 

@@ -459,7 +459,7 @@ Alignment directions are scaled by the given weight and summed up together.
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-`//ezsc Sh(P:clay,S:Cone)`` `**`Constant`**` ``-s 11,30,11 -n 1`
+`//ezsc Sh(P:clay,S:Cone) `**`Constant`**` -s 11,30,11 -n 1`
 
 (for reference)
 
@@ -467,7 +467,7 @@ Alignment directions are scaled by the given weight and summed up together.
 
 
 
-`//ezsc Sh(P:clay,S:Cone)`` `**`10%C,10%R`**` ``-s 11,30,11 -n 1`
+`//ezsc Sh(P:clay,S:Cone) `**`10%C,10%R`**` -s 11,30,11 -n 1`
 
 GIF going through
 

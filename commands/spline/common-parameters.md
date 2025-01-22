@@ -24,23 +24,23 @@ For example
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-`//ezsp rope clay`` `**`<radii>`**
+`//ezsp rope clay `**`<radii>`**
 
-Single radius entry: GIF going from `//ezsp rope clay`` `**`5`** through up to `//ezsp rope clay`` `**`10`** :
+Single radius entry: GIF going from `//ezsp rope clay `**`5`** through up to `//ezsp rope clay `**`10`** :
 
 <img src="../../.gitbook/assets/SplinesRadii_example1.gif" alt="" data-size="original">
 
-Two radii entries: `//ezsp rope clay`` `**`1,12`** . The spline starts with radius 1 and progressively gets thicker up to radius 12 at the end:
+Two radii entries: `//ezsp rope clay `**`1,12`** . The spline starts with radius 1 and progressively gets thicker up to radius 12 at the end:
 
 <img src="../../.gitbook/assets/SplinesRadii_example2.png" alt="" data-size="original">
 
-Triple radii entries: `//ezsp rope clay`` `**`1,12,1`**. The spline starts with radius 1, and progressively gets larger up until the middle of the spline (50% of the path) where it reaches 12 and goes back to radius 1 towards the end:
+Triple radii entries: `//ezsp rope clay `**`1,12,1`**. The spline starts with radius 1, and progressively gets larger up until the middle of the spline (50% of the path) where it reaches 12 and goes back to radius 1 towards the end:
 
 <img src="../../.gitbook/assets/SplinesRadii_example3.png" alt="" data-size="original">
 
 As the first and last values always define the start- and end-radius of the spline and as all unspecified positions in between are interpolated, that means `1,12,1` (no positions specified) is expanded to **`0`**`:1,`**`0.5`**`:12,`**`1`**`:1` when you execute the command. You may also specify the positions yourself though.
 
-Using the command `//ezsp rope clay`` `**`1,0.1:12,1`**, and going from `1,`**`0.1`**`:12,1` up through `1,`**`0.9`**`:12,1`. This shifts the "keyframe position" of our radius-12-entry throughout the spline (start and end are still fixed at radius 1):
+Using the command `//ezsp rope clay `**`1,0.1:12,1`**, and going from `1,`**`0.1`**`:12,1` up through `1,`**`0.9`**`:12,1`. This shifts the "keyframe position" of our radius-12-entry throughout the spline (start and end are still fixed at radius 1):
 
 <img src="../../.gitbook/assets/SplinesRadii_example4.gif" alt="" data-size="original">
 
@@ -70,7 +70,7 @@ Provide `<tension>:<bias>:<continuity>`, colon-separated in that order. The expe
 
 <summary><mark style="color:blue;">Examples:</mark></summary>
 
-`//ezsp polygon clay 10 4`` `**`-p <kbParameters>`**
+`//ezsp polygon clay 10 4 `**`-p <kbParameters>`**
 
 **`-p 0:0:0`**
 
@@ -114,7 +114,7 @@ Higher values for the `-q` parameter can significantly increase processing time.
 
 <summary><mark style="color:blue;">Example (for v0.12.0 and below)</mark></summary>
 
-`//ezspline beads clay 10`` `**`-q <quality>`**
+`//ezspline beads clay 10 `**`-q <quality>`**
 
 GIF start at `-q 1` and moves up to `-q 7`.
 
@@ -141,7 +141,7 @@ There are two ways to twist/roll your spline:
 
 <summary><mark style="color:blue;">Example</mark></summary>
 
-`//ezspline 2d Re(Y1:-0.2,Y2:0.2) clay 10`` `**`-r <angle>`**
+`//ezspline 2d Re(Y1:-0.2,Y2:0.2) clay 10 `**`-r <angle>`**
 
 GIF start at `-q 0` and moves up to `-q 180`.
 
@@ -165,7 +165,7 @@ Note: `//ezspline structure`'s and `//ezspline expressions`'s `-z` flag override
 
 <summary><mark style="color:blue;">Example:</mark></summary>
 
-`//ezsp 3d Chainlink clay 10`` `**`-s <stretchFactor>`**
+`//ezsp 3d Chainlink clay 10 `**`-s <stretchFactor>`**
 
 GIF starts at `-s 0.2`, briefly pauses at `-s 1`, and increases up to `-s 4`.
 
@@ -189,7 +189,7 @@ This parameter is ignored if you pass both a starting and an end angle to `-r`.
 
 <summary><mark style="color:blue;">Example:</mark></summary>
 
-`//ezsp 2d Polygon(S:4) clay 10`` `**`-t <angle>`**
+`//ezsp 2d Polygon(S:4) clay 10 `**`-t <angle>`**
 
 GIF starts at `-t 0` and increases up to `-t 90`.
 
@@ -213,7 +213,7 @@ The default is <mark style="color:orange;">`CONSISTENT`</mark>.
 
 <summary><mark style="color:blue;">Examples:</mark></summary>
 
-`//ezspline expression black,red,blue,white,yellow 5 -o`` `**`-n <normalMode>`**` ``((z%2)>1.5?5:2*(x>0)+(y>0))+0.001`
+`//ezspline expression black,red,blue,white,yellow 5 -o `**`-n <normalMode>`**` ((z%2)>1.5?5:2*(x>0)+(y>0))+0.001`
 
 `-n CONSISTENT`: The default value. The spline curves around the path in a smooth fashion. Towards the end, a noticeable amount of rolling has accumulated since. (At the start white+red is the top surface, while towards the end white+blue is at the top -> the spline "rolled").
 
@@ -263,7 +263,7 @@ The default is <mark style="color:orange;">`FLAT`</mark>.
 
 <summary><mark style="color:blue;">Example</mark></summary>
 
-`//ezsp rope ice 15 6`` `**`-e <endMode>`**
+`//ezsp rope ice 15 6 `**`-e <endMode>`**
 
 `-e FLAT`\
 ![](../../.gitbook/assets/SplinesEndMode_FLAT1.png)
@@ -285,7 +285,7 @@ The default is <mark style="color:orange;">`FLAT`</mark>.
 
 The redstone block line shows the used convex selection.
 
-`//ezsp 2d square ice 15`` `**`-e <endMode>`**&#x20;
+`//ezsp 2d square ice 15 `**`-e <endMode>`**&#x20;
 
 `-e FLAT`\
 ![](../../.gitbook/assets/SplinesEndMode_FLAT2.png)

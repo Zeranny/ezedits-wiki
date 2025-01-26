@@ -6,7 +6,7 @@
 
 ***
 
-### Scatter Region: <mark style="color:orange;">`-h <region>`</mark>
+### Scatter Region: <mark style="color:orange;">`-h <region>`</mark> <a href="#scatter-region-h" id="scatter-region-h"></a>
 
 Determines the region in which the placement positions are scattered.
 
@@ -46,13 +46,13 @@ Gif going through the following options, using the brush once at the same positi
 
 Whereby `$triangle` is just some 3-point polyhedral selection I saved with //ezsel.
 
-Selection is visualised using pink wool for clarity (using the [-l flag](scatter-parameters.md#mask-cover-block-b-less-than-pattern-greater-than)).
+Selection is visualised using pink wool for clarity (using the [-l flag](scatter-parameters.md#mask-cover-pattern-l)).
 
 </details>
 
 ***
 
-### Directional Filter: <mark style="color:orange;">`-d <directions>`</mark> and <mark style="color:orange;">`-e <threshold>`</mark>
+### Directional Filter: <mark style="color:orange;">`-d <directions>`</mark> and <mark style="color:orange;">`-e <threshold>`</mark>  <a href="#directional-filter-d-e" id="directional-filter-d-e"></a>
 
 Enables filtering out placement positions on surfaces that are facing certain directions.
 
@@ -72,9 +72,7 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 
 **`-d west,up`** **`-e 0.5`** (Satter points must be on a surface facing either west or up.)
 
-![](../../.gitbook/assets/ScatterDirectionalFilter_example.png)
-
-
+<img src="../../.gitbook/assets/ScatterDirectionalFilter_example.png" alt="" data-size="original">
 
 **`-d up`** **`-e <threshold>`** (scatter points must be on a surface facing roughly upwards)
 
@@ -88,7 +86,7 @@ The `-e <threshold>` parameter defines how much the surface normal at the placem
 
 ***
 
-### Mask Filter: <mark style="color:orange;">`-m <mask>`</mark>
+### Mask Filter: <mark style="color:orange;">`-m <mask>`</mark>  <a href="#mask-filter-m" id="mask-filter-m"></a>
 
 Enables filtering out placement positions that do not match a mask given by `-m <mask>`. Placement positions must satisfy the mask for a structure to be placed.
 
@@ -110,7 +108,7 @@ Using the following masks:
 
 ***
 
-### Density: <mark style="color:orange;">`-n <density>`</mark>
+### Density: <mark style="color:orange;">`-n <density>`</mark>  <a href="#density-n" id="density-n"></a>
 
 Determines how many placements are placed, by specifying a density percentage.
 
@@ -164,7 +162,7 @@ For cases like these, where you want to place a structure at every instance of a
 
 ***
 
-### Distribution Seed: <mark style="color:orange;">`-i <seed>`</mark>
+### Distribution Seed: <mark style="color:orange;">`-i <seed>`</mark>  <a href="#distribution-seed-i" id="distribution-seed-i"></a>
 
 Sets the seed for the random number generator which chooses the initial random placement positions.
 
@@ -172,7 +170,7 @@ Defaults to `-1` (random seed), meaning that the placement positions differ in e
 
 ***
 
-### Uniformity: <mark style="color:orange;">`-u <iterations>`</mark>
+### Uniformity: <mark style="color:orange;">`-u <iterations>`</mark>  <a href="#uniformity-u" id="uniformity-u"></a>
 
 Determines how uniformly spread out all placement positions are. Expecting a positive integer including 0.
 
@@ -198,9 +196,9 @@ GIF starting with **`-u 0`** and ending with **`-u 20`**:
 
 ***
 
-### Mask Cover Block: <mark style="color:orange;">`-l <pattern>`</mark>
+### Mask Cover Block: <mark style="color:orange;">`-l <pattern>`</mark>  <a href="#mask-cover-pattern-l" id="mask-cover-pattern-l"></a>
 
-After placing all structures, replace all unaffected surface blocks within the region that match the [mask filter (`-m`)](scatter-parameters.md#mask-filter-m-less-than-mask-greater-than) with the given block. (`-m` must be set for this flag to take effect.)
+After placing all structures, replace all unaffected surface blocks within the region that match the [mask filter (`-m`)](scatter-parameters.md#mask-filter-m) with the given block. (`-m` must be set for this flag to take effect.)
 
 This is a niche utility option for cases in which you apply a scatter multiple times in a neighbouring region but do not want to place structures in areas where you already did scatter before. So using this flag, you can (temporarily within your workflow) overwrite all surface blocks within your region with the given block, such that any following scatter operations that overlap with already covered regions, do not place structures there because the surface blocks have been "covered".
 
@@ -214,8 +212,6 @@ Running ezbrush scatter **without** the `-l` flag results in densely placed area
 
 <img src="../../.gitbook/assets/ScatterMaskCoverBlock_example1.gif" alt="" data-size="original">
 
-
-
 `//ezbrush scatter Clipboard -m clay -b pink`
 
 Running ezbrush scatter **with** `-b pink`, whereby pink wool is just some random block in this case, covers the affected areas such that, combined with the `-m clay` mask filter subsequent brush clicks do not place any new shapes there, even when the regions overlap.
@@ -226,7 +222,7 @@ Running ezbrush scatter **with** `-b pink`, whereby pink wool is just some rando
 
 ***
 
-### Trim outside selection: <mark style="color:orange;">`-t`</mark>
+### Trim outside selection: <mark style="color:orange;">`-t`</mark>  <a href="#trim-outside-selection-t" id="trim-outside-selection-t"></a>
 
 By default `scatter` will determine placement positions within the currently selected region, but will place blocks outside the region if a placement position is at the border of the currently selected region. You may cut off any such blocks (prevent them from being placed) with this `-t` flag.
 

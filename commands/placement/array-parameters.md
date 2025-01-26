@@ -4,7 +4,7 @@
 
 ***
 
-### Distance: <mark style="color:orange;">`-g <gap>`</mark>
+### Distance: <mark style="color:orange;">`-g <gap>`</mark>  <a href="#distance-g" id="distance-g"></a>
 
 Control how close all placements are by defining the gap distance between each placement.
 
@@ -35,13 +35,13 @@ Negative values cause the placements to overlap.
 
 ***
 
-### Progressive Scaling: <mark style="color:orange;">`-q <radii>`</mark>
+### Progressive Scaling: <mark style="color:orange;">`-q <radii>`</mark>  <a href="#progressive-scaling-q" id="progressive-scaling-q"></a>
 
-Similar to [Random Scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than), this modifier allows scaling of the placements using relative values, e.g. 1 keeps the scale as is, 2 doubles the size, and 0.5 halfs the size.
+Similar to [Random Scaling](placement-parameters.md#random-scaling-o), this modifier allows scaling of the placements using relative values, e.g. 1 keeps the scale as is, 2 doubles the size, and 0.5 halfs the size.
 
 The scaling factors are defined as a progression along the spline. This means you may specify as many comma-separated scaling factors as you like, and the spline path will smoothly interpolate through all entries.
 
-The syntax is the same as [#radius-progression-less-than-radii-greater-than](../spline/common-parameters.md#radius-progression-less-than-radii-greater-than "mention").
+The syntax is the same as [#radius-progression-less-than-radii-greater-than](../spline/common-parameters.md#radii "mention").
 
 <details>
 
@@ -69,7 +69,7 @@ The syntax is the same as [#radius-progression-less-than-radii-greater-than](../
 
 `//ezar Cl `**`-q 1.5,0.5,5.0,2.0,0.2 -o 0.7,1.3`**
 
-(Combining progressive scaling -q with [random scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) -o)
+(Combining progressive scaling -q with [random scaling](placement-parameters.md#random-scaling-o) -o)
 
 <img src="../../.gitbook/assets/ArrayScaling_example4.png" alt="" data-size="original">
 
@@ -77,15 +77,15 @@ The syntax is the same as [#radius-progression-less-than-radii-greater-than](../
 
 ***
 
-### Path Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark>
+### Path Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark>  <a href="#path-parameters-p" id="path-parameters-p"></a>
 
-Modifies how the path is created from the input (convex selection) points. See [#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than](../spline/common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than "mention")
+Modifies how the path is created from the input (convex selection) points. See [#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than](../spline/common-parameters.md#kb-parameters "mention")
 
 ***
 
-### Spline orientation: <mark style="color:orange;">`-n <normalMode>`</mark>
+### Spline orientation: <mark style="color:orange;">`-n <normalMode>`</mark>  <a href="#spline-orientation-n" id="spline-orientation-n"></a>
 
-Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See [#spline-normal-mode-n-less-than-normalmode-greater-than](../spline/common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than "mention")
+Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See [#spline-normal-mode-n-less-than-normalmode-greater-than](../spline/common-parameters.md#normal-mode "mention")
 
 <details>
 
@@ -109,7 +109,7 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 
 ***
 
-### Snap placements to surfaces: <mark style="color:orange;">`-b`</mark>
+### Snap placements to surfaces: <mark style="color:orange;">`-b`</mark>  <a href="#snap-to-surfaces-b" id="snap-to-surfaces-b"></a>
 
 By default, structures are placed along the spline path that's induced by the input (convex selection) points. This flag moves the placement positions to the nearest surface block instead, in case the position on the path is in midair or submerged in blocks.
 

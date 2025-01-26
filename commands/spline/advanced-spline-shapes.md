@@ -6,13 +6,13 @@ The following `//ezspline` subcommands feature three very powerful but more comp
 
 #### ![](../../.gitbook/assets/SplinesNoise.png)
 
-### `//ezspline `<mark style="color:orange;">`noise`</mark>
+### ` //ezspline `` `<mark style="color:orange;">`noise`</mark> <a href="#noise" id="noise"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Noise Spline</mark></summary>
 
-**`//ezsp noise `**<mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than) <mark style="color:orange;">**`[noise]`**</mark> <mark style="color:orange;">**`[depth]`**</mark> [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) [**`[-h]`**](common-parameters.md#ingame-help-page-h)
+**` //ezsp noise `` `**<mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radii) <mark style="color:orange;">**`[noise]`**</mark> <mark style="color:orange;">**`[depth]`**</mark> [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
 
 Generates a noise-based spline along the selected positions.
 
@@ -35,7 +35,7 @@ Example:
 
 `//ezspline noise ##Grayscale 10`
 
-![](../../.gitbook/assets/SplinesNoise.png)
+<img src="../../.gitbook/assets/SplinesNoise.png" alt="" data-size="original">
 
 </details>
 
@@ -43,13 +43,13 @@ Example:
 
 #### ![](../../.gitbook/assets/SplinesExpression.png)
 
-### `//ezspline `<mark style="color:orange;">`expression`</mark>
+### ` //ezspline `` `<mark style="color:orange;">`expression`</mark> <a href="#expression" id="expression"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Expression Spline</mark></summary>
 
-**`//ezsp expression `**<mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#ingame-help-page-h) <mark style="color:orange;">**`<expression...>`**</mark>
+**` //ezsp expression `` `**<mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#help-page) <mark style="color:orange;">**`<expression...>`**</mark>
 
 Generates a spline shaped by the given WorldEdit expression along the selected positions.
 
@@ -75,7 +75,7 @@ Example:
 
 Expression by [imhols](https://twitter.com/imhols1)
 
-![](../../.gitbook/assets/SplinesExpression.png)
+<img src="../../.gitbook/assets/SplinesExpression.png" alt="" data-size="original">
 
 </details>
 
@@ -83,13 +83,13 @@ Expression by [imhols](https://twitter.com/imhols1)
 
 #### ![](../../.gitbook/assets/SplinesStructure_example1.png)
 
-### `//ezspline `<mark style="color:orange;">`structure`</mark>
+### ` //ezspline `` `<mark style="color:orange;">`structure`</mark> <a href="#structure" id="structure"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Structure Spline</mark></summary>
 
-**`//ezsp structure `**<mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radius-progression-less-than-radii-greater-than)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist-t-less-than-angle-greater-than) [**`[-p <kbParameters>]`**](common-parameters.md#kochanek-bartel-parameters-p-less-than-kbparameters-greater-than) [**`[-q <quality>]`**](common-parameters.md#quality-q-less-than-quality-greater-than) [**`[-n <normalMode>]`**](common-parameters.md#spline-normal-mode-n-less-than-normalmode-greater-than) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#ingame-help-page-h)
+**` //ezsp structure `` `**<mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
 
 Embeds a structure along the path defined by the selected convex region.
 
@@ -100,13 +100,15 @@ Embeds a structure along the path defined by the selected convex region.
 
 The structure will be placed in its Z-direction facing along the path. Multiple instances will be repeated one after another as often as its bounding box fits, unless you use `-z`, in which case one instance of the structure will be stretched across the whole length of the path.
 
+Specifically for `//ezsp structure`, if the [`<radii>`](common-parameters.md#radii) argument is left out, we will automatically calculate the radius at which the structure is generated at its original/inherent size.
+
 _The remaining arguments are outlined on the_ [_Common Parameters_](common-parameters.md) _subpage._
 
 **Examples**:
 
 `//ezsp structure TS(P:##GlowPurple,S:Heart,T:=(z+y)*.4+.5) 12`
 
-![](../../.gitbook/assets/SplinesStructure_example1.png)
+<img src="../../.gitbook/assets/SplinesStructure_example1.png" alt="" data-size="original">
 
 </details>
 

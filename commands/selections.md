@@ -8,12 +8,13 @@
 
 <summary>Selection Load</summary>
 
-**`//selload [selection]`**\
+**`//selload [selection] [-h]`**
 _&#x41;lternate for \`//ezsel load\`_
 
 The `//selload` command retrieves a previously saved selection from the player's saved selection list.
 
 * Selection: A previously saved selection.
+* **-h**: Moves the selection to the player when loaded
 
 </details>
 

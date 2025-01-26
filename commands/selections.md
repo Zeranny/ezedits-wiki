@@ -84,9 +84,7 @@ The `//delpos2` command removes the last secondary selection point for convex an
 ### `//encapsulate`
 
 <details>
-
-
-<summary>Delete Last Position</summary>
+<summary>Encapsulate Blocks In Selection</summary>
 
 **`//encapsulate <mask>`**
 
@@ -101,9 +99,7 @@ The `//encapsulate` command takes your existing selection and changes it to the 
 ### `//encapsulatenear`
 
 <details>
-
-
-<summary>Delete Last Position</summary>
+<summary>Encapsulate Nearby Blocks In a New Selection</summary>
 
 **`//encapsulatenear <radius> <mask>`**
 

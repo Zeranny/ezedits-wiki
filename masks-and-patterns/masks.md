@@ -112,7 +112,7 @@ Masks to blocks which are infested with silverfish.
 
 <summary>#lightsource Mask</summary>
 
-**`#lightsource[lightLevel]` or `#lightsource[lightLevel]` or `#lightsource[minLevel][maxLevel]`**
+**`#lightsource` or `#lightsource[lightLevel]` or `#lightsource[minLevel][maxLevel]`**
 
 Masks to blocks which emit light. Optionally takes a specific light level to match, or minimum and maximum light level, matching any level within that range.
 

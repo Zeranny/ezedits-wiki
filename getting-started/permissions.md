@@ -4,7 +4,7 @@ description: List of permissions within ezEdits
 
 # Permissions
 
-
+Permissions are grouped into permpacks which can be granted with `ezedits.permpack.***`
 
 <table>
   <thead>
@@ -25,10 +25,26 @@ description: List of permissions within ezEdits
       <td><strong>/ezedits info</strong><br>Prints basic plugin info in chat</td>
       <td>Basic</td>
     </tr>
+	<tr>
+      <td>ezedits.general.quiet</td>
+      <td><strong>/ezedits quiet</strong><br>Toggles on/off some of the chat messages from ezEdits</td>
+      <td>Basic</td>
+    </tr>
     <tr>
       <td>ezedits.admin.reload</td>
       <td><strong>/ezedits reload</strong><br>Reloads the config</td>
       <td>Admin</td>
+    </tr>
+    <tr>
+    <tr>
+      <td>ezedits.array</td>
+      <td><strong>//ezarray</strong><br>Places multiple structures sequentially along a path</td>
+      <td>Advanced</td>
+    </tr>
+    <tr>
+      <td>ezedits.brush.array</td>
+      <td><strong>//ezbr array</strong><br>Allows placing multiple shapes or 3d structures along a drawn path</td>
+      <td>Advanced</td>
     </tr>
     <tr>
       <td>ezedits.brush.gradient</td>
@@ -44,6 +60,11 @@ description: List of permissions within ezEdits
       <td>ezedits.brush.paletteshift</td>
       <td><strong>//ezbr paletteshift</strong><br>Binds the palette shift brush to an item</td>
       <td>Intermediate</td>
+    </tr>
+    <tr>
+      <td>ezedits.brush.scatter</td>
+      <td><strong>//ezbr scatter</strong><br>Allows placing multiple shapes or 3d structures in an area</td>
+      <td>Advanced</td>
     </tr>
     <tr>
       <td>ezedits.debug</td>
@@ -297,7 +318,7 @@ description: List of permissions within ezEdits
     </tr>
     <tr>
       <td>ezedits.scatter</td>
-      <td><strong>//ezscatter</strong><br>Scatters a shape across the surface of blocks within your selection</td>
+      <td><strong>//ezscatter</strong><br>Scatters a shape or 3d structure across the surface of blocks within your selection</td>
       <td>Advanced</td>
     </tr>
     <tr>
@@ -308,6 +329,16 @@ description: List of permissions within ezEdits
     <tr>
       <td>ezedits.selection.delpos</td>
       <td><strong>//-2</strong><br>Removes the last point in your selection</td>
+      <td>Basic</td>
+    </tr>
+    <tr>
+      <td>ezedits.selection.encapsulate</td>
+      <td><strong>//encapsulate</strong><br>Resizes an existing selection to the smallest cuboid containing matching blocks</td>
+      <td>Basic</td>
+    </tr>
+    <tr>
+      <td>ezedits.selection.encapsulatenear</td>
+      <td><strong>//encapsulatenear</strong><br>Creates a cuboid selection of the smallest size to contain nearby matching blocks</td>
       <td>Basic</td>
     </tr>
     <tr>
@@ -361,18 +392,18 @@ description: List of permissions within ezEdits
       <td>Advanced</td>
     </tr>
     <tr>
-      <td>ezedits.spline.beads</td>
-      <td><strong>//ezspline beads</strong><br>Generates a bead shaped spline</td>
+      <td>ezedits.spline.basic</td>
+      <td><strong>//ezspline basic</strong><br>Generates a simple cylindrical spline</td>
       <td>Intermediate</td>
     </tr>
     <tr>
-      <td>ezedits.spline.chainlink</td>
-      <td><strong>//ezspline chainlink</strong><br>Generates a chainlink shaped spline</td>
+      <td>ezedits.spline.2d</td>
+      <td><strong>//ezspline 2d ...</strong><br>Generates a shaped spline by sweeping a 2d shape along the path</td>
       <td>Intermediate</td>
     </tr>
     <tr>
-      <td>ezedits.spline.cubes</td>
-      <td><strong>//ezspline cubes</strong><br>Generates a cube shaped spline</td>
+      <td>ezedits.spline.3d</td>
+      <td><strong>//ezspline 3d ...</strong><br>Generates a spline based on the given spline shape</td>
       <td>Intermediate</td>
     </tr>
     <tr>
@@ -381,28 +412,8 @@ description: List of permissions within ezEdits
       <td>Intermediate</td>
     </tr>
     <tr>
-      <td>ezedits.spline.fishnet</td>
-      <td><strong>//ezspline fishnet</strong><br>Generates a fishnet shaped spline</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
       <td>ezedits.spline.noise</td>
       <td><strong>//ezspline noise</strong><br>Generates a spline deformed with noise</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>ezedits.spline.oscillate</td>
-      <td><strong>//ezspline oscillate</strong><br>Generates an oscillation shaped spline</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>ezedits.spline.polygon</td>
-      <td><strong>//ezspline polygon</strong><br>Generates a polygon shaped spline</td>
-      <td>Intermediate</td>
-    </tr>
-    <tr>
-      <td>ezedits.spline.rrings</td>
-      <td><strong>//ezspline rings</strong><br>Generates a spline of rings</td>
       <td>Intermediate</td>
     </tr>
     <tr>
@@ -411,8 +422,8 @@ description: List of permissions within ezEdits
       <td>Intermediate</td>
     </tr>
     <tr>
-      <td>ezedits.spline.simple</td>
-      <td><strong>//ezspline simple</strong><br>Generates a simple cylindrical spline</td>
+      <td>ezedits.spline.structure</td>
+      <td><strong>//ezspline structure ...</strong><br>Stretches a structure along the spline path</td>
       <td>Intermediate</td>
     </tr>
     <tr>

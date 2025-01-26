@@ -250,7 +250,7 @@ Abbreviation: <mark style="color:orange;">**`U`**</mark>
 
 <summary><mark style="color:blue;">Diagram</mark></summary>
 
-![](../../.gitbook/assets/Alignments_aimVSupward.png)
+<img src="../../.gitbook/assets/Alignments_aimVSupward.png" alt="" data-size="original">
 
 </details>
 
@@ -377,15 +377,13 @@ Optional Arguments:
 * <mark style="color:blue;">`C`</mark>, the primary, using the default up direction.
 * <mark style="color:blue;">`Ex(E:"=rx=z;rz=-x",S:N)`</mark> sets the secondary to (z,0,-x), whereby x,z are the normalized placement position coordinates.
 
-![](../../.gitbook/assets/AlignmentsExpression_example1.png)
-
-
+<img src="../../.gitbook/assets/AlignmentsExpression_example1.png" alt="" data-size="original">
 
 `//ezar Sh(S:Fur,P:clay) C E(E:"=rx=sin(2*pi*z);rz=cos(2*pi*z)",S:N) -g -12`
 
 This example shows how the z coordinate ranges from 0 to 1 along the path when using normalized mode.
 
-![](../../.gitbook/assets/AlignmentsExpression_example2.png)
+<img src="../../.gitbook/assets/AlignmentsExpression_example2.png" alt="" data-size="original">
 
 </details>
 
@@ -459,15 +457,13 @@ Alignment directions are scaled by the given weight and summed up together.
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-`//ezsc Sh(P:clay,S:Cone) `**`Constant`**` -s 11,30,11 -n 1`
+`//ezsc Sh(P:clay,S:Cone)`` `**`Constant`**` ``-s 11,30,11 -n 1`
 
 (for reference)
 
-![](../../.gitbook/assets/AlignmentsExpression_example3.png)
+<img src="../../.gitbook/assets/AlignmentsExpression_example3.png" alt="" data-size="original">
 
-
-
-`//ezsc Sh(P:clay,S:Cone) `**`10%C,10%R`**` -s 11,30,11 -n 1`
+`//ezsc Sh(P:clay,S:Cone)`` `**`10%C,10%R`**` ``-s 11,30,11 -n 1`
 
 GIF going through
 
@@ -477,7 +473,7 @@ GIF going through
 * ...
 * `10%Constant,10%Random`
 
-![](../../.gitbook/assets/AlignmentsMixed_example1.gif)
+<img src="../../.gitbook/assets/AlignmentsMixed_example1.gif" alt="" data-size="original">
 
 </details>
 

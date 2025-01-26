@@ -12,8 +12,8 @@ Takes the block the player is aiming at as the mask.
 
 Optionally takes a True/False setting to make your aim sensitive to hitboxes.
 
-- False will treat all blocks as full blocks. E.g. you cannot `#aim` at the block behind a button.
-- True will respect the hitboxes of blocks you are looking at. E.g. you can `#aim` at the block behind a slab.
+* False will treat all blocks as full blocks. E.g. you cannot `#aim` at the block behind a button.
+* True will respect the hitboxes of blocks you are looking at. E.g. you can `#aim` at the block behind a slab.
 
 <img src="../.gitbook/assets/aimMask.gif" alt="" data-size="original">
 
@@ -132,7 +132,7 @@ Masks to blocks which emit light. Optionally takes a specific light level to mat
 <summary>#near Mask</summary>
 
 **`#near[mask][distance]`**\
-**`#near[mask][minDistance][maxDistance]`**\
+&#xNAN;**`#near[mask][minDistance][maxDistance]`**\
 \
 Masks to all blocks within a given spherical (Euclidean) distance of a mask.\
 Doesn't modify blocks which match the inner `mask`.\

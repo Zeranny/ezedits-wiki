@@ -9,7 +9,7 @@
 <summary>Selection Load</summary>
 
 **`//selload [selection]`**\
-&#xNAN;_&#x41;lternate for \`//ezsel load\`_
+_&#x41;lternate for \`//ezsel load\`_
 
 The `//selload` command retrieves a previously saved selection from the player's saved selection list.
 
@@ -20,7 +20,6 @@ The `//selload` command retrieves a previously saved selection from the player's
 ### `//next`
 
 <details>
-
 <summary>Selection Shift</summary>
 
 **`//next <direction> <gap>`**
@@ -77,6 +76,41 @@ This will be most noticeable with convex selections as with a cuboid selection p
 **`Alias: //-2`**
 
 The `//delpos2` command removes the last secondary selection point for convex and poly selections.
+
+</details>
+
+### `//encapsulate`
+
+<details>
+
+
+<summary>Delete Last Position</summary>
+
+**`//encapsulate <mask>`**
+
+**`Alias: //enc`**
+
+The `//encapsulate` command takes your existing selection and changes it to the smallest CUBOID selection which contains blocks matching the given mask.
+
+* **Mask**: Blocks to encapsulate
+
+</details>
+
+### `//encapsulatenear`
+
+<details>
+
+
+<summary>Delete Last Position</summary>
+
+**`//encapsulatenear <radius> <mask>`**
+
+**`Alias: //encnear`**
+
+The `//encapsulate near` command creates a new selection of the smallest CUBOID selection which contains blocks matching the given mask within the radius.
+
+* **Radius**: Cuboid radius to search for matching blocks
+* **Mask**: Blocks to encapsulate
 
 </details>
 

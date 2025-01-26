@@ -36,7 +36,6 @@ Permissions are grouped into permpacks which can be granted with `ezedits.permpa
       <td>Admin</td>
     </tr>
     <tr>
-    <tr>
       <td>ezedits.array</td>
       <td><strong>//ezarray</strong><br>Places multiple structures sequentially along a path</td>
       <td>Advanced</td>

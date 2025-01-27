@@ -6,7 +6,14 @@
 
 <summary>#aim Mask</summary>
 
+**`#aim` or `#aim[True|False]`**
+
 Takes the block the player is aiming at as the mask.
+
+Optionally takes a True/False setting to make your aim sensitive to hitboxes.
+
+* False will treat all blocks as full blocks. E.g. you cannot `#aim` at the block behind a button.
+* True will respect the hitboxes of blocks you are looking at. E.g. you can `#aim` at the block behind a slab.
 
 <img src="../.gitbook/assets/aimMask.gif" alt="" data-size="original">
 
@@ -112,7 +119,7 @@ Masks to blocks which are infested with silverfish.
 
 <summary>#lightsource Mask</summary>
 
-**`#lightsource[lightLevel]` or `#lightsource[lightLevel]` or `#lightsource[minLevel][maxLevel]`**
+**`#lightsource` or `#lightsource[lightLevel]` or `#lightsource[minLevel][maxLevel]`**
 
 Masks to blocks which emit light. Optionally takes a specific light level to match, or minimum and maximum light level, matching any level within that range.
 

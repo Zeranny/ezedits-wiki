@@ -102,7 +102,7 @@ With this primary + secondary system, we hope that you can easily and quickly co
 
 The primary and secondary can be set to either:
 
-<table data-view="cards" data-full-width="false"><thead><tr><th>Name</th><th>Abbreviation</th><th>Description</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="primary+secondary-alignment.md#constant"><strong><code>Constant</code></strong></a></td><td><strong><code>C</code></strong></td><td>Explicitly set a constant direction for all placements.</td><td><a href="primary+secondary-alignment.md#constant">#constant</a></td></tr><tr><td><a href="primary+secondary-alignment.md#random"><strong><code>Random</code></strong></a></td><td><strong><code>R</code></strong></td><td>Random direction for each placement.</td><td><a href="primary+secondary-alignment.md#random">#random</a></td></tr><tr><td><a href="primary+secondary-alignment.md#noise"><strong><code>Noise</code></strong></a></td><td><strong><code>N</code></strong></td><td>Direction based on the evaluation of a noise function at the placement's position.</td><td><a href="primary+secondary-alignment.md#noise">#noise</a></td></tr><tr><td><a href="primary+secondary-alignment.md#aim"><strong><code>Aim</code></strong></a></td><td><strong><code>A</code></strong></td><td>Your player aim direction.</td><td><a href="primary+secondary-alignment.md#aim">#aim</a></td></tr><tr><td><a href="primary+secondary-alignment.md#playerrelative"><strong><code>PlayerRelative</code></strong></a></td><td><strong><code>P</code></strong></td><td>The direction from the placement's position towards the current player position.</td><td><a href="primary+secondary-alignment.md#playerrelative">#playerrelative</a></td></tr><tr><td><a href="primary+secondary-alignment.md#surfacenormal"><strong><code>SurfaceNormal</code></strong></a></td><td><strong><code>S</code></strong></td><td>The approximate surface-normal in the region of the placement's position.</td><td><a href="primary+secondary-alignment.md#surfacenormal">#surfacenormal</a></td></tr><tr><td><a href="primary+secondary-alignment.md#viewdiff"><strong><code>ViewDiff</code></strong></a></td><td><strong><code>V</code></strong></td><td>Define a direction using two clicks. Exclusively for brushes.</td><td><a href="primary+secondary-alignment.md#viewdiff">#viewdiff</a></td></tr><tr><td><a href="primary+secondary-alignment.md#tangential"><strong><code>Tangential</code></strong></a></td><td><strong><code>T</code></strong></td><td>The direction tangential to the path. Exclusively for arrays.</td><td><a href="primary+secondary-alignment.md#tangential">#tangential</a></td></tr><tr><td><a href="primary+secondary-alignment.md#orthogonal"><strong><code>Orthogonal</code></strong></a></td><td><strong><code>O</code></strong></td><td>The direction orthogonal to the path. Exclusively for arrays.</td><td><a href="primary+secondary-alignment.md#orthogonal">#orthogonal</a></td></tr></tbody></table>
+<table data-view="cards" data-full-width="false"><thead><tr><th>Name</th><th>Abbreviation</th><th>Description</th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="primary+secondary-alignment.md#constant"><strong><code>Constant</code></strong></a></td><td><strong><code>C</code></strong></td><td>Explicitly set a constant direction for all placements.</td><td><a href="primary+secondary-alignment.md#constant">#constant</a></td></tr><tr><td><a href="primary+secondary-alignment.md#random"><strong><code>Random</code></strong></a></td><td><strong><code>R</code></strong></td><td>Random direction for each placement.</td><td><a href="primary+secondary-alignment.md#random">#random</a></td></tr><tr><td><a href="primary+secondary-alignment.md#noise"><strong><code>Noise</code></strong></a></td><td><strong><code>N</code></strong></td><td>Direction based on the evaluation of a noise function at the placement's position.</td><td><a href="primary+secondary-alignment.md#noise">#noise</a></td></tr><tr><td><a href="primary+secondary-alignment.md#aim"><strong><code>Aim</code></strong></a></td><td><strong><code>A</code></strong></td><td>Your player aim direction.</td><td><a href="primary+secondary-alignment.md#aim">#aim</a></td></tr><tr><td><a href="primary+secondary-alignment.md#upward"><strong><code>Upward</code></strong></a></td><td><strong><code>U</code></strong></td><td>The most upwards perpendicular direction to your aim.</td><td><a href="primary+secondary-alignment.md#upward">#upward</a></td></tr><tr><td><a href="primary+secondary-alignment.md#playerrelative"><strong><code>PlayerRelative</code></strong></a></td><td><strong><code>P</code></strong></td><td>The direction from the placement's position towards the current player position.</td><td><a href="primary+secondary-alignment.md#playerrelative">#playerrelative</a></td></tr><tr><td><a href="primary+secondary-alignment.md#surfacenormal"><strong><code>SurfaceNormal</code></strong></a></td><td><strong><code>S</code></strong></td><td>The approximate surface-normal in the region of the placement's position.</td><td><a href="primary+secondary-alignment.md#surfacenormal">#surfacenormal</a></td></tr><tr><td><a href="primary+secondary-alignment.md#viewdiff"><strong><code>ViewDiff</code></strong></a></td><td><strong><code>V</code></strong></td><td>Define a direction using two clicks. Exclusively for brushes.</td><td><a href="primary+secondary-alignment.md#viewdiff">#viewdiff</a></td></tr><tr><td><a href="primary+secondary-alignment.md#expression"><strong><code>Expression</code></strong></a></td><td><strong><code>E</code></strong></td><td>Define a direction through an expression over each placement position.</td><td><a href="primary+secondary-alignment.md#expression">#expression</a></td></tr><tr><td><a href="primary+secondary-alignment.md#tangential"><strong><code>Tangential</code></strong></a></td><td><strong><code>T</code></strong></td><td>The direction tangential to the path. Exclusively for arrays.</td><td><a href="primary+secondary-alignment.md#tangential">#tangential</a></td></tr><tr><td><a href="primary+secondary-alignment.md#orthogonal"><strong><code>Orthogonal</code></strong></a></td><td><strong><code>O</code></strong></td><td>The direction orthogonal to the path. Exclusively for arrays.</td><td><a href="primary+secondary-alignment.md#orthogonal">#orthogonal</a></td></tr><tr><td><a href="primary+secondary-alignment.md#mixed"><strong>Mixed</strong></a></td><td>-</td><td>Mix and combine any of the other Alignment modes using a weighted list.</td><td><a href="primary+secondary-alignment.md#mixed">#mixed</a></td></tr></tbody></table>
 
 ***
 
@@ -232,7 +232,25 @@ If we set the `<primary>` to `Aim` then the up direction of our structure, the g
 
 My player model is included in the picture for reference. That's where I was looking when I executed the command. _The aim direction is visualized in F3+B with the thin blue line_
 
-<img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/AimAlignment_demo1.png" alt="" data-size="original"><img src="../../.gitbook/assets/AimAlignment_demo2.png" alt="" data-size="original">
+
+</details>
+
+***
+
+### Upward
+
+The most upward perpendicular direction to your aim.
+
+Syntax: <mark style="color:orange;">**`Upward`**</mark>
+
+Abbreviation: <mark style="color:orange;">**`U`**</mark>
+
+<details>
+
+<summary><mark style="color:blue;">Diagram</mark></summary>
+
+<img src="../../.gitbook/assets/Alignments_aimVSupward.png" alt="" data-size="original">
 
 </details>
 
@@ -256,7 +274,7 @@ If you set the `<primary>` to `PlayerRelative`, then each structure is placed su
 
 If you look closely, you can see my player model in the pictures. That's where I executed the command.
 
-<img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original"> <img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
+<img src="../../.gitbook/assets/PlayerRelative_demo1.png" alt="" data-size="original"><img src="../../.gitbook/assets/PlayerRelative_demo2.png" alt="" data-size="original">
 
 `//ezbr place Shape(S:Cone,P:diamond_block) PlayerRelative Constant -s 12,36,12`
 
@@ -320,6 +338,57 @@ This torus shape required a few more parameters, so this example turned out a bi
 
 ***
 
+### Expression
+
+Define a direction through an expression over each placement position.
+
+Syntax: <mark style="color:orange;">**`Expression(Expression:=<expression>,Space:<space>)`**</mark>
+
+Abbreviation: <mark style="color:orange;">**`E(E:=<expression>,S:<space>)`**</mark>
+
+Mandatory Arguments:
+
+* <mark style="color:orange;">**`Expression`**</mark> **(**<mark style="color:orange;">**`E`**</mark>**)**: An expression defining a 3D vector for each position in space.
+  * Input variables are <mark style="color:blue;">`x`</mark>, <mark style="color:blue;">`y`</mark>, <mark style="color:blue;">`z`</mark>.
+  * Output variables are <mark style="color:blue;">`rx`</mark>, <mark style="color:blue;">`ry`</mark>, <mark style="color:blue;">`rz`</mark>.
+  * For each placement, the expression will evaluated with the according placement position and the result used for the placement's alignment.
+
+Optional Arguments:
+
+* <mark style="color:blue;">**`Space`**</mark>**&#x20;(**<mark style="color:blue;">**`S`**</mark>**)**: Defines the domain of the input variables.
+  * Defaults to <mark style="color:blue;">`WORLD`</mark>.
+  * <mark style="color:blue;">`WORLD`</mark>: the placement position. x, y, z, are in world coordinates
+  * <mark style="color:blue;">`LOCAL`</mark>: When used in...
+    * ezplace: Always 0,0,0.
+    * ezscatter: Coordinates shifted such that the center of the region is 0,0,0.
+    * ezarray: x=y=0. z=0 at the start of the path, z=L at the end of the path, whereby L is the length of the path.
+  * <mark style="color:blue;">`NORMALIZED`</mark>: When used in...
+    * ezplace: Always 0,0,0.
+    * ezscatter: Coordinates normalized to the region such that x,y,z ∈ \[-1,1].
+    * ezarray: x=y=0. z=0 at the start of the path, z=1 at the end of the path.
+
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+`//ezsc TS(P:##Grayscale,S:Fur,T:=y) C Ex(E:"=rx=z;rz=-x",S:N)`
+
+* <mark style="color:blue;">`TS(P:##Grayscale,S:Fur,T:=y)`</mark> is a fur shape in a grayscale gradient.
+* <mark style="color:blue;">`C`</mark>, the primary, using the default up direction.
+* <mark style="color:blue;">`Ex(E:"=rx=z;rz=-x",S:N)`</mark> sets the secondary to (z,0,-x), whereby x,z are the normalized placement position coordinates.
+
+<img src="../../.gitbook/assets/AlignmentsExpression_example1.png" alt="" data-size="original">
+
+`//ezar Sh(S:Fur,P:clay) C E(E:"=rx=sin(2*pi*z);rz=cos(2*pi*z)",S:N) -g -12`
+
+This example shows how the z coordinate ranges from 0 to 1 along the path when using normalized mode.
+
+<img src="../../.gitbook/assets/AlignmentsExpression_example2.png" alt="" data-size="original">
+
+</details>
+
+***
+
 ### Tangential
 
 The direction tangential to the path. Exclusively for arrays.
@@ -368,9 +437,43 @@ Here's a GIF going through the `<angle>` parameter:
 
 `//ezarray Clipboard Orthogonal Constant -n HORIZONTAL`
 
-The [-n flag](array-parameters.md#spline-orientation-n-less-than-normalmode-greater-than) has a direct influence on the orthogonal direction.
+The [-n flag](array-parameters.md#spline-orientation-n) has a direct influence on the orthogonal direction.
 
 <img src="../../.gitbook/assets/OrthogonalAlignment_example2.png" alt="" data-size="original">
+
+</details>
+
+***
+
+### Mixed
+
+You may combine any number of any of the other Alignment modes using a weighted list:
+
+Syntax: <mark style="color:orange;">`<weight1>%<alignment1>,<weight2>%<alignment2>,...`</mark>
+
+Alignment directions are scaled by the given weight and summed up together.
+
+<details>
+
+<summary><mark style="color:blue;">Examples</mark></summary>
+
+`//ezsc Sh(P:clay,S:Cone)`` `**`Constant`**` ``-s 11,30,11 -n 1`
+
+(for reference)
+
+<img src="../../.gitbook/assets/AlignmentsExpression_example3.png" alt="" data-size="original">
+
+`//ezsc Sh(P:clay,S:Cone)`` `**`10%C,10%R`**` ``-s 11,30,11 -n 1`
+
+GIF going through
+
+* `10%Constant`
+* `10%Constant,1%Random`
+* `10%Constant,2%Random`
+* ...
+* `10%Constant,10%Random`
+
+<img src="../../.gitbook/assets/AlignmentsMixed_example1.gif" alt="" data-size="original">
 
 </details>
 
@@ -382,7 +485,7 @@ The following flags adjust how Alignments are calculated.
 
 ***
 
-### Snap to certain directions: <mark style="color:orange;">`[-j <snapDirections>]`</mark>
+### Snap to certain directions: <mark style="color:orange;">`[-j <snapDirections>]`</mark> <a href="#snap-to-angles-j" id="snap-to-angles-j"></a>
 
 This parameter allows you to restrict the chosen alignment direction to the specified subset. E.g. snapping to / only allowing cardinal direction, i.e. 90° rotations.
 
@@ -419,7 +522,7 @@ Available options:
 
 ***
 
-### Perturb Secondary: <mark style="color:orange;">\[-x]</mark>
+### Perturb Secondary: <mark style="color:orange;">\[-x]</mark> <a href="#perturb-secondary-x" id="perturb-secondary-x"></a>
 
 In our primary+secondary system, placement fails if both vectors are collinear (which simply means they are on the same line).
 

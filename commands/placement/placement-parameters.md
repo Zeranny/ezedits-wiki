@@ -2,18 +2,18 @@
 
 Whenever a structure is placed, it goes through the following pipeline (in that order):
 
-* [Applying Dimensions](placement-parameters.md#controlling-dimensions-s-less-than-dimensions-greater-than) (`-s`)
-* [Random Scaling](placement-parameters.md#random-scaling-o-less-than-sizemultiplierrange-greater-than) (`-t`)
-* [Orientation](placement-parameters.md#orientation-advanced-k-less-than-orientationaxis-greater-than-and-c-less-than-orientationangle-great) (`-c` and `-k`)
-* [Random Flips](placement-parameters.md#random-flips-f-less-than-randomflipsaxes-greater-than) (`-f`)
-* [Random 90° Rotations](placement-parameters.md#random-90-rotations-r-less-than-randomrotationaxis-greater-than) (`-r`)
+* [Applying Dimensions](placement-parameters.md#dimensions-s) (`-s`)
+* [Random Scaling](placement-parameters.md#random-scaling-o) (`-t`)
+* [Orientation](placement-parameters.md#orientation-c-k) (`-c` and `-k`)
+* [Random Flips](placement-parameters.md#random-flips-f) (`-f`)
+* [Random 90° Rotations](placement-parameters.md#random-rotations-r) (`-r`)
 * [**Alignment**](primary+secondary-alignment.md) (`<primary>` and `<secondary>`)
 
 ezEdits lets you fully customize this pipeline. In brackets are the flags and arguments that apply changes to each step respectively.
 
 ***
 
-### Controlling Dimensions: <mark style="color:orange;">`-s <dimensions>`</mark>
+### Controlling Dimensions: <mark style="color:orange;">`-s <dimensions>`</mark> <a href="#dimensions-s" id="dimensions-s"></a>
 
 The dimensions define the size of a structure placement, by setting its bounding box size.
 
@@ -41,7 +41,7 @@ Second image: `//ezsc Clipboard -s 5,14,5`
 
 ***
 
-### Random Scaling: <mark style="color:orange;">`-o <sizeMultiplierRange>`</mark>
+### Random Scaling: <mark style="color:orange;">`-o <sizeMultiplierRange>`</mark> <a href="#random-scaling-o" id="random-scaling-o"></a>
 
 Most of the structure commands place multiple structure placements at once. To give a bit of variety you can apply some random scaling for each placement.
 
@@ -65,7 +65,7 @@ By setting the range as `-o 0.5,2.0` we get placements of e.g. our clipboard at 
 
 ***
 
-### Random Flips: <mark style="color:orange;">`-f <randomFlipsAxes>`</mark>
+### Random Flips: <mark style="color:orange;">`-f <randomFlipsAxes>`</mark> <a href="#random-flips-f" id="random-flips-f"></a>
 
 The `-f <randomFlipsAxes>` flag enables random flipping of the structure across any of the axes for each placement.
 
@@ -96,7 +96,7 @@ Second Image: `//ezsc Clipboard -f XZ` (random mirrors along x- and z-axis, but 
 
 ***
 
-### Random 90°-Rotations: <mark style="color:orange;">`-r <randomRotationAxis>`</mark>
+### Random 90°-Rotations: <mark style="color:orange;">`-r <randomRotationAxis>`</mark> <a href="#random-rotations-r" id="random-rotations-r"></a>
 
 The `-r <randomRotationAxis>` flag enables random 90° rotation of the structure across either of the axes for each placement.
 
@@ -124,7 +124,7 @@ Second Image: `//ezsc Clipboard -r Y` (random 90°-rotations around the y-axis)
 
 ***
 
-### Orientation (advanced): <mark style="color:orange;">`-k <orientationAxis>`</mark> and <mark style="color:orange;">`-c <orientationAngle>`</mark>
+### Orientation (advanced): <mark style="color:orange;">`-k <orientationAxis>`</mark> and <mark style="color:orange;">`-c <orientationAngle>`</mark> <a href="#orientation-c-k" id="orientation-c-k"></a>
 
 Setting an orientation means defining which internal coordinate system the structure has. That coordinate system is then used in the random flips/rotations and during alignment. _Defining an orientation is "defining which way is up and which way is forward"_
 
@@ -136,7 +136,7 @@ For example, if you set the rotation axis to `-k x` and the rotation angle to `-
 
 ***
 
-### Place Air: <mark style="color:orange;">`-a`</mark>
+### Place Air: <mark style="color:orange;">`-a`</mark> <a href="#place-air-a" id="place-air-a"></a>
 
 By default, if this flag _is not_ set, air blocks are skipped when placing a structure. When this flag _is_ set, air blocks within the structure are able to override existing blocks.
 

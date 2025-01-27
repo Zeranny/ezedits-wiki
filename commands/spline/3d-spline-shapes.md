@@ -6,7 +6,7 @@ This page covers the `//ezspline 3d` subcommand which feature 3D spline shapes e
 
 ## Syntax
 
-**`//ezspline 3d`` `**<mark style="color:orange;">**`<shape>`**</mark> <mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radii) [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
+**`//ezspline 3d `**<mark style="color:orange;">**`<shape>`**</mark> <mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radii) [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
 
 * <mark style="color:orange;">**`<shape>`**</mark> : Choose one from the list below.
 * <mark style="color:orange;">**`<pattern>`**</mark>: Specifies the block(s) the spline is made out of, e.g. `clay`.
@@ -21,7 +21,7 @@ _The remaining arguments are outlined on the_ [_Common Parameters_](common-param
 
 #### ![](../../.gitbook/assets/SplinesBeads.png)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Beads (Be)`</mark> <a href="#beads" id="beads"></a>
+### `//ezspline 3d `<mark style="color:orange;">`Beads (Be)`</mark> <a href="#beads" id="beads"></a>
 
 <details>
 
@@ -35,7 +35,7 @@ Generates a beads-shaped spline along the selected positions.
 
 Example:
 
-`//ezsp 3d`` `<mark style="color:orange;">`Beads`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Beads`</mark>` clay 10`
 
 <img src="../../.gitbook/assets/SplinesBeads.png" alt="" data-size="original">
 
@@ -47,7 +47,7 @@ _This shape can also be achieved with the_ [_Rings_](3d-spline-shapes.md#ezsplin
 
 #### ![](../../.gitbook/assets/SplinesCubes.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Cubes (Cu)`</mark> <a href="#cubes" id="cubes"></a>
+### `//ezspline 3d `<mark style="color:orange;">`Cubes (Cu)`</mark> <a href="#cubes" id="cubes"></a>
 
 <details>
 
@@ -62,21 +62,21 @@ Generates a chainlink-shaped spline along the selected positions.
 
 Examples:
 
-`//ezsp 3d`` `<mark style="color:orange;">`Cubes`</mark>` ``clay 7`
+`//ezsp 3d `<mark style="color:orange;">`Cubes`</mark>` clay 7`
 
 Default gap is 0.5
 
 <img src="../../.gitbook/assets/SplinesCubes_example1.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Cubes(Gap:0.0)`</mark>` ``clay 7`
+`//ezsp 3d `<mark style="color:orange;">`Cubes(Gap:0.0)`</mark>` clay 7`
 
 <img src="../../.gitbook/assets/SplinesCubes_example2.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Cubes(Gap:1.0)`</mark>` ``clay 7`
+`//ezsp 3d `<mark style="color:orange;">`Cubes(Gap:1.0)`</mark>` clay 7`
 
 <img src="../../.gitbook/assets/SplinesCubes_example3.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Cu(G:2.0)`</mark>` ``clay 7`
+`//ezsp 3d `<mark style="color:orange;">`Cu(G:2.0)`</mark>` clay 7`
 
 <img src="../../.gitbook/assets/SplinesCubes_example4.png" alt="" data-size="original">
 
@@ -86,7 +86,7 @@ Default gap is 0.5
 
 #### ![](../../.gitbook/assets/SplinesChainlink.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Chainlink (Ch)`</mark> <a href="#chainlink" id="chainlink"></a>
+### `//ezspline 3d `<mark style="color:orange;">`Chainlink (Ch)`</mark> <a href="#chainlink" id="chainlink"></a>
 
 <details>
 
@@ -113,28 +113,28 @@ Generates a highly customisable chainlink-shaped spline along the selected posit
 
 Examples:
 
-`//ezsp 3d`` `<mark style="color:orange;">`Chainlink`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Chainlink`</mark>` clay 10`
 
 <img src="../../.gitbook/assets/SplinesChainlink_example1.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Chainlink(M:99,N:99,Extrusion:0.6)`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Chainlink(M:99,N:99,Extrusion:0.6)`</mark>` clay 10`
 
 * `M:99` is responsible for making the chains appear rectangular (instead of elliptical).
 * `N:99` is responsible for making the square chain link's cross-section square-shaped.
 
 <img src="../../.gitbook/assets/SplinesChainlink_example2.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Chainlink(M:1,N:1,E:0.7,G:-0.2,T:1.2)`</mark>` ``clay 11`
+`//ezsp 3d `<mark style="color:orange;">`Chainlink(M:1,N:1,E:0.7,G:-0.2,T:1.2)`</mark>` clay 11`
 
 <img src="../../.gitbook/assets/SplinesChainlink_example3.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Chainlink(M:2,N:2,E:0,G:1)`</mark>` ``clay 11`
+`//ezsp 3d `<mark style="color:orange;">`Chainlink(M:2,N:2,E:0,G:1)`</mark>` clay 11`
 
 <img src="../../.gitbook/assets/SplinesChainlink_example4.png" alt="" data-size="original">
 
-`//ezspline 3d`` `<mark style="color:orange;">`Chainlink(P:FIRST)`</mark> <mark style="color:red;">`red_terracotta`</mark>` ``10`
+`//ezspline 3d `<mark style="color:orange;">`Chainlink(P:FIRST)`</mark> <mark style="color:red;">`red_terracotta`</mark>` 10`
 
-`//ezspline 3d`` `<mark style="color:orange;">`Chainlink(P:SECOND)`</mark> <mark style="color:blue;">`blue_wool`</mark>` ``10`
+`//ezspline 3d `<mark style="color:orange;">`Chainlink(P:SECOND)`</mark> <mark style="color:blue;">`blue_wool`</mark>` 10`
 
 <img src="../../.gitbook/assets/SplinesChainlink_example5.png" alt="" data-size="original">
 
@@ -144,7 +144,7 @@ Examples:
 
 #### ![](../../.gitbook/assets/SplinesFishnet.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Fishnet (Fi)`</mark> <a href="#fishnet" id="fishnet"></a>
+### `//ezspline 3d `<mark style="color:orange;">`Fishnet (Fi)`</mark> <a href="#fishnet" id="fishnet"></a>
 
 <details>
 
@@ -163,19 +163,19 @@ Generates a fishnet-shaped spline along the selected positions.
 
 Examples:
 
-`//ezspline 3d`` `<mark style="color:orange;">`Fishnet`</mark>` ``clay 10`
+`//ezspline 3d `<mark style="color:orange;">`Fishnet`</mark>` clay 10`
 
 <img src="../../.gitbook/assets/SplinesFishnet_example1.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Fishnet(Spacing:2.0)`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Fishnet(Spacing:2.0)`</mark>` clay 10`
 
 <img src="../../.gitbook/assets/SplinesFishnet_example2.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Fishnet(S:2.0,Depth:1.0,Width:0.3)`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Fishnet(S:2.0,Depth:1.0,Width:0.3)`</mark>` clay 10`
 
 <img src="../../.gitbook/assets/SplinesFishnet_example3.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Fi(S:2.0,D:0.5,W:0.5)`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Fi(S:2.0,D:0.5,W:0.5)`</mark>` clay 10`
 
 <img src="../../.gitbook/assets/SplinesFishnet_example4.png" alt="" data-size="original">
 
@@ -185,7 +185,7 @@ Examples:
 
 #### ![](../../.gitbook/assets/SplineOscillate.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Oscillate (Os)`</mark> <a href="#oscillate" id="oscillate"></a>
+### `//ezspline 3d `<mark style="color:orange;">`Oscillate (Os)`</mark> <a href="#oscillate" id="oscillate"></a>
 
 <details>
 
@@ -202,21 +202,21 @@ Generates a spline with an oscillating thickness along the selected positions.
 
 Examples:
 
-`//ezspline 3d`` `<mark style="color:orange;">`Oscillate`</mark>` ``clay 10`
+`//ezspline 3d `<mark style="color:orange;">`Oscillate`</mark>` clay 10`
 
 Uses default values <mark style="color:orange;">`Depth:0.2`</mark> and <mark style="color:orange;">`Interval:0.5`</mark>
 
 <img src="../../.gitbook/assets/SplinesOscillate_example1.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Oscillate(Depth:0.6)`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Oscillate(Depth:0.6)`</mark>` clay 10`
 
 <img src="../../.gitbook/assets/SplinesOscillate_example2.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Oscillate(Depth:0.6,Interval:1.5)`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Oscillate(Depth:0.6,Interval:1.5)`</mark>` clay 10`
 
 <img src="../../.gitbook/assets/SplinesOscillate_example3.png" alt="" data-size="original">
 
-`//ezsp 3d`` `<mark style="color:orange;">`Oscillate(Depth:0.2,Interval:1.5)`</mark>` ``clay 10`
+`//ezsp 3d `<mark style="color:orange;">`Oscillate(Depth:0.2,Interval:1.5)`</mark>` clay 10`
 
 Can be abbreviated to <mark style="color:orange;">`Os(D:0.2,I:1.5)`</mark>
 
@@ -228,7 +228,7 @@ Can be abbreviated to <mark style="color:orange;">`Os(D:0.2,I:1.5)`</mark>
 
 #### ![](../../.gitbook/assets/SplinesRings.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Rings (Ri)`</mark> <a href="#rings" id="rings"></a>
+### `//ezspline 3d `<mark style="color:orange;">`Rings (Ri)`</mark> <a href="#rings" id="rings"></a>
 
 <details>
 
@@ -257,7 +257,7 @@ Generates a highly customisable spline of repeating rings/cubes/spheres along th
 
 #### ![](../../.gitbook/assets/SplinesScales.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Scales (Sc)`</mark> <a href="#scales" id="scales"></a>
+### `//ezspline 3d `<mark style="color:orange;">`Scales (Sc)`</mark> <a href="#scales" id="scales"></a>
 
 <details>
 
@@ -288,7 +288,7 @@ Generates a highly customisable spline with a scales-like three-dimensional text
 
 Example:
 
-`//ezsp 3d`` `<mark style="color:orange;">`Sc(c:8,d:1.2)`</mark>` ``clay 22,9`
+`//ezsp 3d `<mark style="color:orange;">`Sc(c:8,d:1.2)`</mark>` clay 22,9`
 
 <mark style="color:blue;">`//ezt ambient clay ##EnchantedBright`</mark>
 
@@ -300,7 +300,7 @@ Example:
 
 #### ![](../../.gitbook/assets/SplinesNoodles.gif)
 
-### `//ezspline 3d`` `<mark style="color:orange;">`Noodles (No)`</mark> <a href="#noodles" id="noodles"></a>
+### `//ezspline 3d `<mark style="color:orange;">`Noodles (No)`</mark> <a href="#noodles" id="noodles"></a>
 
 <details>
 

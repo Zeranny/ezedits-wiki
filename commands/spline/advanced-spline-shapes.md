@@ -6,13 +6,13 @@ The following `//ezspline` subcommands feature three very powerful but more comp
 
 #### ![](../../.gitbook/assets/SplinesNoise.png)
 
-### ` //ezspline `` `<mark style="color:orange;">`noise`</mark> <a href="#noise" id="noise"></a>
+### ` //ezspline  `<mark style="color:orange;">`noise`</mark> <a href="#noise" id="noise"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Noise Spline</mark></summary>
 
-**` //ezsp noise `` `**<mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radii) <mark style="color:orange;">**`[noise]`**</mark> <mark style="color:orange;">**`[depth]`**</mark> [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
+**` //ezsp noise  `**<mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radii) <mark style="color:orange;">**`[noise]`**</mark> <mark style="color:orange;">**`[depth]`**</mark> [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
 
 Generates a noise-based spline along the selected positions.
 
@@ -43,13 +43,13 @@ Example:
 
 #### ![](../../.gitbook/assets/SplinesExpression.png)
 
-### ` //ezspline `` `<mark style="color:orange;">`expression`</mark> <a href="#expression" id="expression"></a>
+### ` //ezspline  `<mark style="color:orange;">`expression`</mark> <a href="#expression" id="expression"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Expression Spline</mark></summary>
 
-**` //ezsp expression `` `**<mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#help-page) <mark style="color:orange;">**`<expression...>`**</mark>
+**` //ezsp expression  `**<mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#help-page) <mark style="color:orange;">**`<expression...>`**</mark>
 
 Generates a spline shaped by the given WorldEdit expression along the selected positions.
 
@@ -83,13 +83,13 @@ Expression by [imhols](https://twitter.com/imhols1)
 
 #### ![](../../.gitbook/assets/SplinesStructure_example1.png)
 
-### ` //ezspline `` `<mark style="color:orange;">`structure`</mark> <a href="#structure" id="structure"></a>
+### ` //ezspline  `<mark style="color:orange;">`structure`</mark> <a href="#structure" id="structure"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Structure Spline</mark></summary>
 
-**` //ezsp structure `` `**<mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
+**` //ezsp structure  `**<mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
 
 Embeds a structure along the path defined by the selected convex region.
 

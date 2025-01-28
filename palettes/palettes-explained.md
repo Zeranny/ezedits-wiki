@@ -21,7 +21,7 @@ Palettes can be constructed as a simple list of blocks, or via several modifiers
     e.g `stone,dirt` is a 2 block palette of stone and dirt. `stone,##Grayscale` is a palette made of stone and the blocks of the ##Grayscale preset palette.
 * **`-`** - <mark style="color:orange;">**Invert**</mark>:
   * Reverses the order of a palette.\
-    e.g `-##Grayscale` is the wool preset palette in reverse order (starts with white instead of black)
+    e.g `-##Grayscale` is the ##Grayscale preset palette in reverse order (starts with white instead of black)
 * **`(start:end)`** - <mark style="color:orange;">**Sub-palette**</mark>:
   * Returns a portion of a palette.\
     e.g `##Grayscale(1:8)` will return the first 8 blocks of the ##Grayscale preset palette.

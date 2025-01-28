@@ -27,7 +27,15 @@ Palettes can be constructed as a simple list of blocks, or via several modifiers
 
 ## Default Palettes
 
-By default, palettes are saved per player. However, server admins may define a set of default palettes accessible to all players in `plugins/ezEdits/resources/DefaultPalettes.json`. We also come with a predefined set of default palettes:
+By default, palettes are saved per player. However, server admins may define a set of default palettes accessible to all players in
+
+```
+plugins/ezEdits/resources/DefaultPalettes.json
+```
+
+We also come with a predefined set of default palettes:
+
+***
 
 <figure><img src="../.gitbook/assets/palette_Grayscale.png" alt=""><figcaption><p>##Grayscale</p></figcaption></figure>
 
@@ -37,6 +45,8 @@ By default, palettes are saved per player. However, server admins may define a s
 
 <figure><img src="../.gitbook/assets/palette_GrayCold.png" alt=""><figcaption><p>##GrayCold</p></figcaption></figure>
 
+***
+
 <figure><img src="../.gitbook/assets/palette_BlueWhiteRed.png" alt=""><figcaption><p>##BlueWhiteRed</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/palette_Infrared.png" alt=""><figcaption><p>##Infrared</p></figcaption></figure>
@@ -44,6 +54,8 @@ By default, palettes are saved per player. However, server admins may define a s
 <figure><img src="../.gitbook/assets/palette_Magma.png" alt=""><figcaption><p>##Magma</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/palette_Beige.png" alt=""><figcaption><p>##Beige</p></figcaption></figure>
+
+***
 
 <figure><img src="../.gitbook/assets/palette_GlowRed.png" alt=""><figcaption><p>##GlowRed</p></figcaption></figure>
 
@@ -61,6 +73,8 @@ By default, palettes are saved per player. However, server admins may define a s
 
 <figure><img src="../.gitbook/assets/palette_GlowMagenta.png" alt=""><figcaption><p>##GlowMagenta</p></figcaption></figure>
 
+***
+
 <figure><img src="../.gitbook/assets/palette_FadeRed.png" alt=""><figcaption><p>##FadeRed</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/palette_FadeOrange.png" alt=""><figcaption><p>##FadeOrange</p></figcaption></figure>
@@ -77,9 +91,27 @@ By default, palettes are saved per player. However, server admins may define a s
 
 <figure><img src="../.gitbook/assets/palette_FadeMagenta.png" alt=""><figcaption><p>##FadeMagenta</p></figcaption></figure>
 
+***
+
+<figure><img src="../.gitbook/assets/palette_Brown.png" alt=""><figcaption><p>##Brown</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/palette_DustyBrown.png" alt=""><figcaption><p>##DustyBrown</p></figcaption></figure>
+
+***
+
+<figure><img src="../.gitbook/assets/palette_EnchantedDark.png" alt=""><figcaption><p>##EnchantedDark</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/palette_EnchantedWarm.png" alt=""><figcaption><p>##EnchantedWarm</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/palette_EnchantedBright.png" alt=""><figcaption><p>##EnchantedBright</p></figcaption></figure>
+
+***
+
 <figure><img src="../.gitbook/assets/palette_LegacyWool.png" alt=""><figcaption><p>##LegacyWool</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/palette_Light.png" alt=""><figcaption><p>##Light</p></figcaption></figure>
+
+***
 
 <figure><img src="../.gitbook/assets/palette_Moss.png" alt=""><figcaption><p>##Moss</p></figcaption></figure>
 
@@ -93,18 +125,6 @@ By default, palettes are saved per player. However, server admins may define a s
 
 <figure><img src="../.gitbook/assets/palette_Sand.png" alt=""><figcaption><p>##Sand</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/palette_EnchantedDark.png" alt=""><figcaption><p>##EnchantedDark</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/palette_EnchantedWarm.png" alt=""><figcaption><p>##EnchantedWarm</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/palette_EnchantedBright.png" alt=""><figcaption><p>##EnchantedBright</p></figcaption></figure>
-
 <figure><img src="../.gitbook/assets/palette_ShiningGold.png" alt=""><figcaption><p>##ShiningGold</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/palette_Brown.png" alt=""><figcaption><p>##Brown</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/palette_DustyBrown.png" alt=""><figcaption><p>##DustyBrown</p></figcaption></figure>
-
-
-
-
+***

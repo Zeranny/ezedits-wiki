@@ -10,6 +10,7 @@
 ## Palettes
 
 * [Palettes Explained](palettes/palettes-explained.md)
+* [Default Palettes](palettes/default-palettes.md)
 * [Palette Commands](palettes/palette-commands.md)
 
 ## Noise

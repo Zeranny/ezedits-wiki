@@ -17,11 +17,11 @@ Some of the many features that use palettes include:
 Palettes can be constructed as a simple list of blocks, or via several modifiers:
 
 * **`,`** - <mark style="color:orange;">**Concatenate**</mark>:
-  * Adds one block or palette on to the end of the preceding block or palette.\
+  * Adds one block or palette to the end of the preceding block or palette.\
     e.g `stone,dirt` is a 2 block palette of stone and dirt. `stone,##Grayscale` is a palette made of stone and the blocks of the ##Grayscale preset palette.
 * **`-`** - <mark style="color:orange;">**Invert**</mark>:
   * Reverses the order of a palette.\
-    e.g `-##Grayscale` is the wool preset palette in reverse order (starts with black instead of white)
+    e.g `-##Grayscale` is the wool preset palette in reverse order (starts with white instead of block)
 * **`(start:end)`** - <mark style="color:orange;">**Sub-palette**</mark>:
   * Returns a portion of a palette.\
     e.g `##Grayscale(1:8)` will return the first 8 blocks of the ##Grayscale preset palette.
@@ -29,7 +29,7 @@ Palettes can be constructed as a simple list of blocks, or via several modifiers
   * Repeats the previous segment a given number of times.\
     e.g `gold_block*10,diamond_block` will return a palette of 10 gold blocks, followed by a single diamond block.
 * **`[]`** - <mark style="color:orange;">**Grouping**</mark>:
-  * Groups palettes together to allow a modifer to treat them as a single palette.\
+  * Groups palettes together to allow a modifier to treat them as a single palette.\
     e.g `-##Grayscale,gold_block` will return the ##Grayscale preset palette in reverse order, with a gold block at the end. Where `-[##Grayscale,gold_block]` will return the gold block at the start.
 * **`=`** - <mark style="color:orange;">**Result**</mark>:
   * Allows a palette to be tab-completed into its list of blocks if needed.

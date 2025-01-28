@@ -25,6 +25,10 @@ Palettes can be constructed as a simple list of blocks, or via several modifiers
   e.g `-##LegacyWool,gold_block` will return the ##LegacyWool preset palette in reverse order, with a gold block at the end. Where `-[##LegacyWool,gold_block]` will return the gold block at the start.
 * **`=`** - Result: Allows a palette to be tab-completed into its list of blocks if needed.
 
-**##LegacyWool preset palette:**
+## Default Palettes
 
-<figure><img src="../.gitbook/assets/Palette_wool.png" alt=""><figcaption></figcaption></figure>
+By default, palettes are saved per player. However, server admins may define a set of default palettes accessible to all players in `plugins/ezEdits/resources/DefaultPalettes.json`. We also come with a predefined set of default palettes:
+
+<figure><img src="../.gitbook/assets/Palette_wool.png" alt=""><figcaption><p>##Grayscale</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Palette_wool.png" alt=""><figcaption><p>##GrayRough</p></figcaption></figure>

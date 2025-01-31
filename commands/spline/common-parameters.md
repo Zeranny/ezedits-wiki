@@ -181,7 +181,7 @@ GIF start at `-q 0` and moves up to `-q 180`.
 
 Allows stretching or compressing the spline shape in the direction of the spline path.
 
-Defaults to `0`.
+Defaults to `1`.
 
 {% hint style="info" %}
 Note: `//ezspline structure`'s and `//ezspline expressions`'s `-z` flag overrides this flag. If `-z` is on, then `-s` does nothing.

@@ -2,13 +2,11 @@
 
 The following `//ezsp` subcommands feature splines from predefined 2D shapes swept along the spline path.
 
-![](../../.gitbook/assets/SplinesSweep.gif)
-
 ***
 
 ## Syntax
 
-**`//ezspline 2d `**<mark style="color:orange;">**`<shape>`**</mark> <mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radii) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
+**`//ezspline 2d`` `**<mark style="color:orange;">**`<shape>`**</mark> <mark style="color:orange;">**`<pattern>`**</mark> [**`<radii>`**](common-parameters.md#radii) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
 
 * <mark style="color:orange;">**`<shape>`**</mark> : The 2D shape defines the cross-section of the spline. Choose one from the list below.
 * <mark style="color:orange;">**`<pattern>`**</mark>: Specifies the block(s) the spline is made out of, e.g. `clay`.
@@ -19,11 +17,13 @@ _The remaining arguments are outlined on the_ [_Common Parameters_](common-param
 
 ## List of <mark style="color:orange;">`<shape>`</mark>s
 
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong><code>Circle</code></strong> (<strong><code>Ci</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesSimple.png">SplinesSimple.png</a></td><td><a href="2d-spline-shapes.md#circle-spline">#circle-spline</a></td></tr><tr><td><strong><code>Square</code></strong> (<strong><code>Sq</code></strong>)</td><td><a href="../../.gitbook/assets/Splines2DSquare.png">Splines2DSquare.png</a></td><td><a href="2d-spline-shapes.md#square-spline">#square-spline</a></td></tr><tr><td><strong><code>Diamond</code></strong> (<strong><code>Di</code></strong>)</td><td><a href="../../.gitbook/assets/Splines2DDiamond.png">Splines2DDiamond.png</a></td><td><a href="2d-spline-shapes.md#diamond-spline">#diamond-spline</a></td></tr><tr><td><strong><code>RoundedSquare</code></strong> (<strong><code>RS</code></strong>)</td><td><a href="../../.gitbook/assets/Splines2DRoundedSquare.png">Splines2DRoundedSquare.png</a></td><td><a href="2d-spline-shapes.md#roundedsquare-spline">#roundedsquare-spline</a></td></tr><tr><td><strong><code>SuperCircle</code></strong> (<strong><code>SC</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesSuperCircle.gif">SplinesSuperCircle.gif</a></td><td><a href="2d-spline-shapes.md#supercircle-spline">#supercircle-spline</a></td></tr><tr><td><strong><code>CirclesCircle</code></strong> (<strong><code>CC</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesCirclesCircle.gif">SplinesCirclesCircle.gif</a></td><td><a href="2d-spline-shapes.md#circlescircle-spline">#circlescircle-spline</a></td></tr><tr><td><strong><code>Polygon</code></strong> (<strong><code>Po</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesPolygon.gif">SplinesPolygon.gif</a></td><td><a href="2d-spline-shapes.md#polygon-spline">#polygon-spline</a></td></tr><tr><td><strong><code>Rectangle</code></strong> (<strong><code>Re</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesRectangle.gif">SplinesRectangle.gif</a></td><td><a href="2d-spline-shapes.md#rectangle-spline">#rectangle-spline</a></td></tr><tr><td>Star (<strong><code>St</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesStar.gif">SplinesStar.gif</a></td><td><a href="2d-spline-shapes.md#star-spline">#star-spline</a></td></tr><tr><td><strong><code>Flower</code></strong> (<strong><code>Fl</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesFlower.gif">SplinesFlower.gif</a></td><td><a href="2d-spline-shapes.md#flower-spline">#flower-spline</a></td></tr></tbody></table>
+
 ***
 
 #### ![](../../.gitbook/assets/SplinesSimple.png)
 
-### `//ezspline 2d `<mark style="color:orange;">`Circle (Ci)`</mark>`(`<mark style="color:blue;">`//ezspline basic`</mark>`)` <a href="#circle" id="circle"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`Circle (Ci)`</mark>`(`<mark style="color:blue;">`//ezspline basic`</mark>`)` <a href="#circle" id="circle"></a>
 
 <details>
 
@@ -43,7 +43,7 @@ Generates a simple cylindrical spline along the spline path.
 
 #### ![](../../.gitbook/assets/Splines2DSquare.png)
 
-### `//ezspline 2d `<mark style="color:orange;">`Square (Sq)`</mark> <a href="#square" id="square"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`Square (Sq)`</mark> <a href="#square" id="square"></a>
 
 <details>
 
@@ -61,7 +61,7 @@ Generates a simple square-shaped spline along the spline path.
 
 #### ![](../../.gitbook/assets/Splines2DDiamond.png)
 
-### `//ezspline 2d `<mark style="color:orange;">`Diamond (Di)`</mark> <a href="#diamond" id="diamond"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`Diamond (Di)`</mark> <a href="#diamond" id="diamond"></a>
 
 <details>
 
@@ -79,7 +79,7 @@ Generates a simple diamond-shaped spline along the spline path.
 
 #### ![](../../.gitbook/assets/Splines2DRoundedSquare.png)
 
-### `//ezspline 2d `<mark style="color:orange;">`RoundedSquare (RS)`</mark> <a href="#rounded-square" id="rounded-square"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`RoundedSquare (RS)`</mark> <a href="#rounded-square" id="rounded-square"></a>
 
 <details>
 
@@ -97,7 +97,7 @@ Generates a simple rounded square-shaped spline along the spline path.
 
 #### ![](../../.gitbook/assets/SplinesSuperCircle.gif)
 
-### `//ezspline 2d `<mark style="color:orange;">`SuperCircle (SC)`</mark> <a href="#super-circle" id="super-circle"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`SuperCircle (SC)`</mark> <a href="#super-circle" id="super-circle"></a>
 
 <details>
 
@@ -126,7 +126,7 @@ This GIF goes through running the above command with the following set of expone
 
 #### ![](../../.gitbook/assets/SplinesCirclesCircle.gif)
 
-### `//ezspline 2d `<mark style="color:orange;">`CirclesCircle (CC)`</mark> (<mark style="color:blue;">`//ezspline rope`</mark>`)` <a href="#circles-circle" id="circles-circle"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`CirclesCircle (CC)`</mark> (<mark style="color:blue;">`//ezspline rope`</mark>`)` <a href="#circles-circle" id="circles-circle"></a>
 
 <details>
 
@@ -151,7 +151,7 @@ The following GIF has been generated by just running the above command, and incr
 
 <img src="../../.gitbook/assets/SplinesCirclesCircle.gif" alt="" data-size="original">
 
-`//ezspline 2d CirclesCircle `<mark style="color:orange;">**`-t 90`**</mark>` clay 10`
+`//ezspline 2d CirclesCircle`` `<mark style="color:orange;">**`-t 90`**</mark>` ``clay 10`
 
 The following spline can be generated using the above command, which is simply applying the [twist parameter](common-parameters.md#twist):
 
@@ -167,7 +167,7 @@ Or by using `//ezspline rope clay 10`
 
 #### ![](../../.gitbook/assets/SplinesPolygon.gif)
 
-### `//ezspline 2d `<mark style="color:orange;">`Polygon (Po)`</mark> <a href="#polygon" id="polygon"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`Polygon (Po)`</mark> <a href="#polygon" id="polygon"></a>
 
 <details>
 
@@ -195,7 +195,7 @@ The GIF has been generated by running the above command, and incrementing the co
 
 #### ![](../../.gitbook/assets/SplinesRectangle.gif)
 
-### `//ezspline 2d `<mark style="color:orange;">`Rectangle (Re)`</mark> <a href="#rectangle" id="rectangle"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`Rectangle (Re)`</mark> <a href="#rectangle" id="rectangle"></a>
 
 <details>
 
@@ -219,15 +219,15 @@ Generates a rectangle-shaped spline along the spline path.
 Example:
 
 * The "Hi" from above has been generated by running the following set of commands:
-  * `//ezsp 2d `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`-0.6`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`)`</mark>` clay 12`
+  * `//ezsp 2d`` `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`-0.6`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`)`</mark>` ``clay 12`
     * (The left column from the H)
-  * `//ezsp 2d `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`-0.2`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`0.2`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`)`</mark>` clay 12`
+  * `//ezsp 2d`` `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`-0.2`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`0.2`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`)`</mark>` ``clay 12`
     * (The left column from the H)
-  * `//ezsp 2d `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`-0.2`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`0.2`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`0.2`**</mark><mark style="color:orange;">`)`</mark>` clay 12`
+  * `//ezsp 2d`` `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`-0.2`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`0.2`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`0.2`**</mark><mark style="color:orange;">`)`</mark>` ``clay 12`
     * (The horizontal line from the H)
-  * `//ezsp 2d `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`0.6`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`0.2`**</mark><mark style="color:orange;">`)`</mark>` clay 12`
+  * `//ezsp 2d`` `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`0.6`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`-1.0`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`0.2`**</mark><mark style="color:orange;">`)`</mark>` ``clay 12`
     * (The column of the i)
-  * `//ezsp 2d `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`0.6`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`0.6`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`)`</mark>` clay 12`
+  * `//ezsp 2d`` `<mark style="color:orange;">`Re(x1:`</mark><mark style="color:orange;">**`0.6`**</mark><mark style="color:orange;">`,y1:`</mark><mark style="color:orange;">**`0.6`**</mark><mark style="color:orange;">`,x2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`,y2:`</mark><mark style="color:orange;">**`1.0`**</mark><mark style="color:orange;">`)`</mark>` ``clay 12`
     * (The dot of the i)
 
 </details>
@@ -236,7 +236,7 @@ Example:
 
 #### ![](../../.gitbook/assets/SplinesStar.gif)
 
-### `//ezspline 2d `<mark style="color:orange;">`Star (St)`</mark> <a href="#star" id="star"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`Star (St)`</mark> <a href="#star" id="star"></a>
 
 <details>
 
@@ -260,7 +260,7 @@ Generates a star-shaped spline along the spline path.
 
 #### ![](../../.gitbook/assets/SplinesFlower.gif)
 
-### `//ezspline 2d `<mark style="color:orange;">`Flower (Fl)`</mark> <a href="#flower" id="flower"></a>
+### `//ezspline 2d`` `<mark style="color:orange;">`Flower (Fl)`</mark> <a href="#flower" id="flower"></a>
 
 <details>
 

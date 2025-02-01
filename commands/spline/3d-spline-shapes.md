@@ -59,7 +59,7 @@ _This shape can also be achieved with the_ [_Rings_](3d-spline-shapes.md#ezsplin
 
 Generates a chainlink-shaped spline along the selected positions.
 
-* **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (G) (Default: 0.5):
+* **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (<mark style="color:orange;">**`G`**</mark>) (Default: 0.5):
   * Sets the gap between cubes
 
 (<mark style="color:blue;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters: [https://www.desmos.com/3d/xbmia9wiwo](https://www.desmos.com/3d/xbmia9wiwo)
@@ -254,15 +254,15 @@ Can be abbreviated to <mark style="color:orange;">`Os(D:0.2,I:1.5)`</mark>
 
 Generates a highly customisable spline of repeating rings/cubes/spheres along the spline path.
 
-* **`[`**<mark style="color:orange;">**`Extrusion:<value>`**</mark>**`]`** (Default: 0.2):
+* **`[`**<mark style="color:orange;">**`Extrusion:<value>`**</mark>**`]`** (<mark style="color:orange;">**`E`**</mark>) (Default: 0.2):
   * The amount to length to add for each individual link along the chain.
-* **`[`**<mark style="color:orange;">**`Thickness:<value>`**</mark>**`]`** (Default: 0.15):
+* **`[`**<mark style="color:orange;">**`Thickness:<value>`**</mark>**`]`** (<mark style="color:orange;">**`T`**</mark>) (Default: 0.15):
   * Thickness of each ring. Smaller values lead to a larger hole in the middle. 1.0 results in a (super-)sphere.
-* **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (Default: 0.0):
+* **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (<mark style="color:orange;">**`G`**</mark>) (Default: 0.0):
   * Relative gap size between each torus. 0 means there is no gap, all toruses come right after another. 1 means the distance is exactly the size of one torus. Negative values result in overlapping.
-* **`[`**<mark style="color:orange;">**`MajorExponent:<value>`**</mark>**`]`** (Default: 2.0):
+* **`[`**<mark style="color:orange;">**`MajorExponent:<value>`**</mark>**`]`** (<mark style="color:orange;">**`M`**</mark>) (Default: 2.0):
   * The exponent defining the outer shape of an individual torus.
-* **`[`**<mark style="color:orange;">**`MinorExponent:<value>`**</mark>**`]`** (Default: 2.0):
+* **`[`**<mark style="color:orange;">**`MinorExponent:<value>`**</mark>**`]`** (<mark style="color:orange;">**`N`**</mark>) (Default: 2.0):
   * The exponent defining the shape of the cross-section of an individual torus.
 
 (<mark style="color:red;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters (it's very neat): [https://www.desmos.com/3d/eukcghnohc](https://www.desmos.com/3d/eukcghnohc)
@@ -326,12 +326,12 @@ Example:
 
 Experimental spline which generates a set of twisted, intertwining, non-intersecting sub-splines.
 
-* **`[`**<mark style="color:orange;">**`Amount:<value>`**</mark>**`]`** (Default: 12):
+* **`[`**<mark style="color:orange;">**`Amount:<value>`**</mark>**`]`** (<mark style="color:orange;">**`A`**</mark>) (Default: 12):
   * The number of intertwining lines.
-* **`[`**<mark style="color:orange;">**`Tangle:<value>`**</mark>**`]`** (Default: 3.0):
+* **`[`**<mark style="color:orange;">**`Tangle:<value>`**</mark>**`]`** (<mark style="color:orange;">**`T`**</mark>) (Default: 3.0):
   * Determines how much the noodles intertwine and move around. Low values result in fully straight noodles. High values result in more chaotic paths.
   * ![](../../.gitbook/assets/SplinesNoodlesTangle.gif)
-* **`[`**<mark style="color:orange;">**`Density:<value>`**</mark>**`]`** (Default: 70%):
+* **`[`**<mark style="color:orange;">**`Density:<value>`**</mark>**`]`** (<mark style="color:orange;">**`D`**</mark>) (Default: 70%):
   * Indirectly determines the width of the noodles by specifying how much the cross-section should be filled with material vs just air. 100% makes the noodles as thick as they can be so that the given amount of noodles can still fit into the spline radius. Thus, large values do not leave the noodles much space to move which gives rise to glitchy paths. Small values leave large air gaps between the noodles.
   * Example: Cross section of the spline at 100%
   * ![](../../.gitbook/assets/SplinesNoodleSplineDensity_example2.png)
@@ -339,12 +339,12 @@ Experimental spline which generates a set of twisted, intertwining, non-intersec
   * ![](../../.gitbook/assets/SplinesNoodleSplineDensity_example1.png)
   * The smaller the density the smaller the individual radius of the noodles. Difference to the width parameter: The determined radius is the one used for collision detection. The width parameter has no influence on the collision between noodles.
   * ![](../../.gitbook/assets/SplinesNoodlesDensity.gif)
-* **`[`**<mark style="color:orange;">**`Width:<value>`**</mark>**`]`** (Default: 0.8):
+* **`[`**<mark style="color:orange;">**`Width:<value>`**</mark>**`]`** (<mark style="color:orange;">**`W`**</mark>) (Default: 0.8):
   * Relative width multiplier for all noodles independent of the noodle collision detection. Noodle collisions are calculated at width 1.0. This parameter defines the width at which the noodles are rendered/placed. This means values larger than one result in overlapping noodles, clipping into each other, meanwhile, values smaller than one ensure an air gap between all noodles.
   * ![](../../.gitbook/assets/SplinesNoodlesWidth.gif)
-* **`[`**<mark style="color:orange;">**`Frequency:<value>`**</mark>**`]`** (Default: 0.5):
+* **`[`**<mark style="color:orange;">**`Frequency:<value>`**</mark>**`]`** (<mark style="color:orange;">**`F`**</mark>) (Default: 0.5):
   * Sets the frequency value of the underlying noise responsible for the random perturbations. Higher values result in jittering.
-* **`[`**<mark style="color:orange;">**`Seed:<value>`**</mark>**`]`** (Default: -1 (random)):
+* **`[`**<mark style="color:orange;">**`Seed:<value>`**</mark>**`]`** (<mark style="color:orange;">**`S`**</mark>) (Default: -1 (random)):
   * Sets the seed of the underlying noise responsible for the random perturbations.
 
 </details>

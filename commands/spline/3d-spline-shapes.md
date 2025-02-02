@@ -17,6 +17,8 @@ _The remaining arguments are outlined on the_ [_Common Parameters_](common-param
 
 ## List of <mark style="color:orange;">**`<shape>`**</mark>s
 
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong><code>Beads</code></strong> (<strong><code>Be</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesBeads.png">SplinesBeads.png</a></td><td><a href="3d-spline-shapes.md#bead-spline">#bead-spline</a></td></tr><tr><td><strong><code>Cubes</code></strong> (<strong><code>Cu</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesCubes.gif">SplinesCubes.gif</a></td><td><a href="3d-spline-shapes.md#cubes-spline">#cubes-spline</a></td></tr><tr><td><strong><code>Oscillate</code></strong> (<strong><code>Os</code></strong>)</td><td><a href="../../.gitbook/assets/SplineOscillate.gif">SplineOscillate.gif</a></td><td><a href="3d-spline-shapes.md#oscillation-spline">#oscillation-spline</a></td></tr><tr><td><strong><code>Fishnet</code></strong> (<strong><code>Fi</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesFishnet.gif">SplinesFishnet.gif</a></td><td><a href="3d-spline-shapes.md#fishnet-spline">#fishnet-spline</a></td></tr><tr><td><strong><code>Chainlink</code></strong> (<strong><code>Ch</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesChainlink.gif">SplinesChainlink.gif</a></td><td><a href="3d-spline-shapes.md#chain-link-spline">#chain-link-spline</a></td></tr><tr><td><strong><code>Rings</code></strong> (<strong><code>Ri</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesRings.gif">SplinesRings.gif</a></td><td><a href="3d-spline-shapes.md#rings-spline">#rings-spline</a></td></tr><tr><td><strong><code>Scales</code></strong> (<strong><code>Sc</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesScales.gif">SplinesScales.gif</a></td><td><a href="3d-spline-shapes.md#scales-spline">#scales-spline</a></td></tr><tr><td><strong><code>Noodles</code></strong> (<strong><code>No</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesNoodles.gif">SplinesNoodles.gif</a></td><td><a href="3d-spline-shapes.md#noodles-spline">#noodles-spline</a></td></tr></tbody></table>
+
 ***
 
 #### ![](../../.gitbook/assets/SplinesBeads.png)
@@ -33,7 +35,7 @@ Generates a beads-shaped spline along the selected positions.
 
 * _Beads shape has no parameters._
 
-Example:
+**Example:**
 
 `//ezsp 3d `<mark style="color:orange;">`Beads`</mark>` clay 10`
 
@@ -57,10 +59,14 @@ _This shape can also be achieved with the_ [_Rings_](3d-spline-shapes.md#ezsplin
 
 Generates a chainlink-shaped spline along the selected positions.
 
-* **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (G) (Default: 0.5):
+* **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (<mark style="color:orange;">**`G`**</mark>) (Default: 0.5):
   * Sets the gap between cubes
 
-Examples:
+(<mark style="color:blue;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters: [https://www.desmos.com/3d/xbmia9wiwo](https://www.desmos.com/3d/xbmia9wiwo)
+
+
+
+**Examples:**
 
 `//ezsp 3d `<mark style="color:orange;">`Cubes`</mark>` clay 7`
 
@@ -111,7 +117,9 @@ Generates a highly customisable chainlink-shaped spline along the selected posit
 
 (<mark style="color:red;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters (it's very neat): [https://www.desmos.com/3d/yvrsv605mf](https://www.desmos.com/3d/yvrsv605mf)
 
-Examples:
+
+
+**Examples:**
 
 `//ezsp 3d `<mark style="color:orange;">`Chainlink`</mark>` clay 10`
 
@@ -161,7 +169,11 @@ Generates a fishnet-shaped spline along the selected positions.
 * **`[`**<mark style="color:orange;">**`Width:<value>`**</mark>**`]`** (<mark style="color:orange;">**`W`**</mark>) (Default: 0.2):
   * The width of each string.
 
-Examples:
+(<mark style="color:blue;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters (it's very neat): [https://www.desmos.com/3d/eww8fzzyuj](https://www.desmos.com/3d/eww8fzzyuj)
+
+
+
+**Examples:**
 
 `//ezspline 3d `<mark style="color:orange;">`Fishnet`</mark>` clay 10`
 
@@ -199,6 +211,10 @@ Generates a spline with an oscillating thickness along the selected positions.
   * Specifies how many blocks deep the ridges cut into the surface of the spline.
 * **`[`**<mark style="color:orange;">**`Interval:<value>`**</mark>**`]`** (<mark style="color:orange;">**`I`**</mark>) (Default: 0.5):
   * Specifies the distance between each ridge.
+
+(<mark style="color:blue;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters: [https://www.desmos.com/3d/xilpdwcnom](https://www.desmos.com/3d/xilpdwcnom)
+
+
 
 Examples:
 
@@ -238,15 +254,15 @@ Can be abbreviated to <mark style="color:orange;">`Os(D:0.2,I:1.5)`</mark>
 
 Generates a highly customisable spline of repeating rings/cubes/spheres along the spline path.
 
-* **`[`**<mark style="color:orange;">**`Extrusion:<value>`**</mark>**`]`** (Default: 0.2):
+* **`[`**<mark style="color:orange;">**`Extrusion:<value>`**</mark>**`]`** (<mark style="color:orange;">**`E`**</mark>) (Default: 0.2):
   * The amount to length to add for each individual link along the chain.
-* **`[`**<mark style="color:orange;">**`Thickness:<value>`**</mark>**`]`** (Default: 0.15):
+* **`[`**<mark style="color:orange;">**`Thickness:<value>`**</mark>**`]`** (<mark style="color:orange;">**`T`**</mark>) (Default: 0.15):
   * Thickness of each ring. Smaller values lead to a larger hole in the middle. 1.0 results in a (super-)sphere.
-* **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (Default: 0.0):
+* **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (<mark style="color:orange;">**`G`**</mark>) (Default: 0.0):
   * Relative gap size between each torus. 0 means there is no gap, all toruses come right after another. 1 means the distance is exactly the size of one torus. Negative values result in overlapping.
-* **`[`**<mark style="color:orange;">**`MajorExponent:<value>`**</mark>**`]`** (Default: 2.0):
+* **`[`**<mark style="color:orange;">**`MajorExponent:<value>`**</mark>**`]`** (<mark style="color:orange;">**`M`**</mark>) (Default: 2.0):
   * The exponent defining the outer shape of an individual torus.
-* **`[`**<mark style="color:orange;">**`MinorExponent:<value>`**</mark>**`]`** (Default: 2.0):
+* **`[`**<mark style="color:orange;">**`MinorExponent:<value>`**</mark>**`]`** (<mark style="color:orange;">**`N`**</mark>) (Default: 2.0):
   * The exponent defining the shape of the cross-section of an individual torus.
 
 (<mark style="color:red;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters (it's very neat): [https://www.desmos.com/3d/eukcghnohc](https://www.desmos.com/3d/eukcghnohc)
@@ -310,12 +326,12 @@ Example:
 
 Experimental spline which generates a set of twisted, intertwining, non-intersecting sub-splines.
 
-* **`[`**<mark style="color:orange;">**`Amount:<value>`**</mark>**`]`** (Default: 12):
+* **`[`**<mark style="color:orange;">**`Amount:<value>`**</mark>**`]`** (<mark style="color:orange;">**`A`**</mark>) (Default: 12):
   * The number of intertwining lines.
-* **`[`**<mark style="color:orange;">**`Tangle:<value>`**</mark>**`]`** (Default: 3.0):
+* **`[`**<mark style="color:orange;">**`Tangle:<value>`**</mark>**`]`** (<mark style="color:orange;">**`T`**</mark>) (Default: 3.0):
   * Determines how much the noodles intertwine and move around. Low values result in fully straight noodles. High values result in more chaotic paths.
   * ![](../../.gitbook/assets/SplinesNoodlesTangle.gif)
-* **`[`**<mark style="color:orange;">**`Density:<value>`**</mark>**`]`** (Default: 70%):
+* **`[`**<mark style="color:orange;">**`Density:<value>`**</mark>**`]`** (<mark style="color:orange;">**`D`**</mark>) (Default: 70%):
   * Indirectly determines the width of the noodles by specifying how much the cross-section should be filled with material vs just air. 100% makes the noodles as thick as they can be so that the given amount of noodles can still fit into the spline radius. Thus, large values do not leave the noodles much space to move which gives rise to glitchy paths. Small values leave large air gaps between the noodles.
   * Example: Cross section of the spline at 100%
   * ![](../../.gitbook/assets/SplinesNoodleSplineDensity_example2.png)
@@ -323,12 +339,12 @@ Experimental spline which generates a set of twisted, intertwining, non-intersec
   * ![](../../.gitbook/assets/SplinesNoodleSplineDensity_example1.png)
   * The smaller the density the smaller the individual radius of the noodles. Difference to the width parameter: The determined radius is the one used for collision detection. The width parameter has no influence on the collision between noodles.
   * ![](../../.gitbook/assets/SplinesNoodlesDensity.gif)
-* **`[`**<mark style="color:orange;">**`Width:<value>`**</mark>**`]`** (Default: 0.8):
+* **`[`**<mark style="color:orange;">**`Width:<value>`**</mark>**`]`** (<mark style="color:orange;">**`W`**</mark>) (Default: 0.8):
   * Relative width multiplier for all noodles independent of the noodle collision detection. Noodle collisions are calculated at width 1.0. This parameter defines the width at which the noodles are rendered/placed. This means values larger than one result in overlapping noodles, clipping into each other, meanwhile, values smaller than one ensure an air gap between all noodles.
   * ![](../../.gitbook/assets/SplinesNoodlesWidth.gif)
-* **`[`**<mark style="color:orange;">**`Frequency:<value>`**</mark>**`]`** (Default: 0.5):
+* **`[`**<mark style="color:orange;">**`Frequency:<value>`**</mark>**`]`** (<mark style="color:orange;">**`F`**</mark>) (Default: 0.5):
   * Sets the frequency value of the underlying noise responsible for the random perturbations. Higher values result in jittering.
-* **`[`**<mark style="color:orange;">**`Seed:<value>`**</mark>**`]`** (Default: -1 (random)):
+* **`[`**<mark style="color:orange;">**`Seed:<value>`**</mark>**`]`** (<mark style="color:orange;">**`S`**</mark>) (Default: -1 (random)):
   * Sets the seed of the underlying noise responsible for the random perturbations.
 
 </details>

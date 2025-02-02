@@ -2,8 +2,6 @@
 
 The following `//ezsp` subcommands feature splines from predefined 2D shapes swept along the spline path.
 
-![](../../.gitbook/assets/SplinesSweep.gif)
-
 ***
 
 ## Syntax
@@ -18,6 +16,8 @@ _The remaining arguments are outlined on the_ [_Common Parameters_](common-param
 ***
 
 ## List of <mark style="color:orange;">`<shape>`</mark>s
+
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong><code>Circle</code></strong> (<strong><code>Ci</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesSimple.png">SplinesSimple.png</a></td><td><a href="2d-spline-shapes.md#circle-spline">#circle-spline</a></td></tr><tr><td><strong><code>Square</code></strong> (<strong><code>Sq</code></strong>)</td><td><a href="../../.gitbook/assets/Splines2DSquare.png">Splines2DSquare.png</a></td><td><a href="2d-spline-shapes.md#square-spline">#square-spline</a></td></tr><tr><td><strong><code>Diamond</code></strong> (<strong><code>Di</code></strong>)</td><td><a href="../../.gitbook/assets/Splines2DDiamond.png">Splines2DDiamond.png</a></td><td><a href="2d-spline-shapes.md#diamond-spline">#diamond-spline</a></td></tr><tr><td><strong><code>RoundedSquare</code></strong> (<strong><code>RS</code></strong>)</td><td><a href="../../.gitbook/assets/Splines2DRoundedSquare.png">Splines2DRoundedSquare.png</a></td><td><a href="2d-spline-shapes.md#roundedsquare-spline">#roundedsquare-spline</a></td></tr><tr><td><strong><code>SuperCircle</code></strong> (<strong><code>SC</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesSuperCircle.gif">SplinesSuperCircle.gif</a></td><td><a href="2d-spline-shapes.md#supercircle-spline">#supercircle-spline</a></td></tr><tr><td><strong><code>CirclesCircle</code></strong> (<strong><code>CC</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesCirclesCircle.gif">SplinesCirclesCircle.gif</a></td><td><a href="2d-spline-shapes.md#circlescircle-spline">#circlescircle-spline</a></td></tr><tr><td><strong><code>Polygon</code></strong> (<strong><code>Po</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesPolygon.gif">SplinesPolygon.gif</a></td><td><a href="2d-spline-shapes.md#polygon-spline">#polygon-spline</a></td></tr><tr><td><strong><code>Rectangle</code></strong> (<strong><code>Re</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesRectangle.gif">SplinesRectangle.gif</a></td><td><a href="2d-spline-shapes.md#rectangle-spline">#rectangle-spline</a></td></tr><tr><td>Star (<strong><code>St</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesStar.gif">SplinesStar.gif</a></td><td><a href="2d-spline-shapes.md#star-spline">#star-spline</a></td></tr><tr><td><strong><code>Flower</code></strong> (<strong><code>Fl</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesFlower.gif">SplinesFlower.gif</a></td><td><a href="2d-spline-shapes.md#flower-spline">#flower-spline</a></td></tr></tbody></table>
 
 ***
 

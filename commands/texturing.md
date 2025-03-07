@@ -1,5 +1,11 @@
 # Texturing
 
+{% embed url="https://www.youtube.com/watch?v=S-fZlxLPUZo" %}
+Video Tutorial by [MegRae](https://megrae.art/)
+{% endembed %}
+
+***
+
 All sub-commands are under `//eztexture` (`//ezt`)\
 e.g `//eztexture ambient`
 

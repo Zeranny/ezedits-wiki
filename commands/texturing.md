@@ -1,6 +1,12 @@
 # Texturing
 
-All sub-commands are under `//eztexture`  (`//ezt`) \
+{% embed url="https://www.youtube.com/watch?v=S-fZlxLPUZo" %}
+Video Tutorial by [MegRae](https://megrae.art/)
+{% endembed %}
+
+***
+
+All sub-commands are under `//eztexture` (`//ezt`)\
 e.g `//eztexture ambient`
 
 ## `//eztexture ...`
@@ -31,7 +37,7 @@ Textures by approximating the ambience of blocks in the region.
 
 **`//ezt axisgradient <mask> <palette> [axis] [-r]`**
 
-Textures a region using a gradient aligned to  a single axis.
+Textures a region using a gradient aligned to a single axis.
 
 * **Mask**: Blocks to replace.
 * **Palette**: Specifies the palette to use.
@@ -218,52 +224,53 @@ Textures a region using a global light source direction to control the applicati
 
 **`//ezt advanced <mask> <palette> <texture>`**
 
-More powerful interface of using eztexture. It has access to all other eztexture commands and can also mix/combine them.
-Meaning you can for example do ambient and sunlight texturing simultaneously.
+More powerful interface of using eztexture. It has access to all other eztexture commands and can also mix/combine them. Meaning you can for example do ambient and sunlight texturing simultaneously.
 
-- **Mask**: Blocks to replace.
-- **Palette**: Specifies the palette to use.
-- **Texture**: A Texturing specification.
+* **Mask**: Blocks to replace.
+* **Palette**: Specifies the palette to use.
+* **Texture**: A Texturing specification.
 
-#### How to define a `<texture>`?
+**How to define a `<texture>`?**
 
-A `<texture>` follows the following common way of specifying complex objects:
-```<type>(<parameter1>:<value1>,<parameter2>:<value2>)```
-Each Texture type has its own set of parameters. You can set as many parameters as you like. If a parameter is not set, a default value will be used instead. Each parameter can have different inputs it accepts. Some parameters accept numbers, some accept a 3D vector, some accept a Noise argument, and some even accept Texture objects themselves.
-A `<texture>` can be any of the existing texture modes. Some simples examples:
-- `Ambient`
-- `Ambient()`
-- `Ambient(Radius:2)`
-- `Ambient(Radius:2,Brightness:0.2,Contrast:0.3)`
-- `Flow(Noise:@@ridged(Freq:0.12))`
+A `<texture>` follows the following common way of specifying complex objects: `<type>(<parameter1>:<value1>,<parameter2>:<value2>)` Each Texture type has its own set of parameters. You can set as many parameters as you like. If a parameter is not set, a default value will be used instead. Each parameter can have different inputs it accepts. Some parameters accept numbers, some accept a 3D vector, some accept a Noise argument, and some even accept Texture objects themselves. A `<texture>` can be any of the existing texture modes. Some simples examples:
+
+* `Ambient`
+* `Ambient()`
+* `Ambient(Radius:2)`
+* `Ambient(Radius:2,Brightness:0.2,Contrast:0.3)`
+* `Flow(Noise:@@ridged(Freq:0.12))`
 
 To clarify: The following two commands will do the same.
-- `//eztexture ambient #existing ##grayscale 2 0.2 0.3`
-- `//eztexture advanced #existing ##grayscale Ambient(Radius:2,Brightness:0.2,Contrast:0.3)`
 
-#### Combining textures
+* `//eztexture ambient #existing ##grayscale 2 0.2 0.3`
+* `//eztexture advanced #existing ##grayscale Ambient(Radius:2,Brightness:0.2,Contrast:0.3)`
+
+**Combining textures**
 
 The following textures have `Texture1`(`T1`)/`Texture2`(`T2`) parameters accepting `<texture>` arguments themselves allowing you to combine texture modes:
-- `Add(T1:...,T2:...)`
-- `Subtract(T1:...,T2:...)`
-- `Multiply(T1:...,T2:...)`
-- `Divide(T1:...,T2:...)`
-- `WeightedAverage(T1:...,T2:...)`
-- `Darken(T1:...,T2:...)`
-- `Lighten(T1:...,T2:...)`
-- `Difference(T1:...,T2:...)`
-- `Screen(T1:...,T2:...)`
+
+* `Add(T1:...,T2:...)`
+* `Subtract(T1:...,T2:...)`
+* `Multiply(T1:...,T2:...)`
+* `Divide(T1:...,T2:...)`
+* `WeightedAverage(T1:...,T2:...)`
+* `Darken(T1:...,T2:...)`
+* `Lighten(T1:...,T2:...)`
+* `Difference(T1:...,T2:...)`
+* `Screen(T1:...,T2:...)`
 
 The following textures have `Texture`(`T`) parameters accepting `<texture>` arguments themselves allowing you adjust/post-process textures:
-- `Adjust(T:...,Brightness:...,Contrast:...)`
-- `Invert(T:...)`
-- `Blend(T:...,Radius:...)`
+
+* `Adjust(T:...,Brightness:...,Contrast:...)`
+* `Invert(T:...)`
+* `Blend(T:...,Radius:...)`
 
 Examples:
-- `WeightedAverage(T1:Sun(),T2:Ambient())`
-- `Blend(T:Flow(Noise:@@ridged(Freq:0.12)),Radius:0.7)`
-- `Darken(T1:Noise(Noise:@@smoothcells(freq:0.5)),T2:Flow)`
-- `Adjust(T:Pointlight,Contrast:0.5)`
+
+* `WeightedAverage(T1:Sun(),T2:Ambient())`
+* `Blend(T:Flow(Noise:@@ridged(Freq:0.12)),Radius:0.7)`
+* `Darken(T1:Noise(Noise:@@smoothcells(freq:0.5)),T2:Flow)`
+* `Adjust(T:Pointlight,Contrast:0.5)`
 
 Please note that the `Texture`/`Texture1`/`Texture2` (`T`/`T1`/`T2`) are not optional. You must set them to use these combining/adjusting textures. (If you do not set them you'll receive an error saying `cannot be null`).
 

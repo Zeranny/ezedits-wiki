@@ -212,9 +212,9 @@ Running ezbrush scatter **without** the `-l` flag results in densely placed area
 
 <img src="../../.gitbook/assets/ScatterMaskCoverBlock_example1.gif" alt="" data-size="original">
 
-`//ezbrush scatter Clipboard -m clay -l pink`
+`//ezbrush scatter Clipboard -m clay -b pink`
 
-Running ezbrush scatter **with** `-l pink`, whereby pink wool is just some random block in this case, covers the affected areas such that, combined with the `-m clay` mask filter subsequent brush clicks do not place any new shapes there, even when the regions overlap.
+Running ezbrush scatter **with** `-b pink`, whereby pink wool is just some random block in this case, covers the affected areas such that, combined with the `-m clay` mask filter subsequent brush clicks do not place any new shapes there, even when the regions overlap.
 
 <img src="../../.gitbook/assets/ScatterMaskCoverBlock_example2.gif" alt="" data-size="original">
 

@@ -17,17 +17,17 @@ Negative values cause the placements to overlap.
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-`//ezarray Clipboard `**`-g <gap>`** (with the clipboard being a default vanilla oak tree for no particular reason)
+`//ezarray Clipboard`` `**`-g <gap>`** (with the clipboard being a default vanilla oak tree for no particular reason)
 
-`//ezar Cl `**`-g 0`** : (default value, placements are right next to each other)
+`//ezar Cl`` `**`-g 0`** : (default value, placements are right next to each other)
 
 <img src="../../.gitbook/assets/ArrayGap_example1.png" alt="" data-size="original">
 
-`//ezar Cl `**`-g 10`** : (placements are now further apart)
+`//ezar Cl`` `**`-g 10`** : (placements are now further apart)
 
 <img src="../../.gitbook/assets/ArrayGap_example2.png" alt="" data-size="original">
 
-`//ezar Cl `**`-g -3`** (negative values cause placements to overlap)
+`//ezar Cl`` `**`-g -3`** (negative values cause placements to overlap)
 
 <img src="../../.gitbook/assets/ArrayGap_example3.png" alt="" data-size="original">
 
@@ -41,33 +41,33 @@ Similar to [Random Scaling](placement-parameters.md#random-scaling-o), this modi
 
 The scaling factors are defined as a progression along the spline. This means you may specify as many comma-separated scaling factors as you like, and the spline path will smoothly interpolate through all entries.
 
-The syntax is the same as [#radii](../spline/common-parameters.md#radii "mention").
+The syntax is the same as in //ezspline: [#radii](../spline/common-parameters.md#radii "mention")
 
 <details>
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-`//ezarray Clipboard `**`-q <radii>`**
+`//ezarray Clipboard`` `**`-q <radii>`**
 
-`//ezar Cl `**`-q 1`**
+`//ezar Cl`` `**`-q 1`**
 
 (default value, no scaling applied)
 
 <img src="../../.gitbook/assets/ArrayGap_example1.png" alt="" data-size="original">
 
-`//ezar Cl `**`-q 0.3,3`**
+`//ezar Cl`` `**`-q 0.3,3`**
 
 (placements are down-scaled by a factor of 0.3 at the beginning of the path and slowly get bigger up to triple their original size towards the end of the spline path)
 
 <img src="../../.gitbook/assets/ArrayScaling_example2.png" alt="" data-size="original">
 
-`//ezar Cl `**`-q 1.5,0.5,5.0,2.0,0.2`**
+`//ezar Cl`` `**`-q 1.5,0.5,5.0,2.0,0.2`**
 
 (Tree is being scaled progressively through all given values throughout the spline path)
 
 <img src="../../.gitbook/assets/ArrayScaling_example3.png" alt="" data-size="original">
 
-`//ezar Cl `**`-q 1.5,0.5,5.0,2.0,0.2 -o 0.7,1.3`**
+`//ezar Cl`` `**`-q 1.5,0.5,5.0,2.0,0.2 -o 0.7,1.3`**
 
 (Combining progressive scaling -q with [random scaling](placement-parameters.md#random-scaling-o) -o)
 
@@ -79,13 +79,17 @@ The syntax is the same as [#radii](../spline/common-parameters.md#radii "mention
 
 ### Path Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark> <a href="#path-parameters-p" id="path-parameters-p"></a>
 
-Modifies how the path is created from the input (convex selection) points. See [#kb-parameters](../spline/common-parameters.md#kb-parameters "mention")
+Modifies how the path is created from the input (convex selection) points.
+
+See //ezspline documentation: [#kb-parameters](../spline/common-parameters.md#kb-parameters "mention")
 
 ***
 
 ### Spline orientation: <mark style="color:orange;">`-n <normalMode>`</mark> <a href="#spline-orientation-n" id="spline-orientation-n"></a>
 
-Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See [#normal-mode](../spline/common-parameters.md#normal-mode "mention")
+Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave.
+
+See //ezspline documentation: [#normal-mode](../spline/common-parameters.md#normal-mode "mention")
 
 <details>
 
@@ -93,13 +97,13 @@ Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` argumen
 
 `//ezarray Clipboard Orthogonal Constant`**`-n <normalMode>`**
 
-`//ezar Cl O C `**`-n CONSISTENT`**
+`//ezar Cl O C`` `**`-n CONSISTENT`**
 
 (default value)
 
 <img src="../../.gitbook/assets/OrthogonalAlignment_example1.png" alt="" data-size="original">
 
-`//ezar Cl O C `**`-n UPRIGHT`**
+`//ezar Cl O C`` `**`-n UPRIGHT`**
 
 (placements are not as tilted anymore)
 
@@ -125,7 +129,7 @@ GIF comparing
 
 `//ezarray Clipboard` (placements are placed along path)
 
-`//ezarray Clipboard `**`-b`** (placements positions moved to nearest surface block)
+`//ezarray Clipboard`` `**`-b`** (placements positions moved to nearest surface block)
 
 <img src="../../.gitbook/assets/ezgif.com-animated-gif-maker.gif" alt="" data-size="original">
 

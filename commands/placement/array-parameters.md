@@ -41,7 +41,7 @@ Similar to [Random Scaling](placement-parameters.md#random-scaling-o), this modi
 
 The scaling factors are defined as a progression along the spline. This means you may specify as many comma-separated scaling factors as you like, and the spline path will smoothly interpolate through all entries.
 
-The syntax is the same as in //ezspline: [#radii](../spline/common-parameters.md#radii "mention")
+The syntax is the same as [#radii](../spline/common-parameters.md#radii "mention").
 
 <details>
 
@@ -79,17 +79,13 @@ The syntax is the same as in //ezspline: [#radii](../spline/common-parameters.md
 
 ### Path Parameters: <mark style="color:orange;">`-p <kbParameters>`</mark> <a href="#path-parameters-p" id="path-parameters-p"></a>
 
-Modifies how the path is created from the input (convex selection) points.
-
-See //ezspline documentation: [#kb-parameters](../spline/common-parameters.md#kb-parameters "mention")
+Modifies how the path is created from the input (convex selection) points. See [#kb-parameters](../spline/common-parameters.md#kb-parameters "mention")
 
 ***
 
 ### Spline orientation: <mark style="color:orange;">`-n <normalMode>`</mark> <a href="#spline-orientation-n" id="spline-orientation-n"></a>
 
-Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave.
-
-See //ezspline documentation: [#normal-mode](../spline/common-parameters.md#normal-mode "mention")
+Modifies how the ORTHOGONAL option for the `<primary>` and `<secondary>` arguments behave. See [#normal-mode](../spline/common-parameters.md#normal-mode "mention")
 
 <details>
 

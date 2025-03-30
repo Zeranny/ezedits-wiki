@@ -96,7 +96,7 @@ Provide `<tension>:<bias>:<continuity>`, colon-separated in that order. The expe
 
 Determines how accurately the spline shape should be generated, trading between accuracy and runtime.
 
-There are three modes:
+There are four modes:
 
 1. <mark style="color:orange;">`FAST`</mark> (\~1.5x faster than balanced)
 2. <mark style="color:orange;">`BALANCED`</mark>

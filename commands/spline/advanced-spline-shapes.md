@@ -17,7 +17,7 @@ The following `//ezspline` subcommands feature three very powerful but more comp
 Generates a noise-based spline along the selected positions.
 
 * <mark style="color:orange;">**`<Palette>`**</mark>:
-  * Specifies the block palette.
+  * Specifies the blocks that the spline should be made out of.
 * <mark style="color:orange;">**`[noise]`**</mark> (Default: "Perlin(Freq:2,z:0.5)"):
   * The noise that should be embedded along the spline path.
 * <mark style="color:orange;">**`[depth]`**</mark> (Default: 0.7):

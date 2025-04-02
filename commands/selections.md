@@ -105,7 +105,7 @@ The `//encapsulate` command takes your existing selection and changes it to the 
 
 **`Alias: //encnear`**
 
-The `//encapsulate near` command creates a new selection of the smallest CUBOID selection which contains blocks matching the given mask within the radius.
+The `//encapsulatenear` command creates a new selection of the smallest CUBOID selection which contains blocks matching the given mask within the radius.
 
 * **Radius**: Cuboid radius to search for matching blocks
 * **Mask**: Blocks to encapsulate

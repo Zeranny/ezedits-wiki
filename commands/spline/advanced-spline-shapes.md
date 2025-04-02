@@ -129,7 +129,7 @@ Expression by [imhols](https://twitter.com/imhols1)
 
 <summary><mark style="color:blue;">Structure Spline</mark></summary>
 
-**`//ezsp structure`** <mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
+**`//ezsp structure`** <mark style="color:orange;">**`<structure>`**</mark> [**`[radii]`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
 
 Embeds a structure along the path defined by the selected convex region.
 
@@ -140,7 +140,7 @@ Embeds a structure along the path defined by the selected convex region.
 
 The structure will be placed in its Z-direction facing along the path. Multiple instances will be repeated one after another as often as its bounding box fits, unless you use `-z`, in which case one instance of the structure will be stretched across the whole length of the path.
 
-Specifically for `//ezsp structure`, if the [`<radii>`](common-parameters.md#radii) argument is left out, we will automatically calculate the radius at which the structure is generated at its original/inherent size.
+Specifically for `//ezsp structure`, if the [`[radii]`](common-parameters.md#radii) argument is left out, we will automatically calculate the radius at which the structure is generated at its original/inherent size.
 
 _The remaining arguments are outlined on the_ [_Common Parameters_](common-parameters.md) _subpage._
 

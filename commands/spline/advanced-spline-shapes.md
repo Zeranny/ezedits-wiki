@@ -43,39 +43,39 @@ Example:
 
 <summary><mark style="color:blue;">Demos</mark></summary>
 
-![](../../.gitbook/assets/2025-04-02_04.05.21.png)
+![](../../.gitbook/assets/SplinesNoise_example2.png)
 
 Just a small, quick set of noise commands I threw together to show what the noise spline can do. \~eztaK\
 
 
 `//ezspline noise -##Magma 5,25 Ce(F:1.5,fO:1,cR:sub,M:OR,U:-.6) 0.6 -t 90`
 
-![](../../.gitbook/assets/2025-04-02_07.59.22.png)\
+![](../../.gitbook/assets/SplinesNoise_example3.png)\
 
 
 `//ezspline noise ##GrayWarm(3:11),251:8*15 25,10,25 Ce(F:1.6,fO:1,cD:r,cR:r,M:OR,L:-1.1,U:-.2) 0.4`
 
-![](../../.gitbook/assets/2025-04-02_07.59.35.png)\
+![](../../.gitbook/assets/SplinesNoise_example4.png)\
 
 
 `//ezspline noise ~PanesOnly(Palette:light_gray_stained_glass) 20,15,25 Ce(f:1.4,z:.3,m:or,l:-1,u:-0.5) 3 -t 600 -i t=0.2;r=sqrt(x*x+y*y);m=1-abs(2*r-t-1)/abs(t-1);n<m&&r<1`
 
-![](../../.gitbook/assets/2025-04-02_08.01.05.png)\
+![](../../.gitbook/assets/SplinesNoise_example5.png)\
 
 
 //ezspline noise ##Brown 20,12 Ce(f:4,cr:sub,cj:.8,m:or,u:-.5,l:-1.3) 0.2 -s 6 -t 20
 
-![](../../.gitbook/assets/2025-04-02_08.00.20.png)\
+![](../../.gitbook/assets/SplinesNoise_example6.png)\
 
 
 `//ezspline noise -##GlowBlue(6:16) 20,12 Ce(f:2,cr:sub,m:or,u:-.55,l:-0.551,z:0.1) 0.9 -t 200`
 
-![](../../.gitbook/assets/2025-04-02_08.00.40.png)\
+![](../../.gitbook/assets/SplinesNoise_example7.png)\
 
 
 `//ezspline noise ~SlabsOnly(Palette:"##GrayCold(4:11),waxed_weathered_cut_copper") 20 Ce(f:1.5,cr:sub,m:or,u:-0.85,l:-.5,y:0.3) -n UPRIGHT -i (x*x+n+y*y<1&&y<0)*(y+0.97)`
 
-![](../../.gitbook/assets/2025-04-02_08.01.36.png)
+![](../../.gitbook/assets/SplinesNoise_example8.png)
 
 </details>
 

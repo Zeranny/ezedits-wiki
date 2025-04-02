@@ -129,7 +129,7 @@ Expression by [imhols](https://twitter.com/imhols1)
 
 <summary><mark style="color:blue;">Structure Spline</mark></summary>
 
-**` //ezsp structure`` `` `**<mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
+**`//ezsp structure`** <mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
 
 Embeds a structure along the path defined by the selected convex region.
 

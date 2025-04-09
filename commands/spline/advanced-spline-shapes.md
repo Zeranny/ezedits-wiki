@@ -94,7 +94,7 @@ Just a small, quick set of noise commands I threw together to show what the nois
 
 <summary><mark style="color:blue;">Expression Spline</mark></summary>
 
-**`//ezsp expression`** <mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#help-page) <mark style="color:orange;">**`<expression...>`**</mark>
+**`//ezsp expression`** <mark style="color:orange;">`<palette>`</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#help-page) <mark style="color:orange;">**`<expression...>`**</mark>
 
 Generates a spline shaped by the given WorldEdit expression along the selected positions.
 

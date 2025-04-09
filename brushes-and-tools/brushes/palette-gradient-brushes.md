@@ -4,7 +4,7 @@ The following commands feature brushes for creating gradients.
 
 ***
 
-### `//ezbr`` `<mark style="color:orange;">`gradient`</mark>
+### `//ezbr` <mark style="color:orange;">`gradient`</mark>
 
 <details>
 
@@ -34,7 +34,7 @@ The `gradient` brush allows you to first define a plane by selecting 2 points, y
 
 ***
 
-### `//ezbr`` `<mark style="color:orange;">`gradientstroke`</mark>
+### `//ezbr` <mark style="color:orange;">`gradientstroke`</mark>
 
 <details>
 

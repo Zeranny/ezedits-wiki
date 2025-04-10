@@ -50,7 +50,7 @@ The `//ezdeflate` command contracts the volume of blocks within a selected regio
 
 </details>
 
-### `//ezsmoothblocks`
+### `//ezsmoothblocks` (v0.13.1 and older)
 
 <details>
 
@@ -71,3 +71,4 @@ The `//ezsmoothblocks` command modifies a selected region by placing slabs, stai
 
 </details>
 
+***

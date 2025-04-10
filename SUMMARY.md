@@ -31,6 +31,10 @@
   * [Placement Brushes](brushes-and-tools/brushes/placement-brushes.md)
 * [Superwand](brushes-and-tools/superwand.md)
 
+## Smoothblocks
+
+* [Smoothblocks](smoothblocks/smoothblocks.md)
+
 ## Commands
 
 * [Deformation](commands/deformation.md)

@@ -57,6 +57,11 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
     * [`[-n <normalMode>]`](array-parameters.md#spline-orientation-n)
     * [`[-b]`](array-parameters.md#snap-to-surfaces-b)
 
+### Additional Parameters
+
+* Available for place/scatter/array:
+  * [`[-w <smoothblocks>]`](../../smoothblocks/smoothblocks.md)&#x20;
+
 <details>
 
 <summary>Here are the <em>same</em> flags <em>again</em>, but in alphabetical order:</summary>
@@ -83,6 +88,7 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
 * [`[-s <dimensions>]`](placement-parameters.md#dimensions-s)
 * [`[-t]`](scatter-parameters.md#trim-outside-selection-t)
 * [`[-u <iterations>]`](scatter-parameters.md#uniformity-u)
+* [`[-w <smoothblocks>]`](../../smoothblocks/smoothblocks.md)&#x20;
 * [`[-x]`](primary+secondary-alignment.md#perturb-secondary-x)
 * ### [`[-y <maxOffset>]`](array-parameters.md#max-vertical-offset-y)  <a href="#max-vertical-offset-y" id="max-vertical-offset-y"></a>
 

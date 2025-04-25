@@ -70,16 +70,28 @@ No smoothblocks\
 
 ### Materials
 
-By default, the <mark style="color:orange;">**closest color**</mark> shaping block to the specified [pattern](https://worldedit.enginehub.org/en/latest/usage/general/patterns/), [palette](../palettes/palettes-explained.md) or block that would've been placed instead.
+By default, we use the <mark style="color:orange;">**closest colour**</mark> shaping block to the specified [pattern](https://worldedit.enginehub.org/en/latest/usage/general/patterns/), [palette](../palettes/palettes-explained.md) or corresponding block within the schematic.
 
 <details>
 
-<summary><mark style="color:blue;">Example</mark></summary>
+<summary><mark style="color:blue;">Examples</mark></summary>
 
 If you generate a [Structure](../commands/placement/available-structures.md) (e.g. an [Icosphere](../commands/placement/available-structures.md#icosphere-ic)) using the pattern <mark style="color:blue;">**`clay`**</mark> using the <mark style="color:blue;">**`SlabsOnly`**</mark> smoothblocks profile. Then, since there is no clay slab, it will use the slab variant that is **closest in colour** (determined using the default minecraft textures), which for clay would be a stone slab.
 
-![](../.gitbook/assets/Smoothblocks_example1.png)
+![](../.gitbook/assets/Smoothblocks_example1.png)\
+
+
+Another example: ezEdits determined\
+\- `deepslate_tile_slab` as the closest slab to `gray_concrete`\
+\- `smooth_quartz_slab` as the closest slab to `white_wool`\
+(The original schematic does not contain `deepslate_tile` or `smooth_quartz`)
+
+![](../.gitbook/assets/Smoothblocks_example12.png)
 
 </details>
 
-You may also <mark style="color:orange;">**override**</mark> the material of each shaping block variant, by setting the material yourself, e.g.: <mark style="color:orange;">**`-w SlabsOnly(Slab:acacia)`**</mark>
+You may also <mark style="color:orange;">**override**</mark> the material of each shaping block variant, by setting the material yourself, e.g.: <mark style="color:orange;">**`-w SlabsOnly(Slab:acacia)`**</mark>. When using commands that accept a palette, you may even define a whole custom palette or materials for each block variant.\
+
+
+* (Note: Currently, you cannot override materials when pasting schematics and clipboard using smoothblocks.)
+* (Special case: To override the shaping block materials of Structures which themselves require a Pattern or Palette field, you need to use the internal "Smoothblocks" parameter instead of the -w flag.)

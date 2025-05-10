@@ -20,7 +20,7 @@ Comparing generating a noise spline with and without the SlabsOnly profile.
 
 * `//ezspline noise ##grayscale 20`
 
-- `//ezspline noise ##grayscale 20`` `<mark style="color:orange;">**`-w SlabsOnly`**</mark>
+- `//ezspline noise ##grayscale 20`` `<mark style="color:orange;">**`-w Slabs`**</mark>
 
 ![](../.gitbook/assets/Smoothblocks_example3.gif)
 
@@ -29,7 +29,7 @@ Comparing generating a noise spline with and without the SlabsOnly profile.
 Comparing pasting a rotated mushroom schematic with and without the SlabsOnly profile.
 
 * `//ezplace Clipboard Aim`
-* `//ezplace Clipboard Aim`` `<mark style="color:orange;">**`-w SlabsOnly`**</mark>
+* `//ezplace Clipboard Aim`` `<mark style="color:orange;">**`-w Slabs`**</mark>
 
 ![](../.gitbook/assets/Smoothblocks_example5.gif)
 
@@ -37,9 +37,9 @@ Comparing pasting a rotated mushroom schematic with and without the SlabsOnly pr
 
 ### Profiles
 
-There are different smoothblocks profiles. One may, for example, use only slabs, the other may use stairs and slabs, and yet another may also use stairs and slabs but with different orientations. We hardcoded each preset to achieve a certain result. Each preset uses a specific subset of shaping blocks. We named each preset by which shaping blocks they use. Depending on their complexity, some may take longer to run than others.
+There are different smoothblocks profiles. One may, for example, use only slabs, the other may use stairs and slabs, and yet another may also use stairs and slabs but with different orientations. We hardcoded each preset to achieve a certain result. Each preset uses a specific subset of shaping blocks. We named each preset by the shaping blocks it uses. Depending on their complexity, some may take longer to run than others.
 
-<figure><img src="../.gitbook/assets/Smoothblocks_example6.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot_20250510_121545.png" alt=""><figcaption></figcaption></figure>
 
 <details>
 
@@ -76,7 +76,7 @@ By default, we use the <mark style="color:orange;">**closest colour**</mark> sha
 
 <summary><mark style="color:blue;">Examples</mark></summary>
 
-If you generate a [Structure](../commands/placement/available-structures.md) (e.g. an [Icosphere](../commands/placement/available-structures.md#icosphere-ic)) using the pattern <mark style="color:blue;">**`clay`**</mark> using the <mark style="color:blue;">**`SlabsOnly`**</mark> smoothblocks profile. Then, since there is no clay slab, it will use the slab variant that is **closest in colour** (determined using the default minecraft textures), which for clay would be a stone slab.
+If you generate a [Structure](../commands/placement/available-structures.md) (e.g. an [Icosphere](../commands/placement/available-structures.md#icosphere-ic)) using the pattern <mark style="color:blue;">**`clay`**</mark> using the <mark style="color:blue;">**`Slabs`**</mark> smoothblocks profile. Then, since there is no clay slab, it will use the slab variant that is **closest in colour** (determined using the default minecraft textures), which for clay would be a stone slab.
 
 ![](../.gitbook/assets/Smoothblocks_example1.png)\
 
@@ -90,8 +90,7 @@ Another example: ezEdits determined\
 
 </details>
 
-You may also <mark style="color:orange;">**override**</mark> the material of each shaping block variant, by setting the material yourself, e.g.: <mark style="color:orange;">**`-w SlabsOnly(Slab:acacia)`**</mark>. When using commands that accept a palette, you may even define a whole custom palette or materials for each block variant.\
-
+You may also <mark style="color:orange;">**override**</mark> the material of each shaping block variant, by setting the material yourself, e.g.: <mark style="color:orange;">**`-w Slabs(Slab:acacia)`**</mark>. When using commands that accept a palette, you may even define a whole custom palette or materials for each block variant.
 
 * (Note: Currently, you cannot override materials when pasting schematics and clipboard using smoothblocks.)
 * (Special case: To override the shaping block materials of Structures which themselves require a Pattern or Palette field, you need to use the internal "Smoothblocks" parameter instead of the -w flag.)

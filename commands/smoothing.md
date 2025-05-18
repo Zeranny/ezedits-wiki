@@ -24,13 +24,13 @@ The `//ezsmooth` command smooths the edges and surfaces of a selected region usi
 
 <summary>Inflate</summary>
 
-**`//ezinflate <radius>`**
+**`//ezinflate <radii>`**
 
 **`Alias: //inflate`**
 
 The `//ezinflate` command expands the volume of blocks within a selected region by a specified amount, effectively "inflating" the build.
 
-* **Radius**: Specifies the expansion distance in blocks. This value determines how far from the original surfaces the new, inflated surfaces will be created.
+* **Radii**: Specifies the expansion distance, which can be a single value or three comma-separated values for the East/West, Up/Down, and North/South directions, respectively. This value determines how far from the original surfaces the new, inflated surfaces will be created.
 
 </details>
 
@@ -40,13 +40,13 @@ The `//ezinflate` command expands the volume of blocks within a selected region 
 
 <summary>Deflate</summary>
 
-**`//ezdeflate <radius>`**
+**`//ezdeflate <radiii>`**
 
 **`Alias: //deflate`**
 
 The `//ezdeflate` command contracts the volume of blocks within a selected region by a specified amount, effectively "deflating" the build.
 
-* **Radius**: Specifies the expansion distance in blocks. This value determines how far inwards from the original surfaces that blocks will be removed.
+* **Radii**: Specifies the expansion distance, which can be a single value or three comma-separated values for the East/West, Up/Down, and North/South directions, respectively. This value determines how far inwards from the original surfaces that blocks will be removed.
 
 </details>
 

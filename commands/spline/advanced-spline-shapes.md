@@ -6,18 +6,18 @@ The following `//ezspline` subcommands feature three very powerful but more comp
 
 #### ![](../../.gitbook/assets/SplinesNoise.png)
 
-### `//ezspline`` `<mark style="color:orange;">`noise`</mark> <a href="#noise" id="noise"></a>
+### `//ezspline` <mark style="color:orange;">`noise`</mark> <a href="#noise" id="noise"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Noise Spline</mark></summary>
 
-**`//ezsp noise`` `**<mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radii) <mark style="color:orange;">**`[noise]`**</mark> <mark style="color:orange;">**`[depth]`**</mark> [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
+**`//ezsp noise`** <mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radii) <mark style="color:orange;">**`[noise]`**</mark> <mark style="color:orange;">**`[depth]`**</mark> [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
 
 Generates a noise-based spline along the selected positions.
 
 * <mark style="color:orange;">**`<Palette>`**</mark>:
-  * Specifies the block palette.
+  * Specifies the blocks that the spline should be made out of.
 * <mark style="color:orange;">**`[noise]`**</mark> (Default: "Perlin(Freq:2,z:0.5)"):
   * The noise that should be embedded along the spline path.
 * <mark style="color:orange;">**`[depth]`**</mark> (Default: 0.7):
@@ -39,17 +39,62 @@ Example:
 
 </details>
 
+<details>
+
+<summary><mark style="color:blue;">Demos</mark></summary>
+
+![](../../.gitbook/assets/SplinesNoise_example2.png)
+
+Just a small, quick set of noise commands I threw together to show what the noise spline can do. \~eztaK\
+
+
+`//ezspline noise -##Magma 5,25 Ce(F:1.5,fO:1,cR:sub,M:OR,U:-.6) 0.6 -t 90`
+
+![](../../.gitbook/assets/SplinesNoise_example3.png)
+
+
+
+`//ezspline noise ##GrayWarm(3:11),251:8*15 25,10,25 Ce(F:1.6,fO:1,cD:r,cR:r,M:OR,L:-1.1,U:-.2) 0.4`
+
+![](../../.gitbook/assets/SplinesNoise_example4.png)
+
+
+
+`//ezspline noise ~PanesOnly(Palette:light_gray_stained_glass) 20,15,25 Ce(f:1.4,z:.3,m:or,l:-1,u:-0.5) 3 -t 600 -i t=0.2;r=sqrt(x*x+y*y);m=1-abs(2*r-t-1)/abs(t-1);n<m&&r<1`
+
+![](../../.gitbook/assets/SplinesNoise_example5.png)
+
+
+
+`//ezspline noise ##Brown 20,12 Ce(f:4,cr:sub,cj:.8,m:or,u:-.5,l:-1.3) 0.2 -s 6 -t 20`
+
+![](../../.gitbook/assets/SplinesNoise_example6.png)
+
+
+
+`//ezspline noise -##GlowBlue(6:16) 20,12 Ce(f:2,cr:sub,m:or,u:-.55,l:-0.551,z:0.1) 0.9 -t 200`
+
+![](../../.gitbook/assets/SplinesNoise_example7.png)
+
+
+
+`//ezspline noise ~SlabsOnly(Palette:"##GrayCold(4:11),waxed_weathered_cut_copper") 20 Ce(f:1.5,cr:sub,m:or,u:-0.85,l:-.5,y:0.3) -n UPRIGHT -i (x*x+n+y*y<1&&y<0)*(y+0.97)`
+
+![](../../.gitbook/assets/SplinesNoise_example8.png)
+
+</details>
+
 ***
 
 #### ![](../../.gitbook/assets/SplinesExpression.png)
 
-### `//ezspline`` `<mark style="color:orange;">`expression`</mark> <a href="#expression" id="expression"></a>
+### `//ezspline` <mark style="color:orange;">`expression`</mark> <a href="#expression" id="expression"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Expression Spline</mark></summary>
 
-**`//ezsp expression`` `**<mark style="color:orange;">**`<palette>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#help-page) <mark style="color:orange;">**`<expression...>`**</mark>
+**`//ezsp expression`** <mark style="color:orange;">`<palette>`</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z] [-o]`**</mark> [**`[-h]`**](common-parameters.md#help-page) <mark style="color:orange;">**`<expression...>`**</mark>
 
 Generates a spline shaped by the given WorldEdit expression along the selected positions.
 
@@ -83,13 +128,13 @@ Expression by [imhols](https://twitter.com/imhols1)
 
 #### ![](../../.gitbook/assets/SplinesStructure_example1.png)
 
-### `//ezspline`` `<mark style="color:orange;">`structure`</mark> <a href="#structure" id="structure"></a>
+### `//ezspline` <mark style="color:orange;">`structure`</mark> <a href="#structure" id="structure"></a>
 
 <details>
 
 <summary><mark style="color:blue;">Structure Spline</mark></summary>
 
-**`//ezsp structure`` `**<mark style="color:orange;">**`<structure>`**</mark> [**`<radii>`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
+**`//ezsp structure`** <mark style="color:orange;">**`<structure>`**</mark> [**`[radii]`**](common-parameters.md#radii)[**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) <mark style="color:orange;">**`[-z]`**</mark> [**`[-h]`**](common-parameters.md#help-page)
 
 Embeds a structure along the path defined by the selected convex region.
 
@@ -100,7 +145,7 @@ Embeds a structure along the path defined by the selected convex region.
 
 The structure will be placed in its Z-direction facing along the path. Multiple instances will be repeated one after another as often as its bounding box fits, unless you use `-z`, in which case one instance of the structure will be stretched across the whole length of the path.
 
-Specifically for `//ezsp structure`, if the [`<radii>`](common-parameters.md#radii) argument is left out, we will automatically calculate the radius at which the structure is generated at its original/inherent size.
+Specifically for `//ezsp structure`, if the [`[radii]`](common-parameters.md#radii) argument is left out, we will automatically calculate the radius at which the structure is generated at its original/inherent size.
 
 _The remaining arguments are outlined on the_ [_Common Parameters_](common-parameters.md) _subpage._
 

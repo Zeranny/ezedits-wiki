@@ -50,11 +50,31 @@ The `//ezdeflate` command contracts the volume of blocks within a selected regio
 
 </details>
 
-### `//ezsmoothblocks` (v0.13.1 and older)
+### `//ezsmoothblocks` (v0.15.0 and above)
 
 <details>
 
 <summary>Smooth Blocks</summary>
+
+**`//ezsmoothblocks <profile> <radius> <bias>`**
+
+**`Alias: //ezsb`**
+
+The `//ezsmoothblocks` command modifies a selected region by placing slabs, stairs, and walls to create a significantly smoother surface.
+
+* **Profile**: Determines the set of shaping blocks used. See [#profiles](../smoothblocks/smoothblocks.md#profiles "mention").
+
+- **Radius**: Specifies the smoothing radius in blocks. This value determines the area around each block that is considered during the smoothing process. The larger the value to more aggressive the smoothing.
+
+* **Bias**: A value between -1.0 and 1.0 that adjusts the smoothing effect which determines how many blocks are added or removed. Positive values will lead to more blocks being placed than removed, while negative values will remove more blocks than add.
+
+</details>
+
+#### `//ezsmoothblocks` (v0.14.0 and older)
+
+<details>
+
+<summary>Smooth Blocks (Legacy)</summary>
 
 **`//ezsmoothblocks <radius> <iterations> <bias> [-s] [-t] [-w]`**
 

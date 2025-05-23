@@ -8,6 +8,8 @@ Generate, place shapes, and perform edits using shaping blocks like slabs, stair
 
 [Spline Commands](../commands/spline/)
 
+[The Smoothing command](../commands/smoothing.md#ezsmoothblocks-v0.15.0-and-above)
+
 ### How to use
 
 Add the <mark style="color:orange;">**`-w <profile>`**</mark> flag when using one of the supported(!) commands.
@@ -94,3 +96,5 @@ You may also <mark style="color:orange;">**override**</mark> the material of eac
 
 * (Note: Currently, you cannot override materials when pasting schematics and clipboard using smoothblocks.)
 * (Special case: To override the shaping block materials of Structures which themselves require a Pattern or Palette field, you need to use the internal "Smoothblocks" parameter instead of the -w flag.)
+
+### Region Command

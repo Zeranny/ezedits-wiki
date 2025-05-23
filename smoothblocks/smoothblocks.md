@@ -41,7 +41,7 @@ Comparing pasting a rotated mushroom schematic with and without the SlabsOnly pr
 
 There are different smoothblocks profiles. One may, for example, use only slabs, the other may use stairs and slabs, and yet another may also use stairs and slabs but with different orientations. We hardcoded each preset to achieve a certain result. Each preset uses a specific subset of shaping blocks. We named each preset by the shaping blocks it uses. Depending on their complexity, some may take longer to run than others.
 
-<figure><img src="../.gitbook/assets/Screenshot_20250510_121545.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Smoothblocks_example13.png" alt=""><figcaption></figcaption></figure>
 
 <details>
 
@@ -97,4 +97,22 @@ You may also <mark style="color:orange;">**override**</mark> the material of eac
 * (Note: Currently, you cannot override materials when pasting schematics and clipboard using smoothblocks.)
 * (Special case: To override the shaping block materials of Structures which themselves require a Pattern or Palette field, you need to use the internal "Smoothblocks" parameter instead of the -w flag.)
 
-### Region Command
+### Coverage
+
+The Coverage parameter is very specific parameter that (not directly but effectively) lets you control how many shaping blocks should be used as a percentage. 0 means only full blocks are placed, 1 means every surface block will be some shaping block.
+
+The default (and the mathematically most accurate) value is `0.5`.
+
+<details>
+
+<summary>Example</summary>
+
+Gif going from `Coverage:0.0` to `Coverage:1.0`.\
+![](../.gitbook/assets/Smoothblocks_example14.gif)
+
+Example Command: `//ezspline basic clay 15 -w SSW(Coverage:0.5)`\
+
+
+
+
+</details>

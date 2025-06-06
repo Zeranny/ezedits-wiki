@@ -4,11 +4,17 @@ Generate, place shapes, and perform edits using shaping blocks like slabs, stair
 
 ### Currently supported commands are:
 
-[Placement Commands](../commands/placement/)
+[Deform Commands (//ezdeform)](../commands/deformation.md)
 
-[Spline Commands](../commands/spline/)
+[Placement Commands (//ezplace, //ezarray, //ezscatter)](../commands/placement/)
 
-[The Smoothing command](../commands/smoothing.md#ezsmoothblocks-v0.15.0-and-above)
+[Spline Commands (//ezspline)](../commands/spline/)
+
+[Smoothing Commands (//ezsmooth, //ezinflate, //ezdeflate, //ezsmoothblocks)](../commands/smoothing.md)
+
+[Surface Commands (//ezsurface)](../commands/surface.md)
+
+[Texturing Commands (//eztexture)](../commands/texturing.md)
 
 ### How to use
 
@@ -94,7 +100,7 @@ Another example: ezEdits determined\
 
 You may also <mark style="color:orange;">**override**</mark> the material of each shaping block variant, by setting the material yourself, e.g.: <mark style="color:orange;">**`-w Slabs(Slab:acacia)`**</mark>. When using commands that accept a palette, you may even define a whole custom palette or materials for each block variant.
 
-* (Note: Currently, you cannot override materials when pasting schematics and clipboard using smoothblocks.)
+* (Note: Currently, you cannot override materials when pasting schematics, clipboards or editing an existing region using smoothblocks.)
 * (Special case: To override the shaping block materials of Structures which themselves require a Pattern or Palette field, you need to use the internal "Smoothblocks" parameter instead of the -w flag.)
 
 ### Coverage
@@ -105,13 +111,20 @@ The default (and the mathematically most accurate) value is `0.5`.
 
 <details>
 
-<summary>Example</summary>
+<summary>Examples</summary>
 
 Gif going from `Coverage:0.0` to `Coverage:1.0`.\
 ![](../.gitbook/assets/Smoothblocks_example14.gif)
 
-Example Command: `//ezspline basic clay 15 -w SSW(Coverage:0.5)`\
+Example Command: `//ezspline basic clay 15 -w SSW(C:0.5)`
 
+
+
+Another comparison between `C:0.5` and `C:1.0`:
+
+<div><figure><img src="../.gitbook/assets/Smoothblocks_example16.png" alt=""><figcaption><p>Coverage:0.5</p></figcaption></figure> <figure><img src="../.gitbook/assets/Smoothblocks_example15.png" alt=""><figcaption><p>Coverage:1.0</p></figcaption></figure></div>
+
+Note how 0.5 creates smoother and more faithful contours, while 1.0 places the stair at every possible corner block, sacrificing accuracy, but looking nice with Minecraft's default shading.
 
 
 

@@ -6,7 +6,7 @@
 
 <summary>Smooth</summary>
 
-**`//ezsmooth <radii> <iterations> <bias>`**
+**`//ezsmooth <radii> <iterations> <bias> [-w <profile>]`**
 
 **`Alias: //ezsm`**
 
@@ -15,6 +15,7 @@ The `//ezsmooth` command smooths the edges and surfaces of a selected region usi
 * **Radii**: The smoothing radius or radii, which can be a single value or three comma-separated values for the East/West, Up/Down, and North/South directions, respectively. This parameter controls the extent of the smoothing effect.
 * **Iterations**: The number of times the smoothing operation is executed. More iterations lead to a smoother outcome but increase processing time.
 * **Bias**: A value between -1.0 and 1.0 that adjusts the smoothing effect's expansion or contraction. Positive values expand the smoothed area, while negative values contract it.
+* **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
 
 </details>
 
@@ -24,13 +25,14 @@ The `//ezsmooth` command smooths the edges and surfaces of a selected region usi
 
 <summary>Inflate</summary>
 
-**`//ezinflate <radius>`**
+**`//ezinflate <radius> [-w <profile>]`**
 
 **`Alias: //inflate`**
 
 The `//ezinflate` command expands the volume of blocks within a selected region by a specified amount, effectively "inflating" the build.
 
 * **Radius**: Specifies the expansion distance in blocks. This value determines how far from the original surfaces the new, inflated surfaces will be created.
+* **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
 
 </details>
 
@@ -40,13 +42,14 @@ The `//ezinflate` command expands the volume of blocks within a selected region 
 
 <summary>Deflate</summary>
 
-**`//ezdeflate <radius>`**
+**`//ezdeflate <radius> [-w <profile>]`**
 
 **`Alias: //deflate`**
 
 The `//ezdeflate` command contracts the volume of blocks within a selected region by a specified amount, effectively "deflating" the build.
 
 * **Radius**: Specifies the expansion distance in blocks. This value determines how far inwards from the original surfaces that blocks will be removed.
+* **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
 
 </details>
 
@@ -67,6 +70,7 @@ The `//ezsmoothblocks` command modifies a selected region by placing slabs, stai
 - **Radius**: Specifies the smoothing radius in blocks. This value determines the area around each block that is considered during the smoothing process. The larger the value to more aggressive the smoothing.
 
 * **Bias**: A value between -1.0 and 1.0 that adjusts the smoothing effect which determines how many blocks are added or removed. Positive values will lead to more blocks being placed than removed, while negative values will remove more blocks than add.
+* **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
 
 </details>
 

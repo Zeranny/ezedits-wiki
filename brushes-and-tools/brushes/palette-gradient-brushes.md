@@ -10,7 +10,7 @@ The following commands feature brushes for creating gradients.
 
 <summary><mark style="color:blue;">Gradient Brush</mark></summary>
 
-**`//ezbr gradient`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-av] [-n <noise>] [-z <scale>] [-d <distanceFunction>]`**</mark>
+**`//ezbr gradient`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-avw] [-n <noise>] [-z <scale>] [-d <distanceFunction>]`**</mark>
 
 The `gradient` brush allows you to first define a plane by selecting 2 points, you can then paint with your gradient with blocks chosen based on distance along this plane.
 
@@ -26,6 +26,7 @@ The `gradient` brush allows you to first define a plane by selecting 2 points, y
 * <mark style="color:orange;">**Bleed**</mark> (Default: 0.5): Adjusts the strength of interpolation, with a normal range from 0 to 1.
 * <mark style="color:orange;">**`-a`**</mark>: When activated, the gradient is allowed to replace air blocks.
 * <mark style="color:orange;">**`-v`**</mark>: Deactivates WorldEditCUI integration.
+* <mark style="color:orange;">`-w`</mark>: Try to texture shaping blocks (slabs, stairs, etc.) with the closest existing material.
 * <mark style="color:orange;">**`-n <noise>`**</mark> (Default: `White()`): Adds an underlying noise field to the gradient effect.
 * <mark style="color:orange;">**`-z <scale>`**</mark> (Default: 1): Modifies the scale of the noise.
 * <mark style="color:orange;">**`-d <distanceFunction>`**</mark> (Default: NONE): Sets the distance mode changing the brush to work based on distance from the initial block with the given distance function.
@@ -40,7 +41,7 @@ The `gradient` brush allows you to first define a plane by selecting 2 points, y
 
 <summary><mark style="color:blue;">Gradient Stroke Brush</mark></summary>
 
-**`//ezbr gradientstroke`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-advw] [-n <noise>] [-z <scale>]`**</mark>
+**`//ezbr gradientstroke`` `**<mark style="color:orange;">**`<palette> [radius] [interpolation] [bleed] [-advwx] [-n <noise>] [-z <scale>]`**</mark>
 
 The `gradientstroke` brush allows for gradient application along a path (stroke) defined by selecting points.
 
@@ -57,7 +58,8 @@ The `gradientstroke` brush allows for gradient application along a path (stroke)
 * <mark style="color:orange;">**`-a`**</mark>: When activated, allows the gradient to replace air blocks.
 * <mark style="color:orange;">**`-d`**</mark>: Activates the 'distance to center' mode which applies the gradient based on distance to the middle of the stroke line instead of distance along the stroke.
 * <mark style="color:orange;">**`-v`**</mark>: Deactivates WorldEditCUI integration.
-* <mark style="color:orange;">**`-w`**</mark>: Clears the brush's path after every placed stroke.
+* <mark style="color:orange;">`-w`</mark>: Try to texture shaping blocks (slabs, stairs, etc.) with the closest existing material.
+* <mark style="color:orange;">**`-x`**</mark>: Clears the brush's path after every placed stroke.
 * <mark style="color:orange;">**`-n <noise>`**</mark> (Default: `White()`): Adds an underlying noise field to the gradient effect.
 * <mark style="color:orange;">**`-z <scale>`**</mark> (Default: 1): Modifies the scale of the noise.
 

@@ -14,8 +14,6 @@ Generate, place shapes, and perform edits using shaping blocks like slabs, stair
 
 [Surface Commands (//ezsurface)](../commands/surface.md)
 
-[Texturing Commands (//eztexture)](../commands/texturing.md)
-
 ### How to use
 
 Add the <mark style="color:orange;">**`-w <profile>`**</mark> flag when using one of the supported(!) commands.

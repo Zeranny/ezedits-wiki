@@ -1,4 +1,12 @@
+---
+description: Documentation of the //ezspline command
+---
+
 # Spline
+
+{% embed url="https://youtu.be/dJXsPTB5NhU" %}
+Video tutorial by [eztaK](https://linktr.ee/eztak)
+{% endembed %}
 
 ezEdits provides an extensive interface to place and embed various shapes and structures along a 1-dimensional interpolated path in 3-D space.
 

@@ -37,7 +37,8 @@
 
 ## Commands
 
-* [Deformation](commands/deformation.md)
+* [Deformation](commands/deformation/README.md)
+  * [Cylindrify & Spherify](commands/deformation/cylindrify-and-spherify.md)
 * [Flowfields](commands/flowfields.md)
 * [Noisegen](commands/noisegen.md)
 * [Region](commands/region.md)

@@ -4,7 +4,7 @@ Generate, place shapes, and perform edits using shaping blocks like slabs, stair
 
 ### Currently supported commands are:
 
-[Deform Commands (//ezdeform)](../commands/deformation.md)
+[Deform Commands (//ezdeform)](../commands/deformation/)
 
 [Placement Commands (//ezplace, //ezarray, //ezscatter)](../commands/placement/)
 

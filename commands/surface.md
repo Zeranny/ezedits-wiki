@@ -1,6 +1,6 @@
 # Surface
 
-All sub-commands are under `//ezsurface`  (`//ezsu`) \
+All sub-commands are under `//ezsurface` (`//ezsu`)\
 e.g `//ezsurface rockify`
 
 ## `//ezsurface ...`
@@ -11,7 +11,7 @@ e.g `//ezsurface rockify`
 
 <summary>Fuzzify Surface</summary>
 
-**`//ezsu fuzzify <radius> [smooth_radius] [smooth_iterations] [-c] [-e] [-m] [-t]`**
+**`//ezsu fuzzify <radius> [smooth_radius] [smooth_iterations] [-c] [-e] [-m] [-t] [-w <profile>]`**
 
 Uses white noise to make the surface appear more fuzzy.
 
@@ -20,9 +20,10 @@ Uses white noise to make the surface appear more fuzzy.
 * **Smooth Iterations** (Default: 0): Determines how many times the smoothing operation is applied.
 * **-c**: Restricts modifications to only carve into the terrain.
 * **-e**: Limits the operation to only expand out from the terrain.
-* **-m**: Applies a mask to only modify surfaces that match the specified criteria. \
+* **-m**: Applies a mask to only modify surfaces that match the specified criteria.\
   This option can significantly slow down the process due to the added complexity of matching surfaces.
 * **-t**: Tries to retain the topology of the region.
+* **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
 
 </details>
 
@@ -32,7 +33,7 @@ Uses white noise to make the surface appear more fuzzy.
 
 <summary>Rockify Surface</summary>
 
-**`//ezsu rockify <radius> [size] [oct] [smooth_radius] [smooth_iterations] [-c] [-e] [-m] [-t]`**
+**`//ezsu rockify <radius> [size] [oct] [smooth_radius] [smooth_iterations] [-c] [-e] [-m] [-t] [-w <profile>]`**
 
 Uses Perlin noise to make a surface rocky.
 
@@ -43,9 +44,10 @@ Uses Perlin noise to make a surface rocky.
 * **Smooth Iterations** (Default: 4): Determines how many times the smoothing operation is applied.
 * **-c**: Restricts modifications to only carve into the terrain.
 * **-e**: Limits the operation to only expand out from the terrain.
-* **-m**: Applies a mask to only modify surfaces that match the specified criteria. \
+* **-m**: Applies a mask to only modify surfaces that match the specified criteria.\
   This option can significantly slow down the process due to the added complexity of matching surfaces.
 * **-t**: Tries to retain the topology of the region.
+* **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
 
 </details>
 
@@ -55,7 +57,7 @@ Uses Perlin noise to make a surface rocky.
 
 <summary>Voronoify Surface</summary>
 
-**`//ezsu voronoify <radius> [cell_size] [smooth_radius] [smooth_iterations] [-c] [-e] [-m] [-t]`**
+**`//ezsu voronoify <radius> [cell_size] [smooth_radius] [smooth_iterations] [-c] [-e] [-m] [-t] [-w <profile>]`**
 
 Uses Voronoi noise to deform a surface.
 
@@ -65,9 +67,10 @@ Uses Voronoi noise to deform a surface.
 * **Smooth Iterations** (Default: 0): Determines how many times the smoothing operation is applied.
 * **-c**: Restricts modifications to only carve into the terrain.
 * **-e**: Limits the operation to only expand out from the terrain.
-* **-m**: Applies a mask to only modify surfaces that match the specified criteria. \
+* **-m**: Applies a mask to only modify surfaces that match the specified criteria.\
   This option can significantly slow down the process due to the added complexity of matching surfaces.
 * **-t**: Tries to retain the topology of the region.
+* **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
 
 </details>
 
@@ -77,7 +80,7 @@ Uses Voronoi noise to deform a surface.
 
 <summary>Noiseify Surface</summary>
 
-**`//ezsu noisify <radius> <noise> [scale] [smooth_radius] [smooth_iterations] [-c] [-e] [-m] [-t]`**
+**`//ezsu noisify <radius> <noise> [scale] [smooth_radius] [smooth_iterations] [-c] [-e] [-m] [-t] [-w <profile>]`**
 
 Uses a noise preset to deform a surface.
 
@@ -88,8 +91,9 @@ Uses a noise preset to deform a surface.
 * **Smooth Iterations** (Default: 4): Determines how many times the smoothing operation is applied.
 * **-c**: Restricts modifications to only carve into the terrain.
 * **-e**: Limits the operation to only expand out from the terrain.
-* **-m**: Applies a mask to only modify surfaces that match the specified criteria. \
+* **-m**: Applies a mask to only modify surfaces that match the specified criteria.\
   This option can significantly slow down the process due to the added complexity of matching surfaces.
 * **-t**: Tries to retain the topology of the region.
+* **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
 
 </details>

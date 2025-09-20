@@ -330,6 +330,12 @@ The redstone block line shows the used convex selection.
 
 ***
 
+### Smoothblocks: <mark style="color:orange;">`-w <smoothblocks>`</mark> <a href="#help-page" id="help-page"></a>
+
+See [smoothblocks.md](../../smoothblocks/smoothblocks.md "mention").
+
+***
+
 ### Ingame help page: <mark style="color:orange;">`-h`</mark> <a href="#help-page" id="help-page"></a>
 
 Prints the in-game help page. Shortcut for `//help ezspline ...`

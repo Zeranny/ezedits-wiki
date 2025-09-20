@@ -17,7 +17,7 @@ _The remaining arguments are outlined on the_ [_Common Parameters_](common-param
 
 ## List of <mark style="color:orange;">**`<shape>`**</mark>s
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong><code>Beads</code></strong> (<strong><code>Be</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesBeads.png">SplinesBeads.png</a></td><td><a href="3d-spline-shapes.md#bead-spline">#bead-spline</a></td></tr><tr><td><strong><code>Cubes</code></strong> (<strong><code>Cu</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesCubes.gif">SplinesCubes.gif</a></td><td><a href="3d-spline-shapes.md#cubes-spline">#cubes-spline</a></td></tr><tr><td><strong><code>Oscillate</code></strong> (<strong><code>Os</code></strong>)</td><td><a href="../../.gitbook/assets/SplineOscillate.gif">SplineOscillate.gif</a></td><td><a href="3d-spline-shapes.md#oscillation-spline">#oscillation-spline</a></td></tr><tr><td><strong><code>Fishnet</code></strong> (<strong><code>Fi</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesFishnet.gif">SplinesFishnet.gif</a></td><td><a href="3d-spline-shapes.md#fishnet-spline">#fishnet-spline</a></td></tr><tr><td><strong><code>Chainlink</code></strong> (<strong><code>Ch</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesChainlink.gif">SplinesChainlink.gif</a></td><td><a href="3d-spline-shapes.md#chain-link-spline">#chain-link-spline</a></td></tr><tr><td><strong><code>Rings</code></strong> (<strong><code>Ri</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesRings.gif">SplinesRings.gif</a></td><td><a href="3d-spline-shapes.md#rings-spline">#rings-spline</a></td></tr><tr><td><strong><code>Scales</code></strong> (<strong><code>Sc</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesScales.gif">SplinesScales.gif</a></td><td><a href="3d-spline-shapes.md#scales-spline">#scales-spline</a></td></tr><tr><td><strong><code>Noodles</code></strong> (<strong><code>No</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesNoodles.gif">SplinesNoodles.gif</a></td><td><a href="3d-spline-shapes.md#noodles-spline">#noodles-spline</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong><code>Beads</code></strong> (<strong><code>Be</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesBeads.png">SplinesBeads.png</a></td><td><a href="3d-spline-shapes.md#bead-spline">#bead-spline</a></td></tr><tr><td><strong><code>Cubes</code></strong> (<strong><code>Cu</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesCubes.gif">SplinesCubes.gif</a></td><td><a href="3d-spline-shapes.md#cubes-spline">#cubes-spline</a></td></tr><tr><td><strong><code>Braids</code></strong> (<strong><code>Br</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesBraids.gif">SplinesBraids.gif</a></td><td></td></tr><tr><td><strong><code>Oscillate</code></strong> (<strong><code>Os</code></strong>)</td><td><a href="../../.gitbook/assets/SplineOscillate.gif">SplineOscillate.gif</a></td><td><a href="3d-spline-shapes.md#oscillation-spline">#oscillation-spline</a></td></tr><tr><td><strong><code>Fishnet</code></strong> (<strong><code>Fi</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesFishnet.gif">SplinesFishnet.gif</a></td><td><a href="3d-spline-shapes.md#fishnet-spline">#fishnet-spline</a></td></tr><tr><td><strong><code>Chainlink</code></strong> (<strong><code>Ch</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesChainlink.gif">SplinesChainlink.gif</a></td><td><a href="3d-spline-shapes.md#chain-link-spline">#chain-link-spline</a></td></tr><tr><td><strong><code>Rings</code></strong> (<strong><code>Ri</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesRings.gif">SplinesRings.gif</a></td><td><a href="3d-spline-shapes.md#rings-spline">#rings-spline</a></td></tr><tr><td><strong><code>Scales</code></strong> (<strong><code>Sc</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesScales.gif">SplinesScales.gif</a></td><td><a href="3d-spline-shapes.md#scales-spline">#scales-spline</a></td></tr><tr><td><strong><code>Noodles</code></strong> (<strong><code>No</code></strong>)</td><td><a href="../../.gitbook/assets/SplinesNoodles.gif">SplinesNoodles.gif</a></td><td><a href="3d-spline-shapes.md#noodles-spline">#noodles-spline</a></td></tr></tbody></table>
 
 ***
 
@@ -57,7 +57,7 @@ _This shape can also be achieved with the_ [_Rings_](3d-spline-shapes.md#ezsplin
 
 **`//ezsp 3d Cubes([`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`])`** [**`<pattern>`**](3d-spline-shapes.md#syntax) [**`<radii>`**](common-parameters.md#radii) [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
 
-Generates a chainlink-shaped spline along the selected positions.
+Generates a set of warped cubes along the selected positions.
 
 * **`[`**<mark style="color:orange;">**`Gap:<value>`**</mark>**`]`** (<mark style="color:orange;">**`G`**</mark>) (Default: 0.5):
   * Sets the gap between cubes
@@ -83,6 +83,43 @@ Default gap is 0.5
 `//ezsp 3d`` `<mark style="color:orange;">`Cu(G:2.0)`</mark>` ``clay 7`
 
 <img src="../../.gitbook/assets/SplinesCubes_example4.png" alt="" data-size="original">
+
+</details>
+
+***
+
+#### ![](../../.gitbook/assets/SplinesBraids.gif)
+
+### `//ezspline 3d`` `<mark style="color:orange;">`Braids (Br)`</mark> <a href="#cubes" id="cubes"></a>
+
+<details>
+
+<summary><mark style="color:blue;">Braids Spline</mark></summary>
+
+**`//ezsp 3d Braids([`**<mark style="color:orange;">**`Thickness:<value>`**</mark>**`])`** [**`<pattern>`**](3d-spline-shapes.md#syntax) [**`<radii>`**](common-parameters.md#radii) [**`[-s <stretch>]`**](common-parameters.md#stretch-s-less-than-stretchfactor-greater-than) [**`[-t <angle>]`**](common-parameters.md#twist) [**`[-p <kbParameters>]`**](common-parameters.md#kb-parameters) [**`[-q <quality>]`**](common-parameters.md#quality) [**`[-n <normalMode>]`**](common-parameters.md#normal-mode) [**`[-h]`**](common-parameters.md#help-page)
+
+Generates a braids-shaped spline along the selected positions.
+
+* **`[`**<mark style="color:orange;">**`Thickness:<value>`**</mark>**`]`** (<mark style="color:orange;">**`T`**</mark>) (Default: 0.5):
+  * Sets the relative thickness of the individual braids
+
+(<mark style="color:blue;">**`!`**</mark>) We provide an interactive 3D plot to play around with all parameters: [https://www.desmos.com/3d/89xdz5xmsh](https://www.desmos.com/3d/89xdz5xmsh)
+
+**Examples:**
+
+`//ezsp 3d`` `<mark style="color:orange;">`Braids`</mark>` ``clay 7`
+
+![](../../.gitbook/assets/SplinesBraids_example1.png)
+
+`//ezsp 3d`` `<mark style="color:orange;">`Braids(Thickness:0.2)`</mark>` ``clay 7`
+
+![](../../.gitbook/assets/SplinesBraids_example2.png)
+
+`//ezsp 3d`` `<mark style="color:orange;">`Br(G:1)`</mark>` ``clay 7`
+
+![](../../.gitbook/assets/SplinesBraids_example3.png)
+
+
 
 </details>
 

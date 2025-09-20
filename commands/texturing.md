@@ -17,7 +17,7 @@ e.g `//eztexture ambient`
 
 <summary>Ambient Texture</summary>
 
-**`//ezt ambient <mask> <palette> [radius] [brightness] [contrast]`**
+**`//ezt ambient <mask> <palette> [radius] [brightness] [contrast] [-w]`**
 
 Textures by approximating the ambience of blocks in the region.
 
@@ -26,6 +26,7 @@ Textures by approximating the ambience of blocks in the region.
 * **Radius** (Default: 3): The radius within which the command assesses ambient differences. A larger radius considers a broader area for each calculation, leading to smoother transitions.
 * **Brightness** (Default: 0.0): Adjusts the bias towards the start or end of the palette. Higher values strengthen the start of the palette, while lower values emphasize the end.
 * **Contrast** (Default: 0.0): Amplifies or reduces the difference between the smoothed ambient field and local variations, enhancing or softening the texture's impact.
+* **-w**: Try to texture shaping blocks with the closest existing material.
 
 </details>
 
@@ -35,7 +36,7 @@ Textures by approximating the ambience of blocks in the region.
 
 <summary>Axis Gradient Texture</summary>
 
-**`//ezt axisgradient <mask> <palette> [axis] [-r]`**
+**`//ezt axisgradient <mask> <palette> [axis] [-r] [-w]`**
 
 Textures a region using a gradient aligned to a single axis.
 
@@ -43,6 +44,7 @@ Textures a region using a gradient aligned to a single axis.
 * **Palette**: Specifies the palette to use.
 * **Axis** (Default: "y"): Determines the axis along which the gradient is applied ('x', 'y', or 'z'), guiding the direction of the gradient flow.
 * **-r**: Activates relative gradient mode, stretching the palette across whole columns.
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -52,13 +54,14 @@ Textures a region using a gradient aligned to a single axis.
 
 <summary>Blend Texture</summary>
 
-**`//ezt blend <palette> [radius] [-v]`**
+**`//ezt blend <palette> [radius] [-v] [-w]`**
 
 Blends palette blocks within a region.
 
 * **Palette**: Specifies the palette to use for blending.
 * **Radius** (Default: "0.5"): Determines the radius of blending, affecting how broadly the blend effect is applied around each block.
 * **-v**: Activates full blend mode, allowing for the blending of non-surface blocks.
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -68,7 +71,7 @@ Blends palette blocks within a region.
 
 <summary>Blocklight Texture</summary>
 
-**`//ezt blocklight <mask> <palette> [-v] [-s] [-l]`**
+**`//ezt blocklight <mask> <palette> [-v] [-s] [-l] [-w]`**
 
 Textures a region based on in-game block light levels, excluding skylight.
 
@@ -77,6 +80,7 @@ Textures a region based on in-game block light levels, excluding skylight.
 * **-v**: When activated, only considers the light level directly above the block.
 * **-s**: When activated, will consider skylight levels.
 * **-l**: When activated, prevents the palette replacing light source blocks.
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -86,7 +90,7 @@ Textures a region based on in-game block light levels, excluding skylight.
 
 <summary>Cells Texture</summary>
 
-**`//ezt cells <mask> <palette> <amount> [brightness] [contrast] [-s] [-r]`**
+**`//ezt cells <mask> <palette> <amount> [brightness] [contrast] [-s] [-r] [-w]`**
 
 Textures a region with a cell-like pattern.
 
@@ -97,6 +101,7 @@ Textures a region with a cell-like pattern.
 * **Contrast** (Default: 0.0): Modifies the contrast between cells, enhancing the definition and separation of the pattern.
 * **-s** (Default: -1): Optional seed for generating the cell pattern.
 * **-r** (Default: 5): Sets the repulsion factor for seed points in the Voronoi diagram, influencing the shape and distribution of cells.
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -106,7 +111,7 @@ Textures a region with a cell-like pattern.
 
 <summary>Curvature Texture</summary>
 
-**`//ezt curvature <mask> <palette> [radius] [brightness] [contrast]`**
+**`//ezt curvature <mask> <palette> [radius] [brightness] [contrast] [-w]`**
 
 Textures a region by approximating curvature.
 
@@ -115,6 +120,7 @@ Textures a region by approximating curvature.
 * **Radius** (Default: 3): Specifies the radius within which curvature is calculated, influencing the subtlety or prominence of the effect.
 * **Brightness** (Default: 0.0): Adjusts the bias towards the start or end of the palette. Higher values strengthen the start of the palette, while lower values emphasize the end.
 * **Contrast** (Default: 0.0): Modifies the contrast between areas of different curvature, enhancing the definition and separation of the pattern.
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -124,7 +130,7 @@ Textures a region by approximating curvature.
 
 <summary>Flow Texture</summary>
 
-**`//ezt flow <mask> <palette> [exposure] [iterations] [velocity] [paletteScalar] [noise] [-m] [-g] [-f]`**
+**`//ezt flow <mask> <palette> [exposure] [iterations] [velocity] [paletteScalar] [noise] [-m] [-g] [-f] [-w]`**
 
 Generates a flowfield effect across all surfaces within the selection.
 
@@ -138,6 +144,7 @@ Generates a flowfield effect across all surfaces within the selection.
 * **-m**: Point momentum weighting, blending previous movement directions.
 * **-g**: Applies gravity to points, pulling them in the specified direction.
 * **-f**: Fills gaps with the lowest palette block.
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -147,7 +154,7 @@ Generates a flowfield effect across all surfaces within the selection.
 
 <summary>Noise Texture</summary>
 
-**`//ezt noise <mask> <palette> <noise> [-z] [-s]`**
+**`//ezt noise <mask> <palette> <noise> [-z] [-s] [-w]`**
 
 Textures a region using a given noise.
 
@@ -156,6 +163,7 @@ Textures a region using a given noise.
 * **Noise** (Default: `Perlin(Freq:0.05)`): Sets the noise to be used.
 * **-z** (Default: 1): Adjusts the scale of the noise.
 * **-s** (Default: -1): Optional seed value for generating the noise pattern.
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -165,7 +173,7 @@ Textures a region using a given noise.
 
 <summary>Pointlight Texture</summary>
 
-**`//ezt pointlight <mask> <palette> [falloffRange] [radius] [interval] [-l] [-o] [-r][-f]`**
+**`//ezt pointlight <mask> <palette> [falloffRange] [radius] [interval] [-l] [-o] [-r] [-f] [-w]`**
 
 Textures a region based on the orientation of surfaces relative to a light source.
 
@@ -178,6 +186,7 @@ Textures a region based on the orientation of surfaces relative to a light sourc
 * **-l**: Changes the light source position to the given coordinates, otherwise uses the player's position.
 * **-o** (Default: 0.0): Determines the strength of occlusion. A higher value results in "darker" shadows. Expected range of 0-1.
 * **-r** (Default: 1): Determines the smoothing radius for occlusion (shadows).
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -202,7 +211,7 @@ Modifies the texturing of a region by shifting the palette by a set amount.
 
 <summary>Sunlight Texture</summary>
 
-**`//ezt sunlight <mask> <palette> [radius] [interval] [-l] [-o] [-r]`**
+**`//ezt sunlight <mask> <palette> [radius] [interval] [-l] [-o] [-r] [-w]`**
 
 Textures a region using a global light source direction to control the application of the palette.
 
@@ -213,6 +222,7 @@ Textures a region using a global light source direction to control the applicati
 * **-l** (Default: down): Global direction into which the light shines.
 * **-o** (Default: 0.0): Determines the strength of occlusion. A higher value results in "darker" shadows. Expected range of 0-1.
 * **-r** (Default: 1): Determines the smoothing radius for occlusion (shadows).
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 </details>
 
@@ -222,13 +232,14 @@ Textures a region using a global light source direction to control the applicati
 
 <summary>Advanced Texturing</summary>
 
-**`//ezt advanced <mask> <palette> <texture>`**
+**`//ezt advanced <mask> <palette> <texture> [-w]`**
 
 More powerful interface of using eztexture. It has access to all other eztexture commands and can also mix/combine them. Meaning you can for example do ambient and sunlight texturing simultaneously.
 
 * **Mask**: Blocks to replace.
 * **Palette**: Specifies the palette to use.
 * **Texture**: A Texturing specification.
+* **-w**: Try to texture shaping blocks (stairs, slabs, etc.) with the closest existing material.
 
 **How to define a `<texture>`?**
 
@@ -275,3 +286,5 @@ Examples:
 Please note that the `Texture`/`Texture1`/`Texture2` (`T`/`T1`/`T2`) are not optional. You must set them to use these combining/adjusting textures. (If you do not set them you'll receive an error saying `cannot be null`).
 
 </details>
+
+***

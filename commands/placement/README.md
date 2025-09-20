@@ -50,12 +50,17 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
     * [`[-t]`](scatter-parameters.md#trim-outside-selection-t)
 * [**Array Parameters**](array-parameters.md)
   * Covers the following flags (only available for array):
-    * [`[-g <gap>]`](array-parameters.md#distance-g)&#x20;
-    * ### [`[-y <maxOffset>]`](array-parameters.md#max-vertical-offset-y)  <a href="#max-vertical-offset-y" id="max-vertical-offset-y"></a>
+    * [`[-g <gap>]`](array-parameters.md#distance-g)
+    * [`[-y <maxOffset>]`](array-parameters.md#max-vertical-offset-y)
     * [`[-q <radiiMultiplier>]`](array-parameters.md#progressive-scaling-q)
     * [`[-p <kbParameters>]`](array-parameters.md#path-parameters-p)
     * [`[-n <normalMode>]`](array-parameters.md#spline-orientation-n)
     * [`[-b]`](array-parameters.md#snap-to-surfaces-b)
+
+### Additional Parameters
+
+* Available for place/scatter/array:
+  * [`[-w <smoothblocks>]`](../../smoothblocks/smoothblocks.md)&#x20;
 
 <details>
 
@@ -83,8 +88,9 @@ We suggest reading the [**Primary+Secondary Alignment**](primary+secondary-align
 * [`[-s <dimensions>]`](placement-parameters.md#dimensions-s)
 * [`[-t]`](scatter-parameters.md#trim-outside-selection-t)
 * [`[-u <iterations>]`](scatter-parameters.md#uniformity-u)
+* [`[-w <smoothblocks>]`](../../smoothblocks/smoothblocks.md)&#x20;
 * [`[-x]`](primary+secondary-alignment.md#perturb-secondary-x)
-* ### [`[-y <maxOffset>]`](array-parameters.md#max-vertical-offset-y)  <a href="#max-vertical-offset-y" id="max-vertical-offset-y"></a>
+* [`[-y <maxOffset>]`](array-parameters.md#max-vertical-offset-y)
 
 </details>
 

@@ -55,7 +55,7 @@ Just a small, quick set of noise commands I threw together to show what the nois
 
 ![](../../.gitbook/assets/SplinesNoise_example4.png)
 
-`//ezspline noise -w PanesOnly light_gray_stained_glass 20,15,25 Ce(f:1.4,z:.3,m:or,l:-1,u:-0.5) 3 -t 600 -i t=0.2;r=sqrt(x*x+y*y);m=1-abs(2*r-t-1)/abs(t-1);n<m&&r<1`
+`//ezspline noise -w Panes light_gray_stained_glass 20,15,25 Ce(f:1.4,z:.3,m:or,l:-1,u:-0.5) 3 -t 600 -i t=0.2;r=sqrt(x*x+y*y);m=1-abs(2*r-t-1)/abs(t-1);n<m&&r<1`
 
 ![](../../.gitbook/assets/SplinesNoise_example5.png)
 
@@ -67,7 +67,7 @@ Just a small, quick set of noise commands I threw together to show what the nois
 
 ![](../../.gitbook/assets/SplinesNoise_example7.png)
 
-`//ezspline noise -w SlabsOnly ##GrayCold(4:11),waxed_weathered_cut_copper 20 Ce(f:1.5,cr:sub,m:or,u:-0.85,l:-.5,y:0.3) -n UPRIGHT -i (x*x+n+y*y<1&&y<0)*(y+0.97)`
+`//ezspline noise -w Slabs ##GrayCold(4:11),waxed_weathered_cut_copper 20 Ce(f:1.5,cr:sub,m:or,u:-0.85,l:-.5,y:0.3) -n UPRIGHT -i (x*x+n+y*y<1&&y<0)*(y+0.97)`
 
 ![](../../.gitbook/assets/SplinesNoise_example8.png)
 

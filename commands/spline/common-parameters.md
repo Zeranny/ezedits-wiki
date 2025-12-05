@@ -170,7 +170,7 @@ There are two ways to twist/roll your spline:
 
 `//ezspline 2d Re(Y1:-0.2,Y2:0.2) clay 10`` `**`-r <angle>`**
 
-GIF start at `-q 0` and moves up to `-q 180`.
+GIF start at `-r 0` and moves up to `-r 180`.
 
 <img src="../../.gitbook/assets/SplinesRollParameter.gif" alt="" data-size="original">
 

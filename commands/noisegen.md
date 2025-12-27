@@ -11,7 +11,7 @@ e.g `//ng heightmap`
 
 <summary>Heightmap (2D)</summary>
 
-**`//eznoisegen heightmap <palette> <noise> [height] [-z <zoom>] [-s <seed>] [-o <offset>] [-ct]`**
+**`//eznoisegen heightmap <palette> <noise> [height] [-z <zoom>] [-s <seed>] [-o <offset>] [-m <mask>] [-cty]`**
 
 * **Palette**: Specifies the palette of blocks to use.
 * **Noise**: Defines the noise preset to use.
@@ -19,8 +19,12 @@ e.g `//ng heightmap`
 * **-z** (Default: 1): Adjusts the zoom level of the noise.
 * **-s** (Default: -1): Sets the noise seed.
 * **-o** (Default: (0,0,0)): Offsets the noise generation coordinates by a given vector (X,Y,Z).
+* **-m**: Only generate above blocks matching this mask. Falloff settings treat masked blocks as the edge.
 * **-c**: When used, centres the noise generation on the world coordinates of the selection.
-* **-t**: Enables smooth mode, specifically for snow, water, and lava blocks in the palette \[Applicable only in heightmap mode].
+* **-t**: Enables smooth mode, specifically for snow, water, and lava blocks in the palette.
+  *[Applicable only in heightmap mode]*
+* **-y**: Forces use of 3D noise. Impacted by Offset parameter.
+  *[Applicable only in heightmap mode]*
 
 </details>
 
@@ -53,7 +57,7 @@ e.g `//ng heightmap`
 
 <summary>Advanced</summary>
 
-**`//eznoisegen <palette> <noise> [lowerThreshold] [upperThreshold] [-z <scale>] [-s <seed>] [-l <smear>] [-o <offset>] [-chnt]`**
+**`//eznoisegen <palette> <noise> [lowerThreshold] [upperThreshold] [-z <scale>] [-s <seed>] [-l <smear>] [-o <offset>] [-m <mask>] [-chnty]`**
 
 * **Palette**: Specifies the palette of blocks to use.
 * **Noise**: Defines the noise preset to use.
@@ -63,10 +67,14 @@ e.g `//ng heightmap`
 * **-s** (Default: -1): Sets the noise seed.
 * **-l** (Default: 0): Applies a vertical smear to 3D noise.
 * **-o** (Default: (0,0,0)): Offsets the noise generation coordinates by a given vector (X,Y,Z).
+* **-m**: Only generate above blocks matching this mask. Falloff settings treat masked blocks as the edge.
 * **-c**: When used, centres the noise generation on the world coordinates of the selection.
-* **-h**: Activates heightmap mode using 2D noise.\
-  &#xNAN;_&#x48;eightmap mode is only compatible with Cuboid, Cylinder, or Polygon region types._
+* **-h**: Activates heightmap mode using 2D noise.
+  *Heightmap mode is only compatible with Cuboid, Cylinder, or Polygon region types*
 * **-n**: Uses normalized (-1 to 1) selection-centred coordinates for noise generation.
-* **-t**: Enables smooth mode, specifically for snow, water, and lava blocks in the palette \[Applicable only in heightmap mode].
+* **-t**: Enables smooth mode, specifically for snow, water, and lava blocks in the palette.
+  *[Applicable only in heightmap mode]*
+* **-y**: Forces use of 3D noise. Impacted by Offset parameter.
+  *[Applicable only in heightmap mode]*
 
 </details>

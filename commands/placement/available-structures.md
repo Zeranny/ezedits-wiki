@@ -186,9 +186,9 @@ Mandatory Parameters:
 
 A deformed icosphere. Popularised in the building community under the [Arceon Boulder](https://github.com/Brennian/Arceon-1.14/wiki/Brushes#boulder-brush).
 
-Syntax: <mark style="color:orange;">`Icosphere(Pattern:<pattern>,Randomness:<value>,Subdivisions:<value>)`</mark>
+Syntax: <mark style="color:orange;">`Icosphere(Pattern:<pattern>,Randomness:<value>,Subdivisions:<value>,Platform:<value>)`</mark>
 
-Abbr.: <mark style="color:orange;">`Ic(P:<pattern>,R:<value>,S:<value>)`</mark>
+Abbr.: <mark style="color:orange;">`Ic(P:<pattern>,R:<value>,S:<value>,PL:<value>)`</mark>
 
 Mandatory Parameters:
 
@@ -220,6 +220,9 @@ Optional Parameters:
     * ![](../../.gitbook/assets/StructuresIcosphere_example6.gif)
     * 4 results in many polygons used, but also limits the amount of randomness, resulting in a pretty spherical look even with maximum randomness as you can already see with 3 subdivisions.
   * (<mark style="color:red;">**`!`**</mark>) Large number of subdivisions have a large performance impact.
+* <mark style="color:blue;">**`Platform`**</mark> **(**<mark style="color:blue;">**`PL`**</mark>**)**. Defines how mush to squash the top half of the icosphere.
+  * Defaults to <mark style="color:blue;">`0.0`</mark>.
+  * Accepts a value between 0 and 1
 
 Remember: All of the given examples were rendered with equal dimensions across all three axes. Use the [dimensions parameter](placement-parameters.md#dimensions-s) to stretch and squish along the three axes.
 

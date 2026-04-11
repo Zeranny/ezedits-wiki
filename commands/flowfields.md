@@ -44,19 +44,21 @@ Generates a flow field within a selection, creating dynamic pattern based on the
 
 <summary>Flow Line</summary>
 
-**`/ezflowline <pattern> <length> <gravity> <noise> [-i <inertia>] [-c <convexSelPoints>] [-s]`**
+**`//ezflowline <pattern> <length> <gravity> <noise> [-i <inertia>] [-c <convexSelPoints>] [-l <lines>] [-r <randomStrength>] [-s]`**
 
 **`Alias: //flowline`**
 
 Generates a single flow-line based on the actor's position and viewing direction.\
 The same fundamental premise as a Flow Field, but only generating 1 line.
 
-* **Pattern**: Determines the pattern of blocks to place.&#x20;
+* **Pattern**: Determines the pattern of blocks to place.
 * **Length**: Sets the length of the flowline in blocks. This defines how far the flowline will extend from the starting point.
 * **Gravity** (Default: -1): Applies gravity to points, pulling them in the specified direction.
 * **Noise** (Default: `Perlin()`): The type of noise used to generate the flowfield.
-* **-i** (Default: 0.0): Adjusts the point inertia weighting, controlling how much previous movement directions influence future directions. A value between 0.0 and 1.0.
 * **-c** (Default: 0): If greater than 0, creates a convex selection out of the flowline, using the specified number of points to define the selection's shape.
+* **-i** (Default: 0.0): Adjusts the point inertia weighting, controlling how much previous movement directions influence future directions. A value between 0.0 and 1.0.
+* **-l** (Default: 1): Number of flowlines to create.
+* **-r** (Default: 50): Strength of randomistation between lines created (When **`-l`** is above 1).
 * **-s**: Enables snapping of the flowline to surfaces, making the line adhere to the contours of the landscape or structures it intersects.
 
 </details>

@@ -63,11 +63,11 @@ e.g running `//gmask !#current` will invert your current gmask
 
 </details>
 
-### `#eznoise`
+### `#eznoisemask`
 
 <details>
 
-<summary>#eznoise Mask</summary>
+<summary>#eznoisemask Mask</summary>
 
 **`#eznoisemask[noisePreset][<scale>][<threshold>][<seed>]`**\
 **Alias: `#eznm`**
@@ -132,7 +132,7 @@ Masks to blocks which emit light. Optionally takes a specific light level to mat
 <summary>#near Mask</summary>
 
 **`#near[mask][distance]`**\
-&#xNAN;**`#near[mask][minDistance][maxDistance]`**\
+\&#xNAN;**`#near[mask][minDistance][maxDistance]`**\
 \
 Masks to all blocks within a given spherical (Euclidean) distance of a mask.\
 Doesn't modify blocks which match the inner `mask`.\
@@ -161,6 +161,21 @@ e.g `oak_stairs[facing=east]` will only match with `oak_stairs[facing=west]` if 
 
 </details>
 
+### `#radialgradientmask`
+
+<details>
+
+<summary>#radialgradient mask</summary>
+
+**`#radialgradientmask[distance][<distanceMode][<offset>][<noisePreset>][<noiseScale>][<noiseSeed>]`**
+
+Shorthand: `#rgradientm`
+
+Masks blocks based on distance from the player. With closer blocks more likely to pass the mask check.\
+Compatible with noise presets.
+
+</details>
+
 ### `#truelight`
 
 <details>
@@ -173,13 +188,13 @@ Masks to blocks of a given total light level (Illimunation provided by any light
 
 </details>
 
-### `#vectorgradient`
+### `#vectorgradientmask`
 
 <details>
 
-<summary>#vectorgradient Mask</summary>
+<summary>#vectorgradientmask Mask</summary>
 
-**`#vectorgradientmask[vector][distance][<noisePreset>][<noiseScale>][noiseSeed]`**
+**`#vectorgradientmask[vector][distance][<noisePreset>][<noiseScale>][<noiseSeed>]`**
 
 Shorthand: `#vgradientm`
 

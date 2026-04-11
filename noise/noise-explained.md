@@ -25,7 +25,7 @@ Each parameter and many values also has a shorthand, such as "ft" instead of "Fr
 
 <details>
 
-<summary>Setting the Noise Type<br></summary>
+<summary>Setting the Noise Type</summary>
 
 Sets the type of noise to be used. This is the start of any noise and will be in the format of `Noise()`, for example `Perlin()`, where all other parameters will go between the brackets.
 
@@ -62,6 +62,8 @@ Sets the type of noise to be used. This is the start of any noise and will be in
     **If Overridden:**
     * <mark style="color:red;">`LowerBound (l)`</mark>
     * <mark style="color:red;">`UpperBound (u)`</mark>
+    * <mark style="color:red;">`MinClamp (Mn)`</mark>
+    * <mark style="color:red;">`MaxClamp (Mx)`</mark>
 * <mark style="color:red;">`XScaling (x)`</mark>\
   This can be used to stretch or squish the X axis.
 * <mark style="color:red;">`YScaling (y)`</mark>\

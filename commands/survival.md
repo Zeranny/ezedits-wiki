@@ -1,23 +1,31 @@
-# Survival
+# Tweak (Survial)
 
-All sub-commands are under `//ezsurvival` (`//ezsv`) e.g `//ezsv deinfest`
+All sub-commands are under `//eztweak` (`//eztw`) e.g `//eztw deinfest`
 
-## `//ezsurvival ...`
+Old name `//ezsurvival` (`//ezsv`) still works
+
+## `//eztweak ...`
 
 ### `deinfest`
 
-**`//ezsv deinfest`**
+**`//eztw deinfest`**
 
 Replaces infested blocks with their non-infested counterpart. For example, `infested_stone` will become `stone`
 
 ### `persist`
 
-**`//ezsv persist [ON|OFF]`**
+**`//eztw persist [ON|OFF]`**
 
 Toggles leaf block persistence on or off. Having persistence on prevents leaf decay.
 
+### `waterlog`
+
+**`//eztw waterlog [True|False]`**
+
+Toggles waterlog status of blocks.
+
 ### `wax`
 
-**`//ezsv wax [ON|OFF]`**
+**`//eztw wax [ON|OFF]`**
 
 Toggles waxing of copper blocks and signs on or off. Waxing copper blocks prevents them changing states due to age. Waxing signs prevents them from being edited.

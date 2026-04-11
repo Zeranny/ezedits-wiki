@@ -19,11 +19,11 @@ Optionally takes a True/False setting to make your aim sensitive to hitboxes.
 
 </details>
 
-### `#eznoise`
+### `#eznoisepattern`
 
 <details>
 
-<summary>#eznoise Pattern</summary>
+<summary>#eznoisepattern Pattern</summary>
 
 **`#eznoisepattern[palette][noisePreset][<scale>][<seed>]`**\
 **Alias: `#eznp`**
@@ -51,6 +51,20 @@ e.g. `//set #palette[##ice]` is the same as `//set [blue_ice,packed_ice,ice]`
 
 </details>
 
+### `#vectorgradient`
+
+<details>
+
+<summary>#radialgradient Pattern</summary>
+
+**`#radialgradientpattern[palette][distance][<distanceMode>][<offset>][<noisePreset>][<noiseScale>][<noiseSeed>]`**\
+**Alias: `#rgradientp`**
+
+Sets palette blocks based on distance from the player. With the block chosen based on distance plus a blending factor.\
+Compatible with noise presets.
+
+</details>
+
 ### `#selection`
 
 <details>
@@ -68,11 +82,11 @@ Optional `<offset>` variable to offset the pattern by a given vector.
 
 </details>
 
-### `#vectorgradient`
+### `#vectorgradientpattern`
 
 <details>
 
-<summary>#vectorgradient Pattern</summary>
+<summary>#vectorgradientpattern Pattern</summary>
 
 **`#vectorgradientpattern[palette][vector][distance][<noisePreset>][<noiseScale>][<noiseSeed>]`**\
 **Alias: `#vgradientp`**
@@ -80,3 +94,4 @@ Optional `<offset>` variable to offset the pattern by a given vector.
 Sets palette blocks along a vector with a given distance length with the block chosen based on distance plus a blending factor. Can also use noise presets.
 
 </details>
+

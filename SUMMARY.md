@@ -26,6 +26,7 @@
 ## Brushes & Tools
 
 * [Brushes](brushes-and-tools/brushes/README.md)
+  * [Petal Painter Brush](brushes-and-tools/brushes/petal-painter-brush.md)
   * [Palette Shift Brush](brushes-and-tools/brushes/palette-shift-brush.md)
   * [Palette Gradient Brushes](brushes-and-tools/brushes/palette-gradient-brushes.md)
   * [Placement Brushes](brushes-and-tools/brushes/placement-brushes.md)
@@ -58,5 +59,5 @@
   * [Advanced Spline Shapes](commands/spline/advanced-spline-shapes.md)
 * [Stained Glass](commands/stained-glass.md)
 * [Surface](commands/surface.md)
-* [Survival](commands/survival.md)
+* [Tweak (Survial)](commands/survival.md)
 * [Texturing](commands/texturing.md)

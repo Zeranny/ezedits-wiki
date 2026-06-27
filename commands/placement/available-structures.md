@@ -4,6 +4,20 @@ In the context of ezEdits, we call an arrangement of blocks in 3D space a "struc
 
 Currently available structures are:
 
+***
+
+### Common Options
+
+The following optional parameters can be used with any structure type:
+
+* <mark style="color:blue;">**RelativeOffset (RO)**</mark>. Defaults to `(0,0,0)`. Offsets the structure from the placement point relative to its orientation.
+* <mark style="color:blue;">**WorldOffset (WO)**</mark>. Defaults to `(0,0,0)`. Offsets the structure from the placement point along world coordinates.
+* <mark style="color:blue;">**OffsetJitter (OJ)**</mark>. When set, randomly multiplies the strength of RelativeOffset and WorldOffset for each placement. Value range is 1.0-[Set Value]..1.0, so a value of 0.5 would result in a multiplier range of 0.5..1.0
+
+Example: <mark style="color:orange;">`Shape(S:Cone,P:stone,RO:(0,1,0),WO:(0,0,2))`</mark>
+
+***
+
 <details>
 
 <summary><mark style="color:blue;"><strong>Clipboard (Cl)</strong></mark></summary>
@@ -23,8 +37,9 @@ Options:
   * FAST (fast): Default unaltered pasting of clipboards, like //paste
   * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched into the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.
   * See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
+* <mark style="color:blue;">**`Rotation`**</mark> **(**<mark style="color:blue;">**`R`**</mark>**).** Defaults to `0`. Rotates the input shape before it is placed.
 
-- Example: <mark style="color:orange;">`Clipboard(Origin:INHERENT,PasteMethod:SMOOTHED)`</mark> <mark style="color:orange;">or</mark> <mark style="color:orange;">`Cl(O:I,PM:smooth)`</mark>
+- Example: <mark style="color:orange;">`Clipboard(Origin:INHERENT,PasteMethod:SMOOTHED,Rotation:90)`</mark> <mark style="color:orange;">or</mark> <mark style="color:orange;">`Cl(O:I,PM:smooth,R:90)`</mark>
 
 </details>
 
@@ -54,6 +69,7 @@ Options:
   * FAST (fast): Default unaltered pasting of clipboards, like //paste
   * SMOOTHED (smooth): Applies interpolation when the placement cannot be matched into the world grid, e.g. when placing with a 45° rotated orientation. Has a slightly more smoothed look to it, which may preferred for freely rotated placements.
   * See [#comparison-between-fast-and-smooth-pastemethod](available-structures.md#comparison-between-fast-and-smooth-pastemethod "mention")
+* <mark style="color:blue;">**`Rotation`**</mark> **(**<mark style="color:blue;">**`R`**</mark>**).** Defaults to `0`. Rotates the input shape before it is placed.
 
 </details>
 

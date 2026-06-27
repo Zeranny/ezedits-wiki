@@ -15,6 +15,8 @@ Optionally takes a True/False setting to make your aim sensitive to hitboxes.
 * False will treat all blocks as full blocks. E.g. you cannot `#aim` at the block behind a button.
 * True will respect the hitboxes of blocks you are looking at. E.g. you can `#aim` at the block behind a slab.
 
+If the player is not looking at a block within range, the mask matches nothing.
+
 <img src="../.gitbook/assets/aimMask.gif" alt="" data-size="original">
 
 </details>
@@ -46,6 +48,25 @@ In either case, attached means that the block is "touching" the adjacent block. 
 **`#blocklight[lightLevel]` or `#blocklight[minLevel][maxLevel]`**
 
 Masks to blocks of a given block light (Illumination provided by light sources other than skylight). Optionally takes a minimum and maximum light level, matching any level within that range.
+
+</details>
+
+### `#clipblocks`
+
+<details>
+
+<summary>#clipblocks Mask</summary>
+
+**`#clipblocks[<includeAir>][<strict>]`**\
+Shorthand: **`#cb`**
+
+Masks to blocks found in the player's clipboard.
+
+Optional `<includeAir>` value of True or False to include air blocks. Defaults to **False**.\
+e.g `#clipblocks[True]` includes air.
+
+Optional `<strict>` value of True or False to determine if block data must also match. Defaults to **False**.\
+e.g `#clipblocks[False][True]` matches exact block states.
 
 </details>
 
@@ -173,6 +194,25 @@ Shorthand: `#rgradientm`
 
 Masks blocks based on distance from the player. With closer blocks more likely to pass the mask check.\
 Compatible with noise presets.
+
+</details>
+
+### `#schemblocks`
+
+<details>
+
+<summary>#schemblocks Mask</summary>
+
+**`#schemblocks[<schematic>][<includeAir>][<strict>]`**\
+Shorthand: **`#sb`**
+
+Masks to blocks found in a schematic file.
+
+Optional `<includeAir>` value of True or False to include air blocks. Defaults to **False**.\
+e.g `#schemblocks[mybuild][True]` includes air.
+
+Optional `<strict>` value of True or False to determine if block data must also match. Defaults to **False**.\
+e.g `#schemblocks[mybuild][False][True]` matches exact block states.
 
 </details>
 

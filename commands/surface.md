@@ -3,6 +3,8 @@
 All sub-commands are under `//ezsurface` (`//ezsu`)\
 e.g `//ezsurface rockify`
 
+These commands respect your active `//gmask`.
+
 ## `//ezsurface ...`
 
 ### `fuzzify`
@@ -21,6 +23,7 @@ Uses white noise to make the surface appear more fuzzy.
 * **-c**: Restricts modifications to only carve into the terrain.
 * **-e**: Limits the operation to only expand out from the terrain.
 * **-m**: Applies a mask to only modify surfaces that match the specified criteria.\
+  `-c` only carves matching blocks. `-e` only expands from a matching surface into air.\
   This option can significantly slow down the process due to the added complexity of matching surfaces.
 * **-t**: Tries to retain the topology of the region.
 * **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
@@ -45,6 +48,7 @@ Uses Perlin noise to make a surface rocky.
 * **-c**: Restricts modifications to only carve into the terrain.
 * **-e**: Limits the operation to only expand out from the terrain.
 * **-m**: Applies a mask to only modify surfaces that match the specified criteria.\
+  `-c` only carves matching blocks. `-e` only expands from a matching surface into air.\
   This option can significantly slow down the process due to the added complexity of matching surfaces.
 * **-t**: Tries to retain the topology of the region.
 * **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
@@ -68,6 +72,7 @@ Uses Voronoi noise to deform a surface.
 * **-c**: Restricts modifications to only carve into the terrain.
 * **-e**: Limits the operation to only expand out from the terrain.
 * **-m**: Applies a mask to only modify surfaces that match the specified criteria.\
+  `-c` only carves matching blocks. `-e` only expands from a matching surface into air.\
   This option can significantly slow down the process due to the added complexity of matching surfaces.
 * **-t**: Tries to retain the topology of the region.
 * **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).
@@ -92,6 +97,7 @@ Uses a noise preset to deform a surface.
 * **-c**: Restricts modifications to only carve into the terrain.
 * **-e**: Limits the operation to only expand out from the terrain.
 * **-m**: Applies a mask to only modify surfaces that match the specified criteria.\
+  `-c` only carves matching blocks. `-e` only expands from a matching surface into air.\
   This option can significantly slow down the process due to the added complexity of matching surfaces.
 * **-t**: Tries to retain the topology of the region.
 * **-w**: See [Smoothblocks](../smoothblocks/smoothblocks.md).

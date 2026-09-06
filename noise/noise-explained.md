@@ -6,7 +6,7 @@ The place you will likely be most familiar with noise is in Minecraft's terrain 
 
 This is pretty much what we do in ezEdits, using noise to generate shapes, terrain, and textures.
 
-Within the plugin you will find several noise types, with each having different characteristics, and Cellular specifically coming with many additional parameters you can customise.
+Within the plugin you will find several noise types, with each having different characteristics. Cellular and Gabor specifically come with many additional parameters you can customise.
 
 Some of the many features that use noise include:
 
@@ -37,6 +37,7 @@ Sets the type of noise to be used. This is the start of any noise and will be in
 * <mark style="color:purple;">`White (Wh)`</mark>
 * <mark style="color:purple;">`Cellular (Ce)`</mark>
 * <mark style="color:purple;">`Shard (Sh)`</mark>
+* <mark style="color:purple;">`Gabor (Gb)`</mark>
 
 </details>
 
@@ -137,6 +138,30 @@ Sets the type of noise to be used. This is the start of any noise and will be in
 * <mark style="color:red;">`Sharpness (h)`</mark>\
   Usually `0..1.0`\
   Controls the pattern sharpness for Shard noise. Higher values have more defined edges within the pattern, whereas low values will appear more blurry.
+
+</details>
+
+### Gabor Noise Parameters
+
+<details>
+
+<summary>Additional Gabor Noise Parameters</summary>
+
+* <mark style="color:red;">`GaborRadius (gR)`</mark>\
+  Controls the size of each kernel.
+* <mark style="color:red;">`GaborFrequency (gF)`</mark>\
+  Controls how tight the stripes are.\
+  Separate from the normal <mark style="color:red;">`Frequency (f)`</mark> parameter, which scales the whole noise field.
+* <mark style="color:red;">`GaborFrequencySpread (gFs)`</mark>\
+  Controls how much each impulse's frequency can vary.
+* <mark style="color:red;">`GaborOrientation (gO)`</mark>\
+  Sets the stripe direction as a vector. Default `(1,0,0)`.
+* <mark style="color:red;">`GaborOrientationJitter (gJ)`</mark>\
+  Randomly twists each impulse from `0..1`. At `1` the orientation is fully random.
+* <mark style="color:red;">`GaborImpulsesPerCell (gN)`</mark>\
+  Sets how many kernels per cell. Capped at `8`.
+* <mark style="color:red;">`GaborMagnitude (gM)`</mark>\
+  Controls contrast.
 
 </details>
 

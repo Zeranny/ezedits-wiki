@@ -4,6 +4,8 @@
 
 `scatter` first extracts all surface blocks (all non-air blocks touching air) from a region defined by `-h <region>`. You can filter out surfaces that do not match certain conditions using `-d <directions>` & `-e <threshold>`, and `-m <mask>`. On the remaining surfaces, a placement position distribution according to the given density `-n <density>` and uniformity `-u <iterations>` is calculated and structures are placed.
 
+If the region has few or no surface blocks, `//ezscatter` will warn you to expand the selection so it includes air.
+
 ***
 
 ### Scatter Region: <mark style="color:orange;">`-h <region>`</mark> <a href="#scatter-region-h" id="scatter-region-h"></a>

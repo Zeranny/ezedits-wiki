@@ -28,4 +28,4 @@ Toggles waterlog status of blocks.
 
 **`//eztw wax [ON|OFF]`**
 
-Toggles waxing of copper blocks and signs on or off. Waxing copper blocks prevents them changing states due to age. Waxing signs prevents them from being edited.
+Toggles waxing of copper blocks, copper rods, and signs on or off. Waxing copper blocks and rods prevents them changing states due to age. Waxing signs prevents them from being edited.

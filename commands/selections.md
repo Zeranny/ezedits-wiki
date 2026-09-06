@@ -115,6 +115,26 @@ The `//encapsulatenear` command creates a new selection of the smallest CUBOID s
 
 </details>
 
+### `//selcatenary`
+
+<details>
+
+<summary>Catenary Selection</summary>
+
+**`//selcatenary <points> [sag] [sagDirection]`**
+
+**`Alias: //catenary`**
+
+The `//selcatenary` command creates a convex selection along a catenary curve between the start and end of your current selection.
+
+* **Points**: Number of convex selection points to output. Minimum `3`.
+* **Sag** (Default: 0.1): How much the curve droops. `0` is a straight line. Maximum `5`, and further limited so the hang stays within 512 blocks of the span.
+* **SagDirection** (Default: down): Direction the curve hangs, i.e. the direction of gravity.
+
+Requires a selection with a start and end point. Sphere, Ellipsoid, and Cylinder selections are not supported. For convex or poly selections, the first and last points are used.
+
+</details>
+
 ## Selection Management Commands
 
 All sub-commands are under `//ezselection` (`//ezsel`)\

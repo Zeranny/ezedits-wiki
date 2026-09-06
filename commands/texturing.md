@@ -9,6 +9,8 @@ Video Tutorial by [MegRae](https://megrae.art/)
 All sub-commands are under `//eztexture` (`//ezt`)\
 e.g `//eztexture ambient`
 
+If the selection has few or no surface blocks, some texture commands will warn you to expand it so it includes air.
+
 ## `//eztexture ...`
 
 ### `ambient`
